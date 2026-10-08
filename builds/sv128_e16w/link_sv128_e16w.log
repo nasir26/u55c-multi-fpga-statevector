@@ -1,0 +1,300 @@
+WARNING: [v++ 60-1600] The option 'jobs' was used directly on the command line, where its usage is deprecated. To ensure input line works for supported operating systems or shells, v++ supports specification for some options in a configuration file. As an alternative, please use options 'hls.jobs', 'vivado.synth.jobs' in a configuration file. 
+Option Map File Used: '/tools/Xilinx/Vitis/2023.2/data/vitis/vpp/optMap.xml'
+
+****** v++ v2023.2 (64-bit)
+  **** SW Build 4026344 on 2023-10-11-15:42:10
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+INFO: [v++ 60-1306] Additional information associated with this v++ link can be found at:
+	Reports: <WS>/builds/sv128_e16w/reports/link
+	Log files: <WS>/builds/sv128_e16w/logs/link
+Running Dispatch Server on port: 44081
+INFO: [v++ 60-1548] Creating build summary session with primary output <WS>/builds/sv128_e16w/sv.xclbin.link_summary, at Wed Oct  7 14:43:52 2026
+INFO: [v++ 60-1315] Creating rulecheck session with output '<WS>/builds/sv128_e16w/reports/link/v++_link_sv_guidance.html', at Wed Oct  7 14:43:52 2026
+INFO: [v++ 60-895]   Target platform: /opt/xilinx/platforms/xilinx_u55c_gen3x16_xdma_3_202210_1/xilinx_u55c_gen3x16_xdma_3_202210_1.xpfm
+INFO: [v++ 60-1578]   This platform contains Xilinx Shell Archive '/opt/xilinx/platforms/xilinx_u55c_gen3x16_xdma_3_202210_1/hw/hw.xsa'
+INFO: [v++ 74-78] Compiler Version string: 2023.2
+INFO: [v++ 60-629] Linking for hardware target
+INFO: [v++ 60-423]   Target device: xilinx_u55c_gen3x16_xdma_3_202210_1
+WARNING: [v++ 60-889] User-specified kernel frequency for ID 0 is the same as the default frequency 300 MHz, so it will be ignored
+INFO: [v++ 60-1332] Run 'run_link' status: Not started
+INFO: [v++ 60-1443] [14:43:56] Run run_link: Step system_link: Started
+INFO: [v++ 60-1453] Command Line: system_link --xo <WS>/builds/xo_w512/sv128_engine.xo --xo <WS>/../builds/sv_xo/sv_swap.xo --config <WS>/builds/sv128_e16w/_x/link/int/syslinkConfig.ini --xpfm /opt/xilinx/platforms/xilinx_u55c_gen3x16_xdma_3_202210_1/xilinx_u55c_gen3x16_xdma_3_202210_1.xpfm --target hw --output_dir <WS>/builds/sv128_e16w/_x/link/int --temp_dir <WS>/builds/sv128_e16w/_x/link/sys_link
+INFO: [v++ 60-1454] Run Directory: <WS>/builds/sv128_e16w/_x/link/run_link
+INFO: [SYSTEM_LINK 82-70] Extracting xo v3 file <WS>/builds/xo_w512/sv128_engine.xo
+INFO: [SYSTEM_LINK 82-70] Extracting xo v3 file <WS>/../builds/sv_xo/sv_swap.xo
+INFO: [SYSTEM_LINK 82-53] Creating IP database <WS>/builds/sv128_e16w/_x/link/sys_link/_sysl/.cdb/xd_ip_db.xml
+INFO: [SYSTEM_LINK 82-38] [14:43:59] build_xd_ip_db started: /tools/Xilinx/Vitis/2023.2/bin/build_xd_ip_db -ip_search 0  -sds-pf <WS>/builds/sv128_e16w/_x/link/sys_link/hw.hpfm -clkid 0 -ip <WS>/builds/sv128_e16w/_x/link/sys_link/iprepo/xilinx_com_hls_sv_swap_1_0,sv_swap -ip <WS>/builds/sv128_e16w/_x/link/sys_link/iprepo/xilinx_com_hls_sv128_engine_1_0,sv128_engine -o <WS>/builds/sv128_e16w/_x/link/sys_link/_sysl/.cdb/xd_ip_db.xml
+INFO: [SYSTEM_LINK 82-37] [14:44:03] build_xd_ip_db finished successfully
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 458.445 ; gain = 0.000 ; free physical = 423905 ; free virtual = 992004
+INFO: [SYSTEM_LINK 82-51] Create system connectivity graph
+INFO: [SYSTEM_LINK 82-102] Applying explicit connections to the system connectivity graph: <WS>/builds/sv128_e16w/_x/link/sys_link/cfgraph/cfgen_cfgraph.xml
+INFO: [SYSTEM_LINK 82-38] [14:44:03] cfgen started: /tools/Xilinx/Vitis/2023.2/bin/cfgen  -nk sv128_engine:16 -nk sv_swap:4 -slr sv128_engine_1:SLR0 -slr sv128_engine_2:SLR0 -slr sv128_engine_3:SLR0 -slr sv128_engine_4:SLR0 -slr sv128_engine_5:SLR0 -slr sv128_engine_6:SLR0 -slr sv128_engine_7:SLR1 -slr sv128_engine_8:SLR1 -slr sv128_engine_9:SLR1 -slr sv128_engine_10:SLR1 -slr sv128_engine_11:SLR1 -slr sv128_engine_12:SLR2 -slr sv128_engine_13:SLR2 -slr sv128_engine_14:SLR2 -slr sv128_engine_15:SLR2 -slr sv128_engine_16:SLR2 -slr sv_swap_1:SLR0 -slr sv_swap_2:SLR0 -slr sv_swap_3:SLR0 -slr sv_swap_4:SLR0 -sp sv128_engine_1.st:HBM[0:1] -sp sv128_engine_2.st:HBM[2:3] -sp sv128_engine_3.st:HBM[4:5] -sp sv128_engine_4.st:HBM[6:7] -sp sv128_engine_5.st:HBM[8:9] -sp sv128_engine_6.st:HBM[10:11] -sp sv128_engine_7.st:HBM[12:13] -sp sv128_engine_8.st:HBM[14:15] -sp sv128_engine_9.st:HBM[16:17] -sp sv128_engine_10.st:HBM[18:19] -sp sv128_engine_11.st:HBM[20:21] -sp sv128_engine_12.st:HBM[22:23] -sp sv128_engine_13.st:HBM[24:25] -sp sv128_engine_14.st:HBM[26:27] -sp sv128_engine_15.st:HBM[28:29] -sp sv128_engine_16.st:HBM[30:31] -sp sv_swap_1.a:HBM[0:31] -sp sv_swap_1.b:HBM[0:31] -sp sv_swap_2.a:HBM[0:31] -sp sv_swap_2.b:HBM[0:31] -sp sv_swap_3.a:HBM[0:31] -sp sv_swap_3.b:HBM[0:31] -sp sv_swap_4.a:HBM[0:31] -sp sv_swap_4.b:HBM[0:31] -dpa_mem_offload false -dmclkid 0 -r <WS>/builds/sv128_e16w/_x/link/sys_link/_sysl/.cdb/xd_ip_db.xml -o <WS>/builds/sv128_e16w/_x/link/sys_link/cfgraph/cfgen_cfgraph.xml
+INFO: [CFGEN 83-0] Kernel Specs: 
+INFO: [CFGEN 83-0]   kernel: sv128_engine, num: 16  {sv128_engine_1 sv128_engine_2 sv128_engine_3 sv128_engine_4 sv128_engine_5 sv128_engine_6 sv128_engine_7 sv128_engine_8 sv128_engine_9 sv128_engine_10 sv128_engine_11 sv128_engine_12 sv128_engine_13 sv128_engine_14 sv128_engine_15 sv128_engine_16}
+INFO: [CFGEN 83-0]   kernel: sv_swap, num: 4  {sv_swap_1 sv_swap_2 sv_swap_3 sv_swap_4}
+INFO: [CFGEN 83-0] Port Specs: 
+INFO: [CFGEN 83-0]   kernel: sv128_engine_1, k_port: st, sptag: HBM[0:1]
+INFO: [CFGEN 83-0]   kernel: sv128_engine_2, k_port: st, sptag: HBM[2:3]
+INFO: [CFGEN 83-0]   kernel: sv128_engine_3, k_port: st, sptag: HBM[4:5]
+INFO: [CFGEN 83-0]   kernel: sv128_engine_4, k_port: st, sptag: HBM[6:7]
+INFO: [CFGEN 83-0]   kernel: sv128_engine_5, k_port: st, sptag: HBM[8:9]
+INFO: [CFGEN 83-0]   kernel: sv128_engine_6, k_port: st, sptag: HBM[10:11]
+INFO: [CFGEN 83-0]   kernel: sv128_engine_7, k_port: st, sptag: HBM[12:13]
+INFO: [CFGEN 83-0]   kernel: sv128_engine_8, k_port: st, sptag: HBM[14:15]
+INFO: [CFGEN 83-0]   kernel: sv128_engine_9, k_port: st, sptag: HBM[16:17]
+INFO: [CFGEN 83-0]   kernel: sv128_engine_10, k_port: st, sptag: HBM[18:19]
+INFO: [CFGEN 83-0]   kernel: sv128_engine_11, k_port: st, sptag: HBM[20:21]
+INFO: [CFGEN 83-0]   kernel: sv128_engine_12, k_port: st, sptag: HBM[22:23]
+INFO: [CFGEN 83-0]   kernel: sv128_engine_13, k_port: st, sptag: HBM[24:25]
+INFO: [CFGEN 83-0]   kernel: sv128_engine_14, k_port: st, sptag: HBM[26:27]
+INFO: [CFGEN 83-0]   kernel: sv128_engine_15, k_port: st, sptag: HBM[28:29]
+INFO: [CFGEN 83-0]   kernel: sv128_engine_16, k_port: st, sptag: HBM[30:31]
+INFO: [CFGEN 83-0]   kernel: sv_swap_1, k_port: a, sptag: HBM[0:31]
+INFO: [CFGEN 83-0]   kernel: sv_swap_1, k_port: b, sptag: HBM[0:31]
+INFO: [CFGEN 83-0]   kernel: sv_swap_2, k_port: a, sptag: HBM[0:31]
+INFO: [CFGEN 83-0]   kernel: sv_swap_2, k_port: b, sptag: HBM[0:31]
+INFO: [CFGEN 83-0]   kernel: sv_swap_3, k_port: a, sptag: HBM[0:31]
+INFO: [CFGEN 83-0]   kernel: sv_swap_3, k_port: b, sptag: HBM[0:31]
+INFO: [CFGEN 83-0]   kernel: sv_swap_4, k_port: a, sptag: HBM[0:31]
+INFO: [CFGEN 83-0]   kernel: sv_swap_4, k_port: b, sptag: HBM[0:31]
+INFO: [CFGEN 83-0] SLR Specs: 
+INFO: [CFGEN 83-0]   instance: sv128_engine_1, SLR: SLR0
+INFO: [CFGEN 83-0]   instance: sv128_engine_10, SLR: SLR1
+INFO: [CFGEN 83-0]   instance: sv128_engine_11, SLR: SLR1
+INFO: [CFGEN 83-0]   instance: sv128_engine_12, SLR: SLR2
+INFO: [CFGEN 83-0]   instance: sv128_engine_13, SLR: SLR2
+INFO: [CFGEN 83-0]   instance: sv128_engine_14, SLR: SLR2
+INFO: [CFGEN 83-0]   instance: sv128_engine_15, SLR: SLR2
+INFO: [CFGEN 83-0]   instance: sv128_engine_16, SLR: SLR2
+INFO: [CFGEN 83-0]   instance: sv128_engine_2, SLR: SLR0
+INFO: [CFGEN 83-0]   instance: sv128_engine_3, SLR: SLR0
+INFO: [CFGEN 83-0]   instance: sv128_engine_4, SLR: SLR0
+INFO: [CFGEN 83-0]   instance: sv128_engine_5, SLR: SLR0
+INFO: [CFGEN 83-0]   instance: sv128_engine_6, SLR: SLR0
+INFO: [CFGEN 83-0]   instance: sv128_engine_7, SLR: SLR1
+INFO: [CFGEN 83-0]   instance: sv128_engine_8, SLR: SLR1
+INFO: [CFGEN 83-0]   instance: sv128_engine_9, SLR: SLR1
+INFO: [CFGEN 83-0]   instance: sv_swap_1, SLR: SLR0
+INFO: [CFGEN 83-0]   instance: sv_swap_2, SLR: SLR0
+INFO: [CFGEN 83-0]   instance: sv_swap_3, SLR: SLR0
+INFO: [CFGEN 83-0]   instance: sv_swap_4, SLR: SLR0
+INFO: [SYSTEM_LINK 82-37] [14:44:12] cfgen finished successfully
+Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 458.445 ; gain = 0.000 ; free physical = 423896 ; free virtual = 991994
+INFO: [SYSTEM_LINK 82-52] Create top-level block diagram
+INFO: [SYSTEM_LINK 82-38] [14:44:12] cf2bd started: /tools/Xilinx/Vitis/2023.2/bin/cf2bd  --linux --trace_buffer 1024 --input_file <WS>/builds/sv128_e16w/_x/link/sys_link/cfgraph/cfgen_cfgraph.xml --ip_db <WS>/builds/sv128_e16w/_x/link/sys_link/_sysl/.cdb/xd_ip_db.xml --cf_name dr --working_dir <WS>/builds/sv128_e16w/_x/link/sys_link/_sysl/.xsd --temp_dir <WS>/builds/sv128_e16w/_x/link/sys_link --output_dir <WS>/builds/sv128_e16w/_x/link/int --target_bd ulp.bd
+INFO: [CF2BD 82-31] Launching cf2xd: cf2xd -linux -trace-buffer 1024 -i <WS>/builds/sv128_e16w/_x/link/sys_link/cfgraph/cfgen_cfgraph.xml -r <WS>/builds/sv128_e16w/_x/link/sys_link/_sysl/.cdb/xd_ip_db.xml -o dr.xml
+INFO: [CF2BD 82-28] cf2xd finished successfully
+INFO: [CF2BD 82-31] Launching cf_xsd: cf_xsd -disable-address-gen -bd ulp.bd -dn dr -dp <WS>/builds/sv128_e16w/_x/link/sys_link/_sysl/.xsd
+INFO: [CF2BD 82-28] cf_xsd finished successfully
+INFO: [SYSTEM_LINK 82-37] [14:44:25] cf2bd finished successfully
+Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 458.445 ; gain = 0.000 ; free physical = 423911 ; free virtual = 991997
+INFO: [v++ 60-1441] [14:44:25] Run run_link: Step system_link: Completed
+Time (s): cpu = 00:00:28 ; elapsed = 00:00:29 . Memory (MB): peak = 490.477 ; gain = 0.000 ; free physical = 423998 ; free virtual = 992059
+INFO: [v++ 60-1443] [14:44:25] Run run_link: Step cf2sw: Started
+INFO: [v++ 60-1453] Command Line: cf2sw -sdsl <WS>/builds/sv128_e16w/_x/link/int/sdsl.dat -rtd <WS>/builds/sv128_e16w/_x/link/int/cf2sw.rtd -nofilter <WS>/builds/sv128_e16w/_x/link/int/cf2sw_full.rtd -xclbin <WS>/builds/sv128_e16w/_x/link/int/xclbin_orig.xml -o <WS>/builds/sv128_e16w/_x/link/int/xclbin_orig.1.xml
+INFO: [v++ 60-1454] Run Directory: <WS>/builds/sv128_e16w/_x/link/run_link
+INFO: [v++ 60-1441] [14:44:41] Run run_link: Step cf2sw: Completed
+Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 490.477 ; gain = 0.000 ; free physical = 423791 ; free virtual = 991987
+INFO: [v++ 60-1443] [14:44:41] Run run_link: Step rtd2_system_diagram: Started
+INFO: [v++ 60-1453] Command Line: rtd2SystemDiagram
+INFO: [v++ 60-1454] Run Directory: <WS>/builds/sv128_e16w/_x/link/run_link
+INFO: [v++ 60-1441] [14:44:41] Run run_link: Step rtd2_system_diagram: Completed
+Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.28 . Memory (MB): peak = 490.477 ; gain = 0.000 ; free physical = 423766 ; free virtual = 991962
+INFO: [v++ 60-1443] [14:44:41] Run run_link: Step vpl: Started
+INFO: [v++ 60-1453] Command Line: vpl -t hw -f xilinx_u55c_gen3x16_xdma_3_202210_1 --kernel_frequency 300 --remote_ip_cache <WS>/builds/sv128_e16w/.ipcache --output_dir <WS>/builds/sv128_e16w/_x/link/int --log_dir <WS>/builds/sv128_e16w/logs/link --report_dir <WS>/builds/sv128_e16w/reports/link --config <WS>/builds/sv128_e16w/_x/link/int/vplConfig.ini -k <WS>/builds/sv128_e16w/_x/link/int/kernel_info.dat --webtalk_flag Vitis --temp_dir <WS>/builds/sv128_e16w/_x/link --no-info --iprepo <WS>/builds/sv128_e16w/_x/link/int/xo/ip_repo/xilinx_com_hls_sv_swap_1_0 --iprepo <WS>/builds/sv128_e16w/_x/link/int/xo/ip_repo/xilinx_com_hls_sv128_engine_1_0 --messageDb <WS>/builds/sv128_e16w/_x/link/run_link/vpl.pb <WS>/builds/sv128_e16w/_x/link/int/dr.bd.tcl
+INFO: [v++ 60-1454] Run Directory: <WS>/builds/sv128_e16w/_x/link/run_link
+
+****** vpl v2023.2 (64-bit)
+  **** SW Build 4026344 on 2023-10-11-15:42:10
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+INFO: [VPL 60-839] Read in kernel information from file '<WS>/builds/sv128_e16w/_x/link/int/kernel_info.dat'.
+INFO: [VPL 74-78] Compiler Version string: 2023.2
+INFO: [VPL 60-423]   Target device: xilinx_u55c_gen3x16_xdma_3_202210_1
+WARNING: [VPL 60-889] User-specified kernel frequency for ID 0 is the same as the default frequency 300 MHz, so it will be ignored
+INFO: [VPL 60-1032] Extracting hardware platform to <WS>/builds/sv128_e16w/_x/link/vivado/vpl/.local/hw_platform
+[14:44:54] Run vpl: Step create_project: Started
+Creating Vivado project.
+[14:45:01] Run vpl: Step create_project: Completed
+[14:45:01] Run vpl: Step create_bd: Started
+[14:45:46] Run vpl: Step create_bd: Completed
+[14:45:46] Run vpl: Step update_bd: Started
+[14:45:48] Run vpl: Step update_bd: Completed
+[14:45:48] Run vpl: Step generate_target: Started
+[14:47:03] Run vpl: Step generate_target: RUNNING...
+[14:48:18] Run vpl: Step generate_target: RUNNING...
+[14:49:33] Run vpl: Step generate_target: RUNNING...
+[14:50:17] Run vpl: Step generate_target: Completed
+[14:50:17] Run vpl: Step config_hw_runs: Started
+[14:51:33] Run vpl: Step config_hw_runs: RUNNING...
+[14:52:48] Run vpl: Step config_hw_runs: RUNNING...
+[14:54:04] Run vpl: Step config_hw_runs: RUNNING...
+[14:55:19] Run vpl: Step config_hw_runs: RUNNING...
+[14:55:37] Run vpl: Step config_hw_runs: Completed
+[14:55:37] Run vpl: Step synth: Started
+[14:56:08] Block-level synthesis in progress, 0 of 266 jobs complete, 16 jobs running.
+[14:56:39] Block-level synthesis in progress, 0 of 266 jobs complete, 16 jobs running.
+[14:57:09] Block-level synthesis in progress, 11 of 266 jobs complete, 10 jobs running.
+[14:57:39] Block-level synthesis in progress, 15 of 266 jobs complete, 16 jobs running.
+[14:58:10] Block-level synthesis in progress, 21 of 266 jobs complete, 11 jobs running.
+[14:58:40] Block-level synthesis in progress, 39 of 266 jobs complete, 10 jobs running.
+[14:59:10] Block-level synthesis in progress, 54 of 266 jobs complete, 12 jobs running.
+[14:59:41] Block-level synthesis in progress, 67 of 266 jobs complete, 15 jobs running.
+[15:00:11] Block-level synthesis in progress, 71 of 266 jobs complete, 14 jobs running.
+[15:00:41] Block-level synthesis in progress, 79 of 266 jobs complete, 14 jobs running.
+[15:01:12] Block-level synthesis in progress, 93 of 266 jobs complete, 14 jobs running.
+[15:01:42] Block-level synthesis in progress, 95 of 266 jobs complete, 16 jobs running.
+[15:02:13] Block-level synthesis in progress, 104 of 266 jobs complete, 15 jobs running.
+[15:02:43] Block-level synthesis in progress, 109 of 266 jobs complete, 15 jobs running.
+[15:03:14] Block-level synthesis in progress, 122 of 266 jobs complete, 12 jobs running.
+[15:03:44] Block-level synthesis in progress, 127 of 266 jobs complete, 16 jobs running.
+[15:04:14] Block-level synthesis in progress, 142 of 266 jobs complete, 13 jobs running.
+[15:04:45] Block-level synthesis in progress, 165 of 266 jobs complete, 13 jobs running.
+[15:05:15] Block-level synthesis in progress, 172 of 266 jobs complete, 16 jobs running.
+[15:05:46] Block-level synthesis in progress, 179 of 266 jobs complete, 13 jobs running.
+[15:06:16] Block-level synthesis in progress, 186 of 266 jobs complete, 15 jobs running.
+[15:06:47] Block-level synthesis in progress, 205 of 266 jobs complete, 12 jobs running.
+[15:07:18] Block-level synthesis in progress, 221 of 266 jobs complete, 14 jobs running.
+[15:07:48] Block-level synthesis in progress, 239 of 266 jobs complete, 15 jobs running.
+[15:08:19] Block-level synthesis in progress, 253 of 266 jobs complete, 9 jobs running.
+[15:08:49] Block-level synthesis in progress, 256 of 266 jobs complete, 6 jobs running.
+[15:09:20] Block-level synthesis in progress, 261 of 266 jobs complete, 3 jobs running.
+[15:09:51] Block-level synthesis in progress, 261 of 266 jobs complete, 3 jobs running.
+[15:10:21] Block-level synthesis in progress, 263 of 266 jobs complete, 2 jobs running.
+[15:10:52] Block-level synthesis in progress, 264 of 266 jobs complete, 2 jobs running.
+[15:11:22] Block-level synthesis in progress, 265 of 266 jobs complete, 1 job running.
+[15:11:53] Block-level synthesis in progress, 265 of 266 jobs complete, 1 job running.
+[15:12:24] Block-level synthesis in progress, 266 of 266 jobs complete, 0 jobs running.
+[15:12:54] Top-level synthesis in progress.
+[15:13:25] Top-level synthesis in progress.
+[15:13:55] Top-level synthesis in progress.
+[15:14:35] Run vpl: Step synth: Completed
+[15:14:35] Run vpl: Step impl: Started
+[16:05:16] Finished 2nd of 6 tasks (FPGA linking synthesized kernels to platform). Elapsed time: 01h 20m 32s 
+
+[16:05:16] Starting logic optimization..
+[16:06:20] Phase 1 Initialization
+[16:06:20] Phase 1.1 Core Generation And Design Setup
+[16:08:28] Phase 1.2 Setup Constraints And Sort Netlist
+[16:08:28] Phase 2 Timer Update And Timing Data Collection
+[16:08:28] Phase 2.1 Timer Update
+[16:09:31] Phase 2.2 Timing Data Collection
+[16:10:03] Phase 3 Retarget
+[16:11:39] Phase 4 Constant propagation
+[16:12:43] Phase 5 Sweep
+[16:17:30] Phase 6 BUFG optimization
+[16:18:34] Phase 7 Shift Register Optimization
+[16:19:06] Phase 8 Post Processing Netlist
+[16:19:38] Phase 9 Finalization
+[16:19:38] Phase 9.1 Finalizing Design Cores and Updating Shapes
+[16:20:42] Phase 9.2 Verifying Netlist Connectivity
+[16:22:50] Finished 3rd of 6 tasks (FPGA logic optimization). Elapsed time: 00h 17m 33s 
+
+[16:22:50] Starting logic placement..
+[16:24:26] Phase 1 Placer Initialization
+[16:24:26] Phase 1.1 Placer Initialization Netlist Sorting
+[16:29:13] Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device
+[16:34:01] Phase 1.3 Build Placer Netlist Model
+[16:45:44] Phase 1.4 Constrain Clocks/Macros
+[16:46:48] Phase 2 Global Placement
+[16:46:48] Phase 2.1 Floorplanning
+[16:49:59] Phase 2.1.1 Partition Driven Placement
+[16:49:59] Phase 2.1.1.1 PBP: Partition Driven Placement
+[16:59:04] Phase 2.1.1.2 PBP: Clock Region Placement
+[17:01:13] Phase 2.1.1.3 PBP: Discrete Incremental
+[17:02:50] Phase 2.1.1.4 PBP: Compute Congestion
+[17:03:22] Phase 2.1.1.5 PBP: Macro Placement
+[17:04:59] Phase 2.1.1.6 PBP: UpdateTiming
+[17:07:09] Phase 2.2 Physical Synthesis After Floorplan
+[17:09:50] Phase 2.3 Update Timing before SLR Path Opt
+[17:10:22] Phase 2.4 Post-Processing in Floorplanning
+[17:10:55] Phase 2.5 Global Placement Core
+[17:50:47] Phase 2.5.1 UpdateTiming Before Physical Synthesis
+[17:52:24] Phase 2.5.2 Physical Synthesis In Placer
+[18:06:58] Phase 3 Detail Placement
+[18:07:30] Phase 3.1 Commit Multi Column Macros
+[18:07:30] Phase 3.2 Commit Most Macros & LUTRAMs
+[18:19:54] Phase 3.3 Small Shape DP
+[18:19:54] Phase 3.3.1 Small Shape Clustering
+[18:23:41] Phase 3.3.2 Slice Area Swap
+[18:24:13] Phase 3.3.2.1 Slice Area Swap Initial
+[18:53:53] Phase 3.4 Place Remaining
+[18:54:25] Phase 3.5 Re-assign LUT pins
+[18:56:02] Phase 3.6 Pipeline Register Optimization
+[18:56:35] Phase 3.7 Fast Optimization
+[19:01:26] Phase 4 Post Placement Optimization and Clean-Up
+[19:01:26] Phase 4.1 Post Commit Optimization
+[19:10:36] Phase 4.1.1 Post Placement Optimization
+[19:11:08] Phase 4.1.1.1 BUFG Insertion
+[19:11:08] Phase 1 Physical Synthesis Initialization
+[19:16:00] Phase 4.1.1.2 BUFG Replication
+[19:16:00] Phase 4.1.1.3 Post Placement Timing Optimization
+[19:27:19] Phase 4.1.1.4 Replication
+[19:32:11] Phase 4.2 Post Placement Cleanup
+[19:32:11] Phase 4.3 Placer Reporting
+[19:32:11] Phase 4.3.1 Print Estimated Congestion
+[19:33:15] Phase 4.4 Final Placement Cleanup
+[20:07:47] Finished 4th of 6 tasks (FPGA logic placement). Elapsed time: 03h 44m 57s 
+
+[20:07:47] Starting logic routing..
+[20:12:39] Phase 1 Build RT Design
+[20:22:22] Phase 2 Router Initialization
+[20:22:22] Phase 2.1 Fix Topology Constraints
+[20:22:54] Phase 2.2 Pre Route Cleanup
+[20:23:26] Phase 2.3 Global Clock Net Routing
+[20:24:31] Phase 2.4 Update Timing
+[20:40:10] Phase 2.5 Update Timing for Bus Skew
+[20:40:10] Phase 2.5.1 Update Timing
+[20:43:57] Phase 3 Initial Routing
+[20:43:57] Phase 3.1 Global Routing
+[20:43:57] Phase 3.1.1 SLL Assignment
+[20:44:30] Phase 3.2 Initial Net Routing
+[20:48:21] Phase 3.3 Update Timing
+[20:57:40] Phase 3.4 Initial Net Routing
+[21:00:22] Phase 3.5 Update Timing
+[21:09:33] Phase 3.6 Initial Net Routing
+[21:12:15] Phase 3.7 Update Timing
+[21:21:26] Phase 3.8 Initial Net Routing
+[21:24:09] Phase 3.9 Update Timing
+[21:33:20] Phase 3.10 Initial Net Routing
+[21:36:02] Phase 3.11 Update Timing
+[21:46:52] Phase 4 Rip-up And Reroute
+[21:46:52] Phase 4.1 Global Iteration 0
+[21:46:52] Phase 4.1.1 Update Timing
+[21:56:03] Phase 4.2 Global Iteration 1
+[00:11:03] Phase 4.3 Global Iteration 2
+[01:15:19] Phase 5 Delay and Skew Optimization
+[01:15:19] Phase 5.1 Delay CleanUp
+[01:15:19] Phase 5.2 Clock Skew Optimization
+[01:15:52] Phase 6 Post Hold Fix
+[01:15:52] Phase 6.1 Hold Fix Iter
+[01:16:24] Phase 6.2 Additional Hold Fix
+[01:16:57] Phase 6.3 Non Free Resource Hold Fix Iter
+[01:17:29] Phase 7 Leaf Clock Prog Delay Opt
+[01:21:16] Phase 8 Route finalize
+[01:21:48] Phase 9 Verifying routed nets
+[01:21:48] Phase 10 Depositing Routes
+[01:24:30] Phase 11 Post-Route Event Processing
+[01:38:13] Run vpl: Step impl: Failed
+[01:38:16] Run vpl: FINISHED. Run Status: impl ERROR
+
+===>The following messages were generated while processing <WS>/builds/sv128_e16w/_x/link/vivado/vpl/prj/prj.runs/impl_1 :
+ERROR: [VPL 18-1000] Routing results verification failed due to partially-conflicted nets (Up to first 10 of violated nets):  level0_i/ulp/sv128_engine_1/inst/control_s_axi_U/Q[1] level0_i/ulp/sv128_engine_1/inst/grp_run_pass_fu_493/agg_tmp2_3_3_channel_U/mOutPtr_reg_n_3_[0] level0_i/ulp/sv128_engine_1/inst/grp_run_pass_fu_493/agg_tmp2_3_3_channel_U/mOutPtr_reg_n_3_[2] level0_i/ulp/sv128_engine_1/inst/grp_run_pass_fu_493/agg_tmp2_3_3_channel_U/U_sv128_engine_fifo_w32_d4_S_ShiftReg/neg_i_reg_4311[16]_i_19_n_3 level0_i/ulp/sv128_engine_1/inst/grp_run_pass_fu_493/agg_tmp2_3_3_channel_U/U_sv128_engine_fifo_w32_d4_S_ShiftReg/ap_CS_fsm_reg[4]_1 level0_i/ulp/sv128_engine_1/inst/grp_run_pass_fu_493/agg_tmp2_3_3_channel_U/U_sv128_engine_fifo_w32_d4_S_ShiftReg/ap_CS_fsm_reg[4]_4 level0_i/ulp/sv128_engine_1/inst/grp_run_pass_fu_493/agg_tmp2_3_3_channel_U/U_sv128_engine_fifo_w32_d4_S_ShiftReg/neg_i_reg_4311[16]_i_20_n_3 level0_i/ulp/sv128_engine_1/inst/grp_run_pass_fu_493/agg_tmp2_3_3_channel_U/U_sv128_engine_fifo_w32_d4_S_ShiftReg/neg_i_reg_4311[29]_i_3_n_3 level0_i/ulp/sv128_engine_1/inst/grp_run_pass_fu_493/agg_tmp2_3_3_channel_U/U_sv128_engine_fifo_w32_d4_S_ShiftReg/agg_tmp2_3_3_channel_dout[3] level0_i/ulp/sv128_engine_1/inst/grp_run_pass_fu_493/agg_tmp2_3_3_channel_U/U_sv128_engine_fifo_w32_d4_S_ShiftReg/agg_tmp2_3_3_channel_dout[2] 
+
+===>The following messages were generated while  creating FPGA bitstream. Log file: <WS>/builds/sv128_e16w/_x/link/vivado/vpl/runme.log :
+ERROR: [VPL 12-13638] Failed runs(s) : 'impl_1'
+ERROR: [VPL 60-773] In '<WS>/builds/sv128_e16w/_x/link/vivado/vpl/vivado.log', caught Tcl error:  ERROR: [Common 17-39] 'wait_on_runs' failed due to earlier errors.
+WARNING: [VPL 60-732] Link warning: No monitor points found for BD automation.
+ERROR: [VPL 60-704] Integration error, Failed to complete hardware generation. The run name is 'impl_1'. An error stack with function names and arguments may be available in the 'vivado.log'.
+ERROR: [VPL 60-1328] Vpl run 'vpl' failed
+ERROR: [VPL 60-806] Failed to finish platform linker
+INFO: [v++ 60-1442] [01:38:19] Run run_link: Step vpl: Failed
+Time (s): cpu = 00:40:11 ; elapsed = 10:53:38 . Memory (MB): peak = 490.477 ; gain = 0.000 ; free physical = 416074 ; free virtual = 991857
+ERROR: [v++ 60-661] v++ link run 'run_link' failed
+ERROR: [v++ 60-626] Kernel link failed to complete
+ERROR: [v++ 60-703] Failed to finish linking
+INFO: [v++ 60-1653] Closing dispatch client.
+LINK_EXIT 1

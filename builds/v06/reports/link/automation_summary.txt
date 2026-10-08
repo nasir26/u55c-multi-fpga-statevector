@@ -1,0 +1,171 @@
+====================================================================
+Version:    xcd v2023.2 (64-bit)
+Copyright:  Copyright 1986-2023 Xilinx, Inc. All Rights Reserved.
+Created:    Wed Oct  7 18:18:15 2026
+====================================================================
+
+1. Kernel and compute unit information
+======================================
+
+Compute Unit: quantum_fpga_kernel_complex128_1
+Kernel: quantum_fpga_kernel_complex128
+Base Address: 0x800000
+Clock Pin: ap_clk
+Reset Pin: ap_rst_n
+
+2. Interface Connections
+========================
+
+IP to Compute Unit
+------------------
+Source Pin: SLR0/M01_AXI
+Destination Pin: quantum_fpga_kernel_complex128_1/s_axi_control
+
+Compute Unit to IP
+------------------
+Source Pin: quantum_fpga_kernel_complex128_1/m_axi_bank0
+Destination Pin: hmss_0/S01_AXI
+
+Source Pin: quantum_fpga_kernel_complex128_1/m_axi_bank1
+Destination Pin: hmss_0/S02_AXI
+
+Source Pin: quantum_fpga_kernel_complex128_1/m_axi_bank2
+Destination Pin: hmss_0/S03_AXI
+
+Source Pin: quantum_fpga_kernel_complex128_1/m_axi_bank3
+Destination Pin: hmss_0/S04_AXI
+
+Source Pin: quantum_fpga_kernel_complex128_1/m_axi_bank4
+Destination Pin: hmss_0/S05_AXI
+
+Source Pin: quantum_fpga_kernel_complex128_1/m_axi_bank5
+Destination Pin: hmss_0/S06_AXI
+
+Source Pin: quantum_fpga_kernel_complex128_1/m_axi_bank6
+Destination Pin: hmss_0/S07_AXI
+
+Source Pin: quantum_fpga_kernel_complex128_1/m_axi_bank7
+Destination Pin: hmss_0/S08_AXI
+
+Source Pin: quantum_fpga_kernel_complex128_1/m_axi_gmem0
+Destination Pin: hmss_0/S09_AXI
+
+3. Clock Connections
+====================
+
+Compute Unit: quantum_fpga_kernel_complex128_1
+Clock ID: 0
+Platform Clock Frequency: 300.00 MHz
+Requested Kernel Clock Frequency: 300.00 MHz
+Achieved Kernel Clock Frequency: 258.50 MHz
+Source Pin: ulp_ucs/aclk_kernel_00
+Destination Pin: quantum_fpga_kernel_complex128_1/ap_clk
+
+Clock Instance: ulp_ucs
+Source Pin: ii_level0_wire/ulp_m_aclk_ctrl_00
+Destination Pin: ulp_ucs/aclk_ctrl
+
+Clock Instance: ulp_ucs
+Source Pin: ii_level0_wire/ulp_m_aclk_freerun_ref_00
+Destination Pin: ulp_ucs/aclk_freerun
+
+Clock Instance: ulp_ucs
+Source Pin: ii_level0_wire/ulp_m_aclk_freerun_ref_00
+Destination Pin: ulp_ucs/aclk_hbm_refclk
+
+Clock Instance: ulp_ucs
+Source Pin: ii_level0_wire/ulp_m_aclk_pcie_00
+Destination Pin: ulp_ucs/aclk_pcie
+
+4. Reset Connections
+====================
+
+Compute Unit: quantum_fpga_kernel_complex128_1
+Source Pin: proc_sys_reset_kernel_slr0/peripheral_aresetn
+Destination Pin: quantum_fpga_kernel_complex128_1/ap_rst_n
+Associated Clock Pin: quantum_fpga_kernel_complex128_1/ap_clk
+
+5. Clock Summary
+================
+
+PL
++----------------------------------+--------------------------------+------------+---------------+------------+
+| Instance                         | Kernel                         | Clock Port | Compile (MHz) | Link (MHz) |
++----------------------------------+--------------------------------+------------+---------------+------------+
+| quantum_fpga_kernel_complex128_1 | quantum_fpga_kernel_complex128 | ap_clk     | 300.03        | 300.00     |
++----------------------------------+--------------------------------+------------+---------------+------------+
+
+6. SLR Utilization per Compute Unit
+===================================
+
+Compute Unit: quantum_fpga_kernel_complex128_1
++------------+-------+------+------+--------+--------+--------+
+| Site Type  |  SLR0 | SLR1 | SLR2 | SLR0 % | SLR1 % | SLR2 % |
++------------+-------+------+------+--------+--------+--------+
+| LUT        | 76195 |    0 |    0 |  17.33 |   0.00 |   0.00 |
+| LUTAsLogic | 72321 |    0 |    0 |  16.45 |   0.00 |   0.00 |
+| LUTAsMem   |  3874 |    0 |    0 |   1.89 |   0.00 |   0.00 |
+| REG        | 63252 |    0 |    0 |   7.19 |   0.00 |   0.00 |
+| CARRY8     |  3711 |    0 |    0 |   6.75 |   0.00 |   0.00 |
+| F7MUX      |  4213 |    0 |    0 |   1.92 |   0.00 |   0.00 |
+| F8MUX      |  1445 |    0 |    0 |   1.31 |   0.00 |   0.00 |
+| F9MUX      |     0 |    0 |    0 |   0.00 |   0.00 |   0.00 |
+| BRAM       |    40 |    0 |    0 |   5.95 |   0.00 |   0.00 |
+| URAM       |     0 |    0 |    0 |   0.00 |   0.00 |   0.00 |
+| DSPs       |   723 |    0 |    0 |  25.10 |   0.00 |   0.00 |
++------------+-------+------+------+--------+--------+--------+
+
+7. Compute Unit Utilization per SLR
+===================================
+
+SLR0
++------------+----------------------------------+-----------+
+| Site Type  | quantum_fpga_kernel_complex128_1 | Available |
++------------+----------------------------------+-----------+
+| LUT        |                            76195 |    439680 |
+| LUTAsLogic |                            72321 |    439680 |
+| LUTAsMem   |                             3874 |    205440 |
+| REG        |                            63252 |    879360 |
+| CARRY8     |                             3711 |     54960 |
+| F7MUX      |                             4213 |    219840 |
+| F8MUX      |                             1445 |    109920 |
+| F9MUX      |                                0 |     54960 |
+| BRAM       |                               40 |       672 |
+| URAM       |                                0 |       320 |
+| DSPs       |                              723 |      2880 |
++------------+----------------------------------+-----------+
+
+SLR1
++------------+----------------------------------+-----------+
+| Site Type  | quantum_fpga_kernel_complex128_1 | Available |
++------------+----------------------------------+-----------+
+| LUT        |                                0 |    439680 |
+| LUTAsLogic |                                0 |    439680 |
+| LUTAsMem   |                                0 |    205440 |
+| REG        |                                0 |    879360 |
+| CARRY8     |                                0 |     54960 |
+| F7MUX      |                                0 |    219840 |
+| F8MUX      |                                0 |    109920 |
+| F9MUX      |                                0 |     54960 |
+| BRAM       |                                0 |       672 |
+| URAM       |                                0 |       320 |
+| DSPs       |                                0 |      2880 |
++------------+----------------------------------+-----------+
+
+SLR2
++------------+----------------------------------+-----------+
+| Site Type  | quantum_fpga_kernel_complex128_1 | Available |
++------------+----------------------------------+-----------+
+| LUT        |                                0 |    439680 |
+| LUTAsLogic |                                0 |    439680 |
+| LUTAsMem   |                                0 |    205440 |
+| REG        |                                0 |    879360 |
+| CARRY8     |                                0 |     54960 |
+| F7MUX      |                                0 |    219840 |
+| F8MUX      |                                0 |    109920 |
+| F9MUX      |                                0 |     54960 |
+| BRAM       |                                0 |       672 |
+| URAM       |                                0 |       320 |
+| DSPs       |                                0 |      2880 |
++------------+----------------------------------+-----------+
+

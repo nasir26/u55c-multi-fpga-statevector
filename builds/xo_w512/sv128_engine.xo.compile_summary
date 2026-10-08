@@ -1,0 +1,245 @@
+<ENTRY>
+{
+ "thisFile": "<WS>/builds/xo_w512/sv128_engine.xo.compile_summary",
+ "connectId": "",
+ "serverToken": "",
+ "timestamp": "0"
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_CmdStep",
+ "dateTimestamp": "Wed Oct  7 11:57:30 2026",
+ "timestampMillis": "1791354450038",
+ "buildStep": {
+  "cmdId": "e69b4079-477f-4a2a-b9c4-0f00b6780ba5",
+  "name": "v++",
+  "logFile": "<WS>/builds/xo_w512/_x/sv128_engine/sv128_engine.steps.log",
+  "commandLine": "/tools/Xilinx/Vitis/2023.2/bin/unwrapped/lnx64.o/v++  --vivado.prop \"run.__KERNEL__.{STEPS.SYNTH_DESIGN.ARGS.MORE OPTIONS}={-directive sdx_optimization_effort_high}\" --advanced.misc \"report=type report_timing_summary name impl_report_timing_summary_route_design_summary steps {route_design} runs {impl_1} options {-max_paths 10}\" --advanced.misc \"report=type report_timing_summary name impl_report_timing_summary_post_route_phys_opt_design_summary steps {post_route_phys_opt_design} runs {impl_1} options {-max_paths 10}\" -c -t hw --platform xilinx_u55c_gen3x16_xdma_3_202210_1 -k sv128_engine -D SV_WIDE --hls.clock 300000000:sv128_engine --temp_dir <WS>/builds/xo_w512/_x --report_dir <WS>/builds/xo_w512/reports --log_dir <WS>/builds/xo_w512/logs -o <WS>/builds/xo_w512/sv128_engine.xo <WS>/qsim_multifpga/sv128/kernels/sv128_engine.cpp ",
+  "args": [
+   "-c",
+   "-t",
+   "hw",
+   "--platform",
+   "xilinx_u55c_gen3x16_xdma_3_202210_1",
+   "-k",
+   "sv128_engine",
+   "-D",
+   "SV_WIDE",
+   "--hls.clock",
+   "300000000:sv128_engine",
+   "--temp_dir",
+   "<WS>/builds/xo_w512/_x",
+   "--report_dir",
+   "<WS>/builds/xo_w512/reports",
+   "--log_dir",
+   "<WS>/builds/xo_w512/logs",
+   "-o",
+   "<WS>/builds/xo_w512/sv128_engine.xo",
+   "<WS>/qsim_multifpga/sv128/kernels/sv128_engine.cpp"
+  ],
+  "iniFiles": [],
+  "cwd": "<WS>/builds/xo_w512"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Wed Oct  7 11:57:30 2026",
+ "timestampMillis": "1791354450038",
+ "status": {
+  "cmdId": "e69b4079-477f-4a2a-b9c4-0f00b6780ba5",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_FlowMetaData",
+ "dateTimestamp": "Wed Oct  7 11:57:33 2026",
+ "timestampMillis": "1791354453640",
+ "buildSummary": {
+  "hardwarePlatform": "xilinx_u55c_gen3x16_xdma_3_202210_1.xpfm",
+  "hardwareDsa": "",
+  "platformDirectory": "/opt/xilinx/platforms/xilinx_u55c_gen3x16_xdma_3_202210_1",
+  "runtime": "OpenCL",
+  "systemConfig": "Linux",
+  "flow": "BF_COMPILE",
+  "target": "TT_HW",
+  "kernels": [
+   {
+    "base": {
+     "type": "KERNEL",
+     "name": "sv128_engine",
+     "file": "<WS>/builds/xo_w512/sv128_engine.xo",
+     "reports": [],
+     "uuid": ""
+    },
+    "sources": [
+     "<WS>/qsim_multifpga/sv128/kernels/sv128_engine.cpp"
+    ],
+    "psSources": [],
+    "cuNames": [],
+    "type": "HLS",
+    "frequency": 0,
+    "freqUnits": ""
+   }
+  ],
+  "toolVersion": "Vitis V++ Compiler Release 2023.2. SW Build 4026344 on 2023-10-11-15:42:10"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Wed Oct  7 11:57:33 2026",
+ "timestampMillis": "1791354453643",
+ "buildStep": {
+  "cmdId": "01ed2856-de00-4d13-a04c-4b5a62ae5d88",
+  "name": "vitis_hls",
+  "logFile": "<WS>/builds/xo_w512/_x/sv128_engine/sv128_engine/vitis_hls.log",
+  "commandLine": "vitis_hls -f <WS>/builds/xo_w512/_x/sv128_engine/sv128_engine/sv128_engine.tcl -messageDb vitis_hls.pb",
+  "args": [
+   "vitis_hls",
+   "-f",
+   "<WS>/builds/xo_w512/_x/sv128_engine/sv128_engine/sv128_engine.tcl",
+   "-messageDb",
+   "vitis_hls.pb"
+  ],
+  "iniFiles": [],
+  "cwd": "<WS>/builds/xo_w512"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Wed Oct  7 11:57:33 2026",
+ "timestampMillis": "1791354453643",
+ "status": {
+  "cmdId": "01ed2856-de00-4d13-a04c-4b5a62ae5d88",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Wed Oct  7 11:58:20 2026",
+ "timestampMillis": "1791354500854",
+ "status": {
+  "cmdId": "01ed2856-de00-4d13-a04c-4b5a62ae5d88",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Wed Oct  7 11:58:20 2026",
+ "timestampMillis": "1791354500896",
+ "report": {
+  "path": "<WS>/builds/xo_w512/_x/sv128_engine/sv128_engine/sv128_engine/solution/.autopilot/db/sv128_engine.design.xml",
+  "name": "sv128_engine",
+  "fileType": "XML",
+  "reportType": "KERNEL_HLS_REPORT",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Wed Oct  7 11:58:20 2026",
+ "timestampMillis": "1791354500897",
+ "report": {
+  "path": "<WS>/builds/xo_w512/_x/sv128_engine/sv128_engine/sv128_engine/solution/.autopilot/db/.message_syn.xml",
+  "name": "sv128_engine",
+  "fileType": "XML",
+  "reportType": "KERNEL_HLS_DRC_SYNTHESIS",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Wed Oct  7 11:58:20 2026",
+ "timestampMillis": "1791354500898",
+ "report": {
+  "path": "<WS>/builds/xo_w512/reports/sv128_engine/hls_reports/sv128_engine_csynth.rpt",
+  "name": "sv128_engine",
+  "fileType": "TEXT",
+  "reportType": "KERNEL_HLS_CSYNTH",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Wed Oct  7 11:58:20 2026",
+ "timestampMillis": "1791354500898",
+ "report": {
+  "path": "<WS>/builds/xo_w512/_x/sv128_engine/sv128_engine/sv128_engine/solution/syn/report/sv128_engine_csynth.xml",
+  "name": "sv128_engine",
+  "fileType": "XML",
+  "reportType": "KERNEL_HLS_CSYNTH",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Wed Oct  7 11:58:20 2026",
+ "timestampMillis": "1791354500915",
+ "report": {
+  "path": "<WS>/builds/xo_w512/reports/sv128_engine/system_estimate_sv128_engine.xtxt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_SYSTEM_ESTIMATE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Wed Oct  7 11:58:21 2026",
+ "timestampMillis": "1791354501210",
+ "status": {
+  "cmdId": "e69b4079-477f-4a2a-b9c4-0f00b6780ba5",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Wed Oct  7 11:58:21 2026",
+ "timestampMillis": "1791354501301",
+ "report": {
+  "path": "<WS>/builds/xo_w512/reports/sv128_engine/v++_compile_sv128_engine_guidance.html",
+  "name": "",
+  "fileType": "HTML",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Wed Oct  7 11:58:21 2026",
+ "timestampMillis": "1791354501301",
+ "report": {
+  "path": "<WS>/builds/xo_w512/_x/v++_compile_sv128_engine_guidance.pb3",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE",
+  "cmdId": ""
+ }
+}
+</ENTRY>

@@ -1,0 +1,361 @@
+===============================================================================
+Version:    v++ v2023.2 (64-bit)
+Build:      SW Build 4026344 on 2023-10-11-15:42:10
+Copyright:  Copyright 1986-2023 Xilinx, Inc. All Rights Reserved.
+Created:    Wed Oct  7 20:04:27 2026
+===============================================================================
+
+-------------------------------------------------------------------------------
+Design Name:             sv
+Target Device:           xilinx:u55c:gen3x16_xdma_3:202210.1
+Target Clock:            300.000000MHz
+Total number of kernels: 2
+-------------------------------------------------------------------------------
+
+Kernel Summary
+Kernel Name   Type  Target              OpenCL Library  Compute Units
+------------  ----  ------------------  --------------  -------------
+sv_swap       c     fpga0:OCL_REGION_0  sv              4
+sv128_engine  c     fpga0:OCL_REGION_0  sv              8
+
+
+-------------------------------------------------------------------------------
+OpenCL Binary:     sv
+Kernels mapped to: clc_region
+
+Timing Information (MHz)
+Compute Unit    Kernel Name   Module Name                             Target Frequency  Estimated Frequency
+--------------  ------------  --------------------------------------  ----------------  -------------------
+sv128_engine_1  sv128_engine  sv128_engine_Pipeline_VITIS_LOOP_308_1  300.300293        411.015198
+sv128_engine_1  sv128_engine  run_pass_Block_entry4_proc              300.300293        inf
+sv128_engine_1  sv128_engine  reader_Pipeline_SUBS_WORDS              300.300293        411.015198
+sv128_engine_1  sv128_engine  reader                                  300.300293        411.015198
+sv128_engine_1  sv128_engine  compute_Pipeline_PAIRS                  300.300293        383.582642
+sv128_engine_1  sv128_engine  compute                                 300.300293        383.582642
+sv128_engine_1  sv128_engine  run_pass_Block_entry47_proc             300.300293        inf
+sv128_engine_1  sv128_engine  writer_Pipeline_SUBS_WORDS              300.300293        411.015198
+sv128_engine_1  sv128_engine  writer                                  300.300293        411.015198
+sv128_engine_1  sv128_engine  run_pass                                300.300293        319.182892
+sv128_engine_1  sv128_engine  sv128_engine                            300.300293        319.182892
+sv128_engine_2  sv128_engine  sv128_engine_Pipeline_VITIS_LOOP_308_1  300.300293        411.015198
+sv128_engine_2  sv128_engine  run_pass_Block_entry4_proc              300.300293        inf
+sv128_engine_2  sv128_engine  reader_Pipeline_SUBS_WORDS              300.300293        411.015198
+sv128_engine_2  sv128_engine  reader                                  300.300293        411.015198
+sv128_engine_2  sv128_engine  compute_Pipeline_PAIRS                  300.300293        383.582642
+sv128_engine_2  sv128_engine  compute                                 300.300293        383.582642
+sv128_engine_2  sv128_engine  run_pass_Block_entry47_proc             300.300293        inf
+sv128_engine_2  sv128_engine  writer_Pipeline_SUBS_WORDS              300.300293        411.015198
+sv128_engine_2  sv128_engine  writer                                  300.300293        411.015198
+sv128_engine_2  sv128_engine  run_pass                                300.300293        319.182892
+sv128_engine_2  sv128_engine  sv128_engine                            300.300293        319.182892
+sv128_engine_3  sv128_engine  sv128_engine_Pipeline_VITIS_LOOP_308_1  300.300293        411.015198
+sv128_engine_3  sv128_engine  run_pass_Block_entry4_proc              300.300293        inf
+sv128_engine_3  sv128_engine  reader_Pipeline_SUBS_WORDS              300.300293        411.015198
+sv128_engine_3  sv128_engine  reader                                  300.300293        411.015198
+sv128_engine_3  sv128_engine  compute_Pipeline_PAIRS                  300.300293        383.582642
+sv128_engine_3  sv128_engine  compute                                 300.300293        383.582642
+sv128_engine_3  sv128_engine  run_pass_Block_entry47_proc             300.300293        inf
+sv128_engine_3  sv128_engine  writer_Pipeline_SUBS_WORDS              300.300293        411.015198
+sv128_engine_3  sv128_engine  writer                                  300.300293        411.015198
+sv128_engine_3  sv128_engine  run_pass                                300.300293        319.182892
+sv128_engine_3  sv128_engine  sv128_engine                            300.300293        319.182892
+sv128_engine_4  sv128_engine  sv128_engine_Pipeline_VITIS_LOOP_308_1  300.300293        411.015198
+sv128_engine_4  sv128_engine  run_pass_Block_entry4_proc              300.300293        inf
+sv128_engine_4  sv128_engine  reader_Pipeline_SUBS_WORDS              300.300293        411.015198
+sv128_engine_4  sv128_engine  reader                                  300.300293        411.015198
+sv128_engine_4  sv128_engine  compute_Pipeline_PAIRS                  300.300293        383.582642
+sv128_engine_4  sv128_engine  compute                                 300.300293        383.582642
+sv128_engine_4  sv128_engine  run_pass_Block_entry47_proc             300.300293        inf
+sv128_engine_4  sv128_engine  writer_Pipeline_SUBS_WORDS              300.300293        411.015198
+sv128_engine_4  sv128_engine  writer                                  300.300293        411.015198
+sv128_engine_4  sv128_engine  run_pass                                300.300293        319.182892
+sv128_engine_4  sv128_engine  sv128_engine                            300.300293        319.182892
+sv128_engine_5  sv128_engine  sv128_engine_Pipeline_VITIS_LOOP_308_1  300.300293        411.015198
+sv128_engine_5  sv128_engine  run_pass_Block_entry4_proc              300.300293        inf
+sv128_engine_5  sv128_engine  reader_Pipeline_SUBS_WORDS              300.300293        411.015198
+sv128_engine_5  sv128_engine  reader                                  300.300293        411.015198
+sv128_engine_5  sv128_engine  compute_Pipeline_PAIRS                  300.300293        383.582642
+sv128_engine_5  sv128_engine  compute                                 300.300293        383.582642
+sv128_engine_5  sv128_engine  run_pass_Block_entry47_proc             300.300293        inf
+sv128_engine_5  sv128_engine  writer_Pipeline_SUBS_WORDS              300.300293        411.015198
+sv128_engine_5  sv128_engine  writer                                  300.300293        411.015198
+sv128_engine_5  sv128_engine  run_pass                                300.300293        319.182892
+sv128_engine_5  sv128_engine  sv128_engine                            300.300293        319.182892
+sv128_engine_6  sv128_engine  sv128_engine_Pipeline_VITIS_LOOP_308_1  300.300293        411.015198
+sv128_engine_6  sv128_engine  run_pass_Block_entry4_proc              300.300293        inf
+sv128_engine_6  sv128_engine  reader_Pipeline_SUBS_WORDS              300.300293        411.015198
+sv128_engine_6  sv128_engine  reader                                  300.300293        411.015198
+sv128_engine_6  sv128_engine  compute_Pipeline_PAIRS                  300.300293        383.582642
+sv128_engine_6  sv128_engine  compute                                 300.300293        383.582642
+sv128_engine_6  sv128_engine  run_pass_Block_entry47_proc             300.300293        inf
+sv128_engine_6  sv128_engine  writer_Pipeline_SUBS_WORDS              300.300293        411.015198
+sv128_engine_6  sv128_engine  writer                                  300.300293        411.015198
+sv128_engine_6  sv128_engine  run_pass                                300.300293        319.182892
+sv128_engine_6  sv128_engine  sv128_engine                            300.300293        319.182892
+sv128_engine_7  sv128_engine  sv128_engine_Pipeline_VITIS_LOOP_308_1  300.300293        411.015198
+sv128_engine_7  sv128_engine  run_pass_Block_entry4_proc              300.300293        inf
+sv128_engine_7  sv128_engine  reader_Pipeline_SUBS_WORDS              300.300293        411.015198
+sv128_engine_7  sv128_engine  reader                                  300.300293        411.015198
+sv128_engine_7  sv128_engine  compute_Pipeline_PAIRS                  300.300293        383.582642
+sv128_engine_7  sv128_engine  compute                                 300.300293        383.582642
+sv128_engine_7  sv128_engine  run_pass_Block_entry47_proc             300.300293        inf
+sv128_engine_7  sv128_engine  writer_Pipeline_SUBS_WORDS              300.300293        411.015198
+sv128_engine_7  sv128_engine  writer                                  300.300293        411.015198
+sv128_engine_7  sv128_engine  run_pass                                300.300293        319.182892
+sv128_engine_7  sv128_engine  sv128_engine                            300.300293        319.182892
+sv128_engine_8  sv128_engine  sv128_engine_Pipeline_VITIS_LOOP_308_1  300.300293        411.015198
+sv128_engine_8  sv128_engine  run_pass_Block_entry4_proc              300.300293        inf
+sv128_engine_8  sv128_engine  reader_Pipeline_SUBS_WORDS              300.300293        411.015198
+sv128_engine_8  sv128_engine  reader                                  300.300293        411.015198
+sv128_engine_8  sv128_engine  compute_Pipeline_PAIRS                  300.300293        383.582642
+sv128_engine_8  sv128_engine  compute                                 300.300293        383.582642
+sv128_engine_8  sv128_engine  run_pass_Block_entry47_proc             300.300293        inf
+sv128_engine_8  sv128_engine  writer_Pipeline_SUBS_WORDS              300.300293        411.015198
+sv128_engine_8  sv128_engine  writer                                  300.300293        411.015198
+sv128_engine_8  sv128_engine  run_pass                                300.300293        319.182892
+sv128_engine_8  sv128_engine  sv128_engine                            300.300293        319.182892
+sv_swap_1       sv_swap       sv_swap_Pipeline_RA                     300.300293        411.015198
+sv_swap_1       sv_swap       sv_swap_Pipeline_RB                     300.300293        411.015198
+sv_swap_1       sv_swap       sv_swap_Pipeline_WA                     300.300293        379.506653
+sv_swap_1       sv_swap       sv_swap_Pipeline_WB                     300.300293        379.506653
+sv_swap_1       sv_swap       sv_swap                                 300.300293        379.506653
+sv_swap_2       sv_swap       sv_swap_Pipeline_RA                     300.300293        411.015198
+sv_swap_2       sv_swap       sv_swap_Pipeline_RB                     300.300293        411.015198
+sv_swap_2       sv_swap       sv_swap_Pipeline_WA                     300.300293        379.506653
+sv_swap_2       sv_swap       sv_swap_Pipeline_WB                     300.300293        379.506653
+sv_swap_2       sv_swap       sv_swap                                 300.300293        379.506653
+sv_swap_3       sv_swap       sv_swap_Pipeline_RA                     300.300293        411.015198
+sv_swap_3       sv_swap       sv_swap_Pipeline_RB                     300.300293        411.015198
+sv_swap_3       sv_swap       sv_swap_Pipeline_WA                     300.300293        379.506653
+sv_swap_3       sv_swap       sv_swap_Pipeline_WB                     300.300293        379.506653
+sv_swap_3       sv_swap       sv_swap                                 300.300293        379.506653
+sv_swap_4       sv_swap       sv_swap_Pipeline_RA                     300.300293        411.015198
+sv_swap_4       sv_swap       sv_swap_Pipeline_RB                     300.300293        411.015198
+sv_swap_4       sv_swap       sv_swap_Pipeline_WA                     300.300293        379.506653
+sv_swap_4       sv_swap       sv_swap_Pipeline_WB                     300.300293        379.506653
+sv_swap_4       sv_swap       sv_swap                                 300.300293        379.506653
+
+Latency Information
+Compute Unit    Kernel Name   Module Name                             Start Interval  Best (cycles)  Avg (cycles)  Worst (cycles)  Best (absolute)  Avg (absolute)  Worst (absolute)
+--------------  ------------  --------------------------------------  --------------  -------------  ------------  --------------  ---------------  --------------  ----------------
+sv128_engine_1  sv128_engine  sv128_engine_Pipeline_VITIS_LOOP_308_1  108             108            108           108             0.360 us         0.360 us        0.360 us
+sv128_engine_1  sv128_engine  run_pass_Block_entry4_proc              0               0              0             0               0 ns             0 ns            0 ns
+sv128_engine_1  sv128_engine  reader_Pipeline_SUBS_WORDS              undef           undef          undef         undef           undef            undef           undef
+sv128_engine_1  sv128_engine  reader                                  undef           undef          undef         undef           undef            undef           undef
+sv128_engine_1  sv128_engine  compute_Pipeline_PAIRS                  549             549            549           549             1.830 us         1.830 us        1.830 us
+sv128_engine_1  sv128_engine  compute                                 undef           undef          undef         undef           undef            undef           undef
+sv128_engine_1  sv128_engine  run_pass_Block_entry47_proc             0               0              0             0               0 ns             0 ns            0 ns
+sv128_engine_1  sv128_engine  writer_Pipeline_SUBS_WORDS              undef           undef          undef         undef           undef            undef           undef
+sv128_engine_1  sv128_engine  writer                                  undef           undef          undef         undef           undef            undef           undef
+sv128_engine_1  sv128_engine  run_pass                                undef           undef          undef         undef           undef            undef           undef
+sv128_engine_1  sv128_engine  sv128_engine                            undef           undef          undef         undef           undef            undef           undef
+sv128_engine_2  sv128_engine  sv128_engine_Pipeline_VITIS_LOOP_308_1  108             108            108           108             0.360 us         0.360 us        0.360 us
+sv128_engine_2  sv128_engine  run_pass_Block_entry4_proc              0               0              0             0               0 ns             0 ns            0 ns
+sv128_engine_2  sv128_engine  reader_Pipeline_SUBS_WORDS              undef           undef          undef         undef           undef            undef           undef
+sv128_engine_2  sv128_engine  reader                                  undef           undef          undef         undef           undef            undef           undef
+sv128_engine_2  sv128_engine  compute_Pipeline_PAIRS                  549             549            549           549             1.830 us         1.830 us        1.830 us
+sv128_engine_2  sv128_engine  compute                                 undef           undef          undef         undef           undef            undef           undef
+sv128_engine_2  sv128_engine  run_pass_Block_entry47_proc             0               0              0             0               0 ns             0 ns            0 ns
+sv128_engine_2  sv128_engine  writer_Pipeline_SUBS_WORDS              undef           undef          undef         undef           undef            undef           undef
+sv128_engine_2  sv128_engine  writer                                  undef           undef          undef         undef           undef            undef           undef
+sv128_engine_2  sv128_engine  run_pass                                undef           undef          undef         undef           undef            undef           undef
+sv128_engine_2  sv128_engine  sv128_engine                            undef           undef          undef         undef           undef            undef           undef
+sv128_engine_3  sv128_engine  sv128_engine_Pipeline_VITIS_LOOP_308_1  108             108            108           108             0.360 us         0.360 us        0.360 us
+sv128_engine_3  sv128_engine  run_pass_Block_entry4_proc              0               0              0             0               0 ns             0 ns            0 ns
+sv128_engine_3  sv128_engine  reader_Pipeline_SUBS_WORDS              undef           undef          undef         undef           undef            undef           undef
+sv128_engine_3  sv128_engine  reader                                  undef           undef          undef         undef           undef            undef           undef
+sv128_engine_3  sv128_engine  compute_Pipeline_PAIRS                  549             549            549           549             1.830 us         1.830 us        1.830 us
+sv128_engine_3  sv128_engine  compute                                 undef           undef          undef         undef           undef            undef           undef
+sv128_engine_3  sv128_engine  run_pass_Block_entry47_proc             0               0              0             0               0 ns             0 ns            0 ns
+sv128_engine_3  sv128_engine  writer_Pipeline_SUBS_WORDS              undef           undef          undef         undef           undef            undef           undef
+sv128_engine_3  sv128_engine  writer                                  undef           undef          undef         undef           undef            undef           undef
+sv128_engine_3  sv128_engine  run_pass                                undef           undef          undef         undef           undef            undef           undef
+sv128_engine_3  sv128_engine  sv128_engine                            undef           undef          undef         undef           undef            undef           undef
+sv128_engine_4  sv128_engine  sv128_engine_Pipeline_VITIS_LOOP_308_1  108             108            108           108             0.360 us         0.360 us        0.360 us
+sv128_engine_4  sv128_engine  run_pass_Block_entry4_proc              0               0              0             0               0 ns             0 ns            0 ns
+sv128_engine_4  sv128_engine  reader_Pipeline_SUBS_WORDS              undef           undef          undef         undef           undef            undef           undef
+sv128_engine_4  sv128_engine  reader                                  undef           undef          undef         undef           undef            undef           undef
+sv128_engine_4  sv128_engine  compute_Pipeline_PAIRS                  549             549            549           549             1.830 us         1.830 us        1.830 us
+sv128_engine_4  sv128_engine  compute                                 undef           undef          undef         undef           undef            undef           undef
+sv128_engine_4  sv128_engine  run_pass_Block_entry47_proc             0               0              0             0               0 ns             0 ns            0 ns
+sv128_engine_4  sv128_engine  writer_Pipeline_SUBS_WORDS              undef           undef          undef         undef           undef            undef           undef
+sv128_engine_4  sv128_engine  writer                                  undef           undef          undef         undef           undef            undef           undef
+sv128_engine_4  sv128_engine  run_pass                                undef           undef          undef         undef           undef            undef           undef
+sv128_engine_4  sv128_engine  sv128_engine                            undef           undef          undef         undef           undef            undef           undef
+sv128_engine_5  sv128_engine  sv128_engine_Pipeline_VITIS_LOOP_308_1  108             108            108           108             0.360 us         0.360 us        0.360 us
+sv128_engine_5  sv128_engine  run_pass_Block_entry4_proc              0               0              0             0               0 ns             0 ns            0 ns
+sv128_engine_5  sv128_engine  reader_Pipeline_SUBS_WORDS              undef           undef          undef         undef           undef            undef           undef
+sv128_engine_5  sv128_engine  reader                                  undef           undef          undef         undef           undef            undef           undef
+sv128_engine_5  sv128_engine  compute_Pipeline_PAIRS                  549             549            549           549             1.830 us         1.830 us        1.830 us
+sv128_engine_5  sv128_engine  compute                                 undef           undef          undef         undef           undef            undef           undef
+sv128_engine_5  sv128_engine  run_pass_Block_entry47_proc             0               0              0             0               0 ns             0 ns            0 ns
+sv128_engine_5  sv128_engine  writer_Pipeline_SUBS_WORDS              undef           undef          undef         undef           undef            undef           undef
+sv128_engine_5  sv128_engine  writer                                  undef           undef          undef         undef           undef            undef           undef
+sv128_engine_5  sv128_engine  run_pass                                undef           undef          undef         undef           undef            undef           undef
+sv128_engine_5  sv128_engine  sv128_engine                            undef           undef          undef         undef           undef            undef           undef
+sv128_engine_6  sv128_engine  sv128_engine_Pipeline_VITIS_LOOP_308_1  108             108            108           108             0.360 us         0.360 us        0.360 us
+sv128_engine_6  sv128_engine  run_pass_Block_entry4_proc              0               0              0             0               0 ns             0 ns            0 ns
+sv128_engine_6  sv128_engine  reader_Pipeline_SUBS_WORDS              undef           undef          undef         undef           undef            undef           undef
+sv128_engine_6  sv128_engine  reader                                  undef           undef          undef         undef           undef            undef           undef
+sv128_engine_6  sv128_engine  compute_Pipeline_PAIRS                  549             549            549           549             1.830 us         1.830 us        1.830 us
+sv128_engine_6  sv128_engine  compute                                 undef           undef          undef         undef           undef            undef           undef
+sv128_engine_6  sv128_engine  run_pass_Block_entry47_proc             0               0              0             0               0 ns             0 ns            0 ns
+sv128_engine_6  sv128_engine  writer_Pipeline_SUBS_WORDS              undef           undef          undef         undef           undef            undef           undef
+sv128_engine_6  sv128_engine  writer                                  undef           undef          undef         undef           undef            undef           undef
+sv128_engine_6  sv128_engine  run_pass                                undef           undef          undef         undef           undef            undef           undef
+sv128_engine_6  sv128_engine  sv128_engine                            undef           undef          undef         undef           undef            undef           undef
+sv128_engine_7  sv128_engine  sv128_engine_Pipeline_VITIS_LOOP_308_1  108             108            108           108             0.360 us         0.360 us        0.360 us
+sv128_engine_7  sv128_engine  run_pass_Block_entry4_proc              0               0              0             0               0 ns             0 ns            0 ns
+sv128_engine_7  sv128_engine  reader_Pipeline_SUBS_WORDS              undef           undef          undef         undef           undef            undef           undef
+sv128_engine_7  sv128_engine  reader                                  undef           undef          undef         undef           undef            undef           undef
+sv128_engine_7  sv128_engine  compute_Pipeline_PAIRS                  549             549            549           549             1.830 us         1.830 us        1.830 us
+sv128_engine_7  sv128_engine  compute                                 undef           undef          undef         undef           undef            undef           undef
+sv128_engine_7  sv128_engine  run_pass_Block_entry47_proc             0               0              0             0               0 ns             0 ns            0 ns
+sv128_engine_7  sv128_engine  writer_Pipeline_SUBS_WORDS              undef           undef          undef         undef           undef            undef           undef
+sv128_engine_7  sv128_engine  writer                                  undef           undef          undef         undef           undef            undef           undef
+sv128_engine_7  sv128_engine  run_pass                                undef           undef          undef         undef           undef            undef           undef
+sv128_engine_7  sv128_engine  sv128_engine                            undef           undef          undef         undef           undef            undef           undef
+sv128_engine_8  sv128_engine  sv128_engine_Pipeline_VITIS_LOOP_308_1  108             108            108           108             0.360 us         0.360 us        0.360 us
+sv128_engine_8  sv128_engine  run_pass_Block_entry4_proc              0               0              0             0               0 ns             0 ns            0 ns
+sv128_engine_8  sv128_engine  reader_Pipeline_SUBS_WORDS              undef           undef          undef         undef           undef            undef           undef
+sv128_engine_8  sv128_engine  reader                                  undef           undef          undef         undef           undef            undef           undef
+sv128_engine_8  sv128_engine  compute_Pipeline_PAIRS                  549             549            549           549             1.830 us         1.830 us        1.830 us
+sv128_engine_8  sv128_engine  compute                                 undef           undef          undef         undef           undef            undef           undef
+sv128_engine_8  sv128_engine  run_pass_Block_entry47_proc             0               0              0             0               0 ns             0 ns            0 ns
+sv128_engine_8  sv128_engine  writer_Pipeline_SUBS_WORDS              undef           undef          undef         undef           undef            undef           undef
+sv128_engine_8  sv128_engine  writer                                  undef           undef          undef         undef           undef            undef           undef
+sv128_engine_8  sv128_engine  run_pass                                undef           undef          undef         undef           undef            undef           undef
+sv128_engine_8  sv128_engine  sv128_engine                            undef           undef          undef         undef           undef            undef           undef
+sv_swap_1       sv_swap       sv_swap_Pipeline_RA                     4 ~ ?           4              undef         undef           13.332 ns        undef           undef
+sv_swap_1       sv_swap       sv_swap_Pipeline_RB                     4 ~ 2050        4              undef         2050            13.332 ns        undef           6.833 us
+sv_swap_1       sv_swap       sv_swap_Pipeline_WA                     4 ~ 2050        4              undef         2050            13.332 ns        undef           6.833 us
+sv_swap_1       sv_swap       sv_swap_Pipeline_WB                     4 ~ 2050        4              undef         2050            13.332 ns        undef           6.833 us
+sv_swap_1       sv_swap       sv_swap                                 undef           undef          undef         undef           undef            undef           undef
+sv_swap_2       sv_swap       sv_swap_Pipeline_RA                     4 ~ ?           4              undef         undef           13.332 ns        undef           undef
+sv_swap_2       sv_swap       sv_swap_Pipeline_RB                     4 ~ 2050        4              undef         2050            13.332 ns        undef           6.833 us
+sv_swap_2       sv_swap       sv_swap_Pipeline_WA                     4 ~ 2050        4              undef         2050            13.332 ns        undef           6.833 us
+sv_swap_2       sv_swap       sv_swap_Pipeline_WB                     4 ~ 2050        4              undef         2050            13.332 ns        undef           6.833 us
+sv_swap_2       sv_swap       sv_swap                                 undef           undef          undef         undef           undef            undef           undef
+sv_swap_3       sv_swap       sv_swap_Pipeline_RA                     4 ~ ?           4              undef         undef           13.332 ns        undef           undef
+sv_swap_3       sv_swap       sv_swap_Pipeline_RB                     4 ~ 2050        4              undef         2050            13.332 ns        undef           6.833 us
+sv_swap_3       sv_swap       sv_swap_Pipeline_WA                     4 ~ 2050        4              undef         2050            13.332 ns        undef           6.833 us
+sv_swap_3       sv_swap       sv_swap_Pipeline_WB                     4 ~ 2050        4              undef         2050            13.332 ns        undef           6.833 us
+sv_swap_3       sv_swap       sv_swap                                 undef           undef          undef         undef           undef            undef           undef
+sv_swap_4       sv_swap       sv_swap_Pipeline_RA                     4 ~ ?           4              undef         undef           13.332 ns        undef           undef
+sv_swap_4       sv_swap       sv_swap_Pipeline_RB                     4 ~ 2050        4              undef         2050            13.332 ns        undef           6.833 us
+sv_swap_4       sv_swap       sv_swap_Pipeline_WA                     4 ~ 2050        4              undef         2050            13.332 ns        undef           6.833 us
+sv_swap_4       sv_swap       sv_swap_Pipeline_WB                     4 ~ 2050        4              undef         2050            13.332 ns        undef           6.833 us
+sv_swap_4       sv_swap       sv_swap                                 undef           undef          undef         undef           undef            undef           undef
+
+Area Information
+Compute Unit    Kernel Name   Module Name                             FF     LUT    DSP  BRAM  URAM
+--------------  ------------  --------------------------------------  -----  -----  ---  ----  ----
+sv128_engine_1  sv128_engine  sv128_engine_Pipeline_VITIS_LOOP_308_1  1924   5678   0    0     0
+sv128_engine_1  sv128_engine  run_pass_Block_entry4_proc              130    47     0    0     0
+sv128_engine_1  sv128_engine  reader_Pipeline_SUBS_WORDS              1421   1669   0    0     0
+sv128_engine_1  sv128_engine  reader                                  2397   11680  0    0     0
+sv128_engine_1  sv128_engine  compute_Pipeline_PAIRS                  35653  23279  0    0     0
+sv128_engine_1  sv128_engine  compute                                 37133  24424  0    16    0
+sv128_engine_1  sv128_engine  run_pass_Block_entry47_proc             130    47     0    0     0
+sv128_engine_1  sv128_engine  writer_Pipeline_SUBS_WORDS              1633   3129   0    0     0
+sv128_engine_1  sv128_engine  writer                                  2946   13149  0    0     0
+sv128_engine_1  sv128_engine  run_pass                                43186  49925  0    76    0
+sv128_engine_1  sv128_engine  sv128_engine                            59300  90209  0    106   0
+sv128_engine_2  sv128_engine  sv128_engine_Pipeline_VITIS_LOOP_308_1  1924   5678   0    0     0
+sv128_engine_2  sv128_engine  run_pass_Block_entry4_proc              130    47     0    0     0
+sv128_engine_2  sv128_engine  reader_Pipeline_SUBS_WORDS              1421   1669   0    0     0
+sv128_engine_2  sv128_engine  reader                                  2397   11680  0    0     0
+sv128_engine_2  sv128_engine  compute_Pipeline_PAIRS                  35653  23279  0    0     0
+sv128_engine_2  sv128_engine  compute                                 37133  24424  0    16    0
+sv128_engine_2  sv128_engine  run_pass_Block_entry47_proc             130    47     0    0     0
+sv128_engine_2  sv128_engine  writer_Pipeline_SUBS_WORDS              1633   3129   0    0     0
+sv128_engine_2  sv128_engine  writer                                  2946   13149  0    0     0
+sv128_engine_2  sv128_engine  run_pass                                43186  49925  0    76    0
+sv128_engine_2  sv128_engine  sv128_engine                            59300  90209  0    106   0
+sv128_engine_3  sv128_engine  sv128_engine_Pipeline_VITIS_LOOP_308_1  1924   5678   0    0     0
+sv128_engine_3  sv128_engine  run_pass_Block_entry4_proc              130    47     0    0     0
+sv128_engine_3  sv128_engine  reader_Pipeline_SUBS_WORDS              1421   1669   0    0     0
+sv128_engine_3  sv128_engine  reader                                  2397   11680  0    0     0
+sv128_engine_3  sv128_engine  compute_Pipeline_PAIRS                  35653  23279  0    0     0
+sv128_engine_3  sv128_engine  compute                                 37133  24424  0    16    0
+sv128_engine_3  sv128_engine  run_pass_Block_entry47_proc             130    47     0    0     0
+sv128_engine_3  sv128_engine  writer_Pipeline_SUBS_WORDS              1633   3129   0    0     0
+sv128_engine_3  sv128_engine  writer                                  2946   13149  0    0     0
+sv128_engine_3  sv128_engine  run_pass                                43186  49925  0    76    0
+sv128_engine_3  sv128_engine  sv128_engine                            59300  90209  0    106   0
+sv128_engine_4  sv128_engine  sv128_engine_Pipeline_VITIS_LOOP_308_1  1924   5678   0    0     0
+sv128_engine_4  sv128_engine  run_pass_Block_entry4_proc              130    47     0    0     0
+sv128_engine_4  sv128_engine  reader_Pipeline_SUBS_WORDS              1421   1669   0    0     0
+sv128_engine_4  sv128_engine  reader                                  2397   11680  0    0     0
+sv128_engine_4  sv128_engine  compute_Pipeline_PAIRS                  35653  23279  0    0     0
+sv128_engine_4  sv128_engine  compute                                 37133  24424  0    16    0
+sv128_engine_4  sv128_engine  run_pass_Block_entry47_proc             130    47     0    0     0
+sv128_engine_4  sv128_engine  writer_Pipeline_SUBS_WORDS              1633   3129   0    0     0
+sv128_engine_4  sv128_engine  writer                                  2946   13149  0    0     0
+sv128_engine_4  sv128_engine  run_pass                                43186  49925  0    76    0
+sv128_engine_4  sv128_engine  sv128_engine                            59300  90209  0    106   0
+sv128_engine_5  sv128_engine  sv128_engine_Pipeline_VITIS_LOOP_308_1  1924   5678   0    0     0
+sv128_engine_5  sv128_engine  run_pass_Block_entry4_proc              130    47     0    0     0
+sv128_engine_5  sv128_engine  reader_Pipeline_SUBS_WORDS              1421   1669   0    0     0
+sv128_engine_5  sv128_engine  reader                                  2397   11680  0    0     0
+sv128_engine_5  sv128_engine  compute_Pipeline_PAIRS                  35653  23279  0    0     0
+sv128_engine_5  sv128_engine  compute                                 37133  24424  0    16    0
+sv128_engine_5  sv128_engine  run_pass_Block_entry47_proc             130    47     0    0     0
+sv128_engine_5  sv128_engine  writer_Pipeline_SUBS_WORDS              1633   3129   0    0     0
+sv128_engine_5  sv128_engine  writer                                  2946   13149  0    0     0
+sv128_engine_5  sv128_engine  run_pass                                43186  49925  0    76    0
+sv128_engine_5  sv128_engine  sv128_engine                            59300  90209  0    106   0
+sv128_engine_6  sv128_engine  sv128_engine_Pipeline_VITIS_LOOP_308_1  1924   5678   0    0     0
+sv128_engine_6  sv128_engine  run_pass_Block_entry4_proc              130    47     0    0     0
+sv128_engine_6  sv128_engine  reader_Pipeline_SUBS_WORDS              1421   1669   0    0     0
+sv128_engine_6  sv128_engine  reader                                  2397   11680  0    0     0
+sv128_engine_6  sv128_engine  compute_Pipeline_PAIRS                  35653  23279  0    0     0
+sv128_engine_6  sv128_engine  compute                                 37133  24424  0    16    0
+sv128_engine_6  sv128_engine  run_pass_Block_entry47_proc             130    47     0    0     0
+sv128_engine_6  sv128_engine  writer_Pipeline_SUBS_WORDS              1633   3129   0    0     0
+sv128_engine_6  sv128_engine  writer                                  2946   13149  0    0     0
+sv128_engine_6  sv128_engine  run_pass                                43186  49925  0    76    0
+sv128_engine_6  sv128_engine  sv128_engine                            59300  90209  0    106   0
+sv128_engine_7  sv128_engine  sv128_engine_Pipeline_VITIS_LOOP_308_1  1924   5678   0    0     0
+sv128_engine_7  sv128_engine  run_pass_Block_entry4_proc              130    47     0    0     0
+sv128_engine_7  sv128_engine  reader_Pipeline_SUBS_WORDS              1421   1669   0    0     0
+sv128_engine_7  sv128_engine  reader                                  2397   11680  0    0     0
+sv128_engine_7  sv128_engine  compute_Pipeline_PAIRS                  35653  23279  0    0     0
+sv128_engine_7  sv128_engine  compute                                 37133  24424  0    16    0
+sv128_engine_7  sv128_engine  run_pass_Block_entry47_proc             130    47     0    0     0
+sv128_engine_7  sv128_engine  writer_Pipeline_SUBS_WORDS              1633   3129   0    0     0
+sv128_engine_7  sv128_engine  writer                                  2946   13149  0    0     0
+sv128_engine_7  sv128_engine  run_pass                                43186  49925  0    76    0
+sv128_engine_7  sv128_engine  sv128_engine                            59300  90209  0    106   0
+sv128_engine_8  sv128_engine  sv128_engine_Pipeline_VITIS_LOOP_308_1  1924   5678   0    0     0
+sv128_engine_8  sv128_engine  run_pass_Block_entry4_proc              130    47     0    0     0
+sv128_engine_8  sv128_engine  reader_Pipeline_SUBS_WORDS              1421   1669   0    0     0
+sv128_engine_8  sv128_engine  reader                                  2397   11680  0    0     0
+sv128_engine_8  sv128_engine  compute_Pipeline_PAIRS                  35653  23279  0    0     0
+sv128_engine_8  sv128_engine  compute                                 37133  24424  0    16    0
+sv128_engine_8  sv128_engine  run_pass_Block_entry47_proc             130    47     0    0     0
+sv128_engine_8  sv128_engine  writer_Pipeline_SUBS_WORDS              1633   3129   0    0     0
+sv128_engine_8  sv128_engine  writer                                  2946   13149  0    0     0
+sv128_engine_8  sv128_engine  run_pass                                43186  49925  0    76    0
+sv128_engine_8  sv128_engine  sv128_engine                            59300  90209  0    106   0
+sv_swap_1       sv_swap       sv_swap_Pipeline_RA                     550    105    0    0     0
+sv_swap_1       sv_swap       sv_swap_Pipeline_RB                     550    105    0    0     0
+sv_swap_1       sv_swap       sv_swap_Pipeline_WA                     528    105    0    0     0
+sv_swap_1       sv_swap       sv_swap_Pipeline_WB                     528    105    0    0     0
+sv_swap_1       sv_swap       sv_swap                                 10550  8582   0    60    16
+sv_swap_2       sv_swap       sv_swap_Pipeline_RA                     550    105    0    0     0
+sv_swap_2       sv_swap       sv_swap_Pipeline_RB                     550    105    0    0     0
+sv_swap_2       sv_swap       sv_swap_Pipeline_WA                     528    105    0    0     0
+sv_swap_2       sv_swap       sv_swap_Pipeline_WB                     528    105    0    0     0
+sv_swap_2       sv_swap       sv_swap                                 10550  8582   0    60    16
+sv_swap_3       sv_swap       sv_swap_Pipeline_RA                     550    105    0    0     0
+sv_swap_3       sv_swap       sv_swap_Pipeline_RB                     550    105    0    0     0
+sv_swap_3       sv_swap       sv_swap_Pipeline_WA                     528    105    0    0     0
+sv_swap_3       sv_swap       sv_swap_Pipeline_WB                     528    105    0    0     0
+sv_swap_3       sv_swap       sv_swap                                 10550  8582   0    60    16
+sv_swap_4       sv_swap       sv_swap_Pipeline_RA                     550    105    0    0     0
+sv_swap_4       sv_swap       sv_swap_Pipeline_RB                     550    105    0    0     0
+sv_swap_4       sv_swap       sv_swap_Pipeline_WA                     528    105    0    0     0
+sv_swap_4       sv_swap       sv_swap_Pipeline_WB                     528    105    0    0     0
+sv_swap_4       sv_swap       sv_swap                                 10550  8582   0    60    16
+-------------------------------------------------------------------------------

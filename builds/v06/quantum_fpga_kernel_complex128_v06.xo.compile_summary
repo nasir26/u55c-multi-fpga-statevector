@@ -1,0 +1,241 @@
+<ENTRY>
+{
+ "thisFile": "<WS>/builds/v06/quantum_fpga_kernel_complex128_v06.xo.compile_summary",
+ "connectId": "",
+ "serverToken": "",
+ "timestamp": "0"
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_CmdStep",
+ "dateTimestamp": "Wed Oct  7 15:34:17 2026",
+ "timestampMillis": "1791367457195",
+ "buildStep": {
+  "cmdId": "70b0aadd-6846-4c97-9014-479af6096017",
+  "name": "v++",
+  "logFile": "<WS>/builds/v06/_xc/quantum_fpga_kernel_complex128_v06/quantum_fpga_kernel_complex128_v06.steps.log",
+  "commandLine": "/tools/Xilinx/Vitis/2023.2/bin/unwrapped/lnx64.o/v++  --vivado.prop \"run.__KERNEL__.{STEPS.SYNTH_DESIGN.ARGS.MORE OPTIONS}={-directive sdx_optimization_effort_high}\" --advanced.misc \"report=type report_timing_summary name impl_report_timing_summary_route_design_summary steps {route_design} runs {impl_1} options {-max_paths 10}\" --advanced.misc \"report=type report_timing_summary name impl_report_timing_summary_post_route_phys_opt_design_summary steps {post_route_phys_opt_design} runs {impl_1} options {-max_paths 10}\" -c -t hw --platform xilinx_u55c_gen3x16_xdma_3_202210_1 -k quantum_fpga_kernel_complex128 --temp_dir <WS>/builds/v06/_xc --report_dir <WS>/builds/v06/reports --log_dir <WS>/builds/v06/logs -o quantum_fpga_kernel_complex128_v06.xo quantum_fpga_kernel_complex128_v06.cpp ",
+  "args": [
+   "-c",
+   "-t",
+   "hw",
+   "--platform",
+   "xilinx_u55c_gen3x16_xdma_3_202210_1",
+   "-k",
+   "quantum_fpga_kernel_complex128",
+   "--temp_dir",
+   "<WS>/builds/v06/_xc",
+   "--report_dir",
+   "<WS>/builds/v06/reports",
+   "--log_dir",
+   "<WS>/builds/v06/logs",
+   "-o",
+   "quantum_fpga_kernel_complex128_v06.xo",
+   "quantum_fpga_kernel_complex128_v06.cpp"
+  ],
+  "iniFiles": [],
+  "cwd": "<WS>/builds/v06"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Wed Oct  7 15:34:17 2026",
+ "timestampMillis": "1791367457195",
+ "status": {
+  "cmdId": "70b0aadd-6846-4c97-9014-479af6096017",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_FlowMetaData",
+ "dateTimestamp": "Wed Oct  7 15:34:20 2026",
+ "timestampMillis": "1791367460833",
+ "buildSummary": {
+  "hardwarePlatform": "xilinx_u55c_gen3x16_xdma_3_202210_1.xpfm",
+  "hardwareDsa": "",
+  "platformDirectory": "/opt/xilinx/platforms/xilinx_u55c_gen3x16_xdma_3_202210_1",
+  "runtime": "OpenCL",
+  "systemConfig": "Linux",
+  "flow": "BF_COMPILE",
+  "target": "TT_HW",
+  "kernels": [
+   {
+    "base": {
+     "type": "KERNEL",
+     "name": "quantum_fpga_kernel_complex128",
+     "file": "<WS>/builds/v06/quantum_fpga_kernel_complex128_v06.xo",
+     "reports": [],
+     "uuid": ""
+    },
+    "sources": [
+     "<WS>/builds/v06/quantum_fpga_kernel_complex128_v06.cpp"
+    ],
+    "psSources": [],
+    "cuNames": [],
+    "type": "HLS",
+    "frequency": 0,
+    "freqUnits": ""
+   }
+  ],
+  "toolVersion": "Vitis V++ Compiler Release 2023.2. SW Build 4026344 on 2023-10-11-15:42:10"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Wed Oct  7 15:34:20 2026",
+ "timestampMillis": "1791367460836",
+ "buildStep": {
+  "cmdId": "f76a9ea1-7e47-4e3f-89e0-b8b54fd3cb40",
+  "name": "vitis_hls",
+  "logFile": "<WS>/builds/v06/_xc/quantum_fpga_kernel_complex128_v06/quantum_fpga_kernel_complex128/vitis_hls.log",
+  "commandLine": "vitis_hls -f <WS>/builds/v06/_xc/quantum_fpga_kernel_complex128_v06/quantum_fpga_kernel_complex128/quantum_fpga_kernel_complex128.tcl -messageDb vitis_hls.pb",
+  "args": [
+   "vitis_hls",
+   "-f",
+   "<WS>/builds/v06/_xc/quantum_fpga_kernel_complex128_v06/quantum_fpga_kernel_complex128/quantum_fpga_kernel_complex128.tcl",
+   "-messageDb",
+   "vitis_hls.pb"
+  ],
+  "iniFiles": [],
+  "cwd": "<WS>/builds/v06"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Wed Oct  7 15:34:20 2026",
+ "timestampMillis": "1791367460837",
+ "status": {
+  "cmdId": "f76a9ea1-7e47-4e3f-89e0-b8b54fd3cb40",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Wed Oct  7 15:35:53 2026",
+ "timestampMillis": "1791367553139",
+ "status": {
+  "cmdId": "f76a9ea1-7e47-4e3f-89e0-b8b54fd3cb40",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Wed Oct  7 15:35:53 2026",
+ "timestampMillis": "1791367553187",
+ "report": {
+  "path": "<WS>/builds/v06/_xc/quantum_fpga_kernel_complex128_v06/quantum_fpga_kernel_complex128/quantum_fpga_kernel_complex128/solution/.autopilot/db/quantum_fpga_kernel_complex128.design.xml",
+  "name": "quantum_fpga_kernel_complex128",
+  "fileType": "XML",
+  "reportType": "KERNEL_HLS_REPORT",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Wed Oct  7 15:35:53 2026",
+ "timestampMillis": "1791367553188",
+ "report": {
+  "path": "<WS>/builds/v06/_xc/quantum_fpga_kernel_complex128_v06/quantum_fpga_kernel_complex128/quantum_fpga_kernel_complex128/solution/.autopilot/db/.message_syn.xml",
+  "name": "quantum_fpga_kernel_complex128",
+  "fileType": "XML",
+  "reportType": "KERNEL_HLS_DRC_SYNTHESIS",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Wed Oct  7 15:35:53 2026",
+ "timestampMillis": "1791367553189",
+ "report": {
+  "path": "<WS>/builds/v06/reports/quantum_fpga_kernel_complex128_v06/hls_reports/quantum_fpga_kernel_complex128_csynth.rpt",
+  "name": "quantum_fpga_kernel_complex128",
+  "fileType": "TEXT",
+  "reportType": "KERNEL_HLS_CSYNTH",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Wed Oct  7 15:35:53 2026",
+ "timestampMillis": "1791367553189",
+ "report": {
+  "path": "<WS>/builds/v06/_xc/quantum_fpga_kernel_complex128_v06/quantum_fpga_kernel_complex128/quantum_fpga_kernel_complex128/solution/syn/report/quantum_fpga_kernel_complex128_csynth.xml",
+  "name": "quantum_fpga_kernel_complex128",
+  "fileType": "XML",
+  "reportType": "KERNEL_HLS_CSYNTH",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Wed Oct  7 15:35:53 2026",
+ "timestampMillis": "1791367553213",
+ "report": {
+  "path": "<WS>/builds/v06/reports/quantum_fpga_kernel_complex128_v06/system_estimate_quantum_fpga_kernel_complex128_v06.xtxt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_SYSTEM_ESTIMATE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Wed Oct  7 15:35:53 2026",
+ "timestampMillis": "1791367553616",
+ "status": {
+  "cmdId": "70b0aadd-6846-4c97-9014-479af6096017",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Wed Oct  7 15:35:53 2026",
+ "timestampMillis": "1791367553714",
+ "report": {
+  "path": "<WS>/builds/v06/reports/quantum_fpga_kernel_complex128_v06/v++_compile_quantum_fpga_kernel_complex128_v06_guidance.html",
+  "name": "",
+  "fileType": "HTML",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Wed Oct  7 15:35:53 2026",
+ "timestampMillis": "1791367553714",
+ "report": {
+  "path": "<WS>/builds/v06/_xc/v++_compile_quantum_fpga_kernel_complex128_v06_guidance.pb3",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE",
+  "cmdId": ""
+ }
+}
+</ENTRY>

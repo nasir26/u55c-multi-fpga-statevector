@@ -1,0 +1,72 @@
+===============================================================================
+Version:    v++ v2023.2 (64-bit)
+Build:      SW Build 4026344 on 2023-10-11-15:42:10
+Copyright:  Copyright 1986-2023 Xilinx, Inc. All Rights Reserved.
+Created:    Wed Oct  7 18:18:15 2026
+===============================================================================
+
+-------------------------------------------------------------------------------
+Design Name:             quantum_fpga_kernel_complex128_v06
+Target Device:           xilinx:u55c:gen3x16_xdma_3:202210.1
+Target Clock:            300.000000MHz
+Total number of kernels: 1
+-------------------------------------------------------------------------------
+
+Kernel Summary
+Kernel Name                     Type  Target              OpenCL Library                      Compute Units
+------------------------------  ----  ------------------  ----------------------------------  -------------
+quantum_fpga_kernel_complex128  c     fpga0:OCL_REGION_0  quantum_fpga_kernel_complex128_v06  1
+
+
+-------------------------------------------------------------------------------
+OpenCL Binary:     quantum_fpga_kernel_complex128_v06
+Kernels mapped to: clc_region
+
+Timing Information (MHz)
+Compute Unit                      Kernel Name                     Module Name                                      Target Frequency  Estimated Frequency
+--------------------------------  ------------------------------  -----------------------------------------------  ----------------  -------------------
+quantum_fpga_kernel_complex128_1  quantum_fpga_kernel_complex128  quantum_fpga_kernel_complex128_Pipeline_LOAD     300.300293        411.015198
+quantum_fpga_kernel_complex128_1  quantum_fpga_kernel_complex128  quantum_fpga_kernel_complex128_Pipeline_CZ_LOOP  300.300293        411.015198
+quantum_fpga_kernel_complex128_1  quantum_fpga_kernel_complex128  quantum_fpga_kernel_complex128_Pipeline_CX_LOOP  300.300293        183.486252
+quantum_fpga_kernel_complex128_1  quantum_fpga_kernel_complex128  scaled_fixed2ieee_63_1_Pipeline_1                300.300293        826.446228
+quantum_fpga_kernel_complex128_1  quantum_fpga_kernel_complex128  scaled_fixed2ieee_63_1_Pipeline_2                300.300293        399.042297
+quantum_fpga_kernel_complex128_1  quantum_fpga_kernel_complex128  scaled_fixed2ieee_63_1_Pipeline_3                300.300293        742.942078
+quantum_fpga_kernel_complex128_1  quantum_fpga_kernel_complex128  scaled_fixed2ieee_63_1_Pipeline_4                300.300293        448.631653
+quantum_fpga_kernel_complex128_1  quantum_fpga_kernel_complex128  scaled_fixed2ieee_63_1_s                         300.300293        399.042297
+quantum_fpga_kernel_complex128_1  quantum_fpga_kernel_complex128  sin_or_cos_double_s                              300.300293        399.042297
+quantum_fpga_kernel_complex128_1  quantum_fpga_kernel_complex128  apply_single_gate_Pipeline_SQ_LOOP               300.300293        202.839767
+quantum_fpga_kernel_complex128_1  quantum_fpga_kernel_complex128  apply_single_gate                                300.300293        202.839767
+quantum_fpga_kernel_complex128_1  quantum_fpga_kernel_complex128  quantum_fpga_kernel_complex128                   300.300293        183.486252
+
+Latency Information
+Compute Unit                      Kernel Name                     Module Name                                      Start Interval       Best (cycles)  Avg (cycles)   Worst (cycles)  Best (absolute)  Avg (absolute)  Worst (absolute)
+--------------------------------  ------------------------------  -----------------------------------------------  -------------------  -------------  -------------  --------------  ---------------  --------------  ----------------
+quantum_fpga_kernel_complex128_1  quantum_fpga_kernel_complex128  quantum_fpga_kernel_complex128_Pipeline_LOAD     11 ~ 4099            11             2055           4099            36.663 ns        6.849 us        13.662 us
+quantum_fpga_kernel_complex128_1  quantum_fpga_kernel_complex128  quantum_fpga_kernel_complex128_Pipeline_CZ_LOOP  286 ~ 76235669506    286            38117834896    76235669506     0.953 us         127.047 sec     254.093 sec
+quantum_fpga_kernel_complex128_1  quantum_fpga_kernel_complex128  quantum_fpga_kernel_complex128_Pipeline_CX_LOOP  286 ~ 76235669506    286            38117834896    76235669506     1.559 us         207.755 sec     415.509 sec
+quantum_fpga_kernel_complex128_1  quantum_fpga_kernel_complex128  scaled_fixed2ieee_63_1_Pipeline_1                5                    5              5              5               16.665 ns        16.665 ns       16.665 ns
+quantum_fpga_kernel_complex128_1  quantum_fpga_kernel_complex128  scaled_fixed2ieee_63_1_Pipeline_2                5                    5              5              5               16.665 ns        16.665 ns       16.665 ns
+quantum_fpga_kernel_complex128_1  quantum_fpga_kernel_complex128  scaled_fixed2ieee_63_1_Pipeline_3                6                    6              6              6               19.998 ns        19.998 ns       19.998 ns
+quantum_fpga_kernel_complex128_1  quantum_fpga_kernel_complex128  scaled_fixed2ieee_63_1_Pipeline_4                3 ~ 7                3              5              7               9.999 ns         16.665 ns       23.331 ns
+quantum_fpga_kernel_complex128_1  quantum_fpga_kernel_complex128  scaled_fixed2ieee_63_1_s                         27 ~ 31              27             29             31              89.991 ns        96.657 ns       0.103 us
+quantum_fpga_kernel_complex128_1  quantum_fpga_kernel_complex128  sin_or_cos_double_s                              57 ~ 61              57             59             61              0.190 us         0.197 us        0.203 us
+quantum_fpga_kernel_complex128_1  quantum_fpga_kernel_complex128  apply_single_gate_Pipeline_SQ_LOOP               161 ~ 42412802051    161            21206401027    42412802051     0.794 us         104.552 sec     209.105 sec
+quantum_fpga_kernel_complex128_1  quantum_fpga_kernel_complex128  apply_single_gate                                163 ~ 42412802053    163            21206401029    42412802053     0.804 us         104.552 sec     209.105 sec
+quantum_fpga_kernel_complex128_1  quantum_fpga_kernel_complex128  quantum_fpga_kernel_complex128                   92 ~ 39032662795854  91             2714433753681  39032662795853  0.496 us         1.5e+04 sec     2.1e+05 sec
+
+Area Information
+Compute Unit                      Kernel Name                     Module Name                                      FF     LUT     DSP  BRAM  URAM
+--------------------------------  ------------------------------  -----------------------------------------------  -----  ------  ---  ----  ----
+quantum_fpga_kernel_complex128_1  quantum_fpga_kernel_complex128  quantum_fpga_kernel_complex128_Pipeline_LOAD     528    145     0    0     0
+quantum_fpga_kernel_complex128_1  quantum_fpga_kernel_complex128  quantum_fpga_kernel_complex128_Pipeline_CZ_LOOP  3231   2976    0    0     0
+quantum_fpga_kernel_complex128_1  quantum_fpga_kernel_complex128  quantum_fpga_kernel_complex128_Pipeline_CX_LOOP  3341   3665    0    0     0
+quantum_fpga_kernel_complex128_1  quantum_fpga_kernel_complex128  scaled_fixed2ieee_63_1_Pipeline_1                100    169     0    0     0
+quantum_fpga_kernel_complex128_1  quantum_fpga_kernel_complex128  scaled_fixed2ieee_63_1_Pipeline_2                113    624     0    0     0
+quantum_fpga_kernel_complex128_1  quantum_fpga_kernel_complex128  scaled_fixed2ieee_63_1_Pipeline_3                133    69      0    0     0
+quantum_fpga_kernel_complex128_1  quantum_fpga_kernel_complex128  scaled_fixed2ieee_63_1_Pipeline_4                170    710     0    0     0
+quantum_fpga_kernel_complex128_1  quantum_fpga_kernel_complex128  scaled_fixed2ieee_63_1_s                         908    1912    0    0     0
+quantum_fpga_kernel_complex128_1  quantum_fpga_kernel_complex128  sin_or_cos_double_s                              5582   7512    0    0     0
+quantum_fpga_kernel_complex128_1  quantum_fpga_kernel_complex128  apply_single_gate_Pipeline_SQ_LOOP               14963  18738   0    0     0
+quantum_fpga_kernel_complex128_1  quantum_fpga_kernel_complex128  apply_single_gate                                15125  19418   0    0     0
+quantum_fpga_kernel_complex128_1  quantum_fpga_kernel_complex128  quantum_fpga_kernel_complex128                   84734  103537  0    88    0
+-------------------------------------------------------------------------------

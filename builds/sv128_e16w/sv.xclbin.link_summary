@@ -1,0 +1,2267 @@
+<ENTRY>
+{
+ "thisFile": "<WS>/builds/sv128_e16w/sv.xclbin.link_summary",
+ "connectId": "",
+ "serverToken": "",
+ "timestamp": "0"
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_CmdStep",
+ "dateTimestamp": "Wed Oct  7 14:43:52 2026",
+ "timestampMillis": "1791364432790",
+ "buildStep": {
+  "cmdId": "ee4e76cd-a6f3-4b6e-8ed0-b893a19db423",
+  "name": "v++",
+  "logFile": "<WS>/builds/sv128_e16w/_x/link/link.steps.log",
+  "commandLine": "/tools/Xilinx/Vitis/2023.2/bin/unwrapped/lnx64.o/v++  --vivado.prop \"run.__KERNEL__.{STEPS.SYNTH_DESIGN.ARGS.MORE OPTIONS}={-directive sdx_optimization_effort_high}\" --advanced.misc \"report=type report_timing_summary name impl_report_timing_summary_route_design_summary steps {route_design} runs {impl_1} options {-max_paths 10}\" --advanced.misc \"report=type report_timing_summary name impl_report_timing_summary_post_route_phys_opt_design_summary steps {post_route_phys_opt_design} runs {impl_1} options {-max_paths 10}\" -l -t hw --platform xilinx_u55c_gen3x16_xdma_3_202210_1 --config link.cfg --kernel_frequency 300 -j 16 --temp_dir <WS>/builds/sv128_e16w/_x --report_dir <WS>/builds/sv128_e16w/reports --log_dir <WS>/builds/sv128_e16w/logs -o <WS>/builds/sv128_e16w/sv.xclbin <WS>/builds/xo_w512/sv128_engine.xo <WS>/../builds/sv_xo/sv_swap.xo ",
+  "args": [
+   "-l",
+   "-t",
+   "hw",
+   "--platform",
+   "xilinx_u55c_gen3x16_xdma_3_202210_1",
+   "--config",
+   "link.cfg",
+   "--kernel_frequency",
+   "300",
+   "-j",
+   "16",
+   "--temp_dir",
+   "<WS>/builds/sv128_e16w/_x",
+   "--report_dir",
+   "<WS>/builds/sv128_e16w/reports",
+   "--log_dir",
+   "<WS>/builds/sv128_e16w/logs",
+   "-o",
+   "<WS>/builds/sv128_e16w/sv.xclbin",
+   "<WS>/builds/xo_w512/sv128_engine.xo",
+   "<WS>/../builds/sv_xo/sv_swap.xo"
+  ],
+  "iniFiles": [
+   {
+    "path": "<WS>/builds/sv128_e16w/link.cfg",
+    "content": "[connectivity]\nnk=sv128_engine:16\nsp=sv128_engine_1.st:HBM[0:1]\nslr=sv128_engine_1:SLR0\nsp=sv128_engine_2.st:HBM[2:3]\nslr=sv128_engine_2:SLR0\nsp=sv128_engine_3.st:HBM[4:5]\nslr=sv128_engine_3:SLR0\nsp=sv128_engine_4.st:HBM[6:7]\nslr=sv128_engine_4:SLR0\nsp=sv128_engine_5.st:HBM[8:9]\nslr=sv128_engine_5:SLR0\nsp=sv128_engine_6.st:HBM[10:11]\nslr=sv128_engine_6:SLR0\nsp=sv128_engine_7.st:HBM[12:13]\nslr=sv128_engine_7:SLR1\nsp=sv128_engine_8.st:HBM[14:15]\nslr=sv128_engine_8:SLR1\nsp=sv128_engine_9.st:HBM[16:17]\nslr=sv128_engine_9:SLR1\nsp=sv128_engine_10.st:HBM[18:19]\nslr=sv128_engine_10:SLR1\nsp=sv128_engine_11.st:HBM[20:21]\nslr=sv128_engine_11:SLR1\nsp=sv128_engine_12.st:HBM[22:23]\nslr=sv128_engine_12:SLR2\nsp=sv128_engine_13.st:HBM[24:25]\nslr=sv128_engine_13:SLR2\nsp=sv128_engine_14.st:HBM[26:27]\nslr=sv128_engine_14:SLR2\nsp=sv128_engine_15.st:HBM[28:29]\nslr=sv128_engine_15:SLR2\nsp=sv128_engine_16.st:HBM[30:31]\nslr=sv128_engine_16:SLR2\nnk=sv_swap:4\nsp=sv_swap_1.a:HBM[0:31]\nsp=sv_swap_1.b:HBM[0:31]\nslr=sv_swap_1:SLR0\nsp=sv_swap_2.a:HBM[0:31]\nsp=sv_swap_2.b:HBM[0:31]\nslr=sv_swap_2:SLR0\nsp=sv_swap_3.a:HBM[0:31]\nsp=sv_swap_3.b:HBM[0:31]\nslr=sv_swap_3:SLR0\nsp=sv_swap_4.a:HBM[0:31]\nsp=sv_swap_4.b:HBM[0:31]\nslr=sv_swap_4:SLR0\n"
+   }
+  ],
+  "cwd": "<WS>/builds/sv128_e16w"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Wed Oct  7 14:43:52 2026",
+ "timestampMillis": "1791364432790",
+ "status": {
+  "cmdId": "ee4e76cd-a6f3-4b6e-8ed0-b893a19db423",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_FlowMetaData",
+ "dateTimestamp": "Wed Oct  7 14:43:56 2026",
+ "timestampMillis": "1791364436667",
+ "buildSummary": {
+  "hardwarePlatform": "xilinx_u55c_gen3x16_xdma_3_202210_1.xpfm",
+  "hardwareDsa": "",
+  "platformDirectory": "/opt/xilinx/platforms/xilinx_u55c_gen3x16_xdma_3_202210_1",
+  "runtime": "OpenCL",
+  "systemConfig": "Linux",
+  "flow": "BF_LINK",
+  "target": "TT_HW",
+  "binaryContainer": {
+   "base": {
+    "type": "BT_UKNOWN",
+    "name": "sv",
+    "file": "<WS>/builds/sv128_e16w/sv.xclbin",
+    "reports": [],
+    "uuid": ""
+   },
+   "kernels": []
+  },
+  "kernels": [
+   {
+    "base": {
+     "type": "KERNEL",
+     "name": "sv128_engine",
+     "file": "<WS>/builds/xo_w512/sv128_engine.xo",
+     "reports": [],
+     "uuid": ""
+    },
+    "sources": [
+     "<WS>/builds/sv128_e16w/_x/link/int/xo/sv128_engine/sv128_engine/cpu_sources/sv128_engine.cpp"
+    ],
+    "psSources": [],
+    "cuNames": [
+     "sv128_engine_1",
+     "sv128_engine_2",
+     "sv128_engine_3",
+     "sv128_engine_4",
+     "sv128_engine_5",
+     "sv128_engine_6",
+     "sv128_engine_7",
+     "sv128_engine_8",
+     "sv128_engine_9",
+     "sv128_engine_10",
+     "sv128_engine_11",
+     "sv128_engine_12",
+     "sv128_engine_13",
+     "sv128_engine_14",
+     "sv128_engine_15",
+     "sv128_engine_16"
+    ],
+    "type": "HLS",
+    "frequency": 0,
+    "freqUnits": ""
+   },
+   {
+    "base": {
+     "type": "KERNEL",
+     "name": "sv_swap",
+     "file": "<WS>/../builds/sv_xo/sv_swap.xo",
+     "reports": [],
+     "uuid": ""
+    },
+    "sources": [
+     "<WS>/builds/sv128_e16w/_x/link/int/xo/sv_swap/sv_swap/cpu_sources/sv_swap.cpp"
+    ],
+    "psSources": [],
+    "cuNames": [
+     "sv_swap_1",
+     "sv_swap_2",
+     "sv_swap_3",
+     "sv_swap_4"
+    ],
+    "type": "HLS",
+    "frequency": 0,
+    "freqUnits": ""
+   }
+  ],
+  "toolVersion": "Vitis V++ Compiler Release 2023.2. SW Build 4026344 on 2023-10-11-15:42:10"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Wed Oct  7 14:43:56 2026",
+ "timestampMillis": "1791364436952",
+ "buildStep": {
+  "cmdId": "f3ef9d3a-257c-4fba-8c8e-8f8d704da0fe",
+  "name": "system_link",
+  "logFile": "",
+  "commandLine": "system_link --xo <WS>/builds/xo_w512/sv128_engine.xo --xo <WS>/../builds/sv_xo/sv_swap.xo --config <WS>/builds/sv128_e16w/_x/link/int/syslinkConfig.ini --xpfm /opt/xilinx/platforms/xilinx_u55c_gen3x16_xdma_3_202210_1/xilinx_u55c_gen3x16_xdma_3_202210_1.xpfm --target hw --output_dir <WS>/builds/sv128_e16w/_x/link/int --temp_dir <WS>/builds/sv128_e16w/_x/link/sys_link",
+  "args": [
+   "--xo",
+   "<WS>/builds/xo_w512/sv128_engine.xo",
+   "--xo",
+   "<WS>/../builds/sv_xo/sv_swap.xo",
+   "--config",
+   "<WS>/builds/sv128_e16w/_x/link/int/syslinkConfig.ini",
+   "--xpfm",
+   "/opt/xilinx/platforms/xilinx_u55c_gen3x16_xdma_3_202210_1/xilinx_u55c_gen3x16_xdma_3_202210_1.xpfm",
+   "--target",
+   "hw",
+   "--output_dir",
+   "<WS>/builds/sv128_e16w/_x/link/int",
+   "--temp_dir",
+   "<WS>/builds/sv128_e16w/_x/link/sys_link"
+  ],
+  "iniFiles": [
+   {
+    "path": "<WS>/builds/sv128_e16w/_x/link/int/syslinkConfig.ini",
+    "content": "nk=sv128_engine:16\nnk=sv_swap:4\nsp=sv128_engine_1.st:HBM[0:1]\nsp=sv128_engine_2.st:HBM[2:3]\nsp=sv128_engine_3.st:HBM[4:5]\nsp=sv128_engine_4.st:HBM[6:7]\nsp=sv128_engine_5.st:HBM[8:9]\nsp=sv128_engine_6.st:HBM[10:11]\nsp=sv128_engine_7.st:HBM[12:13]\nsp=sv128_engine_8.st:HBM[14:15]\nsp=sv128_engine_9.st:HBM[16:17]\nsp=sv128_engine_10.st:HBM[18:19]\nsp=sv128_engine_11.st:HBM[20:21]\nsp=sv128_engine_12.st:HBM[22:23]\nsp=sv128_engine_13.st:HBM[24:25]\nsp=sv128_engine_14.st:HBM[26:27]\nsp=sv128_engine_15.st:HBM[28:29]\nsp=sv128_engine_16.st:HBM[30:31]\nsp=sv_swap_1.a:HBM[0:31]\nsp=sv_swap_1.b:HBM[0:31]\nsp=sv_swap_2.a:HBM[0:31]\nsp=sv_swap_2.b:HBM[0:31]\nsp=sv_swap_3.a:HBM[0:31]\nsp=sv_swap_3.b:HBM[0:31]\nsp=sv_swap_4.a:HBM[0:31]\nsp=sv_swap_4.b:HBM[0:31]\nslr=sv128_engine_1:SLR0\nslr=sv128_engine_2:SLR0\nslr=sv128_engine_3:SLR0\nslr=sv128_engine_4:SLR0\nslr=sv128_engine_5:SLR0\nslr=sv128_engine_6:SLR0\nslr=sv128_engine_7:SLR1\nslr=sv128_engine_8:SLR1\nslr=sv128_engine_9:SLR1\nslr=sv128_engine_10:SLR1\nslr=sv128_engine_11:SLR1\nslr=sv128_engine_12:SLR2\nslr=sv128_engine_13:SLR2\nslr=sv128_engine_14:SLR2\nslr=sv128_engine_15:SLR2\nslr=sv128_engine_16:SLR2\nslr=sv_swap_1:SLR0\nslr=sv_swap_2:SLR0\nslr=sv_swap_3:SLR0\nslr=sv_swap_4:SLR0\n\n"
+   }
+  ],
+  "cwd": "<WS>/builds/sv128_e16w"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Wed Oct  7 14:43:56 2026",
+ "timestampMillis": "1791364436953",
+ "status": {
+  "cmdId": "f3ef9d3a-257c-4fba-8c8e-8f8d704da0fe",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Wed Oct  7 14:44:25 2026",
+ "timestampMillis": "1791364465695",
+ "status": {
+  "cmdId": "f3ef9d3a-257c-4fba-8c8e-8f8d704da0fe",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Wed Oct  7 14:44:25 2026",
+ "timestampMillis": "1791364465700",
+ "buildStep": {
+  "cmdId": "c6bb37da-fe33-44dd-b9b3-7cb1053fb798",
+  "name": "cf2sw",
+  "logFile": "",
+  "commandLine": "cf2sw -sdsl <WS>/builds/sv128_e16w/_x/link/int/sdsl.dat -rtd <WS>/builds/sv128_e16w/_x/link/int/cf2sw.rtd -nofilter <WS>/builds/sv128_e16w/_x/link/int/cf2sw_full.rtd -xclbin <WS>/builds/sv128_e16w/_x/link/int/xclbin_orig.xml -o <WS>/builds/sv128_e16w/_x/link/int/xclbin_orig.1.xml",
+  "args": [
+   "-sdsl",
+   "<WS>/builds/sv128_e16w/_x/link/int/sdsl.dat",
+   "-rtd",
+   "<WS>/builds/sv128_e16w/_x/link/int/cf2sw.rtd",
+   "-nofilter",
+   "<WS>/builds/sv128_e16w/_x/link/int/cf2sw_full.rtd",
+   "-xclbin",
+   "<WS>/builds/sv128_e16w/_x/link/int/xclbin_orig.xml",
+   "-o",
+   "<WS>/builds/sv128_e16w/_x/link/int/xclbin_orig.1.xml"
+  ],
+  "iniFiles": [],
+  "cwd": "<WS>/builds/sv128_e16w"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Wed Oct  7 14:44:25 2026",
+ "timestampMillis": "1791364465700",
+ "status": {
+  "cmdId": "c6bb37da-fe33-44dd-b9b3-7cb1053fb798",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Wed Oct  7 14:44:41 2026",
+ "timestampMillis": "1791364481679",
+ "status": {
+  "cmdId": "c6bb37da-fe33-44dd-b9b3-7cb1053fb798",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Wed Oct  7 14:44:41 2026",
+ "timestampMillis": "1791364481683",
+ "buildStep": {
+  "cmdId": "401b398a-ae57-4564-97bd-eeef94dafa14",
+  "name": "rtd2_system_diagram",
+  "logFile": "",
+  "commandLine": "rtd2SystemDiagram",
+  "args": [],
+  "iniFiles": [],
+  "cwd": "<WS>/builds/sv128_e16w"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Wed Oct  7 14:44:41 2026",
+ "timestampMillis": "1791364481683",
+ "status": {
+  "cmdId": "401b398a-ae57-4564-97bd-eeef94dafa14",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Wed Oct  7 14:44:41 2026",
+ "timestampMillis": "1791364481959",
+ "report": {
+  "path": "<WS>/builds/sv128_e16w/_x/link/int/systemDiagramModel.json",
+  "name": "",
+  "fileType": "JSON",
+  "reportType": "SYSTEM_DIAGRAM",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Wed Oct  7 14:44:41 2026",
+ "timestampMillis": "1791364481960",
+ "status": {
+  "cmdId": "401b398a-ae57-4564-97bd-eeef94dafa14",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Wed Oct  7 14:44:41 2026",
+ "timestampMillis": "1791364481962",
+ "buildStep": {
+  "cmdId": "8a47be71-eb76-42c9-bc84-039266c23070",
+  "name": "vpl",
+  "logFile": "",
+  "commandLine": "vpl -t hw -f xilinx_u55c_gen3x16_xdma_3_202210_1 --kernel_frequency 300 --remote_ip_cache <WS>/builds/sv128_e16w/.ipcache --output_dir <WS>/builds/sv128_e16w/_x/link/int --log_dir <WS>/builds/sv128_e16w/logs/link --report_dir <WS>/builds/sv128_e16w/reports/link --config <WS>/builds/sv128_e16w/_x/link/int/vplConfig.ini -k <WS>/builds/sv128_e16w/_x/link/int/kernel_info.dat --webtalk_flag Vitis --temp_dir <WS>/builds/sv128_e16w/_x/link --no-info --iprepo <WS>/builds/sv128_e16w/_x/link/int/xo/ip_repo/xilinx_com_hls_sv_swap_1_0 --iprepo <WS>/builds/sv128_e16w/_x/link/int/xo/ip_repo/xilinx_com_hls_sv128_engine_1_0 --messageDb <WS>/builds/sv128_e16w/_x/link/run_link/vpl.pb <WS>/builds/sv128_e16w/_x/link/int/dr.bd.tcl",
+  "args": [
+   "-t",
+   "hw",
+   "-f",
+   "xilinx_u55c_gen3x16_xdma_3_202210_1",
+   "--kernel_frequency",
+   "300",
+   "--remote_ip_cache",
+   "<WS>/builds/sv128_e16w/.ipcache",
+   "--output_dir",
+   "<WS>/builds/sv128_e16w/_x/link/int",
+   "--log_dir",
+   "<WS>/builds/sv128_e16w/logs/link",
+   "--report_dir",
+   "<WS>/builds/sv128_e16w/reports/link",
+   "--config",
+   "<WS>/builds/sv128_e16w/_x/link/int/vplConfig.ini",
+   "-k",
+   "<WS>/builds/sv128_e16w/_x/link/int/kernel_info.dat",
+   "--webtalk_flag",
+   "Vitis",
+   "--temp_dir",
+   "<WS>/builds/sv128_e16w/_x/link",
+   "--no-info",
+   "--iprepo",
+   "<WS>/builds/sv128_e16w/_x/link/int/xo/ip_repo/xilinx_com_hls_sv_swap_1_0",
+   "--iprepo",
+   "<WS>/builds/sv128_e16w/_x/link/int/xo/ip_repo/xilinx_com_hls_sv128_engine_1_0",
+   "--messageDb",
+   "<WS>/builds/sv128_e16w/_x/link/run_link/vpl.pb",
+   "<WS>/builds/sv128_e16w/_x/link/int/dr.bd.tcl"
+  ],
+  "iniFiles": [
+   {
+    "path": "<WS>/builds/sv128_e16w/_x/link/int/vplConfig.ini",
+    "content": "[advanced]\nmisc=report=type report_timing_summary name impl_report_timing_summary_route_design_summary steps {route_design} runs {impl_1} options {-max_paths 10}\nmisc=report=type report_timing_summary name impl_report_timing_summary_post_route_phys_opt_design_summary steps {post_route_phys_opt_design} runs {impl_1} options {-max_paths 10}\nparam=compiler.enablePerformanceTrace=1\nparam=compiler.vppCurrentWorkingDir=<WS>/builds/sv128_e16w\nmisc=BinaryName=sv\n\n[connectivity]\nnk=sv128_engine:16:sv128_engine_1,sv128_engine_2,sv128_engine_3,sv128_engine_4,sv128_engine_5,sv128_engine_6,sv128_engine_7,sv128_engine_8,sv128_engine_9,sv128_engine_10,sv128_engine_11,sv128_engine_12,sv128_engine_13,sv128_engine_14,sv128_engine_15,sv128_engine_16\nnk=sv_swap:4:sv_swap_1,sv_swap_2,sv_swap_3,sv_swap_4\n\n[vivado]\nprop=run.__KERNEL__.{STEPS.SYNTH_DESIGN.ARGS.MORE OPTIONS}={-directive sdx_optimization_effort_high}\nsynth.jobs=16\n\n"
+   }
+  ],
+  "cwd": "<WS>/builds/sv128_e16w"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Wed Oct  7 14:44:41 2026",
+ "timestampMillis": "1791364481963",
+ "status": {
+  "cmdId": "8a47be71-eb76-42c9-bc84-039266c23070",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_CmdStep",
+ "dateTimestamp": "Wed Oct  7 14:44:43 2026",
+ "timestampMillis": "1791364483622",
+ "buildStep": {
+  "cmdId": "1a647e05-3bc8-4a2f-a219-4c015aabe5c5",
+  "name": "vpl",
+  "logFile": "<WS>/builds/sv128_e16w/_x/link/link.steps.log",
+  "commandLine": "/tools/Xilinx/Vitis/2023.2/bin/unwrapped/lnx64.o/vpl -t hw -f xilinx_u55c_gen3x16_xdma_3_202210_1 --kernel_frequency 300 --remote_ip_cache <WS>/builds/sv128_e16w/.ipcache --output_dir <WS>/builds/sv128_e16w/_x/link/int --log_dir <WS>/builds/sv128_e16w/logs/link --report_dir <WS>/builds/sv128_e16w/reports/link --config <WS>/builds/sv128_e16w/_x/link/int/vplConfig.ini -k <WS>/builds/sv128_e16w/_x/link/int/kernel_info.dat --webtalk_flag Vitis --temp_dir <WS>/builds/sv128_e16w/_x/link --no-info --iprepo <WS>/builds/sv128_e16w/_x/link/int/xo/ip_repo/xilinx_com_hls_sv_swap_1_0 --iprepo <WS>/builds/sv128_e16w/_x/link/int/xo/ip_repo/xilinx_com_hls_sv128_engine_1_0 --messageDb <WS>/builds/sv128_e16w/_x/link/run_link/vpl.pb <WS>/builds/sv128_e16w/_x/link/int/dr.bd.tcl ",
+  "args": [],
+  "iniFiles": [],
+  "cwd": "<WS>/builds/sv128_e16w/_x/link/run_link"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Wed Oct  7 14:44:43 2026",
+ "timestampMillis": "1791364483622",
+ "status": {
+  "cmdId": "1a647e05-3bc8-4a2f-a219-4c015aabe5c5",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_VivadoProject",
+ "dateTimestamp": "Wed Oct  7 14:44:47 2026",
+ "timestampMillis": "1791364487982",
+ "vivadoProject": {
+  "openDir": "<WS>/builds/sv128_e16w/_x/link/vivado/vpl",
+  "openScript": "openprj.tcl",
+  "relativeProject": "prj/prj.xpr"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Wed Oct  7 14:44:47 2026",
+ "timestampMillis": "1791364487983",
+ "buildStep": {
+  "cmdId": "7498101c-b1b6-41e5-93fa-2b723231e17e",
+  "name": "vivado",
+  "logFile": "<WS>/builds/sv128_e16w/_x/link/vivado/vpl/vivado.log",
+  "commandLine": "vivado -log vivado.log -applog -m64 -messageDb vivado.pb -mode batch -source vpl.tcl -notrace",
+  "args": [
+   "-log",
+   "vivado.log",
+   "-applog",
+   " -m64",
+   "-messageDb",
+   "vivado.pb",
+   "-mode",
+   "batch",
+   "-source",
+   "vpl.tcl",
+   "-notrace"
+  ],
+  "iniFiles": [],
+  "cwd": "<WS>/builds/sv128_e16w/_x/link/run_link"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Wed Oct  7 14:44:47 2026",
+ "timestampMillis": "1791364487984",
+ "status": {
+  "cmdId": "7498101c-b1b6-41e5-93fa-2b723231e17e",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Wed Oct  7 14:50:17 2026",
+ "timestampMillis": "1791364817529",
+ "report": {
+  "path": "<WS>/builds/sv128_e16w/_x/link/int/automation_summary_pre_synthesis.txt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "VITIS_DESIGN_FLOW",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_CmdStep",
+ "dateTimestamp": "Wed Oct  7 15:14:35 2026",
+ "timestampMillis": "1791366275372",
+ "buildStep": {
+  "cmdId": "1e6bf6e8-3bfb-4c46-bf02-c8f9ea9bd5d8",
+  "name": "vivado.impl",
+  "logFile": "",
+  "commandLine": "",
+  "args": [],
+  "iniFiles": [],
+  "cwd": "<WS>/builds/sv128_e16w/_x/link/vivado/vpl"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Wed Oct  7 15:14:35 2026",
+ "timestampMillis": "1791366275374",
+ "status": {
+  "cmdId": "1e6bf6e8-3bfb-4c46-bf02-c8f9ea9bd5d8",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_CmdStep",
+ "dateTimestamp": "Wed Oct  7 15:14:35 2026",
+ "timestampMillis": "1791366275374",
+ "buildStep": {
+  "cmdId": "90b82dfa-8ef0-41b9-9dc6-0ce56cf521fd",
+  "name": "vivado.impl.impl_1",
+  "logFile": "<WS>/builds/sv128_e16w/_x/link/vivado/vpl/prj/prj.runs/impl_1/runme.log",
+  "commandLine": "",
+  "args": [],
+  "iniFiles": [],
+  "cwd": "<WS>/builds/sv128_e16w/_x/link/vivado/vpl/prj/prj.runs/impl_1"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Wed Oct  7 15:14:35 2026",
+ "timestampMillis": "1791366275375",
+ "status": {
+  "cmdId": "90b82dfa-8ef0-41b9-9dc6-0ce56cf521fd",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Thu Oct  8 01:38:16 2026",
+ "timestampMillis": "1791403696761",
+ "status": {
+  "cmdId": "7498101c-b1b6-41e5-93fa-2b723231e17e",
+  "state": "CS_FAILED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Oct  8 01:38:19 2026",
+ "timestampMillis": "1791403699768",
+ "report": {
+  "path": "<WS>/builds/sv128_e16w/reports/link/imp/impl_1_kernel_util_synthed.xutil",
+  "name": "",
+  "fileType": "XUTIL",
+  "reportType": "KERNEL_UTILIZATION_SYNTHESIS",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Oct  8 01:38:19 2026",
+ "timestampMillis": "1791403699769",
+ "report": {
+  "path": "<WS>/builds/sv128_e16w/reports/link/imp/impl_1_kernel_util_placed.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "KERNEL_UTILIZATION_PLACEMENT",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Oct  8 01:38:19 2026",
+ "timestampMillis": "1791403699770",
+ "report": {
+  "path": "<WS>/builds/sv128_e16w/reports/link/imp/impl_1_full_util_synthed.pb",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "GLOBAL_UTILIZATION_SYNTHESIS",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Oct  8 01:38:19 2026",
+ "timestampMillis": "1791403699770",
+ "report": {
+  "path": "<WS>/builds/sv128_e16w/reports/link/imp/impl_1_slr_util_placed.pb",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "GLOBAL_SLR_UTIL_PLACED",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Oct  8 01:38:19 2026",
+ "timestampMillis": "1791403699771",
+ "report": {
+  "path": "<WS>/builds/sv128_e16w/reports/link/imp/impl_1_full_util_synthed.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_UTILIZATION_SYNTHESIS",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Oct  8 01:38:19 2026",
+ "timestampMillis": "1791403699771",
+ "report": {
+  "path": "<WS>/builds/sv128_e16w/reports/link/imp/impl_1_full_util_placed.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_UTILIZATION_PLACEMENT",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Oct  8 01:38:19 2026",
+ "timestampMillis": "1791403699772",
+ "report": {
+  "path": "<WS>/builds/sv128_e16w/reports/link/imp/impl_1_full_util_placed.pb",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "GLOBAL_UTILIZATION_PLACEMENT",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Oct  8 01:38:19 2026",
+ "timestampMillis": "1791403699772",
+ "report": {
+  "path": "<WS>/builds/sv128_e16w/reports/link/imp/impl_1_slr_util_placed.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_SLR_UTIL_PLACED",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Oct  8 01:38:19 2026",
+ "timestampMillis": "1791403699773",
+ "report": {
+  "path": "<WS>/builds/sv128_e16w/reports/link/imp/impl_1_kernel_util_synthed.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "KERNEL_UTILIZATION_SYNTHESIS",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Oct  8 01:38:19 2026",
+ "timestampMillis": "1791403699773",
+ "report": {
+  "path": "<WS>/builds/sv128_e16w/reports/link/imp/impl_1_kernel_util_placed.xutil",
+  "name": "",
+  "fileType": "XUTIL",
+  "reportType": "KERNEL_UTILIZATION_PLACEMENT",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Oct  8 01:38:19 2026",
+ "timestampMillis": "1791403699799",
+ "report": {
+  "path": "<WS>/builds/sv128_e16w/reports/link/syn/ulp_ii_level0_wire_0_synth_1_ulp_ii_level0_wire_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Oct  8 01:38:19 2026",
+ "timestampMillis": "1791403699799",
+ "report": {
+  "path": "<WS>/builds/sv128_e16w/reports/link/syn/ulp_ulp_cmp_0_synth_1_ulp_ulp_cmp_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Oct  8 01:38:19 2026",
+ "timestampMillis": "1791403699800",
+ "report": {
+  "path": "<WS>/builds/sv128_e16w/reports/link/syn/ulp_hmss_0_0_synth_1_ulp_hmss_0_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Oct  8 01:38:19 2026",
+ "timestampMillis": "1791403699800",
+ "report": {
+  "path": "<WS>/builds/sv128_e16w/reports/link/syn/ulp_axi_vip_data_0_synth_1_ulp_axi_vip_data_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Oct  8 01:38:19 2026",
+ "timestampMillis": "1791403699801",
+ "report": {
+  "path": "<WS>/builds/sv128_e16w/reports/link/syn/ulp_ulp_ucs_0_synth_1_ulp_ulp_ucs_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Oct  8 01:38:19 2026",
+ "timestampMillis": "1791403699801",
+ "report": {
+  "path": "<WS>/builds/sv128_e16w/reports/link/syn/ulp_proc_sys_reset_ctrl_slr0_0_synth_1_ulp_proc_sys_reset_ctrl_slr0_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Oct  8 01:38:19 2026",
+ "timestampMillis": "1791403699802",
+ "report": {
+  "path": "<WS>/builds/sv128_e16w/reports/link/syn/ulp_proc_sys_reset_ctrl_slr1_0_synth_1_ulp_proc_sys_reset_ctrl_slr1_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Oct  8 01:38:19 2026",
+ "timestampMillis": "1791403699802",
+ "report": {
+  "path": "<WS>/builds/sv128_e16w/reports/link/syn/ulp_proc_sys_reset_ctrl_slr2_0_synth_1_ulp_proc_sys_reset_ctrl_slr2_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Oct  8 01:38:19 2026",
+ "timestampMillis": "1791403699803",
+ "report": {
+  "path": "<WS>/builds/sv128_e16w/reports/link/syn/ulp_proc_sys_reset_kernel_slr0_0_synth_1_ulp_proc_sys_reset_kernel_slr0_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Oct  8 01:38:19 2026",
+ "timestampMillis": "1791403699803",
+ "report": {
+  "path": "<WS>/builds/sv128_e16w/reports/link/syn/ulp_proc_sys_reset_kernel_slr1_0_synth_1_ulp_proc_sys_reset_kernel_slr1_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Oct  8 01:38:19 2026",
+ "timestampMillis": "1791403699804",
+ "report": {
+  "path": "<WS>/builds/sv128_e16w/reports/link/syn/ulp_proc_sys_reset_kernel_slr2_0_synth_1_ulp_proc_sys_reset_kernel_slr2_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Oct  8 01:38:19 2026",
+ "timestampMillis": "1791403699804",
+ "report": {
+  "path": "<WS>/builds/sv128_e16w/reports/link/syn/ulp_proc_sys_reset_kernel2_slr0_0_synth_1_ulp_proc_sys_reset_kernel2_slr0_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Oct  8 01:38:19 2026",
+ "timestampMillis": "1791403699805",
+ "report": {
+  "path": "<WS>/builds/sv128_e16w/reports/link/syn/ulp_proc_sys_reset_kernel2_slr1_0_synth_1_ulp_proc_sys_reset_kernel2_slr1_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Oct  8 01:38:19 2026",
+ "timestampMillis": "1791403699806",
+ "report": {
+  "path": "<WS>/builds/sv128_e16w/reports/link/syn/ulp_proc_sys_reset_kernel2_slr2_0_synth_1_ulp_proc_sys_reset_kernel2_slr2_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Oct  8 01:38:19 2026",
+ "timestampMillis": "1791403699806",
+ "report": {
+  "path": "<WS>/builds/sv128_e16w/reports/link/syn/ulp_proc_sys_reset_freerun_slr0_0_synth_1_ulp_proc_sys_reset_freerun_slr0_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Oct  8 01:38:19 2026",
+ "timestampMillis": "1791403699807",
+ "report": {
+  "path": "<WS>/builds/sv128_e16w/reports/link/syn/ulp_proc_sys_reset_freerun_slr1_0_synth_1_ulp_proc_sys_reset_freerun_slr1_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Oct  8 01:38:19 2026",
+ "timestampMillis": "1791403699808",
+ "report": {
+  "path": "<WS>/builds/sv128_e16w/reports/link/syn/ulp_proc_sys_reset_freerun_slr2_0_synth_1_ulp_proc_sys_reset_freerun_slr2_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Oct  8 01:38:19 2026",
+ "timestampMillis": "1791403699808",
+ "report": {
+  "path": "<WS>/builds/sv128_e16w/reports/link/syn/ulp_regslice_control_userpf_0_synth_1_ulp_regslice_control_userpf_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Oct  8 01:38:19 2026",
+ "timestampMillis": "1791403699809",
+ "report": {
+  "path": "<WS>/builds/sv128_e16w/reports/link/syn/ulp_regslice_control_userpf_1_synth_1_ulp_regslice_control_userpf_1_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Oct  8 01:38:19 2026",
+ "timestampMillis": "1791403699810",
+ "report": {
+  "path": "<WS>/builds/sv128_e16w/reports/link/syn/ulp_axi_vip_ctrl_userpf_2_synth_1_ulp_axi_vip_ctrl_userpf_2_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Oct  8 01:38:19 2026",
+ "timestampMillis": "1791403699810",
+ "report": {
+  "path": "<WS>/builds/sv128_e16w/reports/link/syn/ulp_axi_gpio_null_2_synth_1_ulp_axi_gpio_null_2_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Oct  8 01:38:19 2026",
+ "timestampMillis": "1791403699811",
+ "report": {
+  "path": "<WS>/builds/sv128_e16w/reports/link/syn/ulp_regslice_control_userpf_2_synth_1_ulp_regslice_control_userpf_2_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Oct  8 01:38:19 2026",
+ "timestampMillis": "1791403699812",
+ "report": {
+  "path": "<WS>/builds/sv128_e16w/reports/link/syn/ulp_xbar_6_synth_1_ulp_xbar_6_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Oct  8 01:38:19 2026",
+ "timestampMillis": "1791403699812",
+ "report": {
+  "path": "<WS>/builds/sv128_e16w/reports/link/syn/bd_22c0_xbar_1_synth_1_bd_22c0_xbar_1_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Oct  8 01:38:19 2026",
+ "timestampMillis": "1791403699813",
+ "report": {
+  "path": "<WS>/builds/sv128_e16w/reports/link/syn/bd_7cf0_bs_switch_1_0_synth_1_bd_7cf0_bs_switch_1_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Oct  8 01:38:19 2026",
+ "timestampMillis": "1791403699813",
+ "report": {
+  "path": "<WS>/builds/sv128_e16w/reports/link/syn/bd_7cf0_bsip_0_synth_1_bd_7cf0_bsip_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Oct  8 01:38:19 2026",
+ "timestampMillis": "1791403699814",
+ "report": {
+  "path": "<WS>/builds/sv128_e16w/reports/link/syn/bd_22c0_fanout_aresetn_kernel_01_slr2_1_0_synth_1_bd_22c0_fanout_aresetn_kernel_01_slr2_1_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Oct  8 01:38:19 2026",
+ "timestampMillis": "1791403699815",
+ "report": {
+  "path": "<WS>/builds/sv128_e16w/reports/link/syn/bd_22c0_fanout_aresetn_kernel_00_slr1_2_0_synth_1_bd_22c0_fanout_aresetn_kernel_00_slr1_2_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Oct  8 01:38:19 2026",
+ "timestampMillis": "1791403699815",
+ "report": {
+  "path": "<WS>/builds/sv128_e16w/reports/link/syn/bd_22c0_aclk_kernel_00_cont_adapt_0_synth_1_bd_22c0_aclk_kernel_00_cont_adapt_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Oct  8 01:38:19 2026",
+ "timestampMillis": "1791403699816",
+ "report": {
+  "path": "<WS>/builds/sv128_e16w/reports/link/syn/bd_097b_build_info_0_synth_1_bd_097b_build_info_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Oct  8 01:38:19 2026",
+ "timestampMillis": "1791403699816",
+ "report": {
+  "path": "<WS>/builds/sv128_e16w/reports/link/syn/bd_22c0_psreset_aclk_freerun_0_synth_1_bd_22c0_psreset_aclk_freerun_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Oct  8 01:38:19 2026",
+ "timestampMillis": "1791403699817",
+ "report": {
+  "path": "<WS>/builds/sv128_e16w/reports/link/syn/bd_22c0_clock_throttling_aclk_kernel_01_0_synth_1_bd_22c0_clock_throttling_aclk_kernel_01_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Oct  8 01:38:19 2026",
+ "timestampMillis": "1791403699817",
+ "report": {
+  "path": "<WS>/builds/sv128_e16w/reports/link/syn/bd_22c0_frequency_counter_aclk_0_synth_1_bd_22c0_frequency_counter_aclk_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Oct  8 01:38:19 2026",
+ "timestampMillis": "1791403699818",
+ "report": {
+  "path": "<WS>/builds/sv128_e16w/reports/link/syn/bd_7cf0_axi_jtag_0_synth_1_bd_7cf0_axi_jtag_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Oct  8 01:38:19 2026",
+ "timestampMillis": "1791403699818",
+ "report": {
+  "path": "<WS>/builds/sv128_e16w/reports/link/syn/bd_097b_user_debug_bridge_0_synth_1_bd_097b_user_debug_bridge_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Oct  8 01:38:19 2026",
+ "timestampMillis": "1791403699819",
+ "report": {
+  "path": "<WS>/builds/sv128_e16w/reports/link/syn/bd_22c0_frequency_counter_aclk_hbm_0_synth_1_bd_22c0_frequency_counter_aclk_hbm_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Oct  8 01:38:19 2026",
+ "timestampMillis": "1791403699819",
+ "report": {
+  "path": "<WS>/builds/sv128_e16w/reports/link/syn/bd_22c0_psreset_kernel_00_0_synth_1_bd_22c0_psreset_kernel_00_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Oct  8 01:38:19 2026",
+ "timestampMillis": "1791403699820",
+ "report": {
+  "path": "<WS>/builds/sv128_e16w/reports/link/syn/ulp_xbar_4_synth_1_ulp_xbar_4_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Oct  8 01:38:19 2026",
+ "timestampMillis": "1791403699821",
+ "report": {
+  "path": "<WS>/builds/sv128_e16w/reports/link/syn/bd_097b_user_debug_hub_0_synth_1_bd_097b_user_debug_hub_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Oct  8 01:38:19 2026",
+ "timestampMillis": "1791403699821",
+ "report": {
+  "path": "<WS>/builds/sv128_e16w/reports/link/syn/bd_22c0_frequency_counter_aclk_kernel_00_0_synth_1_bd_22c0_frequency_counter_aclk_kernel_00_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Oct  8 01:38:19 2026",
+ "timestampMillis": "1791403699823",
+ "report": {
+  "path": "<WS>/builds/sv128_e16w/reports/link/syn/bd_22c0_aclk_kernel_01_cont_adapt_0_synth_1_bd_22c0_aclk_kernel_01_cont_adapt_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Oct  8 01:38:19 2026",
+ "timestampMillis": "1791403699823",
+ "report": {
+  "path": "<WS>/builds/sv128_e16w/reports/link/syn/bd_22c0_clkwiz_aclk_kernel_00_0_synth_1_bd_22c0_clkwiz_aclk_kernel_00_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Oct  8 01:38:19 2026",
+ "timestampMillis": "1791403699824",
+ "report": {
+  "path": "<WS>/builds/sv128_e16w/reports/link/syn/bd_22c0_clock_throttling_aclk_kernel_00_0_synth_1_bd_22c0_clock_throttling_aclk_kernel_00_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Oct  8 01:38:19 2026",
+ "timestampMillis": "1791403699824",
+ "report": {
+  "path": "<WS>/builds/sv128_e16w/reports/link/syn/bd_22c0_psreset_kernel_01_0_synth_1_bd_22c0_psreset_kernel_01_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Oct  8 01:38:19 2026",
+ "timestampMillis": "1791403699825",
+ "report": {
+  "path": "<WS>/builds/sv128_e16w/reports/link/syn/bd_58f6_lut_buffer_0_synth_1_bd_58f6_lut_buffer_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Oct  8 01:38:19 2026",
+ "timestampMillis": "1791403699825",
+ "report": {
+  "path": "<WS>/builds/sv128_e16w/reports/link/syn/bd_22c0_clkwiz_aclk_kernel_01_0_synth_1_bd_22c0_clkwiz_aclk_kernel_01_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Oct  8 01:38:19 2026",
+ "timestampMillis": "1791403699826",
+ "report": {
+  "path": "<WS>/builds/sv128_e16w/reports/link/syn/bd_58f6_xsdbm_0_synth_1_bd_58f6_xsdbm_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Oct  8 01:38:19 2026",
+ "timestampMillis": "1791403699826",
+ "report": {
+  "path": "<WS>/builds/sv128_e16w/reports/link/syn/bd_22c0_clock_throttling_avg_0_synth_1_bd_22c0_clock_throttling_avg_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Oct  8 01:38:19 2026",
+ "timestampMillis": "1791403699827",
+ "report": {
+  "path": "<WS>/builds/sv128_e16w/reports/link/syn/bd_22c0_gapping_demand_toggle_0_synth_1_bd_22c0_gapping_demand_toggle_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Oct  8 01:38:19 2026",
+ "timestampMillis": "1791403699827",
+ "report": {
+  "path": "<WS>/builds/sv128_e16w/reports/link/syn/bd_22c0_gapping_demand_update_0_synth_1_bd_22c0_gapping_demand_update_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Oct  8 01:38:19 2026",
+ "timestampMillis": "1791403699828",
+ "report": {
+  "path": "<WS>/builds/sv128_e16w/reports/link/syn/bd_22c0_fanout_aresetn_ctrl_slr0_2_0_synth_1_bd_22c0_fanout_aresetn_ctrl_slr0_2_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Oct  8 01:38:19 2026",
+ "timestampMillis": "1791403699828",
+ "report": {
+  "path": "<WS>/builds/sv128_e16w/reports/link/syn/bd_22c0_build_info_0_synth_1_bd_22c0_build_info_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Oct  8 01:38:19 2026",
+ "timestampMillis": "1791403699829",
+ "report": {
+  "path": "<WS>/builds/sv128_e16w/reports/link/syn/bd_22c0_gpio_gapping_demand_0_synth_1_bd_22c0_gpio_gapping_demand_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Oct  8 01:38:19 2026",
+ "timestampMillis": "1791403699829",
+ "report": {
+  "path": "<WS>/builds/sv128_e16w/reports/link/syn/bd_22c0_fanout_aresetn_pcie_slr0_3_0_synth_1_bd_22c0_fanout_aresetn_pcie_slr0_3_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Oct  8 01:38:19 2026",
+ "timestampMillis": "1791403699830",
+ "report": {
+  "path": "<WS>/builds/sv128_e16w/reports/link/syn/bd_22c0_clock_shutdown_latch_0_synth_1_bd_22c0_clock_shutdown_latch_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Oct  8 01:38:19 2026",
+ "timestampMillis": "1791403699830",
+ "report": {
+  "path": "<WS>/builds/sv128_e16w/reports/link/syn/bd_22c0_clk_hbm_adapt_0_synth_1_bd_22c0_clk_hbm_adapt_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Oct  8 01:38:19 2026",
+ "timestampMillis": "1791403699832",
+ "report": {
+  "path": "<WS>/builds/sv128_e16w/reports/link/syn/bd_22c0_xbar_0_synth_1_bd_22c0_xbar_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Oct  8 01:38:19 2026",
+ "timestampMillis": "1791403699833",
+ "report": {
+  "path": "<WS>/builds/sv128_e16w/reports/link/syn/bd_22c0_gpio_ucs_control_status_0_synth_1_bd_22c0_gpio_ucs_control_status_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Oct  8 01:38:19 2026",
+ "timestampMillis": "1791403699833",
+ "report": {
+  "path": "<WS>/builds/sv128_e16w/reports/link/syn/ulp_xbar_7_synth_1_ulp_xbar_7_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Oct  8 01:38:19 2026",
+ "timestampMillis": "1791403699834",
+ "report": {
+  "path": "<WS>/builds/sv128_e16w/reports/link/syn/bd_85ad_slice13_24_0_synth_1_bd_85ad_slice13_24_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Oct  8 01:38:19 2026",
+ "timestampMillis": "1791403699834",
+ "report": {
+  "path": "<WS>/builds/sv128_e16w/reports/link/syn/bd_85ad_interconnect20_15_0_synth_1_bd_85ad_interconnect20_15_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Oct  8 01:38:19 2026",
+ "timestampMillis": "1791403699835",
+ "report": {
+  "path": "<WS>/builds/sv128_e16w/reports/link/syn/bd_22c0_fanout_aresetn_hbm_0_synth_1_bd_22c0_fanout_aresetn_hbm_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Oct  8 01:38:19 2026",
+ "timestampMillis": "1791403699835",
+ "report": {
+  "path": "<WS>/builds/sv128_e16w/reports/link/syn/bd_22c0_psreset_hbm_0_synth_1_bd_22c0_psreset_hbm_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Oct  8 01:38:19 2026",
+ "timestampMillis": "1791403699836",
+ "report": {
+  "path": "<WS>/builds/sv128_e16w/reports/link/syn/ulp_xbar_5_synth_1_ulp_xbar_5_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Oct  8 01:38:19 2026",
+ "timestampMillis": "1791403699836",
+ "report": {
+  "path": "<WS>/builds/sv128_e16w/reports/link/syn/bd_22c0_clkwiz_hbm_0_synth_1_bd_22c0_clkwiz_hbm_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Oct  8 01:38:19 2026",
+ "timestampMillis": "1791403699837",
+ "report": {
+  "path": "<WS>/builds/sv128_e16w/reports/link/syn/ulp_sv128_engine_1_0_synth_1_ulp_sv128_engine_1_0_utilization_synth.rpt",
+  "name": "sv128_engine",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Oct  8 01:38:19 2026",
+ "timestampMillis": "1791403699837",
+ "report": {
+  "path": "<WS>/builds/sv128_e16w/reports/link/syn/ulp_sv128_engine_7_0_synth_1_ulp_sv128_engine_7_0_utilization_synth.rpt",
+  "name": "sv128_engine",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Oct  8 01:38:19 2026",
+ "timestampMillis": "1791403699838",
+ "report": {
+  "path": "<WS>/builds/sv128_e16w/reports/link/syn/ulp_sv128_engine_13_0_synth_1_ulp_sv128_engine_13_0_utilization_synth.rpt",
+  "name": "sv128_engine",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Oct  8 01:38:19 2026",
+ "timestampMillis": "1791403699838",
+ "report": {
+  "path": "<WS>/builds/sv128_e16w/reports/link/syn/ulp_sv_swap_4_0_synth_1_ulp_sv_swap_4_0_utilization_synth.rpt",
+  "name": "sv_swap",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Oct  8 01:38:19 2026",
+ "timestampMillis": "1791403699839",
+ "report": {
+  "path": "<WS>/builds/sv128_e16w/reports/link/syn/bd_85ad_interconnect23_22_0_synth_1_bd_85ad_interconnect23_22_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Oct  8 01:38:19 2026",
+ "timestampMillis": "1791403699839",
+ "report": {
+  "path": "<WS>/builds/sv128_e16w/reports/link/syn/bd_85ad_slice3_4_0_synth_1_bd_85ad_slice3_4_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Oct  8 01:38:19 2026",
+ "timestampMillis": "1791403699840",
+ "report": {
+  "path": "<WS>/builds/sv128_e16w/reports/link/syn/bd_85ad_interconnect6_9_0_synth_1_bd_85ad_interconnect6_9_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Oct  8 01:38:19 2026",
+ "timestampMillis": "1791403699840",
+ "report": {
+  "path": "<WS>/builds/sv128_e16w/reports/link/syn/bd_85ad_interconnect4_5_0_synth_1_bd_85ad_interconnect4_5_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Oct  8 01:38:19 2026",
+ "timestampMillis": "1791403699841",
+ "report": {
+  "path": "<WS>/builds/sv128_e16w/reports/link/syn/bd_85ad_interconnect22_19_0_synth_1_bd_85ad_interconnect22_19_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Oct  8 01:38:19 2026",
+ "timestampMillis": "1791403699841",
+ "report": {
+  "path": "<WS>/builds/sv128_e16w/reports/link/syn/bd_85ad_interconnect16_29_0_synth_1_bd_85ad_interconnect16_29_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Oct  8 01:38:19 2026",
+ "timestampMillis": "1791403699842",
+ "report": {
+  "path": "<WS>/builds/sv128_e16w/reports/link/syn/bd_85ad_slice10_17_0_synth_1_bd_85ad_slice10_17_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Oct  8 01:38:19 2026",
+ "timestampMillis": "1791403699843",
+ "report": {
+  "path": "<WS>/builds/sv128_e16w/reports/link/syn/bd_85ad_interconnect8_13_0_synth_1_bd_85ad_interconnect8_13_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Oct  8 01:38:19 2026",
+ "timestampMillis": "1791403699844",
+ "report": {
+  "path": "<WS>/builds/sv128_e16w/reports/link/syn/bd_85ad_interconnect9_16_0_synth_1_bd_85ad_interconnect9_16_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Oct  8 01:38:19 2026",
+ "timestampMillis": "1791403699844",
+ "report": {
+  "path": "<WS>/builds/sv128_e16w/reports/link/syn/bd_85ad_interconnect13_24_0_synth_1_bd_85ad_interconnect13_24_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Oct  8 01:38:19 2026",
+ "timestampMillis": "1791403699845",
+ "report": {
+  "path": "<WS>/builds/sv128_e16w/reports/link/syn/bd_85ad_interconnect3_4_0_synth_1_bd_85ad_interconnect3_4_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Oct  8 01:38:19 2026",
+ "timestampMillis": "1791403699845",
+ "report": {
+  "path": "<WS>/builds/sv128_e16w/reports/link/syn/bd_85ad_interconnect15_28_0_synth_1_bd_85ad_interconnect15_28_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Oct  8 01:38:19 2026",
+ "timestampMillis": "1791403699846",
+ "report": {
+  "path": "<WS>/builds/sv128_e16w/reports/link/syn/bd_85ad_init_reduce_0_synth_1_bd_85ad_init_reduce_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Oct  8 01:38:19 2026",
+ "timestampMillis": "1791403699846",
+ "report": {
+  "path": "<WS>/builds/sv128_e16w/reports/link/syn/bd_85ad_interconnect0_6_0_synth_1_bd_85ad_interconnect0_6_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Oct  8 01:38:19 2026",
+ "timestampMillis": "1791403699847",
+ "report": {
+  "path": "<WS>/builds/sv128_e16w/reports/link/syn/bd_85ad_interconnect21_18_0_synth_1_bd_85ad_interconnect21_18_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Oct  8 01:38:19 2026",
+ "timestampMillis": "1791403699848",
+ "report": {
+  "path": "<WS>/builds/sv128_e16w/reports/link/syn/bd_85ad_interconnect14_25_0_synth_1_bd_85ad_interconnect14_25_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Oct  8 01:38:19 2026",
+ "timestampMillis": "1791403699848",
+ "report": {
+  "path": "<WS>/builds/sv128_e16w/reports/link/syn/bd_85ad_interconnect18_11_0_synth_1_bd_85ad_interconnect18_11_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Oct  8 01:38:19 2026",
+ "timestampMillis": "1791403699849",
+ "report": {
+  "path": "<WS>/builds/sv128_e16w/reports/link/syn/bd_85ad_interconnect2_1_0_synth_1_bd_85ad_interconnect2_1_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Oct  8 01:38:19 2026",
+ "timestampMillis": "1791403699850",
+ "report": {
+  "path": "<WS>/builds/sv128_e16w/reports/link/syn/bd_85ad_interconnect10_17_0_synth_1_bd_85ad_interconnect10_17_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Oct  8 01:38:19 2026",
+ "timestampMillis": "1791403699851",
+ "report": {
+  "path": "<WS>/builds/sv128_e16w/reports/link/syn/ulp_auto_cc_7_synth_1_ulp_auto_cc_7_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Oct  8 01:38:19 2026",
+ "timestampMillis": "1791403699851",
+ "report": {
+  "path": "<WS>/builds/sv128_e16w/reports/link/syn/ulp_auto_cc_11_synth_1_ulp_auto_cc_11_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Oct  8 01:38:19 2026",
+ "timestampMillis": "1791403699852",
+ "report": {
+  "path": "<WS>/builds/sv128_e16w/reports/link/syn/bd_22c0_auto_cc_0_synth_1_bd_22c0_auto_cc_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Oct  8 01:38:19 2026",
+ "timestampMillis": "1791403699853",
+ "report": {
+  "path": "<WS>/builds/sv128_e16w/reports/link/syn/bd_85ad_interconnect11_20_0_synth_1_bd_85ad_interconnect11_20_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Oct  8 01:38:19 2026",
+ "timestampMillis": "1791403699854",
+ "report": {
+  "path": "<WS>/builds/sv128_e16w/reports/link/syn/bd_85ad_interconnect17_10_0_synth_1_bd_85ad_interconnect17_10_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Oct  8 01:38:19 2026",
+ "timestampMillis": "1791403699855",
+ "report": {
+  "path": "<WS>/builds/sv128_e16w/reports/link/syn/bd_85ad_interconnect24_23_0_synth_1_bd_85ad_interconnect24_23_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Oct  8 01:38:19 2026",
+ "timestampMillis": "1791403699855",
+ "report": {
+  "path": "<WS>/builds/sv128_e16w/reports/link/syn/ulp_m10_regslice_0_synth_1_ulp_m10_regslice_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Oct  8 01:38:19 2026",
+ "timestampMillis": "1791403699856",
+ "report": {
+  "path": "<WS>/builds/sv128_e16w/reports/link/syn/bd_85ad_interconnect19_14_0_synth_1_bd_85ad_interconnect19_14_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Oct  8 01:38:19 2026",
+ "timestampMillis": "1791403699857",
+ "report": {
+  "path": "<WS>/builds/sv128_e16w/reports/link/syn/bd_85ad_interconnect7_12_0_synth_1_bd_85ad_interconnect7_12_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Oct  8 01:38:19 2026",
+ "timestampMillis": "1791403699857",
+ "report": {
+  "path": "<WS>/builds/sv128_e16w/reports/link/syn/bd_85ad_interconnect12_21_0_synth_1_bd_85ad_interconnect12_21_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Oct  8 01:38:19 2026",
+ "timestampMillis": "1791403699858",
+ "report": {
+  "path": "<WS>/builds/sv128_e16w/reports/link/syn/bd_85ad_interconnect5_8_0_synth_1_bd_85ad_interconnect5_8_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Oct  8 01:38:19 2026",
+ "timestampMillis": "1791403699859",
+ "report": {
+  "path": "<WS>/builds/sv128_e16w/reports/link/syn/ulp_auto_cc_12_synth_1_ulp_auto_cc_12_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Oct  8 01:38:19 2026",
+ "timestampMillis": "1791403699859",
+ "report": {
+  "path": "<WS>/builds/sv128_e16w/reports/link/syn/bd_85ad_vip_S16_0_synth_1_bd_85ad_vip_S16_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Oct  8 01:38:19 2026",
+ "timestampMillis": "1791403699861",
+ "report": {
+  "path": "<WS>/builds/sv128_e16w/reports/link/syn/ulp_s00_regslice_19_synth_1_ulp_s00_regslice_19_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Oct  8 01:38:19 2026",
+ "timestampMillis": "1791403699862",
+ "report": {
+  "path": "<WS>/builds/sv128_e16w/reports/link/syn/ulp_m00_regslice_7_synth_1_ulp_m00_regslice_7_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Oct  8 01:38:19 2026",
+ "timestampMillis": "1791403699862",
+ "report": {
+  "path": "<WS>/builds/sv128_e16w/reports/link/syn/bd_85ad_util_vector_logic_0_synth_1_bd_85ad_util_vector_logic_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Oct  8 01:38:19 2026",
+ "timestampMillis": "1791403699863",
+ "report": {
+  "path": "<WS>/builds/sv128_e16w/reports/link/syn/bd_85ad_axi_apb_bridge_inst_0_synth_1_bd_85ad_axi_apb_bridge_inst_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Oct  8 01:38:19 2026",
+ "timestampMillis": "1791403699863",
+ "report": {
+  "path": "<WS>/builds/sv128_e16w/reports/link/syn/bd_85ad_interconnect1_0_0_synth_1_bd_85ad_interconnect1_0_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Oct  8 01:38:19 2026",
+ "timestampMillis": "1791403699864",
+ "report": {
+  "path": "<WS>/builds/sv128_e16w/reports/link/syn/ulp_m03_regslice_7_synth_1_ulp_m03_regslice_7_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Oct  8 01:38:19 2026",
+ "timestampMillis": "1791403699864",
+ "report": {
+  "path": "<WS>/builds/sv128_e16w/reports/link/syn/bd_85ad_hbm_reset_sync_SLR2_0_synth_1_bd_85ad_hbm_reset_sync_SLR2_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Oct  8 01:38:19 2026",
+ "timestampMillis": "1791403699865",
+ "report": {
+  "path": "<WS>/builds/sv128_e16w/reports/link/syn/bd_85ad_hbm_inst_0_synth_1_bd_85ad_hbm_inst_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Thu Oct  8 01:38:19 2026",
+ "timestampMillis": "1791403699870",
+ "status": {
+  "cmdId": "1a647e05-3bc8-4a2f-a219-4c015aabe5c5",
+  "state": "CS_FAILED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Thu Oct  8 01:38:19 2026",
+ "timestampMillis": "1791403699970",
+ "status": {
+  "cmdId": "8a47be71-eb76-42c9-bc84-039266c23070",
+  "state": "CS_FAILED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Oct  8 01:38:19 2026",
+ "timestampMillis": "1791403699989",
+ "report": {
+  "path": "<WS>/builds/sv128_e16w/logs/optraceViewer.html",
+  "name": "",
+  "fileType": "HTML",
+  "reportType": "OPERATION_TRACE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Thu Oct  8 01:38:19 2026",
+ "timestampMillis": "1791403699990",
+ "status": {
+  "cmdId": "ee4e76cd-a6f3-4b6e-8ed0-b893a19db423",
+  "state": "CS_FAILED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Oct  8 01:38:20 2026",
+ "timestampMillis": "1791403700083",
+ "report": {
+  "path": "<WS>/builds/sv128_e16w/reports/link/v++_link_sv_guidance.html",
+  "name": "",
+  "fileType": "HTML",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Oct  8 01:38:20 2026",
+ "timestampMillis": "1791403700084",
+ "report": {
+  "path": "<WS>/builds/sv128_e16w/_x/v++_link_sv_guidance.pb3",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
