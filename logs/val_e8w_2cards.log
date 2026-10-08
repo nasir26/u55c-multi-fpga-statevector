@@ -1,0 +1,13 @@
+ghz            n=20 C=2 P=8 f=111a rep=0 e2e=0.0471 kern=0.0026 exch=0.0090 maxerr=0.00e+00 1-F=0.00e+00
+ghz            n=24 C=2 P=8 f=111a rep=0 e2e=0.1802 kern=0.0237 exch=0.0672 maxerr=1.11e-16 1-F=1.23e-32
+ghz            n=26 C=2 P=8 f=111a rep=0 e2e=0.6563 kern=0.1014 exch=0.2716 maxerr=1.11e-16 1-F=1.23e-32
+ghz            n=28 C=2 P=8 f=111a rep=0 e2e=2.1821 kern=0.4469 exch=0.8899 maxerr=1.11e-16 1-F=1.23e-32
+ghz            n=29 C=2 P=16 f=111a rep=0 e2e=4.0393 kern=0.8466 exch=1.6677 maxerr=1.11e-16 1-F=1.23e-32
+ghz            n=30 C=2 P=32 f=111a rep=0 e2e=7.9485 kern=1.6925 exch=3.2027 maxerr=1.11e-16 1-F=1.23e-32
+qft            n=20 C=2 P=8 f=111a rep=0 e2e=0.1194 kern=0.0174 exch=0.0157 maxerr=0.00e+00 1-F=0.00e+00
+qft            n=24 C=2 P=8 f=111a rep=0 e2e=0.5802 kern=0.2927 exch=0.0992 maxerr=4.61e-19 1-F=2.45e-30
+qft            n=26 C=2 P=8 f=111a rep=0 e2e=2.0986 kern=1.3489 exch=0.3627 maxerr=2.57e-19 1-F=3.15e-30
+qft            n=28 C=2 P=8 f=111a rep=0 e2e=8.5761 kern=6.2452 exch=1.3030 maxerr=1.36e-19 1-F=3.52e-30
+qft            n=29 C=2 P=16 f=111a rep=0 e2e=17.2828 kern=12.9599 exch=2.5617 maxerr=1.02e-19 1-F=3.96e-30
+qft            n=30 C=2 P=32 f=111a rep=0 e2e=35.2288 kern=26.8317 exch=5.1548 maxerr=7.12e-20 1-F=3.90e-30
+RUN_EXIT 0

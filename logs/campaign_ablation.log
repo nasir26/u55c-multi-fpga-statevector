@@ -1,0 +1,101 @@
+qft            n=16 C=4 P=8 f=111a rep=0 e2e=0.1393 kern=0.0113 exch=0.0553 
+qft            n=16 C=4 P=8 f=111a rep=1 e2e=0.1314 kern=0.0109 exch=0.0526 
+qft            n=16 C=4 P=8 f=111a rep=2 e2e=0.1238 kern=0.0114 exch=0.0495 
+qft            n=16 C=4 P=8 f=111a rep=3 e2e=0.1248 kern=0.0113 exch=0.0522 
+qft            n=16 C=4 P=8 f=111a rep=4 e2e=0.1178 kern=0.0109 exch=0.0477 
+qft            n=16 C=4 P=8 f=111a rep=5 e2e=0.1212 kern=0.0113 exch=0.0476 maxerr=0.00e+00 1-F=0.00e+00
+qft            n=16 C=4 P=8 f=011a rep=0 e2e=0.1757 kern=0.0169 exch=0.0810 
+qft            n=16 C=4 P=8 f=011a rep=1 e2e=0.1623 kern=0.0163 exch=0.0744 
+qft            n=16 C=4 P=8 f=011a rep=2 e2e=0.1625 kern=0.0165 exch=0.0746 
+qft            n=16 C=4 P=8 f=011a rep=3 e2e=0.1674 kern=0.0168 exch=0.0761 
+qft            n=16 C=4 P=8 f=011a rep=4 e2e=0.1626 kern=0.0172 exch=0.0732 
+qft            n=16 C=4 P=8 f=011a rep=5 e2e=0.1710 kern=0.0178 exch=0.0773 maxerr=0.00e+00 1-F=0.00e+00
+qft            n=16 C=4 P=8 f=101a rep=0 e2e=0.1327 kern=0.0112 exch=0.0540 
+qft            n=16 C=4 P=8 f=101a rep=1 e2e=0.1244 kern=0.0109 exch=0.0492 
+qft            n=16 C=4 P=8 f=101a rep=2 e2e=0.1201 kern=0.0112 exch=0.0474 
+qft            n=16 C=4 P=8 f=101a rep=3 e2e=0.1170 kern=0.0105 exch=0.0472 
+qft            n=16 C=4 P=8 f=101a rep=4 e2e=0.1241 kern=0.0109 exch=0.0503 
+qft            n=16 C=4 P=8 f=101a rep=5 e2e=0.1248 kern=0.0112 exch=0.0507 maxerr=0.00e+00 1-F=0.00e+00
+qft            n=16 C=4 P=8 f=110a rep=0 e2e=0.1275 kern=0.0109 exch=0.0521 
+qft            n=16 C=4 P=8 f=110a rep=1 e2e=0.1209 kern=0.0107 exch=0.0496 
+qft            n=16 C=4 P=8 f=110a rep=2 e2e=0.1186 kern=0.0102 exch=0.0494 
+qft            n=16 C=4 P=8 f=110a rep=3 e2e=0.1197 kern=0.0107 exch=0.0498 
+qft            n=16 C=4 P=8 f=110a rep=4 e2e=0.1228 kern=0.0108 exch=0.0491 
+qft            n=16 C=4 P=8 f=110a rep=5 e2e=0.1203 kern=0.0112 exch=0.0463 maxerr=0.00e+00 1-F=0.00e+00
+qft            n=16 C=4 P=8 f=1110 rep=0 e2e=0.1346 kern=0.0113 exch=0.0539 
+qft            n=16 C=4 P=8 f=1110 rep=1 e2e=0.1247 kern=0.0111 exch=0.0507 
+qft            n=16 C=4 P=8 f=1110 rep=2 e2e=0.1226 kern=0.0115 exch=0.0506 
+qft            n=16 C=4 P=8 f=1110 rep=3 e2e=0.1161 kern=0.0110 exch=0.0466 
+qft            n=16 C=4 P=8 f=1110 rep=4 e2e=0.1250 kern=0.0106 exch=0.0450 
+qft            n=16 C=4 P=8 f=1110 rep=5 e2e=0.1094 kern=0.0106 exch=0.0439 maxerr=0.00e+00 1-F=0.00e+00
+qft            n=16 C=4 P=8 f=0000 rep=0 e2e=0.1677 kern=0.0134 exch=0.0761 
+qft            n=16 C=4 P=8 f=0000 rep=1 e2e=0.1447 kern=0.0099 exch=0.0698 
+qft            n=16 C=4 P=8 f=0000 rep=2 e2e=0.1538 kern=0.0101 exch=0.0782 
+qft            n=16 C=4 P=8 f=0000 rep=3 e2e=0.1623 kern=0.0105 exch=0.0835 
+qft            n=16 C=4 P=8 f=0000 rep=4 e2e=0.1573 kern=0.0099 exch=0.0795 
+qft            n=16 C=4 P=8 f=0000 rep=5 e2e=0.1678 kern=0.0143 exch=0.0795 maxerr=0.00e+00 1-F=0.00e+00
+qft            n=20 C=4 P=8 f=111a rep=0 e2e=0.1612 kern=0.0136 exch=0.0310 
+qft            n=20 C=4 P=8 f=111a rep=1 e2e=0.1435 kern=0.0151 exch=0.0386 
+qft            n=20 C=4 P=8 f=111a rep=2 e2e=0.1531 kern=0.0149 exch=0.0438 
+qft            n=20 C=4 P=8 f=111a rep=3 e2e=0.1523 kern=0.0151 exch=0.0419 
+qft            n=20 C=4 P=8 f=111a rep=4 e2e=0.1505 kern=0.0154 exch=0.0422 
+qft            n=20 C=4 P=8 f=111a rep=5 e2e=0.1544 kern=0.0146 exch=0.0432 maxerr=0.00e+00 1-F=0.00e+00
+qft            n=20 C=4 P=8 f=011a rep=0 e2e=0.2059 kern=0.0180 exch=0.0654 
+qft            n=20 C=4 P=8 f=011a rep=1 e2e=0.1937 kern=0.0202 exch=0.0667 
+qft            n=20 C=4 P=8 f=011a rep=2 e2e=0.2092 kern=0.0210 exch=0.0776 
+qft            n=20 C=4 P=8 f=011a rep=3 e2e=0.2042 kern=0.0212 exch=0.0758 
+qft            n=20 C=4 P=8 f=011a rep=4 e2e=0.2219 kern=0.0214 exch=0.0804 
+qft            n=20 C=4 P=8 f=011a rep=5 e2e=0.2154 kern=0.0222 exch=0.0764 maxerr=0.00e+00 1-F=0.00e+00
+qft            n=20 C=4 P=8 f=101a rep=0 e2e=0.8965 kern=0.0787 exch=0.5483 
+qft            n=20 C=4 P=8 f=101a rep=1 e2e=0.8818 kern=0.0795 exch=0.5454 
+qft            n=20 C=4 P=8 f=101a rep=2 e2e=0.8620 kern=0.0769 exch=0.5333 
+qft            n=20 C=4 P=8 f=101a rep=3 e2e=0.8617 kern=0.0786 exch=0.5290 
+qft            n=20 C=4 P=8 f=101a rep=4 e2e=0.8648 kern=0.0770 exch=0.5372 
+qft            n=20 C=4 P=8 f=101a rep=5 e2e=0.8382 kern=0.0772 exch=0.5211 maxerr=0.00e+00 1-F=0.00e+00
+qft            n=20 C=4 P=8 f=110a rep=0 e2e=0.1590 kern=0.0150 exch=0.0459 
+qft            n=20 C=4 P=8 f=110a rep=1 e2e=0.1535 kern=0.0144 exch=0.0442 
+qft            n=20 C=4 P=8 f=110a rep=2 e2e=0.1517 kern=0.0147 exch=0.0437 
+qft            n=20 C=4 P=8 f=110a rep=3 e2e=0.1527 kern=0.0152 exch=0.0436 
+qft            n=20 C=4 P=8 f=110a rep=4 e2e=0.1492 kern=0.0150 exch=0.0423 
+qft            n=20 C=4 P=8 f=110a rep=5 e2e=0.1510 kern=0.0157 exch=0.0451 maxerr=0.00e+00 1-F=0.00e+00
+qft            n=20 C=4 P=8 f=1110 rep=0 e2e=0.1651 kern=0.0140 exch=0.0376 
+qft            n=20 C=4 P=8 f=1110 rep=1 e2e=0.1481 kern=0.0122 exch=0.0393 
+qft            n=20 C=4 P=8 f=1110 rep=2 e2e=0.1612 kern=0.0152 exch=0.0438 
+qft            n=20 C=4 P=8 f=1110 rep=3 e2e=0.1421 kern=0.0131 exch=0.0405 
+qft            n=20 C=4 P=8 f=1110 rep=4 e2e=0.1480 kern=0.0139 exch=0.0439 
+qft            n=20 C=4 P=8 f=1110 rep=5 e2e=0.1458 kern=0.0136 exch=0.0424 maxerr=0.00e+00 1-F=0.00e+00
+qft            n=20 C=4 P=8 f=0000 rep=0 e2e=1.0284 kern=0.0951 exch=0.6400 
+qft            n=20 C=4 P=8 f=0000 rep=1 e2e=0.9579 kern=0.0857 exch=0.6059 
+qft            n=20 C=4 P=8 f=0000 rep=2 e2e=0.9664 kern=0.0870 exch=0.6111 
+qft            n=20 C=4 P=8 f=0000 rep=3 e2e=0.9382 kern=0.0786 exch=0.5899 
+qft            n=20 C=4 P=8 f=0000 rep=4 e2e=0.9843 kern=0.0935 exch=0.6147 
+qft            n=20 C=4 P=8 f=0000 rep=5 e2e=1.0040 kern=0.0947 exch=0.6339 maxerr=0.00e+00 1-F=0.00e+00
+qft            n=24 C=4 P=8 f=111a rep=0 e2e=0.5993 kern=0.1501 exch=0.2446 
+qft            n=24 C=4 P=8 f=111a rep=1 e2e=0.6086 kern=0.1510 exch=0.2688 
+qft            n=24 C=4 P=8 f=111a rep=2 e2e=0.6486 kern=0.1510 exch=0.3076 
+qft            n=24 C=4 P=8 f=111a rep=3 e2e=0.6163 kern=0.1509 exch=0.2704 
+qft            n=24 C=4 P=8 f=111a rep=4 e2e=0.6224 kern=0.1512 exch=0.2762 
+qft            n=24 C=4 P=8 f=111a rep=5 e2e=0.6203 kern=0.1507 exch=0.2736 maxerr=4.61e-19 1-F=2.45e-30
+qft            n=24 C=4 P=8 f=011a rep=0 e2e=0.7265 kern=0.1642 exch=0.3498 
+qft            n=24 C=4 P=8 f=011a rep=1 e2e=0.7457 kern=0.1639 exch=0.3819 
+qft            n=24 C=4 P=8 f=011a rep=2 e2e=0.7525 kern=0.1654 exch=0.3802 
+qft            n=24 C=4 P=8 f=011a rep=3 e2e=0.7758 kern=0.1662 exch=0.3990 
+qft            n=24 C=4 P=8 f=011a rep=4 e2e=0.7880 kern=0.1665 exch=0.4031 
+qft            n=24 C=4 P=8 f=011a rep=5 e2e=0.8049 kern=0.1654 exch=0.4211 maxerr=4.61e-19 1-F=2.45e-30
+qft            n=24 C=4 P=8 f=101a rep=0 e2e=4.1562 kern=0.2511 exch=3.5794 
+qft            n=24 C=4 P=8 f=101a rep=1 e2e=4.7924 kern=0.2636 exch=4.1603 
+qft            n=24 C=4 P=8 f=101a rep=2 e2e=4.9408 kern=0.2843 exch=4.2616 
+qft            n=24 C=4 P=8 f=101a rep=3 e2e=4.9342 kern=0.2732 exch=4.2655 
+qft            n=24 C=4 P=8 f=101a rep=4 e2e=5.0590 kern=0.2886 exch=4.3659 
+qft            n=24 C=4 P=8 f=101a rep=5 e2e=5.0372 kern=0.2868 exch=4.3149 maxerr=4.61e-19 1-F=2.45e-30
+qft            n=24 C=4 P=8 f=110a rep=0 e2e=0.6746 kern=0.1542 exch=0.2912 
+qft            n=24 C=4 P=8 f=110a rep=1 e2e=0.6482 kern=0.1542 exch=0.2790 
+qft            n=24 C=4 P=8 f=110a rep=2 e2e=0.6553 kern=0.1545 exch=0.2909 
+qft            n=24 C=4 P=8 f=110a rep=3 e2e=0.6606 kern=0.1540 exch=0.2928 
+qft            n=24 C=4 P=8 f=110a rep=4 e2e=0.6630 kern=0.1540 exch=0.2962 
+qft            n=24 C=4 P=8 f=110a rep=5 e2e=0.6553 kern=0.1539 exch=0.2911 maxerr=4.61e-19 1-F=2.45e-30
+qft            n=24 C=4 P=8 f=1110 rep=0 e2e=0.6554 kern=0.1538 exch=0.2872 
+qft            n=24 C=4 P=8 f=1110 rep=1 e2e=0.6528 kern=0.1563 exch=0.2874 
+qft            n=24 C=4 P=8 f=1110 rep=2 e2e=0.6627 kern=0.1540 exch=0.2897 
+qft            n=24 C=4 P=8 f=1110 rep=3 e2e=0.6547 kern=0.1542 exch=0.2905 
+qft            n=24 C=4 P=8 f=1110 rep=4 e2e=0.6450 kern=0.1546 exch=0.2861 

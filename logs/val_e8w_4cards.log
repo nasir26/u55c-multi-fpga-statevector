@@ -1,0 +1,3 @@
+ghz            n=24 C=4 P=8 f=111a rep=0 e2e=0.1956 kern=0.0132 exch=0.0793 maxerr=1.11e-16 1-F=1.23e-32
+ghz            n=28 C=4 P=8 f=111a rep=0 e2e=1.9281 kern=0.2035 exch=0.8555 maxerr=1.11e-16 1-F=1.23e-32
+ghz            n=30 C=4 P=16 f=111a rep=0 e2e=6.8109 kern=0.8484 exch=3.1210 maxerr=1.11e-16 1-F=1.23e-32

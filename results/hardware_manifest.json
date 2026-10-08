@@ -1,0 +1,88 @@
+{
+ "captured": "2026-10-08T09:52:24+0530",
+ "host": "fpga-host",
+ "kernel": "5.15.0-139-generic",
+ "os": "Ubuntu 20.04.6 LTS",
+ "cpu": "AMD EPYC 7742 64-Core Processor",
+ "logical_cpus": 256,
+ "sockets": "2",
+ "cores_per_socket": "64",
+ "numa": "NUMA node0 CPU(s):                    0-63,128-191\nNUMA node1 CPU(s):                    64-127,192-255",
+ "mem_gib": "503",
+ "governor": "ondemand",
+ "xrt": "Version : 2.16.204\nBranch : 2023.2\nHash : fa4c0045003fed0acea4593788dce5ef6d0b66ee\nHash Date : 2023-10-11 23:46:00",
+ "vitis": "2023.2",
+ "python_fpga_env": {
+  "python": "3.8.20",
+  "numpy": "1.24.4",
+  "scipy": "1.10.1",
+  "qiskit": "1.2.4",
+  "qiskit_aer": "0.15.1"
+ },
+ "cards": [
+  {
+   "bdf": "0000:01:00.1",
+   "serial": "XFL1QXBKJ1YS",
+   "numa_node": "0",
+   "shell": "xilinx_u55c_gen3x16_xdma_base_3",
+   "logic_uuid": "97088961-FEAE-DA91-52A2-1D9DFD63CCEF"
+  },
+  {
+   "bdf": "0000:21:00.1",
+   "serial": "XFL1VPTMR32A",
+   "numa_node": "0",
+   "shell": "xilinx_u55c_gen3x16_xdma_base_3",
+   "logic_uuid": "97088961-FEAE-DA91-52A2-1D9DFD63CCEF"
+  },
+  {
+   "bdf": "0000:41:00.1",
+   "serial": "XFL1BRXKUS4Q",
+   "numa_node": "0",
+   "shell": "xilinx_u55c_gen3x16_xdma_base_3",
+   "logic_uuid": "97088961-FEAE-DA91-52A2-1D9DFD63CCEF"
+  },
+  {
+   "bdf": "0000:a1:00.1",
+   "serial": "XFL1SW2CMEQG",
+   "numa_node": "1",
+   "shell": "xilinx_u55c_gen3x16_xdma_base_3",
+   "logic_uuid": "97088961-FEAE-DA91-52A2-1D9DFD63CCEF"
+  }
+ ],
+ "bitstreams": {
+  "v06": {
+   "path": "builds/v06/quantum_fpga_kernel_complex128_v06.xclbin",
+   "sha256": "dd0b0b00b6215d6c9b4fb5a579ed50eaaaa33d6468e0fc6924b8e5c13103f773",
+   "uuid": "b2228012-e0a6-8880-e0c6-a35df1182b67",
+   "kernel_clocks_mhz": [
+    "450",
+    "500",
+    "258"
+   ]
+  },
+  "sv128_e8w": {
+   "path": "builds/sv128_e8w/sv.xclbin",
+   "sha256": "30a69b31cdb70d75e8669ee005da8829162b65bc07455bf176c3b237401f9ba8",
+   "uuid": "31e9ad00-83ba-032a-0d40-edde20a12e4d",
+   "kernel_clocks_mhz": [
+    "449",
+    "500",
+    "300"
+   ]
+  },
+  "v07": {
+   "path": "../opt_kernel/opt_kernel/quantum_fpga_kernel_complex128.xclbin",
+   "sha256": "5759942dc83fecf55454850f5d0b8634ea3e66f29d907eca59da54313e0a0185",
+   "uuid": "508e94a5-8875-7090-8aae-18ef7013afcd",
+   "kernel_clocks_mhz": [
+    "450",
+    "500",
+    "300"
+   ]
+  }
+ },
+ "git": {
+  "qsim_multifpga": "1f48ac7dc03dcb3d8b7aa9dfe72a84418926331f",
+  "branch": "jsc-revision"
+ }
+}

@@ -1,0 +1,21 @@
+qft            n=12 C=2 P=1 f=111a rep=0 e2e=0.0220 kern=0.0008 exch=0.0015 maxerr=2.36e-17 1-F=1.73e-31
+qft            n=16 C=2 P=8 f=111a rep=0 e2e=0.0557 kern=0.0050 exch=0.0058 maxerr=7.64e-18 1-F=2.54e-31
+qft            n=20 C=2 P=8 f=111a rep=0 e2e=0.1377 kern=0.0159 exch=0.0189 maxerr=2.40e-18 1-F=3.60e-31
+qft            n=24 C=2 P=8 f=111a rep=0 e2e=0.7910 kern=0.2938 exch=0.2092 maxerr=9.77e-19 1-F=8.31e-31
+qft            n=28 C=2 P=8 f=111a rep=0 e2e=10.7688 kern=6.2455 exch=2.7990 maxerr=3.05e-19 1-F=1.08e-30
+rand10         n=12 C=2 P=1 f=111a rep=0 e2e=4.9585 kern=0.0013 exch=0.0037 maxerr=6.14e-17 1-F=1.55e-30
+rand10         n=16 C=2 P=8 f=111a rep=0 e2e=0.1559 kern=0.0110 exch=0.0303 maxerr=1.87e-17 1-F=2.04e-30
+rand10         n=20 C=2 P=8 f=111a rep=0 e2e=0.2132 kern=0.0237 exch=0.0343 maxerr=6.05e-18 1-F=2.62e-30
+rand10         n=24 C=2 P=8 f=111a rep=0 e2e=1.3208 kern=0.3562 exch=0.6170 maxerr=1.93e-18 1-F=3.33e-30
+rand10         n=28 C=2 P=8 f=111a rep=0 e2e=20.1583 kern=6.4431 exch=11.1031 maxerr=5.22e-19 1-F=3.83e-30
+partition_heavy n=12 C=2 P=1 f=111a rep=0 e2e=0.0145 kern=0.0004 exch=0.0012 maxerr=3.38e-17 1-F=2.71e-31
+partition_heavy n=16 C=2 P=8 f=111a rep=0 e2e=0.0255 kern=0.0008 exch=0.0025 maxerr=8.85e-18 1-F=2.83e-31
+partition_heavy n=20 C=2 P=8 f=111a rep=0 e2e=0.0837 kern=0.0040 exch=0.0156 maxerr=3.47e-18 1-F=2.82e-31
+partition_heavy n=24 C=2 P=8 f=111a rep=0 e2e=0.4810 kern=0.0199 exch=0.2318 maxerr=1.36e-18 1-F=8.48e-31
+partition_heavy n=28 C=2 P=8 f=111a rep=0 e2e=4.8722 kern=0.2897 exch=2.9202 maxerr=3.42e-19 1-F=8.50e-31
+ghz            n=12 C=2 P=1 f=111a rep=0 e2e=0.0152 kern=0.0004 exch=0.0012 maxerr=6.99e-18 1-F=4.96e-33
+ghz            n=16 C=2 P=8 f=111a rep=0 e2e=0.0225 kern=0.0008 exch=0.0024 maxerr=1.94e-18 1-F=4.98e-33
+ghz            n=20 C=2 P=8 f=111a rep=0 e2e=0.0769 kern=0.0024 exch=0.0061 maxerr=4.85e-19 1-F=4.90e-33
+ghz            n=24 C=2 P=8 f=111a rep=0 e2e=0.3321 kern=0.0230 exch=0.0696 maxerr=2.71e-19 1-F=3.88e-32
+ghz            n=28 C=2 P=8 f=111a rep=0 e2e=3.1125 kern=0.4469 exch=0.8742 maxerr=6.78e-20 1-F=2.48e-32
+RUN_EXIT 0

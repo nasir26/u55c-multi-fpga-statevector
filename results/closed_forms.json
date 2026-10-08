@@ -1,0 +1,229 @@
+{
+ "grover": {
+  "4": {
+   "k_used": 3,
+   "P_k_used": 0.9613189697265625,
+   "k_opt": 3,
+   "P_k_opt": 0.9613189697265625,
+   "k_submitted_formula": 4,
+   "P_k_submitted_formula": 0.5817041397094724,
+   "P_max_over_k": 0.9995635157945328
+  },
+  "6": {
+   "k_used": 6,
+   "P_k_used": 0.9965856807867991,
+   "k_opt": 6,
+   "P_k_opt": 0.9965856807867991,
+   "k_submitted_formula": 7,
+   "P_k_submitted_formula": 0.9074492475732605,
+   "P_max_over_k": 0.9965856807867991
+  },
+  "8": {
+   "k_used": 13,
+   "P_k_used": 0.9861862401036727,
+   "k_opt": 12,
+   "P_k_opt": 0.9999470421032736,
+   "k_submitted_formula": 13,
+   "P_k_submitted_formula": 0.9861862401036727,
+   "P_max_over_k": 0.9999470421032736
+  },
+  "10": {
+   "k_used": 25,
+   "P_k_used": 0.9994612447444079,
+   "k_opt": 25,
+   "P_k_opt": 0.9994612447444079,
+   "k_submitted_formula": 26,
+   "P_k_submitted_formula": 0.9926694874190605,
+   "P_max_over_k": 0.9999491727586417
+  },
+  "12": {
+   "k_used": null,
+   "P_k_used": null,
+   "k_opt": 50,
+   "P_k_opt": 0.9999453461091142,
+   "k_submitted_formula": 51,
+   "P_k_submitted_formula": 0.9985073716695138,
+   "P_max_over_k": 0.9999453461091142
+  }
+ },
+ "qft": {
+  "4": {
+   "total": 12,
+   "local": 3,
+   "diagonal": 5,
+   "exchange": 4,
+   "formula_total": 12,
+   "submitted_formula_total": 10
+  },
+  "6": {
+   "total": 24,
+   "local": 11,
+   "diagonal": 9,
+   "exchange": 4,
+   "formula_total": 24,
+   "submitted_formula_total": 21
+  },
+  "8": {
+   "total": 40,
+   "local": 23,
+   "diagonal": 13,
+   "exchange": 4,
+   "formula_total": 40,
+   "submitted_formula_total": 36
+  },
+  "10": {
+   "total": 60,
+   "local": 39,
+   "diagonal": 17,
+   "exchange": 4,
+   "formula_total": 60,
+   "submitted_formula_total": 55
+  },
+  "12": {
+   "total": 84,
+   "local": 59,
+   "diagonal": 21,
+   "exchange": 4,
+   "formula_total": 84,
+   "submitted_formula_total": 78
+  },
+  "14": {
+   "total": 112,
+   "local": 83,
+   "diagonal": 25,
+   "exchange": 4,
+   "formula_total": 112,
+   "submitted_formula_total": 105
+  },
+  "16": {
+   "total": 144,
+   "local": 111,
+   "diagonal": 29,
+   "exchange": 4,
+   "formula_total": 144,
+   "submitted_formula_total": 136
+  },
+  "18": {
+   "total": 180,
+   "local": 143,
+   "diagonal": 33,
+   "exchange": 4,
+   "formula_total": 180,
+   "submitted_formula_total": 171
+  },
+  "20": {
+   "total": 220,
+   "local": 179,
+   "diagonal": 37,
+   "exchange": 4,
+   "formula_total": 220,
+   "submitted_formula_total": 210
+  },
+  "22": {
+   "total": 264,
+   "local": 219,
+   "diagonal": 41,
+   "exchange": 4,
+   "formula_total": 264,
+   "submitted_formula_total": 253
+  },
+  "24": {
+   "total": 312,
+   "local": 263,
+   "diagonal": 45,
+   "exchange": 4,
+   "formula_total": 312,
+   "submitted_formula_total": 300
+  },
+  "26": {
+   "total": 364,
+   "local": 311,
+   "diagonal": 49,
+   "exchange": 4,
+   "formula_total": 364,
+   "submitted_formula_total": 351
+  },
+  "28": {
+   "total": 420,
+   "local": 363,
+   "diagonal": 53,
+   "exchange": 4,
+   "formula_total": 420,
+   "submitted_formula_total": 406
+  },
+  "30": {
+   "total": 480,
+   "local": 419,
+   "diagonal": 57,
+   "exchange": 4,
+   "formula_total": 480,
+   "submitted_formula_total": 465
+  }
+ },
+ "capacity_bytes": {
+  "20": {
+   "c64": 8388608,
+   "c128": 16777216
+  },
+  "21": {
+   "c64": 16777216,
+   "c128": 33554432
+  },
+  "22": {
+   "c64": 33554432,
+   "c128": 67108864
+  },
+  "23": {
+   "c64": 67108864,
+   "c128": 134217728
+  },
+  "24": {
+   "c64": 134217728,
+   "c128": 268435456
+  },
+  "25": {
+   "c64": 268435456,
+   "c128": 536870912
+  },
+  "26": {
+   "c64": 536870912,
+   "c128": 1073741824
+  },
+  "27": {
+   "c64": 1073741824,
+   "c128": 2147483648
+  },
+  "28": {
+   "c64": 2147483648,
+   "c128": 4294967296
+  },
+  "29": {
+   "c64": 4294967296,
+   "c128": 8589934592
+  },
+  "30": {
+   "c64": 8589934592,
+   "c128": 17179869184
+  },
+  "31": {
+   "c64": 17179869184,
+   "c128": 34359738368
+  },
+  "32": {
+   "c64": 34359738368,
+   "c128": 68719476736
+  }
+ },
+ "kernel_single_issue": {
+  "II": 16,
+  "f_hz": 258500000.0,
+  "bytes_per_pair": 64,
+  "pairs_per_s": 16156250.0,
+  "bytes_per_s": 1034000000.0,
+  "t_1q_gate_s_per_card": {
+   "20": 0.008112773694390715,
+   "24": 0.12980437911025144,
+   "28": 2.076870065764023
+  }
+ }
+}

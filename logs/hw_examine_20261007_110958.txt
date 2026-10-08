@@ -1,0 +1,393 @@
+2026-10-07T11:09:58+05:30
+System Configuration
+  OS Name              : Linux
+  Release              : 5.15.0-139-generic
+  Version              : #149~20.04.1-Ubuntu SMP Wed Apr 16 08:29:56 UTC 2025
+  Machine              : x86_64
+  CPU Cores            : 256
+  Memory               : 515766 MB
+  Distribution         : Ubuntu 20.04.6 LTS
+  GLIBC                : 2.31
+  Model                : MZ72-HB2-00
+
+XRT
+  Version              : 2.16.204
+  Branch               : 2023.2
+  Hash                 : fa4c0045003fed0acea4593788dce5ef6d0b66ee
+  Hash Date            : 2023-10-11 23:46:00
+  XOCL                 : 2.16.204, fa4c0045003fed0acea4593788dce5ef6d0b66ee
+  XCLMGMT              : 2.16.204, fa4c0045003fed0acea4593788dce5ef6d0b66ee
+
+Devices present
+BDF             :  Shell                            Logic UUID                            Device ID       Device Ready*  
+-------------------------------------------------------------------------------------------------------------------------
+[0000:01:00.1]  :  xilinx_u55c_gen3x16_xdma_base_3  97088961-FEAE-DA91-52A2-1D9DFD63CCEF  user(inst=129)  Yes            
+[0000:21:00.1]  :  xilinx_u55c_gen3x16_xdma_base_3  97088961-FEAE-DA91-52A2-1D9DFD63CCEF  user(inst=128)  Yes            
+[0000:41:00.1]  :  xilinx_u55c_gen3x16_xdma_base_3  97088961-FEAE-DA91-52A2-1D9DFD63CCEF  user(inst=130)  Yes            
+[0000:a1:00.1]  :  xilinx_u55c_gen3x16_xdma_base_3  97088961-FEAE-DA91-52A2-1D9DFD63CCEF  user(inst=131)  Yes            
+
+
+* Devices that are not ready will have reduced functionality when using XRT tools
+=== 0000:01:00.1
+
+-------------------------------------------------
+[0000:01:00.1] : xilinx_u55c_gen3x16_xdma_base_3
+-------------------------------------------------
+Platform
+  XSA Name               : xilinx_u55c_gen3x16_xdma_base_3 
+  Logic UUID             : 97088961-FEAE-DA91-52A2-1D9DFD63CCEF 
+  FPGA Name              :  
+  JTAG ID Code           : 0x14b7d093 
+  DDR Size               : 0 Bytes
+  DDR Count              : 0 
+  Mig Calibrated         : true 
+  P2P Status             : disabled 
+  Performance Mode       : not supported 
+  P2P IO space required  : 32 GB
+
+Clocks
+  DATA_CLK (Data)        : 200 MHz
+  KERNEL_CLK (Kernel)    : 500 MHz
+  hbm_aclk (System)      : 450 MHz
+
+Mac Addresses            : 00:0A:35:0F:84:A8
+                         : 00:0A:35:0F:84:A9
+                         : 00:0A:35:0F:84:AA
+                         : 00:0A:35:0F:84:AB
+                         : 00:0A:35:0F:84:AC
+                         : 00:0A:35:0F:84:AD
+                         : 00:0A:35:0F:84:AE
+                         : 00:0A:35:0F:84:AF
+
+  Device Status: HEALTHY
+  Hardware Context ID: 0
+    Xclbin UUID: 2777330E-DBD3-1210-5BE7-C6793A6CDDFC
+    PL Compute Units
+      Index  Name                                                 Base Address  Usage  Status  
+      -----------------------------------------------------------------------------------------
+      0      quantum_simulator_kernel:quantum_simulator_kernel_1  0x800000      49     (IDLE)  
+
+
+Thermals
+  Temperature    Celcius  
+  ------------------------
+  PCB Top Front  47       
+  PCB Top Rear   57       
+  FPGA           66       
+  Int Vcc        62       
+  FPGA HBM       61       
+
+
+Electrical
+  Max Power              : 150 Watts
+  Power                  : 23.998416 Watts
+  Power Warning          : false
+
+  Power Rails            :   Voltage  Current  
+  ---------------------------------------------
+  12 Volts Auxillary     :  12.144 V  0.625 A  
+  12 Volts PCI Express   :  11.992 V  1.064 A  
+  3.3 Volts PCI Express  :   3.232 V  1.129 A  
+  3.3 Volts Auxillary    :   0.000 V  0.000 A  
+  Internal FPGA Vcc      :   0.852 V  9.300 A  
+  Internal FPGA Vcc IO   :   0.855 V  3.900 A  
+  DDR Vpp Bottom         :   0.000 V  0.000 A  
+  DDR Vpp Top            :   0.000 V  0.000 A  
+  5.5 Volts System       :   5.005 V  0.000 A  
+  Vcc 1.2 Volts Top      :   0.000 V  0.000 A  
+  Vcc 1.2 Volts Bottom   :   0.000 V  0.000 A  
+  1.8 Volts Top          :   1.796 V  0.000 A  
+  0.9 Volts Vcc          :   0.903 V  0.000 A  
+  12 Volts SW            :   0.000 V  0.000 A  
+  Mgt Vtt                :   1.200 V  0.000 A  
+  3.3 Volts Vcc          :   3.355 V  0.000 A  
+  1.2 Volts HBM          :   1.201 V  0.000 A  
+  Vpp 2.5 Volts          :   2.501 V  0.000 A  
+  12 Volts Aux1          :   0.000 V  0.000 A  
+  Vcc 1.2 Volts i        :   0.000 V  0.000 A  
+  V12 in i               :   0.000 V  0.000 A  
+  V12 in Aux0 i          :   0.000 V  0.000 A  
+  V12 in Aux1 i          :   0.000 V  0.000 A  
+  Vcc Auxillary          :   0.000 V  0.000 A  
+  Vcc Auxillary Pmc      :   0.000 V  0.000 A  
+  Vcc Ram                :   0.000 V  0.000 A  
+  0.9 Volts Vcc Vcu      :   0.000 V  0.000 A  
+
+numa_node: 0
+=== 0000:21:00.1
+
+-------------------------------------------------
+[0000:21:00.1] : xilinx_u55c_gen3x16_xdma_base_3
+-------------------------------------------------
+Platform
+  XSA Name               : xilinx_u55c_gen3x16_xdma_base_3 
+  Logic UUID             : 97088961-FEAE-DA91-52A2-1D9DFD63CCEF 
+  FPGA Name              :  
+  JTAG ID Code           : 0x14b7d093 
+  DDR Size               : 0 Bytes
+  DDR Count              : 0 
+  Mig Calibrated         : true 
+  P2P Status             : disabled 
+  Performance Mode       : not supported 
+  P2P IO space required  : 32 GB
+
+Clocks
+  DATA_CLK (Data)        : 250 MHz
+  KERNEL_CLK (Kernel)    : 500 MHz
+  hbm_aclk (System)      : 450 MHz
+
+Mac Addresses            : 00:0A:35:0F:85:D0
+                         : 00:0A:35:0F:85:D1
+                         : 00:0A:35:0F:85:D2
+                         : 00:0A:35:0F:85:D3
+                         : 00:0A:35:0F:85:D4
+                         : 00:0A:35:0F:85:D5
+                         : 00:0A:35:0F:85:D6
+                         : 00:0A:35:0F:85:D7
+
+  Device Status: HEALTHY
+  Hardware Context ID: 0
+    Xclbin UUID: F691B481-64EC-C100-7682-43791E2CF8CB
+    PL Compute Units
+      Index  Name                                                     Base Address  Usage  Status  
+      ---------------------------------------------------------------------------------------------
+      0      new_quantum_noisy_kernel_4:new_quantum_noisy_kernel_4_1  0x800000      19789  (IDLE)  
+
+
+Thermals
+  Temperature    Celcius  
+  ------------------------
+  PCB Top Front  46       
+  PCB Top Rear   58       
+  FPGA           70       
+  Int Vcc        65       
+  FPGA HBM       65       
+
+
+Electrical
+  Max Power              : 150 Watts
+  Power                  : 24.258944 Watts
+  Power Warning          : false
+
+  Power Rails            :   Voltage  Current  
+  ---------------------------------------------
+  12 Volts Auxillary     :  12.176 V  0.640 A  
+  12 Volts PCI Express   :  11.992 V  1.072 A  
+  3.3 Volts PCI Express  :   3.224 V  1.120 A  
+  3.3 Volts Auxillary    :   0.000 V  0.000 A  
+  Internal FPGA Vcc      :   0.851 V  9.600 A  
+  Internal FPGA Vcc IO   :   0.854 V  3.700 A  
+  DDR Vpp Bottom         :   0.000 V  0.000 A  
+  DDR Vpp Top            :   0.000 V  0.000 A  
+  5.5 Volts System       :   4.992 V  0.000 A  
+  Vcc 1.2 Volts Top      :   0.000 V  0.000 A  
+  Vcc 1.2 Volts Bottom   :   0.000 V  0.000 A  
+  1.8 Volts Top          :   1.810 V  0.000 A  
+  0.9 Volts Vcc          :   0.898 V  0.000 A  
+  12 Volts SW            :   0.000 V  0.000 A  
+  Mgt Vtt                :   1.201 V  0.000 A  
+  3.3 Volts Vcc          :   3.379 V  0.000 A  
+  1.2 Volts HBM          :   1.200 V  0.000 A  
+  Vpp 2.5 Volts          :   2.496 V  0.000 A  
+  12 Volts Aux1          :   0.000 V  0.000 A  
+  Vcc 1.2 Volts i        :   0.000 V  0.000 A  
+  V12 in i               :   0.000 V  0.000 A  
+  V12 in Aux0 i          :   0.000 V  0.000 A  
+  V12 in Aux1 i          :   0.000 V  0.000 A  
+  Vcc Auxillary          :   0.000 V  0.000 A  
+  Vcc Auxillary Pmc      :   0.000 V  0.000 A  
+  Vcc Ram                :   0.000 V  0.000 A  
+  0.9 Volts Vcc Vcu      :   0.000 V  0.000 A  
+
+numa_node: 0
+=== 0000:41:00.1
+
+-------------------------------------------------
+[0000:41:00.1] : xilinx_u55c_gen3x16_xdma_base_3
+-------------------------------------------------
+Platform
+  XSA Name               : xilinx_u55c_gen3x16_xdma_base_3 
+  Logic UUID             : 97088961-FEAE-DA91-52A2-1D9DFD63CCEF 
+  FPGA Name              :  
+  JTAG ID Code           : 0x14b7d093 
+  DDR Size               : 0 Bytes
+  DDR Count              : 0 
+  Mig Calibrated         : true 
+  P2P Status             : disabled 
+  Performance Mode       : not supported 
+  P2P IO space required  : 32 GB
+
+Clocks
+  DATA_CLK (Data)        : 300 MHz
+  KERNEL_CLK (Kernel)    : 500 MHz
+  hbm_aclk (System)      : 437 MHz
+
+Mac Addresses            : 00:0A:35:0F:86:90
+                         : 00:0A:35:0F:86:91
+                         : 00:0A:35:0F:86:92
+                         : 00:0A:35:0F:86:93
+                         : 00:0A:35:0F:86:94
+                         : 00:0A:35:0F:86:95
+                         : 00:0A:35:0F:86:96
+                         : 00:0A:35:0F:86:97
+
+  Device Status: HEALTHY
+  Hardware Context ID: 0
+    Xclbin UUID: B586123C-CE97-885A-0F89-76EC040C5E8B
+    PL Compute Units
+      Index  Name                    Base Address  Usage  Status  
+      ------------------------------------------------------------
+      0      sv_engine:sv_engine_2   0x810000      1720   (IDLE)  
+      1      sv_engine:sv_engine_1   0x800000      1720   (IDLE)  
+      2      sv_engine:sv_engine_3   0x820000      1720   (IDLE)  
+      3      sv_engine:sv_engine_4   0x830000      1720   (IDLE)  
+      4      sv_engine:sv_engine_5   0x840000      1720   (IDLE)  
+      5      sv_engine:sv_engine_6   0x850000      1720   (IDLE)  
+      6      sv_engine:sv_engine_7   0xc20000      1720   (IDLE)  
+      7      sv_engine:sv_engine_8   0xc30000      1720   (IDLE)  
+      8      sv_engine:sv_engine_9   0xc40000      1536   (IDLE)  
+      9      sv_engine:sv_engine_10  0xc00000      1536   (IDLE)  
+      10     sv_engine:sv_engine_11  0xc10000      1536   (IDLE)  
+      11     sv_engine:sv_engine_12  0x1000000     1536   (IDLE)  
+      12     sv_engine:sv_engine_13  0x1010000     1536   (IDLE)  
+      13     sv_engine:sv_engine_14  0x1020000     1536   (IDLE)  
+      14     sv_engine:sv_engine_15  0x1030000     1536   (IDLE)  
+      15     sv_engine:sv_engine_16  0x1040000     1536   (IDLE)  
+      16     sv_swap:sv_swap_1       0x860000      39748  (IDLE)  
+      17     sv_swap:sv_swap_2       0x870000      39724  (IDLE)  
+      18     sv_swap:sv_swap_3       0x880000      39724  (IDLE)  
+      19     sv_swap:sv_swap_4       0x890000      39724  (IDLE)  
+
+
+Thermals
+  Temperature    Celcius  
+  ------------------------
+  PCB Top Front  52       
+  PCB Top Rear   63       
+  FPGA           76       
+  Int Vcc        70       
+  FPGA HBM       71       
+
+
+Electrical
+  Max Power              : 150 Watts
+  Power                  : 37.830392 Watts
+  Power Warning          : false
+
+  Power Rails            :   Voltage   Current  
+  ----------------------------------------------
+  12 Volts Auxillary     :  12.152 V   1.369 A  
+  12 Volts PCI Express   :  12.016 V   1.464 A  
+  3.3 Volts PCI Express  :   3.240 V   1.112 A  
+  3.3 Volts Auxillary    :   0.000 V   0.000 A  
+  Internal FPGA Vcc      :   0.852 V  23.300 A  
+  Internal FPGA Vcc IO   :   0.854 V   3.800 A  
+  DDR Vpp Bottom         :   0.000 V   0.000 A  
+  DDR Vpp Top            :   0.000 V   0.000 A  
+  5.5 Volts System       :   5.018 V   0.000 A  
+  Vcc 1.2 Volts Top      :   0.000 V   0.000 A  
+  Vcc 1.2 Volts Bottom   :   0.000 V   0.000 A  
+  1.8 Volts Top          :   1.814 V   0.000 A  
+  0.9 Volts Vcc          :   0.901 V   0.000 A  
+  12 Volts SW            :   0.000 V   0.000 A  
+  Mgt Vtt                :   1.204 V   0.000 A  
+  3.3 Volts Vcc          :   3.361 V   0.000 A  
+  1.2 Volts HBM          :   1.205 V   0.000 A  
+  Vpp 2.5 Volts          :   2.496 V   0.000 A  
+  12 Volts Aux1          :   0.000 V   0.000 A  
+  Vcc 1.2 Volts i        :   0.000 V   0.000 A  
+  V12 in i               :   0.000 V   0.000 A  
+  V12 in Aux0 i          :   0.000 V   0.000 A  
+  V12 in Aux1 i          :   0.000 V   0.000 A  
+  Vcc Auxillary          :   0.000 V   0.000 A  
+  Vcc Auxillary Pmc      :   0.000 V   0.000 A  
+  Vcc Ram                :   0.000 V   0.000 A  
+  0.9 Volts Vcc Vcu      :   0.000 V   0.000 A  
+
+numa_node: 0
+=== 0000:a1:00.1
+
+-------------------------------------------------
+[0000:a1:00.1] : xilinx_u55c_gen3x16_xdma_base_3
+-------------------------------------------------
+Platform
+  XSA Name               : xilinx_u55c_gen3x16_xdma_base_3 
+  Logic UUID             : 97088961-FEAE-DA91-52A2-1D9DFD63CCEF 
+  FPGA Name              :  
+  JTAG ID Code           : 0x14b7d093 
+  DDR Size               : 0 Bytes
+  DDR Count              : 0 
+  Mig Calibrated         : true 
+  P2P Status             : disabled 
+  Performance Mode       : not supported 
+  P2P IO space required  : 32 GB
+
+Clocks
+  DATA_CLK (Data)        : 300 MHz
+  KERNEL_CLK (Kernel)    : 500 MHz
+  hbm_aclk (System)      : 450 MHz
+
+Mac Addresses            : 00:0A:35:0F:84:68
+                         : 00:0A:35:0F:84:69
+                         : 00:0A:35:0F:84:6A
+                         : 00:0A:35:0F:84:6B
+                         : 00:0A:35:0F:84:6C
+                         : 00:0A:35:0F:84:6D
+                         : 00:0A:35:0F:84:6E
+                         : 00:0A:35:0F:84:6F
+
+  Device Status: HEALTHY
+  Hardware Context ID: 0
+    Xclbin UUID: 508E94A5-8875-7090-8AAE-18EF7013AFCD
+    PL Compute Units
+      Index  Name                                                             Base Address  Usage  Status  
+      -----------------------------------------------------------------------------------------------------
+      0      quantum_fpga_kernel_complex128:quantum_fpga_kernel_complex128_1  0x800000      16160  (IDLE)  
+
+
+Thermals
+  Temperature    Celcius  
+  ------------------------
+  PCB Top Front  46       
+  PCB Top Rear   53       
+  FPGA           62       
+  Int Vcc        59       
+  FPGA HBM       57       
+
+
+Electrical
+  Max Power              : 150 Watts
+  Power                  : 23.429136 Watts
+  Power Warning          : false
+
+  Power Rails            :   Voltage  Current  
+  ---------------------------------------------
+  12 Volts Auxillary     :  12.176 V  0.609 A  
+  12 Volts PCI Express   :  11.992 V  1.040 A  
+  3.3 Volts PCI Express  :   3.232 V  1.096 A  
+  3.3 Volts Auxillary    :   0.000 V  0.000 A  
+  Internal FPGA Vcc      :   0.854 V  8.500 A  
+  Internal FPGA Vcc IO   :   0.855 V  3.300 A  
+  DDR Vpp Bottom         :   0.000 V  0.000 A  
+  DDR Vpp Top            :   0.000 V  0.000 A  
+  5.5 Volts System       :   5.006 V  0.000 A  
+  Vcc 1.2 Volts Top      :   0.000 V  0.000 A  
+  Vcc 1.2 Volts Bottom   :   0.000 V  0.000 A  
+  1.8 Volts Top          :   1.813 V  0.000 A  
+  0.9 Volts Vcc          :   0.898 V  0.000 A  
+  12 Volts SW            :   0.000 V  0.000 A  
+  Mgt Vtt                :   1.202 V  0.000 A  
+  3.3 Volts Vcc          :   3.368 V  0.000 A  
+  1.2 Volts HBM          :   1.199 V  0.000 A  
+  Vpp 2.5 Volts          :   2.500 V  0.000 A  
+  12 Volts Aux1          :   0.000 V  0.000 A  
+  Vcc 1.2 Volts i        :   0.000 V  0.000 A  
+  V12 in i               :   0.000 V  0.000 A  
+  V12 in Aux0 i          :   0.000 V  0.000 A  
+  V12 in Aux1 i          :   0.000 V  0.000 A  
+  Vcc Auxillary          :   0.000 V  0.000 A  
+  Vcc Auxillary Pmc      :   0.000 V  0.000 A  
+  Vcc Ram                :   0.000 V  0.000 A  
+  0.9 Volts Vcc Vcu      :   0.000 V  0.000 A  
+
+numa_node: 1

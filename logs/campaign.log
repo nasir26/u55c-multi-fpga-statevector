@@ -1,0 +1,35 @@
+[2026-10-08T01:39:49+05:30] load 0.60 1.43 2.31 1/3882 1677106 busy_tools=0
+[2026-10-08T01:39:49+05:30] stage cpu start
+[2026-10-08T09:38:16+05:30] cpu exit 143
+[2026-10-08T09:53:27+05:30] cpu grover exit 143
+[2026-10-08T09:53:27+05:30] stage cpu end
+STAGE_DONE
+[2026-10-08T09:57:50+05:30] load 1.74 42.54 46.86 1/3888 1872601 busy_tools=0
+[2026-10-08T09:57:50+05:30] stage main start
+[2026-10-08T10:00:34+05:30] main/small_4c exit 0
+[2026-10-08T10:14:40+05:30] main/grover_4c exit 135
+[2026-10-08T10:14:41+05:30] main/large_4c exit 1
+[2026-10-08T10:14:42+05:30] main/max_4c exit 1
+[2026-10-08T10:14:42+05:30] stage main end
+[2026-10-08T10:14:43+05:30] load 12.45 10.65 22.47 6/3887 1884592 busy_tools=0
+[2026-10-08T10:14:43+05:30] stage scaling start
+[2026-10-08T10:19:02+05:30] day stage scaling12 start
+[2026-10-08T10:22:25+05:30] four card phase started without the ambient gate (author decision); per configuration cooling and abort limits apply
+[2026-10-08T10:22:25+05:30] night stage main4 start
+[2026-10-08T12:15:36+05:30] main/small_4c exit 0
+[2026-10-08T12:27:32+05:30] main/grover_4c exit 1
+[2026-10-08T12:53:12+05:30] main/large_4c exit 1
+[2026-10-08T13:13:21+05:30] main/max_4c exit 1
+[2026-10-08T13:13:21+05:30] night stage main4 end
+[2026-10-08T13:13:21+05:30] night stage scaling4 start
+[2026-10-08T13:47:37+05:30] scaling/strong_4c exit 0
+[2026-10-08T14:05:12+05:30] scaling/weak_4c exit 0
+[2026-10-08T14:05:12+05:30] night stage scaling4 end
+[2026-10-08T14:05:12+05:30] night stage ablation4 start
+[2026-10-08T14:29:00+05:30] campaign4 (wide gate compiler, commit be265a8) started
+[2026-10-08T14:29:00+05:30] stage haar4 start
+[2026-10-08T14:42:36+05:30] haar/haar_4c exit 1
+[2026-10-08T14:42:36+05:30] stage haar4 end
+[2026-10-08T14:42:36+05:30] CAMPAIGN4_DONE
+[2026-10-08T14:44:22+05:30] campaign4 (wide gate compiler, commit 092288f) started
+[2026-10-08T14:44:22+05:30] stage main4rest start
