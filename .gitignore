@@ -1,0 +1,14 @@
+__pycache__/
+*.pyc
+envs/
+cache/
+tmp/
+cards.env
+*.xclbin
+*.xo
+*.xsa
+*.ltx
+_x/
+_xs/
+.Xil/
+/build/
