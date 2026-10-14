@@ -1,0 +1,31 @@
+name: tests
+
+# Hardware free tests on the CPU: the compiler and the NumPy golden model against Qiskit, wide multi controlled gates,
+# the multi card runtime on a mocked XRT, and the exchange arithmetic of the submitted design. The C simulation and the
+# hardware checks need Vitis and the cards and are not run here.
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - run: pip install -r requirements-tests.txt
+      - name: Compiler and golden model against Qiskit
+        run: python sv128/tests/test_compiler_model.py
+      - name: Wide multi controlled gates
+        run: python sv128/tests/test_wide_gates.py
+      - name: Runtime on a mocked XRT, one, two and four cards
+        run: python sv128/tests/test_runtime_mock.py
+      - name: Exchange arithmetic of the submitted design
+        run: python baseline/test_exchange_math.py

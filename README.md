@@ -1,5 +1,7 @@
 # Multi FPGA complex128 statevector simulator on four Alveo U55C
 
+[![tests](https://github.com/nasir26/u55c-multi-fpga-statevector/actions/workflows/tests.yml/badge.svg)](https://github.com/nasir26/u55c-multi-fpga-statevector/actions/workflows/tests.yml)
+
 An exact statevector quantum circuit simulator that distributes a complex128 state over the HBM of one, two or four
 AMD Alveo U55C cards in one host. Every gate that does not need amplitudes held by another card runs on the FPGAs;
 only the remaining gates move data, inside a card by a device copy kernel and across cards through host memory.
@@ -61,6 +63,18 @@ compare against the stored `sha256` files.
 - Vitis 2023.2 only to rebuild bitstreams or run the C simulation
 
 ## Quick start
+
+Without an FPGA, the hardware free tests run with any Python 3.11 (they also run on every push, see the badge above):
+
+```
+pip install -r requirements-tests.txt
+python sv128/tests/test_compiler_model.py
+python sv128/tests/test_wide_gates.py
+python sv128/tests/test_runtime_mock.py
+python baseline/test_exchange_math.py
+```
+
+With the environments of the measurement host:
 
 ```
 bash setup/setup_envs.sh && source env.sh

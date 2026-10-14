@@ -1,0 +1,21 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite the paper below."
+title: "Multi FPGA complex128 statevector simulator on four Alveo U55C"
+type: software
+authors:
+  - family-names: Ali
+    given-names: Nasir
+    email: nasirali2607@gmail.com
+    affiliation: "Centre for Development of Advanced Computing (C-DAC), Noida, India"
+repository-code: "https://github.com/nasir26/u55c-multi-fpga-statevector"
+license: MIT
+keywords: [multi FPGA, quantum circuit simulation, distributed statevector, HBM, Alveo U55C, complex128]
+preferred-citation:
+  type: article
+  title: "Multi-FPGA Quantum Circuit Simulation: A Distributed Statevector Architecture on Four Xilinx Alveo U55C Accelerators"
+  authors:
+    - family-names: Ali
+      given-names: Nasir
+  year: 2026
+  doi: 10.21203/rs.3.rs-10128153/v1
+  notes: "Research Square preprint; under major revision, The Journal of Supercomputing"
