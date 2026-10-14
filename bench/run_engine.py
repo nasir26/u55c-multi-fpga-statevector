@@ -19,7 +19,7 @@ BDF = os.environ.get("QSIM_BDFS", "0000:01:00.1,0000:21:00.1,0000:41:00.1,0000:a
 DEFAULT_CARDS = {1: os.environ.get("QSIM_CARDS1", "0000:41:00.1").split(","),           # coolest cards of the original host
                  2: os.environ.get("QSIM_CARDS2", "0000:41:00.1,0000:a1:00.1").split(","), 4: BDF}
 REF_SV_MAX = 20
-PRE_FPGA_C, PRE_HBM_C = 87, 82   # pre run guard: park and cool before a repetition if a card is this hot
+PRE_FPGA_C, PRE_HBM_C = 85, 80   # pre run guard: park and cool before a repetition if a card is this hot
 
 
 def build(name, n):
@@ -53,7 +53,9 @@ def build(name, n):
 
 def reference(qc, init):
     n = qc.num_qubits
-    if n <= REF_SV_MAX:
+    # Statevector applies every gate as a dense matrix over its qubits; wide multi controlled gates (Grover) go to Aer
+    wide = max((len(i.qubits) for i in qc.data), default=0) > 10
+    if n <= REF_SV_MAX and not wide:
         from qiskit.quantum_info import Statevector
         sv = Statevector(init) if init is not None else Statevector.from_int(0, 2 ** n)
         return sv.evolve(qc).data, "qiskit.Statevector"
@@ -169,14 +171,6 @@ def main():
                     f4 = "auto" if fl[3] == "a" else fl[3] == "1"
                     ref = None
                     imap = None
-                    if a.part:
-                        top = [int(x) for x in a.part.split(",")]
-                        rest = [q for q in range(n) if q not in top]
-                        imap = [0] * n                                     # imap[logical] = physical
-                        for i, q in enumerate(rest):
-                            imap[q] = i
-                        for i, q in enumerate(reversed(top)):
-                            imap[q] = n - len(top) + i
                     # park and cool only when a card is at or above the start limit; otherwise keep the loaded engine
                     hot = (not a.mock) and any(fv >= a.cool_c for fv, hv in temps().values())
                     cool_s, setup_s = 0.0, 0.0
@@ -186,6 +180,17 @@ def main():
                         t_s = time.perf_counter()
                         rt = DistSVRuntime(bdfs, a.xclbin, a.engines, a.swaps, use_device_swap=not a.no_device_swap)
                         setup_s = time.perf_counter() - t_s
+                    if a.part:
+                        # the circuit may be padded to the minimum slice width: build the map over the padded width so
+                        # that the chosen qubits occupy the top physical (card select) positions
+                        top = [int(x) for x in a.part.split(",")]
+                        nr = rt.plan(n)[1]
+                        rest = [q for q in range(nr) if q not in top]
+                        imap = [0] * nr                                    # imap[logical] = physical
+                        for i, q in enumerate(rest):
+                            imap[q] = i
+                        for i, q in enumerate(reversed(top)):
+                            imap[q] = nr - len(top) + i
                     for rep in range(a.reps):
                         # pre run guard: a card close to the limit is parked and cooled before the repetition starts,
                         # so that the abort limit is not crossed during a long run
@@ -213,6 +218,8 @@ def main():
                         if "state" in r and n <= a.ref_max:
                             t0 = time.perf_counter()
                             if ref is None:
+                                if not a.mock and any(fv >= a.cool_c for fv, hv in temps().values()):
+                                    park(); rt = None        # do not keep a hot card waiting with the engine loaded
                                 ref, ref_src = reference(qc, init)
                             rec["metrics"] = compare(r["state"], ref); rec["reference"] = ref_src
                             rec["T_reference"] = time.perf_counter() - t0
@@ -226,14 +233,14 @@ def main():
                                 rec["counting_top4"] = [(int(i), float(pr[i])) for i in np.argsort(pr)[::-1][:4]]
                         recs.append(rec)
                         T = r["timing"]
-                        print(f"{name:14s} n={n:2d} C={rt.C} P={r['P']} f={fl} rep={rep} e2e={T['T_e2e']:.4f} kern={T['T_kernel']:.4f} "
+                        print(f"{name:14s} n={n:2d} C={rec['C']} P={r['P']} f={fl} rep={rep} e2e={T['T_e2e']:.4f} kern={T['T_kernel']:.4f} "
                               f"exch={T['T_exchange']:.4f} " + (f"maxerr={rec['metrics']['max_abs_err']:.2e} 1-F={rec['metrics']['one_minus_F']:.2e}"
                                                              if "metrics" in rec else ""), flush=True)
                         json.dump(dict(meta=meta, records=recs, thermal_stops=stops), open(a.out, "w"))
                         if thermal:
                             # the run finished but a card crossed the abort limit: stop this instance, record it, cool
                             # down and continue with the next instance
-                            stops.append(dict(circuit=name, n=n, C=rt.C, flags=fl, init=a.init, reps_done=rep + 1,
+                            stops.append(dict(circuit=name, n=n, C=rec["C"], flags=fl, init=a.init, reps_done=rep + 1,
                                               reps_planned=a.reps, abort=rec["thermal_abort"], time=time.strftime("%Y-%m-%dT%H:%M:%S%z")))
                             print(f"THERMAL STOP {name} n={n} flags={fl} after {rep + 1} of {a.reps} repetitions: {rec['thermal_abort']}", flush=True)
                             cool()
