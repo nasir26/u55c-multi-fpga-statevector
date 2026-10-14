@@ -1,0 +1,242 @@
+qft            n=16 C=4 P=8 f=111a rep=0 e2e=0.1435 kern=0.0111 exch=0.0551 
+qft            n=16 C=4 P=8 f=111a rep=1 e2e=0.1267 kern=0.0110 exch=0.0506 
+qft            n=16 C=4 P=8 f=111a rep=2 e2e=0.1253 kern=0.0112 exch=0.0494 
+qft            n=16 C=4 P=8 f=111a rep=3 e2e=0.1244 kern=0.0106 exch=0.0488 
+qft            n=16 C=4 P=8 f=111a rep=4 e2e=0.1258 kern=0.0114 exch=0.0503 
+qft            n=16 C=4 P=8 f=111a rep=5 e2e=0.1276 kern=0.0118 exch=0.0500 maxerr=0.00e+00 1-F=0.00e+00
+qft            n=20 C=4 P=8 f=111a rep=0 e2e=0.1691 kern=0.0153 exch=0.0477 
+qft            n=20 C=4 P=8 f=111a rep=1 e2e=0.1593 kern=0.0154 exch=0.0466 
+qft            n=20 C=4 P=8 f=111a rep=2 e2e=0.1556 kern=0.0145 exch=0.0445 
+qft            n=20 C=4 P=8 f=111a rep=3 e2e=0.1589 kern=0.0147 exch=0.0439 
+qft            n=20 C=4 P=8 f=111a rep=4 e2e=0.1473 kern=0.0143 exch=0.0428 
+qft            n=20 C=4 P=8 f=111a rep=5 e2e=0.1506 kern=0.0142 exch=0.0437 maxerr=0.00e+00 1-F=0.00e+00
+qft            n=24 C=4 P=8 f=111a rep=0 e2e=0.6659 kern=0.1539 exch=0.2942 
+qft            n=24 C=4 P=8 f=111a rep=1 e2e=0.6568 kern=0.1544 exch=0.2909 
+qft            n=24 C=4 P=8 f=111a rep=2 e2e=0.6584 kern=0.1542 exch=0.2908 
+qft            n=24 C=4 P=8 f=111a rep=3 e2e=0.6540 kern=0.1549 exch=0.2817 
+qft            n=24 C=4 P=8 f=111a rep=4 e2e=0.6552 kern=0.1552 exch=0.2903 
+qft            n=24 C=4 P=8 f=111a rep=5 e2e=0.6524 kern=0.1553 exch=0.2854 maxerr=4.61e-19 1-F=2.45e-30
+ghz            n=16 C=4 P=8 f=111a rep=0 e2e=0.0428 kern=0.0018 exch=0.0058 
+ghz            n=16 C=4 P=8 f=111a rep=1 e2e=0.0336 kern=0.0020 exch=0.0058 
+ghz            n=16 C=4 P=8 f=111a rep=2 e2e=0.0345 kern=0.0018 exch=0.0052 
+ghz            n=16 C=4 P=8 f=111a rep=3 e2e=0.0336 kern=0.0020 exch=0.0057 
+ghz            n=16 C=4 P=8 f=111a rep=4 e2e=0.0329 kern=0.0020 exch=0.0054 
+ghz            n=16 C=4 P=8 f=111a rep=5 e2e=0.0356 kern=0.0015 exch=0.0055 maxerr=0.00e+00 1-F=0.00e+00
+ghz            n=20 C=4 P=8 f=111a rep=0 e2e=0.0370 kern=0.0018 exch=0.0068 
+ghz            n=20 C=4 P=8 f=111a rep=1 e2e=0.0349 kern=0.0017 exch=0.0070 
+ghz            n=20 C=4 P=8 f=111a rep=2 e2e=0.0348 kern=0.0017 exch=0.0072 
+ghz            n=20 C=4 P=8 f=111a rep=3 e2e=0.0350 kern=0.0017 exch=0.0079 
+ghz            n=20 C=4 P=8 f=111a rep=4 e2e=0.0339 kern=0.0018 exch=0.0079 
+ghz            n=20 C=4 P=8 f=111a rep=5 e2e=0.0351 kern=0.0017 exch=0.0080 maxerr=0.00e+00 1-F=0.00e+00
+ghz            n=24 C=4 P=8 f=111a rep=0 e2e=0.1505 kern=0.0122 exch=0.0600 
+ghz            n=24 C=4 P=8 f=111a rep=1 e2e=0.1477 kern=0.0124 exch=0.0553 
+ghz            n=24 C=4 P=8 f=111a rep=2 e2e=0.1497 kern=0.0124 exch=0.0590 
+ghz            n=24 C=4 P=8 f=111a rep=3 e2e=0.1516 kern=0.0124 exch=0.0599 
+ghz            n=24 C=4 P=8 f=111a rep=4 e2e=0.1524 kern=0.0124 exch=0.0627 
+ghz            n=24 C=4 P=8 f=111a rep=5 e2e=0.1498 kern=0.0124 exch=0.0551 maxerr=1.11e-16 1-F=1.23e-32
+qft            n=16 C=4 P=8 f=111a rep=0 e2e=0.1287 kern=0.0090 exch=0.0428 
+qft            n=16 C=4 P=8 f=111a rep=1 e2e=0.1114 kern=0.0081 exch=0.0403 
+qft            n=16 C=4 P=8 f=111a rep=2 e2e=0.1079 kern=0.0087 exch=0.0386 
+qft            n=16 C=4 P=8 f=111a rep=3 e2e=0.0962 kern=0.0088 exch=0.0347 
+qft            n=16 C=4 P=8 f=111a rep=4 e2e=0.0971 kern=0.0086 exch=0.0359 
+qft            n=16 C=4 P=8 f=111a rep=5 e2e=0.1033 kern=0.0083 exch=0.0384 maxerr=0.00e+00 1-F=0.00e+00
+qft            n=20 C=4 P=8 f=111a rep=0 e2e=0.1759 kern=0.0132 exch=0.0618 
+qft            n=20 C=4 P=8 f=111a rep=1 e2e=0.1603 kern=0.0130 exch=0.0578 
+qft            n=20 C=4 P=8 f=111a rep=2 e2e=0.1668 kern=0.0132 exch=0.0598 
+qft            n=20 C=4 P=8 f=111a rep=3 e2e=0.1659 kern=0.0130 exch=0.0615 
+qft            n=20 C=4 P=8 f=111a rep=4 e2e=0.1589 kern=0.0130 exch=0.0566 
+qft            n=20 C=4 P=8 f=111a rep=5 e2e=0.1579 kern=0.0127 exch=0.0562 maxerr=0.00e+00 1-F=0.00e+00
+qft            n=24 C=4 P=8 f=111a rep=0 e2e=0.6520 kern=0.1541 exch=0.2872 
+qft            n=24 C=4 P=8 f=111a rep=1 e2e=0.6491 kern=0.1551 exch=0.2865 
+qft            n=24 C=4 P=8 f=111a rep=2 e2e=0.6450 kern=0.1552 exch=0.2808 
+qft            n=24 C=4 P=8 f=111a rep=3 e2e=0.6437 kern=0.1553 exch=0.2870 
+qft            n=24 C=4 P=8 f=111a rep=4 e2e=0.6496 kern=0.1558 exch=0.2858 
+qft            n=24 C=4 P=8 f=111a rep=5 e2e=0.6501 kern=0.1552 exch=0.2863 maxerr=4.61e-19 1-F=2.45e-30
+ghz            n=16 C=4 P=8 f=111a rep=0 e2e=0.0712 kern=0.0039 exch=0.0270 
+ghz            n=16 C=4 P=8 f=111a rep=1 e2e=0.0591 kern=0.0034 exch=0.0220 
+ghz            n=16 C=4 P=8 f=111a rep=2 e2e=0.0581 kern=0.0033 exch=0.0204 
+ghz            n=16 C=4 P=8 f=111a rep=3 e2e=0.0541 kern=0.0035 exch=0.0196 
+ghz            n=16 C=4 P=8 f=111a rep=4 e2e=0.0571 kern=0.0036 exch=0.0196 
+ghz            n=16 C=4 P=8 f=111a rep=5 e2e=0.0621 kern=0.0037 exch=0.0210 maxerr=0.00e+00 1-F=0.00e+00
+ghz            n=20 C=4 P=8 f=111a rep=0 e2e=0.0501 kern=0.0045 exch=0.0097 
+ghz            n=20 C=4 P=8 f=111a rep=1 e2e=0.0420 kern=0.0030 exch=0.0075 
+ghz            n=20 C=4 P=8 f=111a rep=2 e2e=0.0366 kern=0.0026 exch=0.0073 
+ghz            n=20 C=4 P=8 f=111a rep=3 e2e=0.0467 kern=0.0031 exch=0.0082 
+ghz            n=20 C=4 P=8 f=111a rep=4 e2e=0.0385 kern=0.0026 exch=0.0073 
+ghz            n=20 C=4 P=8 f=111a rep=5 e2e=0.0421 kern=0.0036 exch=0.0098 maxerr=0.00e+00 1-F=0.00e+00
+ghz            n=24 C=4 P=8 f=111a rep=0 e2e=0.1570 kern=0.0148 exch=0.0617 
+ghz            n=24 C=4 P=8 f=111a rep=1 e2e=0.1575 kern=0.0152 exch=0.0623 
+ghz            n=24 C=4 P=8 f=111a rep=2 e2e=0.1592 kern=0.0152 exch=0.0603 
+ghz            n=24 C=4 P=8 f=111a rep=3 e2e=0.1604 kern=0.0150 exch=0.0633 
+ghz            n=24 C=4 P=8 f=111a rep=4 e2e=0.1673 kern=0.0151 exch=0.0612 
+ghz            n=24 C=4 P=8 f=111a rep=5 e2e=0.1606 kern=0.0151 exch=0.0579 maxerr=1.11e-16 1-F=1.23e-32
+grover         n= 8 C=4 P=1 f=111a rep=0 e2e=0.0505 kern=0.0010 exch=0.0000 
+grover         n= 8 C=4 P=1 f=111a rep=1 e2e=0.0388 kern=0.0010 exch=0.0000 
+grover         n= 8 C=4 P=1 f=111a rep=2 e2e=0.0381 kern=0.0010 exch=0.0000 
+grover         n= 8 C=4 P=1 f=111a rep=3 e2e=0.0415 kern=0.0010 exch=0.0000 
+grover         n= 8 C=4 P=1 f=111a rep=4 e2e=0.0374 kern=0.0010 exch=0.0000 
+grover         n= 8 C=4 P=1 f=111a rep=5 e2e=0.0395 kern=0.0010 exch=0.0000 maxerr=1.79e-15 1-F=2.85e-28
+grover         n=12 C=4 P=1 f=111a rep=0 e2e=0.5662 kern=0.0465 exch=0.1948 
+grover         n=12 C=4 P=1 f=111a rep=1 e2e=0.5663 kern=0.0464 exch=0.1929 
+grover         n=12 C=4 P=1 f=111a rep=2 e2e=0.5594 kern=0.0475 exch=0.1940 
+grover         n=12 C=4 P=1 f=111a rep=3 e2e=0.5674 kern=0.0467 exch=0.1974 
+grover         n=12 C=4 P=1 f=111a rep=4 e2e=0.5821 kern=0.0462 exch=0.1913 
+grover         n=12 C=4 P=1 f=111a rep=5 e2e=0.5709 kern=0.0474 exch=0.1980 maxerr=7.09e-16 1-F=6.68e-28
+grover         n=14 C=4 P=2 f=111a rep=0 e2e=2.7926 kern=0.2764 exch=1.3270 
+grover         n=14 C=4 P=2 f=111a rep=1 e2e=2.6595 kern=0.2693 exch=1.2625 
+grover         n=14 C=4 P=2 f=111a rep=2 e2e=2.6663 kern=0.2641 exch=1.2626 
+grover         n=14 C=4 P=2 f=111a rep=3 e2e=2.7829 kern=0.2858 exch=1.3072 
+grover         n=14 C=4 P=2 f=111a rep=4 e2e=2.7342 kern=0.2658 exch=1.3125 
+grover         n=14 C=4 P=2 f=111a rep=5 e2e=2.7887 kern=0.2726 exch=1.3099 maxerr=1.01e-15 1-F=3.49e-27
+XRT build version: 2.16.204
+Build hash: fa4c0045003fed0acea4593788dce5ef6d0b66ee
+Build date: 2023-10-11 23:46:00
+Git branch: 2023.2
+PID: 2121083
+UID: 1011
+[Thu Oct  8 11:57:33 2026 GMT]
+HOST: fpga-host
+EXE: <WS>/../envs/fpga/bin/python3.8
+[XRT] ERROR: Xclbin on card is in use, can't change.
+[XRT] ERROR: See dmesg log for details. err = -16
+park failed: failed to load xclbin: Device or resource busy
+Traceback (most recent call last):
+  File "bench/run_engine.py", line 263, in <module>
+    main()
+  File "bench/run_engine.py", line 199, in main
+    r = rt.run(qc, shots=1024, f1=f1, f2=f2, f3=f3, f4=f4, return_state=(rep == a.reps - 1), seed=rep, initial_map=imap,
+  File "<WS>/qsim_multifpga/bench/../sv128/host/runtime.py", line 348, in run
+    prog, fmap, stats = compile_circuit(qrun, L, k, fuse_1q=fuse, tiling=tiling, initial_map=initial_map,
+  File "<WS>/qsim_multifpga/sv128/host/compiler.py", line 477, in compile_circuit
+    a = compile_circuit(qc, L, k, fuse_1q, tiling, initial_map, max_high, f1, f2, f3, False)
+  File "<WS>/qsim_multifpga/sv128/host/compiler.py", line 506, in compile_circuit
+    final_map = [l2p_end[relab[l]] for l in range(n)]
+  File "<WS>/qsim_multifpga/sv128/host/compiler.py", line 506, in <listcomp>
+    final_map = [l2p_end[relab[l]] for l in range(n)]
+IndexError: list index out of range
+qft            n=16 C=2 P=8 f=111a rep=0 e2e=0.0775 kern=0.0114 exch=0.0058 
+qft            n=16 C=2 P=8 f=111a rep=1 e2e=0.0492 kern=0.0028 exch=0.0042 
+qft            n=16 C=2 P=8 f=111a rep=2 e2e=0.0517 kern=0.0034 exch=0.0044 
+qft            n=16 C=2 P=8 f=111a rep=3 e2e=0.0499 kern=0.0033 exch=0.0046 
+qft            n=16 C=2 P=8 f=111a rep=4 e2e=0.0525 kern=0.0034 exch=0.0042 
+qft            n=16 C=2 P=8 f=111a rep=5 e2e=0.0491 kern=0.0030 exch=0.0044 maxerr=0.00e+00 1-F=0.00e+00
+qft            n=20 C=2 P=8 f=111a rep=0 e2e=0.1065 kern=0.0163 exch=0.0136 
+qft            n=20 C=2 P=8 f=111a rep=1 e2e=0.1062 kern=0.0162 exch=0.0128 
+qft            n=20 C=2 P=8 f=111a rep=2 e2e=0.1054 kern=0.0163 exch=0.0129 
+qft            n=20 C=2 P=8 f=111a rep=3 e2e=0.1099 kern=0.0175 exch=0.0147 
+qft            n=20 C=2 P=8 f=111a rep=4 e2e=0.1104 kern=0.0171 exch=0.0141 
+qft            n=20 C=2 P=8 f=111a rep=5 e2e=0.1289 kern=0.0178 exch=0.0149 maxerr=0.00e+00 1-F=0.00e+00
+qft            n=24 C=2 P=8 f=111a rep=0 e2e=0.5810 kern=0.2923 exch=0.1000 
+qft            n=24 C=2 P=8 f=111a rep=1 e2e=0.5706 kern=0.2926 exch=0.0948 
+qft            n=24 C=2 P=8 f=111a rep=2 e2e=0.5765 kern=0.2924 exch=0.0911 
+qft            n=24 C=2 P=8 f=111a rep=3 e2e=0.5755 kern=0.2923 exch=0.0958 
+qft            n=24 C=2 P=8 f=111a rep=4 e2e=0.5699 kern=0.2923 exch=0.0918 
+qft            n=24 C=2 P=8 f=111a rep=5 e2e=0.5817 kern=0.2929 exch=0.0949 maxerr=4.61e-19 1-F=2.45e-30
+ghz            n=16 C=2 P=8 f=111a rep=0 e2e=0.0257 kern=0.0016 exch=0.0037 
+ghz            n=16 C=2 P=8 f=111a rep=1 e2e=0.0257 kern=0.0017 exch=0.0039 
+ghz            n=16 C=2 P=8 f=111a rep=2 e2e=0.0268 kern=0.0013 exch=0.0033 
+ghz            n=16 C=2 P=8 f=111a rep=3 e2e=0.0240 kern=0.0009 exch=0.0033 
+ghz            n=16 C=2 P=8 f=111a rep=4 e2e=0.0279 kern=0.0012 exch=0.0035 
+ghz            n=16 C=2 P=8 f=111a rep=5 e2e=0.0258 kern=0.0010 exch=0.0030 maxerr=0.00e+00 1-F=0.00e+00
+ghz            n=20 C=2 P=8 f=111a rep=0 e2e=0.0355 kern=0.0030 exch=0.0063 
+ghz            n=20 C=2 P=8 f=111a rep=1 e2e=0.0332 kern=0.0021 exch=0.0060 
+ghz            n=20 C=2 P=8 f=111a rep=2 e2e=0.0259 kern=0.0019 exch=0.0050 
+ghz            n=20 C=2 P=8 f=111a rep=3 e2e=0.0272 kern=0.0018 exch=0.0055 
+ghz            n=20 C=2 P=8 f=111a rep=4 e2e=0.0257 kern=0.0018 exch=0.0049 
+ghz            n=20 C=2 P=8 f=111a rep=5 e2e=0.0254 kern=0.0019 exch=0.0048 maxerr=0.00e+00 1-F=0.00e+00
+ghz            n=24 C=2 P=8 f=111a rep=0 e2e=0.1545 kern=0.0228 exch=0.0548 
+ghz            n=24 C=2 P=8 f=111a rep=1 e2e=0.1576 kern=0.0230 exch=0.0563 
+ghz            n=24 C=2 P=8 f=111a rep=2 e2e=0.1598 kern=0.0235 exch=0.0571 
+ghz            n=24 C=2 P=8 f=111a rep=3 e2e=0.1565 kern=0.0235 exch=0.0545 
+ghz            n=24 C=2 P=8 f=111a rep=4 e2e=0.1541 kern=0.0231 exch=0.0571 
+ghz            n=24 C=2 P=8 f=111a rep=5 e2e=0.1626 kern=0.0233 exch=0.0594 maxerr=1.11e-16 1-F=1.23e-32
+qft            n=16 C=2 P=8 f=111a rep=0 e2e=0.0602 kern=0.0039 exch=0.0048 
+qft            n=16 C=2 P=8 f=111a rep=1 e2e=0.0494 kern=0.0036 exch=0.0042 
+qft            n=16 C=2 P=8 f=111a rep=2 e2e=0.0573 kern=0.0038 exch=0.0054 
+qft            n=16 C=2 P=8 f=111a rep=3 e2e=0.0537 kern=0.0036 exch=0.0044 
+qft            n=16 C=2 P=8 f=111a rep=4 e2e=0.0514 kern=0.0034 exch=0.0046 
+qft            n=16 C=2 P=8 f=111a rep=5 e2e=0.0524 kern=0.0035 exch=0.0044 maxerr=0.00e+00 1-F=0.00e+00
+qft            n=20 C=2 P=8 f=111a rep=0 e2e=0.1167 kern=0.0157 exch=0.0181 
+qft            n=20 C=2 P=8 f=111a rep=1 e2e=0.0970 kern=0.0159 exch=0.0159 
+qft            n=20 C=2 P=8 f=111a rep=2 e2e=0.0980 kern=0.0158 exch=0.0158 
+qft            n=20 C=2 P=8 f=111a rep=3 e2e=0.1049 kern=0.0169 exch=0.0167 
+qft            n=20 C=2 P=8 f=111a rep=4 e2e=0.1089 kern=0.0171 exch=0.0183 
+qft            n=20 C=2 P=8 f=111a rep=5 e2e=0.1058 kern=0.0165 exch=0.0190 maxerr=0.00e+00 1-F=0.00e+00
+qft            n=24 C=2 P=8 f=111a rep=0 e2e=0.7497 kern=0.2960 exch=0.2487 
+qft            n=24 C=2 P=8 f=111a rep=1 e2e=0.7242 kern=0.2964 exch=0.2513 
+qft            n=24 C=2 P=8 f=111a rep=2 e2e=0.7404 kern=0.2977 exch=0.2551 
+qft            n=24 C=2 P=8 f=111a rep=3 e2e=0.7452 kern=0.2970 exch=0.2597 
+qft            n=24 C=2 P=8 f=111a rep=4 e2e=0.7546 kern=0.2965 exch=0.2670 
+qft            n=24 C=2 P=8 f=111a rep=5 e2e=0.7677 kern=0.2963 exch=0.2730 maxerr=4.61e-19 1-F=2.45e-30
+ghz            n=16 C=2 P=8 f=111a rep=0 e2e=0.0245 kern=0.0019 exch=0.0007 
+ghz            n=16 C=2 P=8 f=111a rep=1 e2e=0.0186 kern=0.0010 exch=0.0006 
+ghz            n=16 C=2 P=8 f=111a rep=2 e2e=0.0190 kern=0.0011 exch=0.0007 
+ghz            n=16 C=2 P=8 f=111a rep=3 e2e=0.0183 kern=0.0010 exch=0.0006 
+ghz            n=16 C=2 P=8 f=111a rep=4 e2e=0.0186 kern=0.0011 exch=0.0007 
+ghz            n=16 C=2 P=8 f=111a rep=5 e2e=0.0195 kern=0.0011 exch=0.0007 maxerr=0.00e+00 1-F=0.00e+00
+ghz            n=20 C=2 P=8 f=111a rep=0 e2e=0.0326 kern=0.0026 exch=0.0010 
+ghz            n=20 C=2 P=8 f=111a rep=1 e2e=0.0314 kern=0.0026 exch=0.0011 
+ghz            n=20 C=2 P=8 f=111a rep=2 e2e=0.0236 kern=0.0023 exch=0.0008 
+ghz            n=20 C=2 P=8 f=111a rep=3 e2e=0.0245 kern=0.0023 exch=0.0008 
+ghz            n=20 C=2 P=8 f=111a rep=4 e2e=0.0226 kern=0.0023 exch=0.0008 
+ghz            n=20 C=2 P=8 f=111a rep=5 e2e=0.0227 kern=0.0023 exch=0.0008 maxerr=0.00e+00 1-F=0.00e+00
+ghz            n=24 C=2 P=8 f=111a rep=0 e2e=0.1117 kern=0.0258 exch=0.0058 
+ghz            n=24 C=2 P=8 f=111a rep=1 e2e=0.1047 kern=0.0259 exch=0.0058 
+ghz            n=24 C=2 P=8 f=111a rep=2 e2e=0.1106 kern=0.0280 exch=0.0058 
+ghz            n=24 C=2 P=8 f=111a rep=3 e2e=0.1094 kern=0.0272 exch=0.0061 
+ghz            n=24 C=2 P=8 f=111a rep=4 e2e=0.1095 kern=0.0275 exch=0.0058 
+ghz            n=24 C=2 P=8 f=111a rep=5 e2e=0.1127 kern=0.0268 exch=0.0059 maxerr=1.11e-16 1-F=1.23e-32
+grover         n= 8 C=2 P=1 f=111a rep=0 e2e=0.0461 kern=0.0010 exch=0.0000 
+grover         n= 8 C=2 P=1 f=111a rep=1 e2e=0.0389 kern=0.0009 exch=0.0000 
+grover         n= 8 C=2 P=1 f=111a rep=2 e2e=0.0442 kern=0.0010 exch=0.0000 
+grover         n= 8 C=2 P=1 f=111a rep=3 e2e=0.0377 kern=0.0010 exch=0.0000 
+grover         n= 8 C=2 P=1 f=111a rep=4 e2e=0.0339 kern=0.0009 exch=0.0000 
+grover         n= 8 C=2 P=1 f=111a rep=5 e2e=0.0413 kern=0.0009 exch=0.0000 maxerr=1.79e-15 1-F=2.85e-28
+grover         n=12 C=2 P=1 f=111a rep=0 e2e=0.4001 kern=0.0299 exch=0.1092 
+grover         n=12 C=2 P=1 f=111a rep=1 e2e=0.3983 kern=0.0315 exch=0.1062 
+grover         n=12 C=2 P=1 f=111a rep=2 e2e=0.3969 kern=0.0285 exch=0.1045 
+grover         n=12 C=2 P=1 f=111a rep=3 e2e=0.3960 kern=0.0297 exch=0.1055 
+grover         n=12 C=2 P=1 f=111a rep=4 e2e=0.4174 kern=0.0291 exch=0.1010 
+grover         n=12 C=2 P=1 f=111a rep=5 e2e=0.4015 kern=0.0308 exch=0.1088 maxerr=7.09e-16 1-F=6.68e-28
+grover         n=14 C=2 P=4 f=111a rep=0 e2e=2.6926 kern=0.2909 exch=1.2477 
+grover         n=14 C=2 P=4 f=111a rep=1 e2e=2.5876 kern=0.2585 exch=1.2262 
+grover         n=14 C=2 P=4 f=111a rep=2 e2e=2.6081 kern=0.2745 exch=1.2142 
+grover         n=14 C=2 P=4 f=111a rep=3 e2e=2.6274 kern=0.2784 exch=1.1997 
+grover         n=14 C=2 P=4 f=111a rep=4 e2e=2.6193 kern=0.2820 exch=1.2343 
+grover         n=14 C=2 P=4 f=111a rep=5 e2e=2.6807 kern=0.2809 exch=1.2104 maxerr=1.01e-15 1-F=3.49e-27
+grover         n= 8 C=2 P=1 f=111a rep=0 e2e=0.0441 kern=0.0014 exch=0.0008 
+grover         n= 8 C=2 P=1 f=111a rep=1 e2e=0.0375 kern=0.0014 exch=0.0009 
+grover         n= 8 C=2 P=1 f=111a rep=2 e2e=0.0382 kern=0.0011 exch=0.0008 
+grover         n= 8 C=2 P=1 f=111a rep=3 e2e=0.0347 kern=0.0010 exch=0.0007 
+grover         n= 8 C=2 P=1 f=111a rep=4 e2e=0.0353 kern=0.0011 exch=0.0006 
+grover         n= 8 C=2 P=1 f=111a rep=5 e2e=0.0372 kern=0.0011 exch=0.0008 maxerr=1.79e-15 1-F=2.85e-28
+grover         n=12 C=2 P=1 f=111a rep=0 e2e=0.3962 kern=0.0289 exch=0.1004 
+grover         n=12 C=2 P=1 f=111a rep=1 e2e=0.4009 kern=0.0280 exch=0.0950 
+grover         n=12 C=2 P=1 f=111a rep=2 e2e=0.3963 kern=0.0285 exch=0.0993 
+grover         n=12 C=2 P=1 f=111a rep=3 e2e=0.4004 kern=0.0295 exch=0.0965 
+grover         n=12 C=2 P=1 f=111a rep=4 e2e=0.4228 kern=0.0286 exch=0.0981 
+grover         n=12 C=2 P=1 f=111a rep=5 e2e=0.4009 kern=0.0286 exch=0.1009 maxerr=8.63e-16 1-F=6.67e-28
+grover         n=14 C=2 P=4 f=111a rep=0 e2e=3.0394 kern=0.2444 exch=1.6569 
+grover         n=14 C=2 P=4 f=111a rep=1 e2e=3.2005 kern=0.3462 exch=1.6535 
+grover         n=14 C=2 P=4 f=111a rep=2 e2e=3.0651 kern=0.3151 exch=1.6163 
+grover         n=14 C=2 P=4 f=111a rep=3 e2e=3.2059 kern=0.3049 exch=1.6597 
+grover         n=14 C=2 P=4 f=111a rep=4 e2e=3.1456 kern=0.2575 exch=1.6593 
+grover         n=14 C=2 P=4 f=111a rep=5 e2e=3.1359 kern=0.2328 exch=1.6496 maxerr=1.01e-15 1-F=3.49e-27
+grover         n= 8 C=4 P=1 f=111a rep=0 e2e=0.0582 kern=0.0016 exch=0.0065 
+grover         n= 8 C=4 P=1 f=111a rep=1 e2e=0.0523 kern=0.0016 exch=0.0062 
+grover         n= 8 C=4 P=1 f=111a rep=2 e2e=0.0502 kern=0.0015 exch=0.0062 
+grover         n= 8 C=4 P=1 f=111a rep=3 e2e=0.0523 kern=0.0018 exch=0.0063 
+grover         n= 8 C=4 P=1 f=111a rep=4 e2e=0.0500 kern=0.0016 exch=0.0060 
+grover         n= 8 C=4 P=1 f=111a rep=5 e2e=0.0514 kern=0.0015 exch=0.0065 maxerr=1.79e-15 1-F=2.85e-28
+grover         n=12 C=4 P=1 f=111a rep=0 e2e=0.8691 kern=0.0744 exch=0.3024 
+grover         n=12 C=4 P=1 f=111a rep=1 e2e=0.8034 kern=0.0501 exch=0.2801 
+grover         n=12 C=4 P=1 f=111a rep=2 e2e=0.8118 kern=0.0444 exch=0.2857 
+grover         n=12 C=4 P=1 f=111a rep=3 e2e=0.8170 kern=0.0516 exch=0.2935 
+grover         n=12 C=4 P=1 f=111a rep=4 e2e=0.9135 kern=0.0958 exch=0.3089 
+grover         n=12 C=4 P=1 f=111a rep=5 e2e=0.8664 kern=0.0776 exch=0.2961 maxerr=8.63e-16 1-F=6.67e-28
+grover         n=14 C=4 P=2 f=111a rep=0 e2e=2.8630 kern=0.2383 exch=1.5006 
+grover         n=14 C=4 P=2 f=111a rep=1 e2e=2.8718 kern=0.2358 exch=1.4801 
+grover         n=14 C=4 P=2 f=111a rep=2 e2e=2.8483 kern=0.2463 exch=1.4837 
+grover         n=14 C=4 P=2 f=111a rep=3 e2e=2.9793 kern=0.2455 exch=1.5275 
+grover         n=14 C=4 P=2 f=111a rep=4 e2e=2.9857 kern=0.2684 exch=1.5536 
+grover         n=14 C=4 P=2 f=111a rep=5 e2e=2.9905 kern=0.2436 exch=1.5362 maxerr=1.01e-15 1-F=3.49e-27

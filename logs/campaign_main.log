@@ -1506,3 +1506,54 @@ grover         n=16 C=4 P=8 f=111a rep=1 e2e=23.3231 kern=2.5637 exch=13.2903
 grover         n=16 C=4 P=8 f=111a rep=2 e2e=22.7180 kern=2.6298 exch=12.9740 
 grover         n=16 C=4 P=8 f=111a rep=3 e2e=23.6891 kern=2.6362 exch=13.5285 
 grover         n=16 C=4 P=8 f=111a rep=4 e2e=23.0307 kern=2.6886 exch=13.2131 
+Traceback (most recent call last):
+  File "bench/run_engine.py", line 259, in <module>
+    main()
+  File "bench/run_engine.py", line 216, in main
+    ref, ref_src = reference(qc, init)
+  File "bench/run_engine.py", line 59, in reference
+    return sv.evolve(qc).data, "qiskit.Statevector"
+  File "<WS>/../envs/fpga/lib/python3.8/site-packages/qiskit/quantum_info/states/statevector.py", line 391, in evolve
+    return self._evolve_instruction(ret, other, qargs=qargs)
+  File "<WS>/../envs/fpga/lib/python3.8/site-packages/qiskit/quantum_info/states/statevector.py", line 957, in _evolve_instruction
+    Statevector._evolve_instruction(statevec, instruction.operation, qargs=new_qargs)
+  File "<WS>/../envs/fpga/lib/python3.8/site-packages/qiskit/quantum_info/states/statevector.py", line 957, in _evolve_instruction
+    Statevector._evolve_instruction(statevec, instruction.operation, qargs=new_qargs)
+  File "<WS>/../envs/fpga/lib/python3.8/site-packages/qiskit/quantum_info/states/statevector.py", line 957, in _evolve_instruction
+    Statevector._evolve_instruction(statevec, instruction.operation, qargs=new_qargs)
+  File "<WS>/../envs/fpga/lib/python3.8/site-packages/qiskit/quantum_info/states/statevector.py", line 899, in _evolve_instruction
+    return Statevector._evolve_operator(statevec, Operator(mat), qargs=qargs)
+  File "<WS>/../envs/fpga/lib/python3.8/site-packages/qiskit/quantum_info/states/statevector.py", line 872, in _evolve_operator
+    np.dot(oper.data, np.reshape(tensor, contract_shape)),
+  File "<__array_function__ internals>", line 200, in dot
+KeyboardInterrupt
+ghz            n=31 C=4 P=32 f=111a rep=0 e2e=13.5171 kern=1.6949 exch=6.2374 
+ghz            n=31 C=4 P=32 f=111a rep=1 e2e=13.7360 kern=1.6958 exch=6.3885 
+qft            n=31 C=4 P=32 f=111a rep=0 e2e=60.0188 kern=28.6840 exch=25.4036 
+qft            n=31 C=4 P=32 f=111a rep=1 e2e=59.9778 kern=28.6817 exch=25.3396 
+THERMAL STOP qft n=31 flags=111a after 2 of 2 repetitions: ABORT 0000:21:00.1 fpga=91 hbm=86 t=1791578846.386289
+qft_iqft       n=24 C=4 P=8 f=111a rep=0 e2e=1.7672 kern=0.3341 exch=1.1207 
+qft_iqft       n=24 C=4 P=8 f=111a rep=1 e2e=1.7347 kern=0.3340 exch=1.1074 
+qft_iqft       n=24 C=4 P=8 f=111a rep=2 e2e=1.7864 kern=0.3339 exch=1.1457 
+qft_iqft       n=24 C=4 P=8 f=111a rep=3 e2e=1.8013 kern=0.3329 exch=1.1534 
+qft_iqft       n=24 C=4 P=8 f=111a rep=4 e2e=1.8312 kern=0.3297 exch=1.1796 
+qft_iqft       n=24 C=4 P=8 f=111a rep=5 e2e=1.8057 kern=0.3321 exch=1.1644 maxerr=4.87e-17 1-F=1.99e-30
+qft_iqft       n=26 C=4 P=8 f=111a rep=0 e2e=5.9723 kern=1.4375 exch=4.0373 
+qft_iqft       n=26 C=4 P=8 f=111a rep=1 e2e=6.1046 kern=1.4443 exch=4.1363 
+qft_iqft       n=26 C=4 P=8 f=111a rep=2 e2e=6.3203 kern=1.4432 exch=4.3488 
+qft_iqft       n=26 C=4 P=8 f=111a rep=3 e2e=6.4000 kern=1.4455 exch=4.4166 
+qft_iqft       n=26 C=4 P=8 f=111a rep=4 e2e=6.3042 kern=1.4436 exch=4.3013 
+qft_iqft       n=26 C=4 P=8 f=111a rep=5 e2e=6.2915 kern=1.4461 exch=4.3414 maxerr=4.22e-17 1-F=2.40e-30
+qft_iqft       n=28 C=4 P=8 f=111a rep=0 e2e=21.0092 kern=6.5339 exch=13.3889 
+qft_iqft       n=28 C=4 P=8 f=111a rep=1 e2e=20.8714 kern=6.5344 exch=13.2360 
+qft_iqft       n=28 C=4 P=8 f=111a rep=2 e2e=20.9517 kern=6.5333 exch=13.3180 
+qft_iqft       n=28 C=4 P=8 f=111a rep=3 e2e=20.7691 kern=6.5342 exch=13.1540 
+qft_iqft       n=28 C=4 P=8 f=111a rep=4 e2e=20.7337 kern=6.5348 exch=13.1006 
+qft_iqft       n=28 C=4 P=8 f=111a rep=5 e2e=20.6270 kern=6.5341 exch=12.9703 maxerr=7.38e-17 1-F=2.57e-30
+grover         n=16 C=4 P=8 f=111a rep=0 e2e=23.7798 kern=2.5726 exch=13.7897 
+grover         n=16 C=4 P=8 f=111a rep=1 e2e=23.2128 kern=2.6585 exch=13.3221 
+grover         n=16 C=4 P=8 f=111a rep=2 e2e=22.2327 kern=2.5090 exch=12.6798 maxerr=1.35e-15 1-F=1.78e-26
+ghz            n=31 C=4 P=32 f=111a rep=0 e2e=14.1071 kern=1.6966 exch=6.6040 
+ghz            n=31 C=4 P=32 f=111a rep=1 e2e=14.1117 kern=1.6954 exch=6.4312 maxerr=1.11e-16 1-F=1.23e-32
+qft            n=31 C=4 P=32 f=111a rep=0 e2e=61.5487 kern=28.6868 exch=26.7416 
+qft            n=31 C=4 P=32 f=111a rep=1 e2e=61.7180 kern=28.6798 exch=26.6838 maxerr=5.42e-20 1-F=4.57e-30

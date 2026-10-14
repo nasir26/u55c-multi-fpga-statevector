@@ -1,0 +1,108 @@
+shor15         n=12 C=4 P=1 f=111a rep=0 e2e=0.1986 kern=0.0021 exch=0.0026 
+shor15         n=12 C=4 P=1 f=111a rep=1 e2e=0.1859 kern=0.0020 exch=0.0024 
+shor15         n=12 C=4 P=1 f=111a rep=2 e2e=0.1845 kern=0.0020 exch=0.0024 
+shor15         n=12 C=4 P=1 f=111a rep=3 e2e=0.1803 kern=0.0020 exch=0.0023 
+shor15         n=12 C=4 P=1 f=111a rep=4 e2e=0.1826 kern=0.0020 exch=0.0022 
+shor15         n=12 C=4 P=1 f=111a rep=5 e2e=0.1747 kern=0.0019 exch=0.0024 maxerr=1.16e-15 1-F=5.84e-30
+shor15         n=16 C=4 P=8 f=111a rep=0 e2e=0.3450 kern=0.0176 exch=0.0774 
+shor15         n=16 C=4 P=8 f=111a rep=1 e2e=0.3475 kern=0.0173 exch=0.0755 
+shor15         n=16 C=4 P=8 f=111a rep=2 e2e=0.3237 kern=0.0107 exch=0.0722 
+shor15         n=16 C=4 P=8 f=111a rep=3 e2e=0.3357 kern=0.0116 exch=0.0745 
+shor15         n=16 C=4 P=8 f=111a rep=4 e2e=0.3437 kern=0.0176 exch=0.0753 
+shor15         n=16 C=4 P=8 f=111a rep=5 e2e=0.3451 kern=0.0182 exch=0.0749 maxerr=1.16e-15 1-F=5.81e-30
+shor15         n=20 C=4 P=8 f=111a rep=0 e2e=0.4160 kern=0.0339 exch=0.1027 
+shor15         n=20 C=4 P=8 f=111a rep=1 e2e=0.3914 kern=0.0338 exch=0.0976 
+shor15         n=20 C=4 P=8 f=111a rep=2 e2e=0.4094 kern=0.0344 exch=0.1039 
+shor15         n=20 C=4 P=8 f=111a rep=3 e2e=0.3998 kern=0.0336 exch=0.1026 
+shor15         n=20 C=4 P=8 f=111a rep=4 e2e=0.4005 kern=0.0339 exch=0.0996 
+shor15         n=20 C=4 P=8 f=111a rep=5 e2e=0.4004 kern=0.0342 exch=0.0993 maxerr=1.16e-15 1-F=5.82e-30
+shor15         n=24 C=4 P=8 f=111a rep=0 e2e=1.6506 kern=0.3303 exch=0.9458 
+shor15         n=24 C=4 P=8 f=111a rep=1 e2e=1.6349 kern=0.3310 exch=0.9506 
+shor15         n=24 C=4 P=8 f=111a rep=2 e2e=1.6227 kern=0.3305 exch=0.9426 
+shor15         n=24 C=4 P=8 f=111a rep=3 e2e=1.6441 kern=0.3297 exch=0.9531 
+shor15         n=24 C=4 P=8 f=111a rep=4 e2e=1.6273 kern=0.3310 exch=0.9498 
+shor15         n=24 C=4 P=8 f=111a rep=5 e2e=1.6136 kern=0.3306 exch=0.9259 maxerr=1.16e-15 1-F=5.79e-30
+qpe            n=12 C=4 P=1 f=111a rep=0 e2e=0.0370 kern=0.0004 exch=0.0000 
+qpe            n=12 C=4 P=1 f=111a rep=1 e2e=0.0291 kern=0.0004 exch=0.0000 
+qpe            n=12 C=4 P=1 f=111a rep=2 e2e=0.0280 kern=0.0004 exch=0.0000 
+qpe            n=12 C=4 P=1 f=111a rep=3 e2e=0.0255 kern=0.0004 exch=0.0000 
+qpe            n=12 C=4 P=1 f=111a rep=4 e2e=0.0321 kern=0.0004 exch=0.0000 
+qpe            n=12 C=4 P=1 f=111a rep=5 e2e=0.0331 kern=0.0004 exch=0.0000 maxerr=2.49e-14 1-F=2.05e-27
+qpe            n=16 C=4 P=8 f=111a rep=0 e2e=0.1280 kern=0.0102 exch=0.0477 
+qpe            n=16 C=4 P=8 f=111a rep=1 e2e=0.1222 kern=0.0091 exch=0.0424 
+qpe            n=16 C=4 P=8 f=111a rep=2 e2e=0.1234 kern=0.0092 exch=0.0414 
+qpe            n=16 C=4 P=8 f=111a rep=3 e2e=0.1161 kern=0.0057 exch=0.0412 
+qpe            n=16 C=4 P=8 f=111a rep=4 e2e=0.1233 kern=0.0057 exch=0.0425 
+qpe            n=16 C=4 P=8 f=111a rep=5 e2e=0.1156 kern=0.0056 exch=0.0403 maxerr=2.00e-13 1-F=1.31e-25
+qpe            n=20 C=4 P=8 f=111a rep=0 e2e=0.1557 kern=0.0118 exch=0.0356 
+qpe            n=20 C=4 P=8 f=111a rep=1 e2e=0.1332 kern=0.0120 exch=0.0381 
+qpe            n=20 C=4 P=8 f=111a rep=2 e2e=0.1440 kern=0.0143 exch=0.0444 
+qpe            n=20 C=4 P=8 f=111a rep=3 e2e=0.1443 kern=0.0143 exch=0.0438 
+qpe            n=20 C=4 P=8 f=111a rep=4 e2e=0.1447 kern=0.0146 exch=0.0449 
+qpe            n=20 C=4 P=8 f=111a rep=5 e2e=0.1468 kern=0.0148 exch=0.0444 maxerr=2.00e-13 1-F=1.31e-25
+qpe            n=24 C=4 P=8 f=111a rep=0 e2e=0.7512 kern=0.1604 exch=0.4246 
+qpe            n=24 C=4 P=8 f=111a rep=1 e2e=0.7724 kern=0.1598 exch=0.4478 
+qpe            n=24 C=4 P=8 f=111a rep=2 e2e=0.7910 kern=0.1602 exch=0.4616 
+qpe            n=24 C=4 P=8 f=111a rep=3 e2e=0.8068 kern=0.1614 exch=0.4737 
+qpe            n=24 C=4 P=8 f=111a rep=4 e2e=0.8470 kern=0.1623 exch=0.5028 
+qpe            n=24 C=4 P=8 f=111a rep=5 e2e=0.8686 kern=0.1615 exch=0.5203 maxerr=2.00e-13 1-F=1.31e-25
+qpe            n=28 C=4 P=8 f=111a rep=0 e2e=10.7261 kern=3.2637 exch=6.4951 
+qpe            n=28 C=4 P=8 f=111a rep=1 e2e=10.7050 kern=3.2641 exch=6.4629 
+qpe            n=28 C=4 P=8 f=111a rep=2 e2e=11.0053 kern=3.2648 exch=6.7847 
+qpe            n=28 C=4 P=8 f=111a rep=3 e2e=11.0317 kern=3.2657 exch=6.8247 
+qpe            n=28 C=4 P=8 f=111a rep=4 e2e=10.9798 kern=3.2659 exch=6.7418 
+qpe            n=28 C=4 P=8 f=111a rep=5 e2e=11.0690 kern=3.2660 exch=6.8219 maxerr=2.00e-13 1-F=1.31e-25
+shor15         n=12 C=2 P=1 f=111a rep=0 e2e=0.1812 kern=0.0019 exch=0.0022 
+shor15         n=12 C=2 P=1 f=111a rep=1 e2e=0.1720 kern=0.0019 exch=0.0012 
+shor15         n=12 C=2 P=1 f=111a rep=2 e2e=0.1680 kern=0.0019 exch=0.0018 
+shor15         n=12 C=2 P=1 f=111a rep=3 e2e=0.1648 kern=0.0019 exch=0.0014 
+shor15         n=12 C=2 P=1 f=111a rep=4 e2e=0.1676 kern=0.0019 exch=0.0015 
+shor15         n=12 C=2 P=1 f=111a rep=5 e2e=0.1645 kern=0.0019 exch=0.0012 maxerr=1.16e-15 1-F=5.84e-30
+shor15         n=16 C=2 P=8 f=111a rep=0 e2e=0.2827 kern=0.0171 exch=0.0199 
+shor15         n=16 C=2 P=8 f=111a rep=1 e2e=0.2740 kern=0.0149 exch=0.0183 
+shor15         n=16 C=2 P=8 f=111a rep=2 e2e=0.2720 kern=0.0151 exch=0.0197 
+shor15         n=16 C=2 P=8 f=111a rep=3 e2e=0.2676 kern=0.0154 exch=0.0179 
+shor15         n=16 C=2 P=8 f=111a rep=4 e2e=0.2677 kern=0.0144 exch=0.0179 
+shor15         n=16 C=2 P=8 f=111a rep=5 e2e=0.2682 kern=0.0142 exch=0.0174 maxerr=1.16e-15 1-F=5.81e-30
+shor15         n=20 C=2 P=8 f=111a rep=0 e2e=0.3298 kern=0.0413 exch=0.0412 
+shor15         n=20 C=2 P=8 f=111a rep=1 e2e=0.3289 kern=0.0442 exch=0.0534 
+shor15         n=20 C=2 P=8 f=111a rep=2 e2e=0.3351 kern=0.0427 exch=0.0511 
+shor15         n=20 C=2 P=8 f=111a rep=3 e2e=0.3372 kern=0.0422 exch=0.0511 
+shor15         n=20 C=2 P=8 f=111a rep=4 e2e=0.3389 kern=0.0427 exch=0.0494 
+shor15         n=20 C=2 P=8 f=111a rep=5 e2e=0.3425 kern=0.0442 exch=0.0573 maxerr=1.16e-15 1-F=5.82e-30
+shor15         n=24 C=2 P=8 f=111a rep=0 e2e=1.4251 kern=0.6260 exch=0.4856 
+shor15         n=24 C=2 P=8 f=111a rep=1 e2e=1.4410 kern=0.6261 exch=0.5110 
+shor15         n=24 C=2 P=8 f=111a rep=2 e2e=1.4693 kern=0.6278 exch=0.5259 
+shor15         n=24 C=2 P=8 f=111a rep=3 e2e=1.5469 kern=0.6285 exch=0.5960 
+shor15         n=24 C=2 P=8 f=111a rep=4 e2e=1.5343 kern=0.6276 exch=0.5822 
+shor15         n=24 C=2 P=8 f=111a rep=5 e2e=1.5568 kern=0.6279 exch=0.6074 maxerr=1.16e-15 1-F=5.79e-30
+qpe            n=12 C=2 P=1 f=111a rep=0 e2e=0.0305 kern=0.0004 exch=0.0000 
+qpe            n=12 C=2 P=1 f=111a rep=1 e2e=0.0272 kern=0.0004 exch=0.0000 
+qpe            n=12 C=2 P=1 f=111a rep=2 e2e=0.0250 kern=0.0004 exch=0.0000 
+qpe            n=12 C=2 P=1 f=111a rep=3 e2e=0.0213 kern=0.0004 exch=0.0000 
+qpe            n=12 C=2 P=1 f=111a rep=4 e2e=0.0254 kern=0.0004 exch=0.0000 
+qpe            n=12 C=2 P=1 f=111a rep=5 e2e=0.0248 kern=0.0004 exch=0.0000 maxerr=2.49e-14 1-F=2.05e-27
+qpe            n=16 C=2 P=8 f=111a rep=0 e2e=0.0649 kern=0.0049 exch=0.0023 
+qpe            n=16 C=2 P=8 f=111a rep=1 e2e=0.0635 kern=0.0051 exch=0.0022 
+qpe            n=16 C=2 P=8 f=111a rep=2 e2e=0.0672 kern=0.0043 exch=0.0019 
+qpe            n=16 C=2 P=8 f=111a rep=3 e2e=0.0601 kern=0.0041 exch=0.0020 
+qpe            n=16 C=2 P=8 f=111a rep=4 e2e=0.0666 kern=0.0045 exch=0.0018 
+qpe            n=16 C=2 P=8 f=111a rep=5 e2e=0.0608 kern=0.0049 exch=0.0021 maxerr=2.00e-13 1-F=1.31e-25
+qpe            n=20 C=2 P=8 f=111a rep=0 e2e=0.1084 kern=0.0161 exch=0.0112 
+qpe            n=20 C=2 P=8 f=111a rep=1 e2e=0.1095 kern=0.0167 exch=0.0120 
+qpe            n=20 C=2 P=8 f=111a rep=2 e2e=0.0983 kern=0.0165 exch=0.0090 
+qpe            n=20 C=2 P=8 f=111a rep=3 e2e=0.1051 kern=0.0179 exch=0.0095 
+qpe            n=20 C=2 P=8 f=111a rep=4 e2e=0.1030 kern=0.0178 exch=0.0074 
+qpe            n=20 C=2 P=8 f=111a rep=5 e2e=0.1057 kern=0.0179 exch=0.0080 maxerr=2.00e-13 1-F=1.31e-25
+qpe            n=24 C=2 P=8 f=111a rep=0 e2e=0.7491 kern=0.3069 exch=0.2715 
+qpe            n=24 C=2 P=8 f=111a rep=1 e2e=0.7507 kern=0.3066 exch=0.2739 
+qpe            n=24 C=2 P=8 f=111a rep=2 e2e=0.7613 kern=0.3074 exch=0.2909 
+qpe            n=24 C=2 P=8 f=111a rep=3 e2e=0.7678 kern=0.3073 exch=0.2792 
+qpe            n=24 C=2 P=8 f=111a rep=4 e2e=0.7798 kern=0.3068 exch=0.3018 
+qpe            n=24 C=2 P=8 f=111a rep=5 e2e=0.7921 kern=0.3064 exch=0.3091 maxerr=2.00e-13 1-F=1.31e-25
+qpe            n=28 C=2 P=8 f=111a rep=0 e2e=10.7366 kern=6.5217 exch=3.3063 
+qpe            n=28 C=2 P=8 f=111a rep=1 e2e=10.7411 kern=6.5232 exch=3.3102 
+qpe            n=28 C=2 P=8 f=111a rep=2 e2e=10.7905 kern=6.5242 exch=3.3329 
+qpe            n=28 C=2 P=8 f=111a rep=3 e2e=10.4583 kern=6.5230 exch=3.0426 
+qpe            n=28 C=2 P=8 f=111a rep=4 e2e=10.5954 kern=6.5227 exch=3.1515 
+qpe            n=28 C=2 P=8 f=111a rep=5 e2e=10.6026 kern=6.5220 exch=3.1664 maxerr=2.00e-13 1-F=1.31e-25

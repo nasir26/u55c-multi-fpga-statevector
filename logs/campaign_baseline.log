@@ -1,0 +1,693 @@
+baseline qft          n= 4 rep=0 e2e=0.0657 exec=0.0212 
+baseline qft          n= 4 rep=1 e2e=0.0300 exec=0.0192 
+baseline qft          n= 4 rep=2 e2e=0.0264 exec=0.0184 
+baseline qft          n= 4 rep=3 e2e=0.0254 exec=0.0176 
+baseline qft          n= 4 rep=4 e2e=0.0257 exec=0.0179 
+baseline qft          n= 4 rep=5 e2e=0.0245 exec=0.0170 maxerr=2.78e-17
+baseline qft          n= 8 rep=0 e2e=0.0526 exec=0.0433 
+baseline qft          n= 8 rep=1 e2e=0.0485 exec=0.0379 
+baseline qft          n= 8 rep=2 e2e=0.0447 exec=0.0347 
+baseline qft          n= 8 rep=3 e2e=0.0463 exec=0.0345 
+baseline qft          n= 8 rep=4 e2e=0.0439 exec=0.0337 
+baseline qft          n= 8 rep=5 e2e=0.0419 exec=0.0327 maxerr=5.08e-17
+baseline qft          n=12 rep=0 e2e=0.1718 exec=0.1570 
+baseline qft          n=12 rep=1 e2e=0.1702 exec=0.1556 
+baseline qft          n=12 rep=2 e2e=0.1672 exec=0.1544 
+baseline qft          n=12 rep=3 e2e=0.1707 exec=0.1550 
+baseline qft          n=12 rep=4 e2e=0.1679 exec=0.1548 
+baseline qft          n=12 rep=5 e2e=0.1690 exec=0.1562 maxerr=9.38e-17
+baseline qft          n=14 rep=0 e2e=0.7201 exec=0.6974 
+baseline qft          n=14 rep=1 e2e=0.7116 exec=0.6951 
+baseline qft          n=14 rep=2 e2e=0.7071 exec=0.6918 
+baseline qft          n=14 rep=3 e2e=0.7084 exec=0.6920 
+baseline qft          n=14 rep=4 e2e=0.7079 exec=0.6927 
+baseline qft          n=14 rep=5 e2e=0.7071 exec=0.6925 maxerr=2.97e-17
+baseline qft          n=16 rep=0 e2e=3.5585 exec=3.5360 
+baseline qft          n=16 rep=1 e2e=3.4895 exec=3.4746 
+baseline qft          n=16 rep=2 e2e=3.4918 exec=3.4785 
+baseline qft          n=16 rep=3 e2e=3.5104 exec=3.4965 
+baseline qft          n=16 rep=4 e2e=3.5775 exec=3.5648 
+baseline qft          n=16 rep=5 e2e=3.5417 exec=3.5279 maxerr=2.08e-17
+baseline qft          n=18 rep=0 e2e=17.8932 exec=17.8628 
+baseline qft          n=18 rep=1 e2e=17.7626 exec=17.7415 
+baseline qft          n=18 rep=2 e2e=17.8521 exec=17.8314 
+baseline qft          n=18 rep=3 e2e=17.8289 exec=17.8103 
+baseline qft          n=18 rep=4 e2e=17.8039 exec=17.7825 
+baseline qft          n=18 rep=5 e2e=17.7509 exec=17.7284 maxerr=1.82e-17
+baseline qft          n=20 rep=0 e2e=89.5169 exec=89.4802 
+baseline qft          n=20 rep=1 e2e=89.3582 exec=89.3282 
+baseline qft          n=20 rep=2 e2e=89.1023 exec=89.0749 
+baseline qft          n=20 rep=3 e2e=89.2750 exec=89.2460 
+baseline qft          n=20 rep=4 e2e=89.1340 exec=89.1046 
+baseline qft          n=20 rep=5 e2e=89.2514 exec=89.2220 maxerr=6.19e-18
+baseline qft          n=22 rep=0 e2e=440.6978 exec=440.6055 
+baseline qft          n=22 rep=1 e2e=440.6553 exec=440.5676 
+baseline qft          n=22 rep=2 e2e=440.1434 exec=440.0733 
+baseline qft          n=22 rep=3 e2e=440.1121 exec=440.0405 
+baseline qft          n=22 rep=4 e2e=440.5448 exec=440.4748 
+baseline qft          n=22 rep=5 e2e=440.0718 exec=439.9905 maxerr=8.46e-18
+baseline ghz          n= 4 rep=0 e2e=0.0170 exec=0.0081 
+baseline ghz          n= 4 rep=1 e2e=0.0155 exec=0.0062 
+baseline ghz          n= 4 rep=2 e2e=0.0122 exec=0.0058 
+baseline ghz          n= 4 rep=3 e2e=0.0126 exec=0.0058 
+baseline ghz          n= 4 rep=4 e2e=0.0128 exec=0.0063 
+baseline ghz          n= 4 rep=5 e2e=0.0122 exec=0.0057 maxerr=0.00e+00
+baseline ghz          n= 8 rep=0 e2e=0.0167 exec=0.0090 
+baseline ghz          n= 8 rep=1 e2e=0.0175 exec=0.0068 
+baseline ghz          n= 8 rep=2 e2e=0.0129 exec=0.0061 
+baseline ghz          n= 8 rep=3 e2e=0.0128 exec=0.0061 
+baseline ghz          n= 8 rep=4 e2e=0.0130 exec=0.0062 
+baseline ghz          n= 8 rep=5 e2e=0.0142 exec=0.0062 maxerr=0.00e+00
+baseline ghz          n=12 rep=0 e2e=0.0245 exec=0.0144 
+baseline ghz          n=12 rep=1 e2e=0.0210 exec=0.0127 
+baseline ghz          n=12 rep=2 e2e=0.0193 exec=0.0123 
+baseline ghz          n=12 rep=3 e2e=0.0191 exec=0.0127 
+baseline ghz          n=12 rep=4 e2e=0.0183 exec=0.0120 
+baseline ghz          n=12 rep=5 e2e=0.0196 exec=0.0117 maxerr=0.00e+00
+baseline ghz          n=14 rep=0 e2e=0.0876 exec=0.0787 
+baseline ghz          n=14 rep=1 e2e=0.0613 exec=0.0524 
+baseline ghz          n=14 rep=2 e2e=0.0482 exec=0.0420 
+baseline ghz          n=14 rep=3 e2e=0.0518 exec=0.0445 
+baseline ghz          n=14 rep=4 e2e=0.0539 exec=0.0467 
+baseline ghz          n=14 rep=5 e2e=0.0485 exec=0.0412 maxerr=0.00e+00
+baseline ghz          n=16 rep=0 e2e=0.2027 exec=0.1923 
+baseline ghz          n=16 rep=1 e2e=0.1808 exec=0.1704 
+baseline ghz          n=16 rep=2 e2e=0.1652 exec=0.1560 
+baseline ghz          n=16 rep=3 e2e=0.1848 exec=0.1759 
+baseline ghz          n=16 rep=4 e2e=0.1842 exec=0.1748 
+baseline ghz          n=16 rep=5 e2e=0.1648 exec=0.1558 maxerr=0.00e+00
+baseline ghz          n=18 rep=0 e2e=0.7122 exec=0.6863 
+baseline ghz          n=18 rep=1 e2e=0.6662 exec=0.6529 
+baseline ghz          n=18 rep=2 e2e=0.6428 exec=0.6334 
+baseline ghz          n=18 rep=3 e2e=0.6355 exec=0.6251 
+baseline ghz          n=18 rep=4 e2e=0.6338 exec=0.6228 
+baseline ghz          n=18 rep=5 e2e=0.6301 exec=0.6206 maxerr=0.00e+00
+baseline ghz          n=20 rep=0 e2e=2.8338 exec=2.8021 
+baseline ghz          n=20 rep=1 e2e=2.7381 exec=2.7106 
+baseline ghz          n=20 rep=2 e2e=2.7211 exec=2.7029 
+baseline ghz          n=20 rep=3 e2e=2.7307 exec=2.7034 
+baseline ghz          n=20 rep=4 e2e=2.7389 exec=2.7121 
+baseline ghz          n=20 rep=5 e2e=2.7520 exec=2.7296 maxerr=0.00e+00
+baseline ghz          n=22 rep=0 e2e=12.0556 exec=11.9761 
+baseline ghz          n=22 rep=1 e2e=12.0395 exec=11.9570 
+baseline ghz          n=22 rep=2 e2e=12.0799 exec=11.9191 
+baseline ghz          n=22 rep=3 e2e=12.0324 exec=11.9051 
+baseline ghz          n=22 rep=4 e2e=11.9661 exec=11.9004 
+baseline ghz          n=22 rep=5 e2e=12.0000 exec=11.9339 maxerr=1.11e-16
+baseline bell         n= 4 rep=0 e2e=0.0137 exec=0.0053 
+baseline bell         n= 4 rep=1 e2e=0.0118 exec=0.0039 
+baseline bell         n= 4 rep=2 e2e=0.0086 exec=0.0039 
+baseline bell         n= 4 rep=3 e2e=0.0096 exec=0.0037 
+baseline bell         n= 4 rep=4 e2e=0.0098 exec=0.0033 
+baseline bell         n= 4 rep=5 e2e=0.0100 exec=0.0034 maxerr=0.00e+00
+baseline bell         n= 8 rep=0 e2e=0.0142 exec=0.0055 
+baseline bell         n= 8 rep=1 e2e=0.0103 exec=0.0037 
+baseline bell         n= 8 rep=2 e2e=0.0102 exec=0.0037 
+baseline bell         n= 8 rep=3 e2e=0.0095 exec=0.0032 
+baseline bell         n= 8 rep=4 e2e=0.0092 exec=0.0036 
+baseline bell         n= 8 rep=5 e2e=0.0077 exec=0.0033 maxerr=0.00e+00
+baseline bell         n=12 rep=0 e2e=0.0176 exec=0.0069 
+baseline bell         n=12 rep=1 e2e=0.0110 exec=0.0044 
+baseline bell         n=12 rep=2 e2e=0.0111 exec=0.0046 
+baseline bell         n=12 rep=3 e2e=0.0110 exec=0.0042 
+baseline bell         n=12 rep=4 e2e=0.0090 exec=0.0041 
+baseline bell         n=12 rep=5 e2e=0.0097 exec=0.0042 maxerr=0.00e+00
+baseline bell         n=14 rep=0 e2e=0.0169 exec=0.0079 
+baseline bell         n=14 rep=1 e2e=0.0125 exec=0.0057 
+baseline bell         n=14 rep=2 e2e=0.0113 exec=0.0058 
+baseline bell         n=14 rep=3 e2e=0.0107 exec=0.0058 
+baseline bell         n=14 rep=4 e2e=0.0110 exec=0.0054 
+baseline bell         n=14 rep=5 e2e=0.0113 exec=0.0052 maxerr=0.00e+00
+baseline bell         n=16 rep=0 e2e=0.0637 exec=0.0528 
+baseline bell         n=16 rep=1 e2e=0.0465 exec=0.0349 
+baseline bell         n=16 rep=2 e2e=0.0444 exec=0.0248 
+baseline bell         n=16 rep=3 e2e=0.0437 exec=0.0244 
+baseline bell         n=16 rep=4 e2e=0.0424 exec=0.0326 
+baseline bell         n=16 rep=5 e2e=0.0405 exec=0.0336 maxerr=0.00e+00
+baseline bell         n=18 rep=0 e2e=0.1073 exec=0.0941 
+baseline bell         n=18 rep=1 e2e=0.1431 exec=0.1206 
+baseline bell         n=18 rep=2 e2e=0.1209 exec=0.1072 
+baseline bell         n=18 rep=3 e2e=0.1257 exec=0.0985 
+baseline bell         n=18 rep=4 e2e=0.0920 exec=0.0801 
+baseline bell         n=18 rep=5 e2e=0.0731 exec=0.0602 maxerr=0.00e+00
+baseline bell         n=20 rep=0 e2e=0.2397 exec=0.2135 
+baseline bell         n=20 rep=1 e2e=0.2445 exec=0.2151 
+baseline bell         n=20 rep=2 e2e=0.2558 exec=0.2336 
+baseline bell         n=20 rep=3 e2e=0.2481 exec=0.2281 
+baseline bell         n=20 rep=4 e2e=0.2193 exec=0.1958 
+baseline bell         n=20 rep=5 e2e=0.2220 exec=0.1949 maxerr=0.00e+00
+baseline bell         n=22 rep=0 e2e=0.6330 exec=0.5709 
+baseline bell         n=22 rep=1 e2e=0.5833 exec=0.5348 
+baseline bell         n=22 rep=2 e2e=0.7019 exec=0.5461 
+baseline bell         n=22 rep=3 e2e=0.6561 exec=0.5775 
+baseline bell         n=22 rep=4 e2e=0.6245 exec=0.5548 
+baseline bell         n=22 rep=5 e2e=0.6013 exec=0.5337 maxerr=1.11e-16
+baseline qft_iqft     n= 4 rep=0 e2e=0.0557 exec=0.0451 
+baseline qft_iqft     n= 4 rep=1 e2e=0.0480 exec=0.0383 
+baseline qft_iqft     n= 4 rep=2 e2e=0.0532 exec=0.0397 
+baseline qft_iqft     n= 4 rep=3 e2e=0.0476 exec=0.0408 
+baseline qft_iqft     n= 4 rep=4 e2e=0.0444 exec=0.0370 
+baseline qft_iqft     n= 4 rep=5 e2e=0.0435 exec=0.0369 maxerr=2.23e-08
+baseline qft_iqft     n= 8 rep=0 e2e=0.0923 exec=0.0767 
+baseline qft_iqft     n= 8 rep=1 e2e=0.0818 exec=0.0687 
+baseline qft_iqft     n= 8 rep=2 e2e=0.0788 exec=0.0674 
+baseline qft_iqft     n= 8 rep=3 e2e=0.0770 exec=0.0666 
+baseline qft_iqft     n= 8 rep=4 e2e=0.0759 exec=0.0661 
+baseline qft_iqft     n= 8 rep=5 e2e=0.0750 exec=0.0629 maxerr=5.82e-08
+baseline qft_iqft     n=12 rep=0 e2e=0.3576 exec=0.3319 
+baseline qft_iqft     n=12 rep=1 e2e=0.3440 exec=0.3240 
+baseline qft_iqft     n=12 rep=2 e2e=0.3446 exec=0.3265 
+baseline qft_iqft     n=12 rep=3 e2e=0.3490 exec=0.3311 
+baseline qft_iqft     n=12 rep=4 e2e=0.3437 exec=0.3268 
+baseline qft_iqft     n=12 rep=5 e2e=0.3447 exec=0.3268 maxerr=2.26e-08
+baseline qft_iqft     n=14 rep=0 e2e=1.4377 exec=1.4079 
+baseline qft_iqft     n=14 rep=1 e2e=1.4290 exec=1.4048 
+baseline qft_iqft     n=14 rep=2 e2e=1.4312 exec=1.4087 
+baseline qft_iqft     n=14 rep=3 e2e=1.4216 exec=1.4002 
+baseline qft_iqft     n=14 rep=4 e2e=1.4243 exec=1.4038 
+baseline qft_iqft     n=14 rep=5 e2e=1.4338 exec=1.4122 maxerr=2.21e-08
+baseline qft_iqft     n=16 rep=0 e2e=7.1783 exec=7.1489 
+baseline qft_iqft     n=16 rep=1 e2e=7.0919 exec=7.0493 
+baseline qft_iqft     n=16 rep=2 e2e=7.1949 exec=7.1192 
+baseline qft_iqft     n=16 rep=3 e2e=7.1875 exec=7.1513 
+baseline qft_iqft     n=16 rep=4 e2e=7.1846 exec=7.1174 
+baseline qft_iqft     n=16 rep=5 e2e=7.1532 exec=7.0534 maxerr=4.46e-08
+baseline qft_iqft     n=18 rep=0 e2e=36.1881 exec=36.1368 
+baseline qft_iqft     n=18 rep=1 e2e=36.0924 exec=36.0458 
+baseline qft_iqft     n=18 rep=2 e2e=36.0664 exec=35.9901 
+baseline qft_iqft     n=18 rep=3 e2e=36.2333 exec=36.1475 
+baseline qft_iqft     n=18 rep=4 e2e=36.0441 exec=35.9974 
+baseline qft_iqft     n=18 rep=5 e2e=36.1626 exec=36.1068 maxerr=3.30e-08
+baseline qft_iqft     n=20 rep=0 e2e=180.1774 exec=180.1133 
+baseline qft_iqft     n=20 rep=1 e2e=179.9899 exec=179.9309 
+baseline qft_iqft     n=20 rep=2 e2e=180.5678 exec=180.4964 
+baseline qft_iqft     n=20 rep=3 e2e=179.9110 exec=179.8533 
+baseline qft_iqft     n=20 rep=4 e2e=180.0928 exec=180.0018 
+baseline qft_iqft     n=20 rep=5 e2e=180.1775 exec=180.0690 maxerr=1.99e-08
+baseline qft_iqft     n=22 rep=0 e2e=889.7917 exec=889.6570 
+baseline qft_iqft     n=22 rep=1 e2e=888.8991 exec=888.7673 
+baseline qft_iqft     n=22 rep=2 e2e=889.3912 exec=889.2713 
+baseline qft_iqft     n=22 rep=3 e2e=888.4428 exec=888.3237 
+baseline qft_iqft     n=22 rep=4 e2e=887.9820 exec=887.8483 
+baseline qft_iqft     n=22 rep=5 e2e=888.0823 exec=887.9619 maxerr=1.31e-08
+baseline rand10       n= 4 rep=0 e2e=0.1032 exec=0.0900 
+baseline rand10       n= 4 rep=1 e2e=0.0903 exec=0.0785 
+baseline rand10       n= 4 rep=2 e2e=0.0845 exec=0.0749 
+baseline rand10       n= 4 rep=3 e2e=0.0816 exec=0.0720 
+baseline rand10       n= 4 rep=4 e2e=0.0820 exec=0.0733 
+baseline rand10       n= 4 rep=5 e2e=0.0857 exec=0.0758 maxerr=8.46e-08
+baseline rand10       n= 8 rep=0 e2e=0.1215 exec=0.1039 
+baseline rand10       n= 8 rep=1 e2e=0.1034 exec=0.0880 
+baseline rand10       n= 8 rep=2 e2e=0.0963 exec=0.0831 
+baseline rand10       n= 8 rep=3 e2e=0.0993 exec=0.0867 
+baseline rand10       n= 8 rep=4 e2e=0.0969 exec=0.0835 
+baseline rand10       n= 8 rep=5 e2e=0.0960 exec=0.0830 maxerr=8.31e-08
+baseline rand10       n=12 rep=0 e2e=0.1916 exec=0.1668 
+baseline rand10       n=12 rep=1 e2e=0.1795 exec=0.1581 
+baseline rand10       n=12 rep=2 e2e=0.1704 exec=0.1528 
+baseline rand10       n=12 rep=3 e2e=0.1692 exec=0.1522 
+baseline rand10       n=12 rep=4 e2e=0.1640 exec=0.1474 
+baseline rand10       n=12 rep=5 e2e=0.1706 exec=0.1534 maxerr=4.42e-08
+baseline rand10       n=14 rep=0 e2e=0.4651 exec=0.4356 
+baseline rand10       n=14 rep=1 e2e=0.4261 exec=0.4042 
+baseline rand10       n=14 rep=2 e2e=0.4194 exec=0.4009 
+baseline rand10       n=14 rep=3 e2e=0.4300 exec=0.4088 
+baseline rand10       n=14 rep=4 e2e=0.4328 exec=0.4126 
+baseline rand10       n=14 rep=5 e2e=0.4441 exec=0.4229 maxerr=2.31e-08
+baseline rand10       n=16 rep=0 e2e=1.8713 exec=1.8436 
+baseline rand10       n=16 rep=1 e2e=1.8187 exec=1.7778 
+baseline rand10       n=16 rep=2 e2e=1.8051 exec=1.7667 
+baseline rand10       n=16 rep=3 e2e=1.8280 exec=1.7676 
+baseline rand10       n=16 rep=4 e2e=1.9307 exec=1.8877 
+baseline rand10       n=16 rep=5 e2e=1.8754 exec=1.8432 maxerr=1.53e-08
+baseline rand10       n=18 rep=0 e2e=7.0956 exec=7.0627 
+baseline rand10       n=18 rep=1 e2e=7.0606 exec=7.0317 
+baseline rand10       n=18 rep=2 e2e=7.0655 exec=7.0368 
+baseline rand10       n=18 rep=3 e2e=7.0803 exec=7.0532 
+baseline rand10       n=18 rep=4 e2e=7.1912 exec=7.1630 
+baseline rand10       n=18 rep=5 e2e=7.1152 exec=7.0888 maxerr=7.97e-09
+baseline rand10       n=20 rep=0 e2e=29.1814 exec=29.1273 
+baseline rand10       n=20 rep=1 e2e=29.3013 exec=29.2574 
+baseline rand10       n=20 rep=2 e2e=28.9686 exec=28.9285 
+baseline rand10       n=20 rep=3 e2e=28.8218 exec=28.7858 
+baseline rand10       n=20 rep=4 e2e=28.8608 exec=28.8249 
+baseline rand10       n=20 rep=5 e2e=29.0414 exec=29.0036 maxerr=5.48e-09
+baseline rand10       n=22 rep=0 e2e=125.4721 exec=125.3586 
+baseline rand10       n=22 rep=1 e2e=125.4055 exec=125.3046 
+baseline rand10       n=22 rep=2 e2e=125.1354 exec=125.0340 
+baseline rand10       n=22 rep=3 e2e=125.1972 exec=125.0884 
+baseline rand10       n=22 rep=4 e2e=125.0909 exec=124.9777 
+baseline rand10       n=22 rep=5 e2e=124.9991 exec=124.8996 maxerr=2.69e-09
+baseline partition_heavy n= 4 rep=0 e2e=0.0989 exec=0.0868 
+baseline partition_heavy n= 4 rep=1 e2e=0.0853 exec=0.0749 
+baseline partition_heavy n= 4 rep=2 e2e=0.0786 exec=0.0724 
+baseline partition_heavy n= 4 rep=3 e2e=0.0759 exec=0.0714 
+baseline partition_heavy n= 4 rep=4 e2e=0.0755 exec=0.0695 
+baseline partition_heavy n= 4 rep=5 e2e=0.0756 exec=0.0708 maxerr=2.35e-16
+baseline partition_heavy n= 8 rep=0 e2e=0.1012 exec=0.0891 
+baseline partition_heavy n= 8 rep=1 e2e=0.0952 exec=0.0841 
+baseline partition_heavy n= 8 rep=2 e2e=0.0829 exec=0.0776 
+baseline partition_heavy n= 8 rep=3 e2e=0.0780 exec=0.0723 
+baseline partition_heavy n= 8 rep=4 e2e=0.0797 exec=0.0743 
+baseline partition_heavy n= 8 rep=5 e2e=0.0798 exec=0.0753 maxerr=2.33e-16
+baseline partition_heavy n=12 rep=0 e2e=0.1096 exec=0.1001 
+baseline partition_heavy n=12 rep=1 e2e=0.0915 exec=0.0840 
+baseline partition_heavy n=12 rep=2 e2e=0.0900 exec=0.0845 
+baseline partition_heavy n=12 rep=3 e2e=0.0791 exec=0.0742 
+baseline partition_heavy n=12 rep=4 e2e=0.0801 exec=0.0736 
+baseline partition_heavy n=12 rep=5 e2e=0.0787 exec=0.0737 maxerr=2.33e-16
+baseline partition_heavy n=14 rep=0 e2e=0.1150 exec=0.1062 
+baseline partition_heavy n=14 rep=1 e2e=0.1062 exec=0.0986 
+baseline partition_heavy n=14 rep=2 e2e=0.0951 exec=0.0896 
+baseline partition_heavy n=14 rep=3 e2e=0.0880 exec=0.0821 
+baseline partition_heavy n=14 rep=4 e2e=0.0892 exec=0.0840 
+baseline partition_heavy n=14 rep=5 e2e=0.0903 exec=0.0852 maxerr=2.35e-16
+baseline partition_heavy n=16 rep=0 e2e=0.4984 exec=0.4866 
+baseline partition_heavy n=16 rep=1 e2e=0.5420 exec=0.5302 
+baseline partition_heavy n=16 rep=2 e2e=0.7362 exec=0.7252 
+baseline partition_heavy n=16 rep=3 e2e=0.7596 exec=0.7200 
+baseline partition_heavy n=16 rep=4 e2e=0.6023 exec=0.5712 
+baseline partition_heavy n=16 rep=5 e2e=0.6451 exec=0.6335 maxerr=2.35e-16
+baseline partition_heavy n=18 rep=0 e2e=1.3003 exec=1.2816 
+baseline partition_heavy n=18 rep=1 e2e=1.5176 exec=1.4785 
+baseline partition_heavy n=18 rep=2 e2e=1.4611 exec=1.4310 
+baseline partition_heavy n=18 rep=3 e2e=1.5278 exec=1.5052 
+baseline partition_heavy n=18 rep=4 e2e=1.7463 exec=1.7079 
+baseline partition_heavy n=18 rep=5 e2e=1.5788 exec=1.5463 maxerr=2.35e-16
+baseline partition_heavy n=20 rep=0 e2e=2.8502 exec=2.8165 
+baseline partition_heavy n=20 rep=1 e2e=2.7529 exec=2.7159 
+baseline partition_heavy n=20 rep=2 e2e=3.2715 exec=3.2373 
+baseline partition_heavy n=20 rep=3 e2e=2.7415 exec=2.7088 
+baseline partition_heavy n=20 rep=4 e2e=2.6998 exec=2.6673 
+baseline partition_heavy n=20 rep=5 e2e=3.0228 exec=2.9792 maxerr=2.35e-16
+baseline partition_heavy n=22 rep=0 e2e=7.6048 exec=7.5257 
+baseline partition_heavy n=22 rep=1 e2e=7.0746 exec=7.0142 
+baseline partition_heavy n=22 rep=2 e2e=7.3679 exec=7.1752 
+baseline partition_heavy n=22 rep=3 e2e=7.1014 exec=7.0323 
+baseline partition_heavy n=22 rep=4 e2e=7.1147 exec=7.0351 
+baseline partition_heavy n=22 rep=5 e2e=6.9643 exec=6.8943 maxerr=4.31e-16
+baseline qft          n= 4 rep=0 e2e=0.0733 exec=0.0224 
+baseline qft          n= 4 rep=1 e2e=0.0301 exec=0.0202 
+baseline qft          n= 4 rep=2 e2e=0.0264 exec=0.0193 
+baseline qft          n= 4 rep=3 e2e=0.0248 exec=0.0179 
+baseline qft          n= 4 rep=4 e2e=0.0229 exec=0.0162 
+baseline qft          n= 4 rep=5 e2e=0.0229 exec=0.0158 maxerr=2.78e-17
+baseline qft          n= 8 rep=0 e2e=0.0689 exec=0.0549 
+baseline qft          n= 8 rep=1 e2e=0.0617 exec=0.0496 
+baseline qft          n= 8 rep=2 e2e=0.0554 exec=0.0451 
+baseline qft          n= 8 rep=3 e2e=0.0551 exec=0.0434 
+baseline qft          n= 8 rep=4 e2e=0.0514 exec=0.0434 
+baseline qft          n= 8 rep=5 e2e=0.0537 exec=0.0439 maxerr=5.08e-17
+baseline qft          n=12 rep=0 e2e=0.2212 exec=0.2095 
+baseline qft          n=12 rep=1 e2e=0.2129 exec=0.1980 
+baseline qft          n=12 rep=2 e2e=0.2112 exec=0.1968 
+baseline qft          n=12 rep=3 e2e=0.2109 exec=0.1971 
+baseline qft          n=12 rep=4 e2e=0.2108 exec=0.1984 
+baseline qft          n=12 rep=5 e2e=0.2060 exec=0.1931 maxerr=9.38e-17
+baseline qft          n=14 rep=0 e2e=0.8006 exec=0.7801 
+baseline qft          n=14 rep=1 e2e=0.7868 exec=0.7710 
+baseline qft          n=14 rep=2 e2e=0.7830 exec=0.7679 
+baseline qft          n=14 rep=3 e2e=0.7837 exec=0.7679 
+baseline qft          n=14 rep=4 e2e=0.7788 exec=0.7633 
+baseline qft          n=14 rep=5 e2e=0.7695 exec=0.7564 maxerr=2.97e-17
+baseline qft          n=16 rep=0 e2e=3.6601 exec=3.6433 
+baseline qft          n=16 rep=1 e2e=3.6259 exec=3.6088 
+baseline qft          n=16 rep=2 e2e=3.6348 exec=3.6208 
+baseline qft          n=16 rep=3 e2e=3.6560 exec=3.6418 
+baseline qft          n=16 rep=4 e2e=3.6299 exec=3.6133 
+baseline qft          n=16 rep=5 e2e=3.6419 exec=3.6180 maxerr=2.08e-17
+baseline qft          n=18 rep=0 e2e=18.0147 exec=17.9828 
+baseline qft          n=18 rep=1 e2e=17.9820 exec=17.9612 
+baseline qft          n=18 rep=2 e2e=17.8924 exec=17.8726 
+baseline qft          n=18 rep=3 e2e=17.9013 exec=17.8821 
+baseline qft          n=18 rep=4 e2e=17.9961 exec=17.9744 
+baseline qft          n=18 rep=5 e2e=17.9649 exec=17.9358 maxerr=1.82e-17
+baseline qft          n=20 rep=0 e2e=89.6074 exec=89.5655 
+baseline qft          n=20 rep=1 e2e=89.3025 exec=89.2736 
+baseline qft          n=20 rep=2 e2e=89.4452 exec=89.4057 
+baseline qft          n=20 rep=3 e2e=89.4132 exec=89.3789 
+baseline qft          n=20 rep=4 e2e=89.5354 exec=89.4984 
+baseline qft          n=20 rep=5 e2e=89.3535 exec=89.3143 maxerr=6.19e-18
+baseline ghz          n= 4 rep=0 e2e=0.0182 exec=0.0096 
+baseline ghz          n= 4 rep=1 e2e=0.0158 exec=0.0070 
+baseline ghz          n= 4 rep=2 e2e=0.0130 exec=0.0064 
+baseline ghz          n= 4 rep=3 e2e=0.0133 exec=0.0063 
+baseline ghz          n= 4 rep=4 e2e=0.0130 exec=0.0067 
+baseline ghz          n= 4 rep=5 e2e=0.0122 exec=0.0060 maxerr=0.00e+00
+baseline ghz          n= 8 rep=0 e2e=0.0210 exec=0.0127 
+baseline ghz          n= 8 rep=1 e2e=0.0198 exec=0.0115 
+baseline ghz          n= 8 rep=2 e2e=0.0170 exec=0.0102 
+baseline ghz          n= 8 rep=3 e2e=0.0156 exec=0.0101 
+baseline ghz          n= 8 rep=4 e2e=0.0171 exec=0.0100 
+baseline ghz          n= 8 rep=5 e2e=0.0157 exec=0.0094 maxerr=0.00e+00
+baseline ghz          n=12 rep=0 e2e=0.0318 exec=0.0231 
+baseline ghz          n=12 rep=1 e2e=0.0313 exec=0.0206 
+baseline ghz          n=12 rep=2 e2e=0.0263 exec=0.0199 
+baseline ghz          n=12 rep=3 e2e=0.0268 exec=0.0194 
+baseline ghz          n=12 rep=4 e2e=0.0252 exec=0.0187 
+baseline ghz          n=12 rep=5 e2e=0.0253 exec=0.0187 maxerr=0.00e+00
+baseline ghz          n=14 rep=0 e2e=0.1018 exec=0.0918 
+baseline ghz          n=14 rep=1 e2e=0.0605 exec=0.0511 
+baseline ghz          n=14 rep=2 e2e=0.0569 exec=0.0495 
+baseline ghz          n=14 rep=3 e2e=0.0550 exec=0.0488 
+baseline ghz          n=14 rep=4 e2e=0.0680 exec=0.0611 
+baseline ghz          n=14 rep=5 e2e=0.0577 exec=0.0515 maxerr=0.00e+00
+baseline ghz          n=16 rep=0 e2e=0.2413 exec=0.2286 
+baseline ghz          n=16 rep=1 e2e=0.2692 exec=0.2588 
+baseline ghz          n=16 rep=2 e2e=0.2093 exec=0.1996 
+baseline ghz          n=16 rep=3 e2e=0.2234 exec=0.2135 
+baseline ghz          n=16 rep=4 e2e=0.2105 exec=0.2017 
+baseline ghz          n=16 rep=5 e2e=0.1864 exec=0.1781 maxerr=0.00e+00
+baseline ghz          n=18 rep=0 e2e=0.7423 exec=0.7229 
+baseline ghz          n=18 rep=1 e2e=0.6736 exec=0.6590 
+baseline ghz          n=18 rep=2 e2e=0.6618 exec=0.6434 
+baseline ghz          n=18 rep=3 e2e=0.6534 exec=0.6433 
+baseline ghz          n=18 rep=4 e2e=0.6476 exec=0.6380 
+baseline ghz          n=18 rep=5 e2e=0.6614 exec=0.6506 maxerr=0.00e+00
+baseline ghz          n=20 rep=0 e2e=2.8607 exec=2.8186 
+baseline ghz          n=20 rep=1 e2e=2.7640 exec=2.7362 
+baseline ghz          n=20 rep=2 e2e=2.7751 exec=2.7529 
+baseline ghz          n=20 rep=3 e2e=2.7588 exec=2.7329 
+baseline ghz          n=20 rep=4 e2e=2.7955 exec=2.7665 
+baseline ghz          n=20 rep=5 e2e=2.7658 exec=2.7385 maxerr=0.00e+00
+baseline bell         n= 4 rep=0 e2e=0.0161 exec=0.0053 
+baseline bell         n= 4 rep=1 e2e=0.0099 exec=0.0038 
+baseline bell         n= 4 rep=2 e2e=0.0097 exec=0.0037 
+baseline bell         n= 4 rep=3 e2e=0.0081 exec=0.0033 
+baseline bell         n= 4 rep=4 e2e=0.0094 exec=0.0033 
+baseline bell         n= 4 rep=5 e2e=0.0084 exec=0.0031 maxerr=0.00e+00
+baseline bell         n= 8 rep=0 e2e=0.0152 exec=0.0057 
+baseline bell         n= 8 rep=1 e2e=0.0137 exec=0.0038 
+baseline bell         n= 8 rep=2 e2e=0.0093 exec=0.0038 
+baseline bell         n= 8 rep=3 e2e=0.0101 exec=0.0038 
+baseline bell         n= 8 rep=4 e2e=0.0088 exec=0.0034 
+baseline bell         n= 8 rep=5 e2e=0.0080 exec=0.0034 maxerr=0.00e+00
+baseline bell         n=12 rep=0 e2e=0.0143 exec=0.0063 
+baseline bell         n=12 rep=1 e2e=0.0114 exec=0.0045 
+baseline bell         n=12 rep=2 e2e=0.0103 exec=0.0043 
+baseline bell         n=12 rep=3 e2e=0.0095 exec=0.0041 
+baseline bell         n=12 rep=4 e2e=0.0111 exec=0.0038 
+baseline bell         n=12 rep=5 e2e=0.0100 exec=0.0039 maxerr=0.00e+00
+baseline bell         n=14 rep=0 e2e=0.0161 exec=0.0076 
+baseline bell         n=14 rep=1 e2e=0.0137 exec=0.0059 
+baseline bell         n=14 rep=2 e2e=0.0124 exec=0.0055 
+baseline bell         n=14 rep=3 e2e=0.0104 exec=0.0053 
+baseline bell         n=14 rep=4 e2e=0.0096 exec=0.0052 
+baseline bell         n=14 rep=5 e2e=0.0105 exec=0.0052 maxerr=0.00e+00
+baseline bell         n=16 rep=0 e2e=0.0714 exec=0.0573 
+baseline bell         n=16 rep=1 e2e=0.0353 exec=0.0262 
+baseline bell         n=16 rep=2 e2e=0.0281 exec=0.0203 
+baseline bell         n=16 rep=3 e2e=0.0290 exec=0.0214 
+baseline bell         n=16 rep=4 e2e=0.0265 exec=0.0196 
+baseline bell         n=16 rep=5 e2e=0.0296 exec=0.0219 maxerr=0.00e+00
+baseline bell         n=18 rep=0 e2e=0.1100 exec=0.0960 
+baseline bell         n=18 rep=1 e2e=0.1131 exec=0.0972 
+baseline bell         n=18 rep=2 e2e=0.0686 exec=0.0565 
+baseline bell         n=18 rep=3 e2e=0.0745 exec=0.0599 
+baseline bell         n=18 rep=4 e2e=0.0671 exec=0.0560 
+baseline bell         n=18 rep=5 e2e=0.0891 exec=0.0796 maxerr=0.00e+00
+baseline bell         n=20 rep=0 e2e=0.2332 exec=0.1968 
+baseline bell         n=20 rep=1 e2e=0.2967 exec=0.2790 
+baseline bell         n=20 rep=2 e2e=0.2503 exec=0.2337 
+baseline bell         n=20 rep=3 e2e=0.2598 exec=0.2405 
+baseline bell         n=20 rep=4 e2e=0.2232 exec=0.1996 
+baseline bell         n=20 rep=5 e2e=0.2292 exec=0.2110 maxerr=0.00e+00
+baseline qft_iqft     n= 4 rep=0 e2e=0.0649 exec=0.0476 
+baseline qft_iqft     n= 4 rep=1 e2e=0.0509 exec=0.0408 
+baseline qft_iqft     n= 4 rep=2 e2e=0.0434 exec=0.0375 
+baseline qft_iqft     n= 4 rep=3 e2e=0.0449 exec=0.0372 
+baseline qft_iqft     n= 4 rep=4 e2e=0.0443 exec=0.0368 
+baseline qft_iqft     n= 4 rep=5 e2e=0.0479 exec=0.0365 maxerr=2.23e-08
+baseline qft_iqft     n= 8 rep=0 e2e=0.1163 exec=0.1016 
+baseline qft_iqft     n= 8 rep=1 e2e=0.0972 exec=0.0836 
+baseline qft_iqft     n= 8 rep=2 e2e=0.0960 exec=0.0843 
+baseline qft_iqft     n= 8 rep=3 e2e=0.1059 exec=0.0946 
+baseline qft_iqft     n= 8 rep=4 e2e=0.1293 exec=0.0842 
+baseline qft_iqft     n= 8 rep=5 e2e=0.0952 exec=0.0831 maxerr=5.82e-08
+baseline qft_iqft     n=12 rep=0 e2e=0.4539 exec=0.4288 
+baseline qft_iqft     n=12 rep=1 e2e=0.4332 exec=0.4140 
+baseline qft_iqft     n=12 rep=2 e2e=0.4382 exec=0.4198 
+baseline qft_iqft     n=12 rep=3 e2e=0.4422 exec=0.4235 
+baseline qft_iqft     n=12 rep=4 e2e=0.4322 exec=0.4118 
+baseline qft_iqft     n=12 rep=5 e2e=0.4196 exec=0.4040 maxerr=2.26e-08
+baseline qft_iqft     n=14 rep=0 e2e=1.6078 exec=1.5775 
+baseline qft_iqft     n=14 rep=1 e2e=1.5784 exec=1.5551 
+baseline qft_iqft     n=14 rep=2 e2e=1.5750 exec=1.5540 
+baseline qft_iqft     n=14 rep=3 e2e=1.5886 exec=1.5664 
+baseline qft_iqft     n=14 rep=4 e2e=1.5912 exec=1.5703 
+baseline qft_iqft     n=14 rep=5 e2e=1.5590 exec=1.5379 maxerr=2.21e-08
+baseline qft_iqft     n=16 rep=0 e2e=7.3939 exec=7.3594 
+baseline qft_iqft     n=16 rep=1 e2e=7.4264 exec=7.3697 
+baseline qft_iqft     n=16 rep=2 e2e=7.3794 exec=7.2896 
+baseline qft_iqft     n=16 rep=3 e2e=7.4051 exec=7.3391 
+baseline qft_iqft     n=16 rep=4 e2e=7.4231 exec=7.3221 
+baseline qft_iqft     n=16 rep=5 e2e=7.3951 exec=7.3413 maxerr=4.46e-08
+baseline qft_iqft     n=18 rep=0 e2e=36.3580 exec=36.3190 
+baseline qft_iqft     n=18 rep=1 e2e=36.2519 exec=36.1697 
+baseline qft_iqft     n=18 rep=2 e2e=36.2796 exec=36.2102 
+baseline qft_iqft     n=18 rep=3 e2e=36.3783 exec=36.3358 
+baseline qft_iqft     n=18 rep=4 e2e=36.3284 exec=36.2478 
+baseline qft_iqft     n=18 rep=5 e2e=36.4240 exec=36.3435 maxerr=3.30e-08
+baseline qft_iqft     n=20 rep=0 e2e=180.4120 exec=180.3549 
+baseline qft_iqft     n=20 rep=1 e2e=180.5640 exec=180.5024 
+baseline qft_iqft     n=20 rep=2 e2e=180.5644 exec=180.5074 
+baseline qft_iqft     n=20 rep=3 e2e=180.6773 exec=180.6116 
+baseline qft_iqft     n=20 rep=4 e2e=180.5599 exec=180.5082 
+baseline qft_iqft     n=20 rep=5 e2e=180.6760 exec=180.6204 maxerr=1.99e-08
+baseline rand10       n= 4 rep=0 e2e=0.1068 exec=0.0911 
+baseline rand10       n= 4 rep=1 e2e=0.0918 exec=0.0811 
+baseline rand10       n= 4 rep=2 e2e=0.0868 exec=0.0783 
+baseline rand10       n= 4 rep=3 e2e=0.0859 exec=0.0778 
+baseline rand10       n= 4 rep=4 e2e=0.0849 exec=0.0764 
+baseline rand10       n= 4 rep=5 e2e=0.0837 exec=0.0714 maxerr=8.46e-08
+baseline rand10       n= 8 rep=0 e2e=0.1673 exec=0.1464 
+baseline rand10       n= 8 rep=1 e2e=0.1469 exec=0.1228 
+baseline rand10       n= 8 rep=2 e2e=0.1403 exec=0.1214 
+baseline rand10       n= 8 rep=3 e2e=0.1464 exec=0.1261 
+baseline rand10       n= 8 rep=4 e2e=0.1376 exec=0.1169 
+baseline rand10       n= 8 rep=5 e2e=0.1352 exec=0.1217 maxerr=8.31e-08
+baseline rand10       n=12 rep=0 e2e=0.2733 exec=0.2458 
+baseline rand10       n=12 rep=1 e2e=0.2600 exec=0.2310 
+baseline rand10       n=12 rep=2 e2e=0.2428 exec=0.2247 
+baseline rand10       n=12 rep=3 e2e=0.2423 exec=0.2251 
+baseline rand10       n=12 rep=4 e2e=0.2420 exec=0.2249 
+baseline rand10       n=12 rep=5 e2e=0.2438 exec=0.2250 maxerr=4.42e-08
+baseline rand10       n=14 rep=0 e2e=0.6019 exec=0.5684 
+baseline rand10       n=14 rep=1 e2e=0.5539 exec=0.5228 
+baseline rand10       n=14 rep=2 e2e=0.5425 exec=0.5180 
+baseline rand10       n=14 rep=3 e2e=0.5631 exec=0.5424 
+baseline rand10       n=14 rep=4 e2e=0.5890 exec=0.5700 
+baseline rand10       n=14 rep=5 e2e=0.5413 exec=0.5212 maxerr=2.31e-08
+baseline rand10       n=16 rep=0 e2e=2.0622 exec=2.0302 
+baseline rand10       n=16 rep=1 e2e=2.0605 exec=2.0343 
+baseline rand10       n=16 rep=2 e2e=1.9223 exec=1.8935 
+baseline rand10       n=16 rep=3 e2e=2.1888 exec=2.1391 
+baseline rand10       n=16 rep=4 e2e=2.0642 exec=2.0124 
+baseline rand10       n=16 rep=5 e2e=2.0322 exec=1.9851 maxerr=1.53e-08
+baseline rand10       n=18 rep=0 e2e=7.2274 exec=7.1927 
+baseline rand10       n=18 rep=1 e2e=7.3522 exec=7.2597 
+baseline rand10       n=18 rep=2 e2e=7.3295 exec=7.3014 
+baseline rand10       n=18 rep=3 e2e=7.4127 exec=7.3855 
+baseline rand10       n=18 rep=4 e2e=7.4435 exec=7.4158 
+baseline rand10       n=18 rep=5 e2e=7.4563 exec=7.4287 maxerr=7.97e-09
+baseline rand10       n=20 rep=0 e2e=29.6162 exec=29.5697 
+baseline rand10       n=20 rep=1 e2e=29.4506 exec=29.4097 
+baseline rand10       n=20 rep=2 e2e=29.2754 exec=29.2352 
+baseline rand10       n=20 rep=3 e2e=29.3551 exec=29.3179 
+baseline rand10       n=20 rep=4 e2e=29.3805 exec=29.3407 
+baseline rand10       n=20 rep=5 e2e=29.4346 exec=29.3942 maxerr=5.48e-09
+baseline partition_heavy n= 4 rep=0 e2e=0.0988 exec=0.0882 
+baseline partition_heavy n= 4 rep=1 e2e=0.0794 exec=0.0730 
+baseline partition_heavy n= 4 rep=2 e2e=0.0789 exec=0.0746 
+baseline partition_heavy n= 4 rep=3 e2e=0.0766 exec=0.0714 
+baseline partition_heavy n= 4 rep=4 e2e=0.0744 exec=0.0691 
+baseline partition_heavy n= 4 rep=5 e2e=0.0780 exec=0.0699 maxerr=2.35e-16
+baseline partition_heavy n= 8 rep=0 e2e=0.0927 exec=0.0846 
+baseline partition_heavy n= 8 rep=1 e2e=0.0832 exec=0.0764 
+baseline partition_heavy n= 8 rep=2 e2e=0.0748 exec=0.0702 
+baseline partition_heavy n= 8 rep=3 e2e=0.0762 exec=0.0719 
+baseline partition_heavy n= 8 rep=4 e2e=0.0742 exec=0.0698 
+baseline partition_heavy n= 8 rep=5 e2e=0.0769 exec=0.0715 maxerr=2.33e-16
+baseline partition_heavy n=12 rep=0 e2e=0.1113 exec=0.1019 
+baseline partition_heavy n=12 rep=1 e2e=0.0915 exec=0.0840 
+baseline partition_heavy n=12 rep=2 e2e=0.0899 exec=0.0813 
+baseline partition_heavy n=12 rep=3 e2e=0.0831 exec=0.0777 
+baseline partition_heavy n=12 rep=4 e2e=0.0812 exec=0.0723 
+baseline partition_heavy n=12 rep=5 e2e=0.0816 exec=0.0767 maxerr=2.33e-16
+baseline partition_heavy n=14 rep=0 e2e=0.1148 exec=0.1059 
+baseline partition_heavy n=14 rep=1 e2e=0.1000 exec=0.0919 
+baseline partition_heavy n=14 rep=2 e2e=0.0937 exec=0.0877 
+baseline partition_heavy n=14 rep=3 e2e=0.0937 exec=0.0877 
+baseline partition_heavy n=14 rep=4 e2e=0.0920 exec=0.0870 
+baseline partition_heavy n=14 rep=5 e2e=0.1010 exec=0.0953 maxerr=2.35e-16
+baseline partition_heavy n=16 rep=0 e2e=0.6022 exec=0.5905 
+baseline partition_heavy n=16 rep=1 e2e=1.1540 exec=1.1423 
+baseline partition_heavy n=16 rep=2 e2e=0.7693 exec=0.7432 
+baseline partition_heavy n=16 rep=3 e2e=0.5991 exec=0.5814 
+baseline partition_heavy n=16 rep=4 e2e=0.7808 exec=0.7442 
+baseline partition_heavy n=16 rep=5 e2e=0.5365 exec=0.5196 maxerr=2.35e-16
+baseline partition_heavy n=18 rep=0 e2e=1.3391 exec=1.3216 
+baseline partition_heavy n=18 rep=1 e2e=1.3277 exec=1.3086 
+baseline partition_heavy n=18 rep=2 e2e=1.3141 exec=1.2874 
+baseline partition_heavy n=18 rep=3 e2e=1.4655 exec=1.4220 
+baseline partition_heavy n=18 rep=4 e2e=1.3652 exec=1.3371 
+baseline partition_heavy n=18 rep=5 e2e=1.4357 exec=1.4152 maxerr=2.35e-16
+baseline partition_heavy n=20 rep=0 e2e=2.7553 exec=2.7206 
+baseline partition_heavy n=20 rep=1 e2e=2.6101 exec=2.5832 
+baseline partition_heavy n=20 rep=2 e2e=2.7488 exec=2.7110 
+baseline partition_heavy n=20 rep=3 e2e=2.6722 exec=2.6271 
+baseline partition_heavy n=20 rep=4 e2e=2.7397 exec=2.7004 
+baseline partition_heavy n=20 rep=5 e2e=2.8445 exec=2.8240 maxerr=2.35e-16
+baseline grover       n= 4 rep=0 e2e=0.4360 exec=0.3381 
+baseline grover       n= 4 rep=1 e2e=0.3255 exec=0.3104 
+baseline grover       n= 4 rep=2 e2e=0.4167 exec=0.4027 maxerr=3.62e-09
+baseline grover       n= 6 rep=0 e2e=2.1804 exec=2.0371 
+baseline grover       n= 6 rep=1 e2e=1.9806 exec=1.9305 
+baseline grover       n= 6 rep=2 e2e=1.9560 exec=1.9061 maxerr=5.66e-08
+baseline grover       n= 8 rep=0 e2e=6.8088 exec=6.4148 
+baseline grover       n= 8 rep=1 e2e=6.5928 exec=6.3420 
+baseline grover       n= 8 rep=2 e2e=6.4945 exec=6.2945 maxerr=7.87e-08
+baseline grover       n=10 rep=0 e2e=21.7206 exec=20.4305 
+baseline grover       n=10 rep=1 e2e=20.4675 exec=19.5315 
+baseline grover       n=10 rep=2 e2e=20.7149 exec=19.7486 maxerr=1.06e-07
+baseline grover       n=12 rep=0 e2e=107.1303 exec=103.3116 
+baseline grover       n=12 rep=1 e2e=106.5715 exec=103.1875 
+baseline grover       n=12 rep=2 e2e=106.5793 exec=103.2552 maxerr=1.38e-07
+baseline qft          n= 8 rep=0 e2e=0.0956 exec=0.0424 
+baseline qft          n= 8 rep=1 e2e=0.0531 exec=0.0390 
+baseline qft          n= 8 rep=2 e2e=0.0458 exec=0.0350 maxerr=1.13e-08
+baseline qft          n=12 rep=0 e2e=0.1722 exec=0.1566 
+baseline qft          n=12 rep=1 e2e=0.1705 exec=0.1535 
+baseline qft          n=12 rep=2 e2e=0.1673 exec=0.1522 maxerr=5.82e-09
+baseline qft          n=16 rep=0 e2e=3.5365 exec=3.5133 
+baseline qft          n=16 rep=1 e2e=3.5332 exec=3.5175 
+baseline qft          n=16 rep=2 e2e=3.5390 exec=3.5252 maxerr=2.61e-09
+baseline qft          n=20 rep=0 e2e=89.4467 exec=89.3866 
+baseline qft          n=20 rep=1 e2e=89.3308 exec=89.2957 
+baseline qft          n=20 rep=2 e2e=89.6205 exec=89.5768 maxerr=8.33e-10
+baseline rand10       n= 8 rep=0 e2e=0.1274 exec=0.1012 
+baseline rand10       n= 8 rep=1 e2e=0.1100 exec=0.0883 
+baseline rand10       n= 8 rep=2 e2e=0.1069 exec=0.0871 maxerr=9.64e-08
+baseline rand10       n=12 rep=0 e2e=0.2152 exec=0.1858 
+baseline rand10       n=12 rep=1 e2e=0.1809 exec=0.1565 
+baseline rand10       n=12 rep=2 e2e=0.1902 exec=0.1588 maxerr=4.36e-08
+baseline rand10       n=16 rep=0 e2e=1.8608 exec=1.8245 
+baseline rand10       n=16 rep=1 e2e=1.9094 exec=1.8547 
+baseline rand10       n=16 rep=2 e2e=1.8532 exec=1.7908 maxerr=1.73e-08
+baseline rand10       n=20 rep=0 e2e=29.0471 exec=28.9918 
+baseline rand10       n=20 rep=1 e2e=29.1857 exec=29.1436 
+baseline rand10       n=20 rep=2 e2e=29.0659 exec=29.0301 maxerr=4.64e-09
+baseline partition_heavy n= 8 rep=0 e2e=0.1006 exec=0.0901 
+baseline partition_heavy n= 8 rep=1 e2e=0.0878 exec=0.0758 
+baseline partition_heavy n= 8 rep=2 e2e=0.0824 exec=0.0731 maxerr=8.36e-17
+baseline partition_heavy n=12 rep=0 e2e=0.0944 exec=0.0818 
+baseline partition_heavy n=12 rep=1 e2e=0.0854 exec=0.0765 
+baseline partition_heavy n=12 rep=2 e2e=0.0845 exec=0.0775 maxerr=3.14e-17
+baseline partition_heavy n=16 rep=0 e2e=0.5685 exec=0.5557 
+baseline partition_heavy n=16 rep=1 e2e=1.2710 exec=1.2523 
+baseline partition_heavy n=16 rep=2 e2e=1.0079 exec=0.9937 maxerr=8.94e-18
+baseline partition_heavy n=20 rep=0 e2e=2.7471 exec=2.7118 
+baseline partition_heavy n=20 rep=1 e2e=2.9165 exec=2.8743 
+baseline partition_heavy n=20 rep=2 e2e=2.7380 exec=2.7081 maxerr=3.50e-18
+baseline qft          n=24 rep=0 e2e=2129.5025 exec=2129.2081 
+baseline qft          n=24 rep=1 e2e=2128.1990 exec=2128.0042 
+baseline qft          n=24 rep=2 e2e=2126.7085 exec=2126.5206 maxerr=6.18e-17
+baseline qft          n=26 rep=0 e2e=10124.3549 exec=10123.5115 
+baseline qft          n=26 rep=1 e2e=10196.2435 exec=10195.3885 
+baseline qft          n=26 rep=2 e2e=10211.5410 exec=10210.7021 maxerr=2.36e-17
+Traceback (most recent call last):
+  File "baseline/run_baseline.py", line 99, in <module>
+    main()
+  File "baseline/run_baseline.py", line 74, in main
+    r = d.run(qc, batch_local=not a.per_gate, init_state=init, diag_path=not a.no_diag)
+  File "<WS>/qsim_multifpga/baseline/dist_v06.py", line 287, in run
+    flush()
+  File "<WS>/qsim_multifpga/baseline/dist_v06.py", line 274, in flush
+    self._bcast(("local", list(pending)))
+  File "<WS>/qsim_multifpga/baseline/dist_v06.py", line 243, in _bcast
+    return self._gather(want)
+  File "<WS>/qsim_multifpga/baseline/dist_v06.py", line 233, in _gather
+    m = self.resq.get(timeout=3600)
+  File "<WS>/../envs/fpga/lib/python3.8/multiprocessing/queues.py", line 108, in get
+    raise Empty
+_queue.Empty
+baseline qft          n= 8 rep=0 e2e=0.0938 exec=0.0419 
+baseline qft          n= 8 rep=1 e2e=0.0536 exec=0.0404 
+baseline qft          n= 8 rep=2 e2e=0.0470 exec=0.0346 
+baseline qft          n= 8 rep=3 e2e=0.0430 exec=0.0329 maxerr=5.08e-17
+baseline qft          n=12 rep=0 e2e=0.1841 exec=0.1672 
+baseline qft          n=12 rep=1 e2e=0.1703 exec=0.1547 
+baseline qft          n=12 rep=2 e2e=0.1689 exec=0.1536 
+baseline qft          n=12 rep=3 e2e=0.1728 exec=0.1578 maxerr=9.38e-17
+baseline qft          n=16 rep=0 e2e=3.5631 exec=3.5434 
+baseline qft          n=16 rep=1 e2e=3.4865 exec=3.4721 
+baseline qft          n=16 rep=2 e2e=3.4715 exec=3.4584 
+baseline qft          n=16 rep=3 e2e=3.5419 exec=3.5294 maxerr=4.45e-03
+baseline qft          n=18 rep=0 e2e=17.8341 exec=17.8115 
+baseline qft          n=18 rep=1 e2e=17.7763 exec=17.7563 
+baseline qft          n=18 rep=2 e2e=17.6856 exec=17.6673 
+baseline qft          n=18 rep=3 e2e=17.7464 exec=17.7249 maxerr=9.65e-03
+baseline qft          n=20 rep=0 e2e=88.8849 exec=88.8485 
+baseline qft          n=20 rep=1 e2e=89.1224 exec=89.0927 
+baseline qft          n=20 rep=2 e2e=88.8842 exec=88.8570 
+baseline qft          n=20 rep=3 e2e=89.2945 exec=89.2636 maxerr=6.84e-03
+baseline qft          n= 8 rep=0 e2e=0.1046 exec=0.0492 
+baseline qft          n= 8 rep=1 e2e=0.0592 exec=0.0445 
+baseline qft          n= 8 rep=2 e2e=0.0498 exec=0.0388 
+baseline qft          n= 8 rep=3 e2e=0.0504 exec=0.0395 maxerr=5.08e-17
+baseline qft          n=12 rep=0 e2e=0.1881 exec=0.1715 
+baseline qft          n=12 rep=1 e2e=0.1810 exec=0.1644 
+baseline qft          n=12 rep=2 e2e=0.1727 exec=0.1579 
+baseline qft          n=12 rep=3 e2e=0.1748 exec=0.1617 maxerr=2.66e-02
+baseline qft          n=16 rep=0 e2e=3.9838 exec=3.9661 
+baseline qft          n=16 rep=1 e2e=4.1501 exec=4.1348 
+baseline qft          n=16 rep=2 e2e=3.9795 exec=3.9648 
+baseline qft          n=16 rep=3 e2e=4.0033 exec=3.9893 maxerr=9.41e-03
+baseline qft          n=18 rep=0 e2e=18.2035 exec=18.1794 
+baseline qft          n=18 rep=1 e2e=18.0784 exec=18.0582 
+baseline qft          n=18 rep=2 e2e=18.0098 exec=17.9909 
+baseline qft          n=18 rep=3 e2e=18.0179 exec=17.9995 maxerr=9.29e-03
+baseline qft          n=20 rep=0 e2e=90.2584 exec=90.2113 
+baseline qft          n=20 rep=1 e2e=89.9697 exec=89.9243 
+baseline qft          n=20 rep=2 e2e=89.8994 exec=89.8700 
+baseline qft          n=20 rep=3 e2e=89.6347 exec=89.6077 maxerr=7.17e-03
+baseline qft          n= 8 rep=0 e2e=0.0961 exec=0.0436 
+baseline qft          n= 8 rep=1 e2e=0.0523 exec=0.0394 
+baseline qft          n= 8 rep=2 e2e=0.0465 exec=0.0356 
+baseline qft          n= 8 rep=3 e2e=0.0450 exec=0.0339 maxerr=5.08e-17
+baseline qft          n=12 rep=0 e2e=0.1681 exec=0.1565 
+baseline qft          n=12 rep=1 e2e=0.1717 exec=0.1559 
+baseline qft          n=12 rep=2 e2e=0.1702 exec=0.1567 
+baseline qft          n=12 rep=3 e2e=0.1691 exec=0.1555 maxerr=9.38e-17
+baseline qft          n=16 rep=0 e2e=3.5776 exec=3.5584 
+baseline qft          n=16 rep=1 e2e=3.5484 exec=3.5337 
+baseline qft          n=16 rep=2 e2e=3.5943 exec=3.5808 
+baseline qft          n=16 rep=3 e2e=3.6014 exec=3.5878 maxerr=2.08e-17
+baseline qft          n=18 rep=0 e2e=18.1511 exec=18.1280 
+baseline qft          n=18 rep=1 e2e=17.9845 exec=17.9632 
+baseline qft          n=18 rep=2 e2e=17.9695 exec=17.9513 
+baseline qft          n=18 rep=3 e2e=17.9313 exec=17.9082 maxerr=1.82e-17
+baseline qft          n=20 rep=0 e2e=90.1150 exec=90.0680 
+baseline qft          n=20 rep=1 e2e=89.9550 exec=89.9243 
+baseline qft          n=20 rep=2 e2e=89.9605 exec=89.9330 
+baseline qft          n=20 rep=3 e2e=90.1647 exec=90.1378 maxerr=6.19e-18
+baseline qft          n= 8 rep=0 e2e=0.1049 exec=0.0507 
+baseline qft          n= 8 rep=1 e2e=0.0574 exec=0.0460 
+baseline qft          n= 8 rep=2 e2e=0.0497 exec=0.0394 
+baseline qft          n= 8 rep=3 e2e=0.0475 exec=0.0392 maxerr=5.08e-17
+baseline qft          n=12 rep=0 e2e=0.1837 exec=0.1682 
+baseline qft          n=12 rep=1 e2e=0.1865 exec=0.1694 
+baseline qft          n=12 rep=2 e2e=0.1754 exec=0.1658 
+baseline qft          n=12 rep=3 e2e=0.1800 exec=0.1661 maxerr=9.38e-17
+baseline qft          n=16 rep=0 e2e=4.4358 exec=4.4152 
+baseline qft          n=16 rep=1 e2e=4.0494 exec=4.0345 
+baseline qft          n=16 rep=2 e2e=4.2491 exec=4.2359 
+baseline qft          n=16 rep=3 e2e=3.9659 exec=3.9524 maxerr=2.08e-17
+baseline qft          n=18 rep=0 e2e=18.5124 exec=18.4825 
+baseline qft          n=18 rep=1 e2e=18.6606 exec=18.6415 
+baseline qft          n=18 rep=2 e2e=18.3129 exec=18.2959 
+baseline qft          n=18 rep=3 e2e=18.3517 exec=18.3343 maxerr=1.82e-17
+baseline qft          n=20 rep=0 e2e=91.7946 exec=91.7530 
+baseline qft          n=20 rep=1 e2e=91.4620 exec=91.4343 
+baseline qft          n=20 rep=2 e2e=91.2424 exec=91.2176 
+baseline qft          n=20 rep=3 e2e=91.2946 exec=91.2679 maxerr=6.19e-18

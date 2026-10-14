@@ -1,0 +1,280 @@
+qft            n=20 C=4 P=8 f=111a rep=0 e2e=0.1580 kern=0.0150 exch=0.0420 
+qft            n=20 C=4 P=8 f=111a rep=1 e2e=0.1420 kern=0.0150 exch=0.0415 
+qft            n=20 C=4 P=8 f=111a rep=2 e2e=0.1476 kern=0.0156 exch=0.0422 
+qft            n=20 C=4 P=8 f=111a rep=3 e2e=0.1534 kern=0.0157 exch=0.0429 
+qft            n=20 C=4 P=8 f=111a rep=4 e2e=0.1496 kern=0.0153 exch=0.0430 
+qft            n=20 C=4 P=8 f=111a rep=5 e2e=0.1488 kern=0.0157 exch=0.0416 maxerr=0.00e+00 1-F=0.00e+00
+qft            n=24 C=4 P=8 f=111a rep=0 e2e=0.6883 kern=0.1546 exch=0.3149 
+qft            n=24 C=4 P=8 f=111a rep=1 e2e=0.6902 kern=0.1547 exch=0.3150 
+qft            n=24 C=4 P=8 f=111a rep=2 e2e=0.6864 kern=0.1544 exch=0.3132 
+qft            n=24 C=4 P=8 f=111a rep=3 e2e=0.6826 kern=0.1548 exch=0.3102 
+qft            n=24 C=4 P=8 f=111a rep=4 e2e=0.6784 kern=0.1552 exch=0.3064 
+qft            n=24 C=4 P=8 f=111a rep=5 e2e=0.6765 kern=0.1551 exch=0.3110 maxerr=4.61e-19 1-F=2.45e-30
+rand10         n=20 C=4 P=8 f=111a rep=0 e2e=0.3730 kern=0.0322 exch=0.1674 
+rand10         n=20 C=4 P=8 f=111a rep=1 e2e=0.3493 kern=0.0340 exch=0.1529 
+rand10         n=20 C=4 P=8 f=111a rep=2 e2e=0.3439 kern=0.0331 exch=0.1559 
+rand10         n=20 C=4 P=8 f=111a rep=3 e2e=0.3671 kern=0.0350 exch=0.1605 
+rand10         n=20 C=4 P=8 f=111a rep=4 e2e=0.3498 kern=0.0328 exch=0.1552 
+rand10         n=20 C=4 P=8 f=111a rep=5 e2e=0.3676 kern=0.0353 exch=0.1638 maxerr=5.58e-18 1-F=2.42e-30
+rand10         n=24 C=4 P=8 f=111a rep=0 e2e=1.6543 kern=0.2001 exch=1.1320 
+rand10         n=24 C=4 P=8 f=111a rep=1 e2e=1.6250 kern=0.1993 exch=1.1127 
+rand10         n=24 C=4 P=8 f=111a rep=2 e2e=1.5740 kern=0.1986 exch=1.0772 
+rand10         n=24 C=4 P=8 f=111a rep=3 e2e=1.5989 kern=0.1987 exch=1.0968 
+rand10         n=24 C=4 P=8 f=111a rep=4 e2e=1.6022 kern=0.2028 exch=1.0829 
+rand10         n=24 C=4 P=8 f=111a rep=5 e2e=1.5847 kern=0.1997 exch=1.0866 maxerr=1.70e-18 1-F=3.12e-30
+qft            n=20 C=4 P=8 f=111a rep=0 e2e=0.1624 kern=0.0147 exch=0.0443 
+qft            n=20 C=4 P=8 f=111a rep=1 e2e=0.1468 kern=0.0142 exch=0.0416 
+qft            n=20 C=4 P=8 f=111a rep=2 e2e=0.1459 kern=0.0140 exch=0.0404 
+qft            n=20 C=4 P=8 f=111a rep=3 e2e=0.1468 kern=0.0140 exch=0.0418 
+qft            n=20 C=4 P=8 f=111a rep=4 e2e=0.1471 kern=0.0148 exch=0.0420 
+qft            n=20 C=4 P=8 f=111a rep=5 e2e=0.1499 kern=0.0144 exch=0.0418 maxerr=0.00e+00 1-F=0.00e+00
+qft            n=24 C=4 P=8 f=111a rep=0 e2e=0.6867 kern=0.1547 exch=0.3098 
+qft            n=24 C=4 P=8 f=111a rep=1 e2e=0.6673 kern=0.1536 exch=0.3050 
+qft            n=24 C=4 P=8 f=111a rep=2 e2e=0.6626 kern=0.1545 exch=0.3044 
+qft            n=24 C=4 P=8 f=111a rep=3 e2e=0.6690 kern=0.1539 exch=0.3008 
+qft            n=24 C=4 P=8 f=111a rep=4 e2e=0.6674 kern=0.1540 exch=0.3038 
+qft            n=24 C=4 P=8 f=111a rep=5 e2e=0.6720 kern=0.1540 exch=0.3092 maxerr=4.61e-19 1-F=2.45e-30
+rand10         n=20 C=4 P=8 f=111a rep=0 e2e=0.3740 kern=0.0312 exch=0.1645 
+rand10         n=20 C=4 P=8 f=111a rep=1 e2e=0.3511 kern=0.0306 exch=0.1560 
+rand10         n=20 C=4 P=8 f=111a rep=2 e2e=0.3527 kern=0.0306 exch=0.1569 
+rand10         n=20 C=4 P=8 f=111a rep=3 e2e=0.3547 kern=0.0307 exch=0.1599 
+rand10         n=20 C=4 P=8 f=111a rep=4 e2e=0.3597 kern=0.0311 exch=0.1569 
+rand10         n=20 C=4 P=8 f=111a rep=5 e2e=0.3537 kern=0.0326 exch=0.1593 maxerr=5.58e-18 1-F=2.42e-30
+rand10         n=24 C=4 P=8 f=111a rep=0 e2e=1.6418 kern=0.1985 exch=1.1263 
+rand10         n=24 C=4 P=8 f=111a rep=1 e2e=1.6217 kern=0.1979 exch=1.1199 
+rand10         n=24 C=4 P=8 f=111a rep=2 e2e=1.6196 kern=0.1998 exch=1.1069 
+rand10         n=24 C=4 P=8 f=111a rep=3 e2e=1.6179 kern=0.1993 exch=1.1115 
+rand10         n=24 C=4 P=8 f=111a rep=4 e2e=1.6040 kern=0.1988 exch=1.1060 
+rand10         n=24 C=4 P=8 f=111a rep=5 e2e=1.6152 kern=0.2001 exch=1.1115 maxerr=1.70e-18 1-F=3.12e-30
+qft            n=20 C=4 P=8 f=111a rep=0 e2e=0.1643 kern=0.0161 exch=0.0435 
+qft            n=20 C=4 P=8 f=111a rep=1 e2e=0.1512 kern=0.0153 exch=0.0442 
+qft            n=20 C=4 P=8 f=111a rep=2 e2e=0.1505 kern=0.0155 exch=0.0443 
+qft            n=20 C=4 P=8 f=111a rep=3 e2e=0.1514 kern=0.0145 exch=0.0431 
+qft            n=20 C=4 P=8 f=111a rep=4 e2e=0.1492 kern=0.0147 exch=0.0430 
+qft            n=20 C=4 P=8 f=111a rep=5 e2e=0.1494 kern=0.0151 exch=0.0437 maxerr=0.00e+00 1-F=0.00e+00
+qft            n=24 C=4 P=8 f=111a rep=0 e2e=0.6955 kern=0.1551 exch=0.3059 
+qft            n=24 C=4 P=8 f=111a rep=1 e2e=0.6748 kern=0.1548 exch=0.3027 
+qft            n=24 C=4 P=8 f=111a rep=2 e2e=0.6688 kern=0.1542 exch=0.3007 
+qft            n=24 C=4 P=8 f=111a rep=3 e2e=0.6782 kern=0.1544 exch=0.3074 
+qft            n=24 C=4 P=8 f=111a rep=4 e2e=0.6624 kern=0.1542 exch=0.2988 
+qft            n=24 C=4 P=8 f=111a rep=5 e2e=0.6698 kern=0.1549 exch=0.3038 maxerr=4.61e-19 1-F=2.45e-30
+rand10         n=20 C=4 P=8 f=111a rep=0 e2e=0.4240 kern=0.0315 exch=0.2041 
+rand10         n=20 C=4 P=8 f=111a rep=1 e2e=0.3789 kern=0.0312 exch=0.1680 
+rand10         n=20 C=4 P=8 f=111a rep=2 e2e=0.3700 kern=0.0307 exch=0.1631 
+rand10         n=20 C=4 P=8 f=111a rep=3 e2e=0.3699 kern=0.0303 exch=0.1653 
+rand10         n=20 C=4 P=8 f=111a rep=4 e2e=0.3719 kern=0.0319 exch=0.1689 
+rand10         n=20 C=4 P=8 f=111a rep=5 e2e=0.3715 kern=0.0315 exch=0.1642 maxerr=5.58e-18 1-F=2.42e-30
+rand10         n=24 C=4 P=8 f=111a rep=0 e2e=1.5931 kern=0.1994 exch=1.0772 
+rand10         n=24 C=4 P=8 f=111a rep=1 e2e=1.5865 kern=0.1987 exch=1.0749 
+rand10         n=24 C=4 P=8 f=111a rep=2 e2e=1.5959 kern=0.2028 exch=1.0821 
+rand10         n=24 C=4 P=8 f=111a rep=3 e2e=1.5795 kern=0.1973 exch=1.0767 
+rand10         n=24 C=4 P=8 f=111a rep=4 e2e=1.5779 kern=0.1968 exch=1.0733 
+rand10         n=24 C=4 P=8 f=111a rep=5 e2e=1.6003 kern=0.1992 exch=1.0847 maxerr=1.70e-18 1-F=3.12e-30
+qft            n=20 C=4 P=8 f=111a rep=0 e2e=0.1773 kern=0.0153 exch=0.0473 
+qft            n=20 C=4 P=8 f=111a rep=1 e2e=0.1514 kern=0.0145 exch=0.0447 
+qft            n=20 C=4 P=8 f=111a rep=2 e2e=0.1538 kern=0.0147 exch=0.0459 
+qft            n=20 C=4 P=8 f=111a rep=3 e2e=0.1525 kern=0.0139 exch=0.0442 
+qft            n=20 C=4 P=8 f=111a rep=4 e2e=0.1581 kern=0.0143 exch=0.0454 
+qft            n=20 C=4 P=8 f=111a rep=5 e2e=0.1537 kern=0.0147 exch=0.0446 maxerr=0.00e+00 1-F=0.00e+00
+qft            n=24 C=4 P=8 f=111a rep=0 e2e=0.7077 kern=0.1542 exch=0.2977 
+qft            n=24 C=4 P=8 f=111a rep=1 e2e=0.6654 kern=0.1548 exch=0.2959 
+qft            n=24 C=4 P=8 f=111a rep=2 e2e=0.6730 kern=0.1544 exch=0.2943 
+qft            n=24 C=4 P=8 f=111a rep=3 e2e=0.6650 kern=0.1549 exch=0.2932 
+qft            n=24 C=4 P=8 f=111a rep=4 e2e=0.6671 kern=0.1551 exch=0.2939 
+qft            n=24 C=4 P=8 f=111a rep=5 e2e=0.6490 kern=0.1541 exch=0.2917 maxerr=4.61e-19 1-F=2.45e-30
+rand10         n=20 C=4 P=8 f=111a rep=0 e2e=0.3701 kern=0.0303 exch=0.1607 
+rand10         n=20 C=4 P=8 f=111a rep=1 e2e=0.3746 kern=0.0324 exch=0.1640 
+rand10         n=20 C=4 P=8 f=111a rep=2 e2e=0.3727 kern=0.0313 exch=0.1667 
+rand10         n=20 C=4 P=8 f=111a rep=3 e2e=0.3686 kern=0.0317 exch=0.1648 
+rand10         n=20 C=4 P=8 f=111a rep=4 e2e=0.3643 kern=0.0317 exch=0.1616 
+rand10         n=20 C=4 P=8 f=111a rep=5 e2e=0.3636 kern=0.0317 exch=0.1611 maxerr=5.58e-18 1-F=2.42e-30
+rand10         n=24 C=4 P=8 f=111a rep=0 e2e=1.6142 kern=0.2013 exch=1.0806 
+rand10         n=24 C=4 P=8 f=111a rep=1 e2e=1.6049 kern=0.2022 exch=1.0767 
+rand10         n=24 C=4 P=8 f=111a rep=2 e2e=1.6089 kern=0.2025 exch=1.0836 
+rand10         n=24 C=4 P=8 f=111a rep=3 e2e=1.5966 kern=0.2025 exch=1.0825 
+rand10         n=24 C=4 P=8 f=111a rep=4 e2e=1.6015 kern=0.2009 exch=1.0839 
+rand10         n=24 C=4 P=8 f=111a rep=5 e2e=1.6066 kern=0.2021 exch=1.0860 maxerr=1.70e-18 1-F=3.12e-30
+qft            n=20 C=4 P=8 f=111a rep=0 e2e=0.1453 kern=0.0114 exch=0.0429 
+qft            n=20 C=4 P=8 f=111a rep=1 e2e=0.1387 kern=0.0114 exch=0.0411 
+qft            n=20 C=4 P=8 f=111a rep=2 e2e=0.1382 kern=0.0114 exch=0.0404 
+qft            n=20 C=4 P=8 f=111a rep=3 e2e=0.1421 kern=0.0131 exch=0.0400 
+qft            n=20 C=4 P=8 f=111a rep=4 e2e=0.1544 kern=0.0144 exch=0.0442 
+qft            n=20 C=4 P=8 f=111a rep=5 e2e=0.1504 kern=0.0145 exch=0.0425 maxerr=0.00e+00 1-F=0.00e+00
+qft            n=24 C=4 P=8 f=111a rep=0 e2e=0.5922 kern=0.1535 exch=0.2426 
+qft            n=24 C=4 P=8 f=111a rep=1 e2e=0.6117 kern=0.1552 exch=0.2598 
+qft            n=24 C=4 P=8 f=111a rep=2 e2e=0.6441 kern=0.1547 exch=0.2817 
+qft            n=24 C=4 P=8 f=111a rep=3 e2e=0.6388 kern=0.1554 exch=0.2722 
+qft            n=24 C=4 P=8 f=111a rep=4 e2e=0.6640 kern=0.1546 exch=0.2934 
+qft            n=24 C=4 P=8 f=111a rep=5 e2e=0.6637 kern=0.1549 exch=0.2905 maxerr=4.61e-19 1-F=2.45e-30
+rand10         n=20 C=4 P=8 f=111a rep=0 e2e=0.3493 kern=0.0298 exch=0.1561 
+rand10         n=20 C=4 P=8 f=111a rep=1 e2e=0.3520 kern=0.0311 exch=0.1522 
+rand10         n=20 C=4 P=8 f=111a rep=2 e2e=0.3529 kern=0.0298 exch=0.1488 
+rand10         n=20 C=4 P=8 f=111a rep=3 e2e=0.3655 kern=0.0322 exch=0.1571 
+rand10         n=20 C=4 P=8 f=111a rep=4 e2e=0.3589 kern=0.0319 exch=0.1559 
+rand10         n=20 C=4 P=8 f=111a rep=5 e2e=0.3511 kern=0.0309 exch=0.1566 maxerr=5.58e-18 1-F=2.42e-30
+rand10         n=24 C=4 P=8 f=111a rep=0 e2e=1.5314 kern=0.1942 exch=1.0198 
+rand10         n=24 C=4 P=8 f=111a rep=1 e2e=1.6137 kern=0.1999 exch=1.1007 
+rand10         n=24 C=4 P=8 f=111a rep=2 e2e=1.6086 kern=0.1999 exch=1.0848 
+rand10         n=24 C=4 P=8 f=111a rep=3 e2e=1.5850 kern=0.2026 exch=1.0758 
+rand10         n=24 C=4 P=8 f=111a rep=4 e2e=1.5963 kern=0.1971 exch=1.0816 
+rand10         n=24 C=4 P=8 f=111a rep=5 e2e=1.6540 kern=0.2031 exch=1.1248 maxerr=1.70e-18 1-F=3.12e-30
+qft            n=20 C=2 P=8 f=111a rep=0 e2e=0.1190 kern=0.0175 exch=0.0185 
+qft            n=20 C=2 P=8 f=111a rep=1 e2e=0.1078 kern=0.0170 exch=0.0155 
+qft            n=20 C=2 P=8 f=111a rep=2 e2e=0.1080 kern=0.0177 exch=0.0137 
+qft            n=20 C=2 P=8 f=111a rep=3 e2e=0.1064 kern=0.0169 exch=0.0147 
+qft            n=20 C=2 P=8 f=111a rep=4 e2e=0.1079 kern=0.0181 exch=0.0161 
+qft            n=20 C=2 P=8 f=111a rep=5 e2e=0.1077 kern=0.0171 exch=0.0143 maxerr=0.00e+00 1-F=0.00e+00
+qft            n=24 C=2 P=8 f=111a rep=0 e2e=0.6177 kern=0.2937 exch=0.1076 
+qft            n=24 C=2 P=8 f=111a rep=1 e2e=0.5965 kern=0.2941 exch=0.1087 
+qft            n=24 C=2 P=8 f=111a rep=2 e2e=0.5940 kern=0.2937 exch=0.1082 
+qft            n=24 C=2 P=8 f=111a rep=3 e2e=0.5894 kern=0.2935 exch=0.1068 
+qft            n=24 C=2 P=8 f=111a rep=4 e2e=0.5951 kern=0.2935 exch=0.1041 
+qft            n=24 C=2 P=8 f=111a rep=5 e2e=0.5927 kern=0.2939 exch=0.1057 maxerr=4.61e-19 1-F=2.45e-30
+rand10         n=20 C=2 P=8 f=111a rep=0 e2e=0.2163 kern=0.0289 exch=0.0541 
+rand10         n=20 C=2 P=8 f=111a rep=1 e2e=0.2123 kern=0.0298 exch=0.0526 
+rand10         n=20 C=2 P=8 f=111a rep=2 e2e=0.2139 kern=0.0302 exch=0.0558 
+rand10         n=20 C=2 P=8 f=111a rep=3 e2e=0.2126 kern=0.0303 exch=0.0542 
+rand10         n=20 C=2 P=8 f=111a rep=4 e2e=0.2133 kern=0.0310 exch=0.0531 
+rand10         n=20 C=2 P=8 f=111a rep=5 e2e=0.2108 kern=0.0316 exch=0.0532 maxerr=5.58e-18 1-F=2.42e-30
+rand10         n=24 C=2 P=8 f=111a rep=0 e2e=1.2978 kern=0.3577 exch=0.6660 
+rand10         n=24 C=2 P=8 f=111a rep=1 e2e=1.3004 kern=0.3590 exch=0.6655 
+rand10         n=24 C=2 P=8 f=111a rep=2 e2e=1.2915 kern=0.3584 exch=0.6635 
+rand10         n=24 C=2 P=8 f=111a rep=3 e2e=1.2945 kern=0.3569 exch=0.6621 
+rand10         n=24 C=2 P=8 f=111a rep=4 e2e=1.2975 kern=0.3568 exch=0.6720 
+rand10         n=24 C=2 P=8 f=111a rep=5 e2e=1.2921 kern=0.3580 exch=0.6665 maxerr=1.70e-18 1-F=3.12e-30
+baseline qft          n=16 rep=0 e2e=3.6424 exec=3.5841 
+baseline qft          n=16 rep=1 e2e=3.5941 exec=3.5738 
+baseline qft          n=16 rep=2 e2e=3.5747 exec=3.5593 
+baseline qft          n=16 rep=3 e2e=3.5939 exec=3.5766 maxerr=2.08e-17
+baseline qft          n=20 rep=0 e2e=90.2889 exec=90.2512 
+baseline qft          n=20 rep=1 e2e=90.2500 exec=90.2153 
+baseline qft          n=20 rep=2 e2e=90.2712 exec=90.2403 
+baseline qft          n=20 rep=3 e2e=90.2130 exec=90.1816 maxerr=6.19e-18
+qft            n=20 C=2 P=8 f=111a rep=0 e2e=0.1253 kern=0.0175 exch=0.0181 
+qft            n=20 C=2 P=8 f=111a rep=1 e2e=0.1106 kern=0.0173 exch=0.0156 
+qft            n=20 C=2 P=8 f=111a rep=2 e2e=0.1052 kern=0.0173 exch=0.0138 
+qft            n=20 C=2 P=8 f=111a rep=3 e2e=0.1018 kern=0.0163 exch=0.0130 
+qft            n=20 C=2 P=8 f=111a rep=4 e2e=0.1106 kern=0.0170 exch=0.0140 
+qft            n=20 C=2 P=8 f=111a rep=5 e2e=0.1079 kern=0.0166 exch=0.0138 maxerr=0.00e+00 1-F=0.00e+00
+qft            n=24 C=2 P=8 f=111a rep=0 e2e=0.5982 kern=0.2941 exch=0.1105 
+qft            n=24 C=2 P=8 f=111a rep=1 e2e=0.6008 kern=0.2939 exch=0.1032 
+qft            n=24 C=2 P=8 f=111a rep=2 e2e=0.5943 kern=0.2942 exch=0.1019 
+qft            n=24 C=2 P=8 f=111a rep=3 e2e=0.5978 kern=0.2934 exch=0.1075 
+qft            n=24 C=2 P=8 f=111a rep=4 e2e=0.5979 kern=0.2937 exch=0.1042 
+qft            n=24 C=2 P=8 f=111a rep=5 e2e=0.6040 kern=0.2942 exch=0.1048 maxerr=4.61e-19 1-F=2.45e-30
+rand10         n=20 C=2 P=8 f=111a rep=0 e2e=0.2250 kern=0.0290 exch=0.0566 
+rand10         n=20 C=2 P=8 f=111a rep=1 e2e=0.2143 kern=0.0285 exch=0.0522 
+rand10         n=20 C=2 P=8 f=111a rep=2 e2e=0.2195 kern=0.0284 exch=0.0554 
+rand10         n=20 C=2 P=8 f=111a rep=3 e2e=0.2146 kern=0.0275 exch=0.0545 
+rand10         n=20 C=2 P=8 f=111a rep=4 e2e=0.2193 kern=0.0275 exch=0.0546 
+rand10         n=20 C=2 P=8 f=111a rep=5 e2e=0.2109 kern=0.0283 exch=0.0547 maxerr=5.58e-18 1-F=2.42e-30
+rand10         n=24 C=2 P=8 f=111a rep=0 e2e=1.3120 kern=0.3581 exch=0.6774 
+rand10         n=24 C=2 P=8 f=111a rep=1 e2e=1.3083 kern=0.3568 exch=0.6745 
+rand10         n=24 C=2 P=8 f=111a rep=2 e2e=1.3216 kern=0.3561 exch=0.6840 
+rand10         n=24 C=2 P=8 f=111a rep=3 e2e=1.3192 kern=0.3567 exch=0.6791 
+rand10         n=24 C=2 P=8 f=111a rep=4 e2e=1.3177 kern=0.3569 exch=0.6822 
+rand10         n=24 C=2 P=8 f=111a rep=5 e2e=1.3167 kern=0.3610 exch=0.6809 maxerr=1.70e-18 1-F=3.12e-30
+baseline qft          n=16 rep=0 e2e=3.5632 exec=3.5061 
+baseline qft          n=16 rep=1 e2e=3.5260 exec=3.5125 
+baseline qft          n=16 rep=2 e2e=3.4901 exec=3.4768 
+baseline qft          n=16 rep=3 e2e=3.5437 exec=3.5304 maxerr=2.08e-17
+baseline qft          n=20 rep=0 e2e=89.2564 exec=89.2153 
+baseline qft          n=20 rep=1 e2e=89.2001 exec=89.1704 
+baseline qft          n=20 rep=2 e2e=89.1252 exec=89.0969 
+baseline qft          n=20 rep=3 e2e=89.1267 exec=89.0990 maxerr=6.19e-18
+qft            n=20 C=2 P=8 f=111a rep=0 e2e=0.1267 kern=0.0174 exch=0.0180 
+qft            n=20 C=2 P=8 f=111a rep=1 e2e=0.1087 kern=0.0170 exch=0.0153 
+qft            n=20 C=2 P=8 f=111a rep=2 e2e=0.1120 kern=0.0169 exch=0.0146 
+qft            n=20 C=2 P=8 f=111a rep=3 e2e=0.1148 kern=0.0172 exch=0.0151 
+qft            n=20 C=2 P=8 f=111a rep=4 e2e=0.1105 kern=0.0163 exch=0.0141 
+qft            n=20 C=2 P=8 f=111a rep=5 e2e=0.1076 kern=0.0164 exch=0.0138 maxerr=0.00e+00 1-F=0.00e+00
+qft            n=24 C=2 P=8 f=111a rep=0 e2e=0.6044 kern=0.2937 exch=0.1122 
+qft            n=24 C=2 P=8 f=111a rep=1 e2e=0.5882 kern=0.2933 exch=0.0992 
+qft            n=24 C=2 P=8 f=111a rep=2 e2e=0.5946 kern=0.2938 exch=0.1024 
+qft            n=24 C=2 P=8 f=111a rep=3 e2e=0.5940 kern=0.2938 exch=0.1015 
+qft            n=24 C=2 P=8 f=111a rep=4 e2e=0.5948 kern=0.2940 exch=0.1018 
+qft            n=24 C=2 P=8 f=111a rep=5 e2e=0.5889 kern=0.2935 exch=0.1019 maxerr=4.61e-19 1-F=2.45e-30
+rand10         n=20 C=2 P=8 f=111a rep=0 e2e=0.2247 kern=0.0286 exch=0.0592 
+rand10         n=20 C=2 P=8 f=111a rep=1 e2e=0.2278 kern=0.0285 exch=0.0563 
+rand10         n=20 C=2 P=8 f=111a rep=2 e2e=0.2327 kern=0.0288 exch=0.0573 
+rand10         n=20 C=2 P=8 f=111a rep=3 e2e=0.2273 kern=0.0288 exch=0.0552 
+rand10         n=20 C=2 P=8 f=111a rep=4 e2e=0.2288 kern=0.0286 exch=0.0579 
+rand10         n=20 C=2 P=8 f=111a rep=5 e2e=0.2294 kern=0.0286 exch=0.0563 maxerr=5.58e-18 1-F=2.42e-30
+rand10         n=24 C=2 P=8 f=111a rep=0 e2e=1.2971 kern=0.3582 exch=0.6594 
+rand10         n=24 C=2 P=8 f=111a rep=1 e2e=1.2944 kern=0.3585 exch=0.6597 
+rand10         n=24 C=2 P=8 f=111a rep=2 e2e=1.3055 kern=0.3582 exch=0.6560 
+rand10         n=24 C=2 P=8 f=111a rep=3 e2e=1.2925 kern=0.3587 exch=0.6522 
+rand10         n=24 C=2 P=8 f=111a rep=4 e2e=1.2863 kern=0.3590 exch=0.6476 
+rand10         n=24 C=2 P=8 f=111a rep=5 e2e=1.2816 kern=0.3579 exch=0.6479 maxerr=1.70e-18 1-F=3.12e-30
+baseline qft          n=16 rep=0 e2e=3.5988 exec=3.5408 
+baseline qft          n=16 rep=1 e2e=3.5571 exec=3.5407 
+baseline qft          n=16 rep=2 e2e=3.5407 exec=3.5226 
+baseline qft          n=16 rep=3 e2e=3.5322 exec=3.5161 maxerr=2.08e-17
+baseline qft          n=20 rep=0 e2e=89.2811 exec=89.2385 
+baseline qft          n=20 rep=1 e2e=89.1784 exec=89.1471 
+baseline qft          n=20 rep=2 e2e=89.1928 exec=89.1598 
+baseline qft          n=20 rep=3 e2e=89.3396 exec=89.3119 maxerr=6.19e-18
+qft            n=20 C=2 P=8 f=111a rep=0 e2e=0.1272 kern=0.0179 exch=0.0182 
+qft            n=20 C=2 P=8 f=111a rep=1 e2e=0.1115 kern=0.0179 exch=0.0145 
+qft            n=20 C=2 P=8 f=111a rep=2 e2e=0.1146 kern=0.0175 exch=0.0160 
+qft            n=20 C=2 P=8 f=111a rep=3 e2e=0.1096 kern=0.0163 exch=0.0141 
+qft            n=20 C=2 P=8 f=111a rep=4 e2e=0.1097 kern=0.0171 exch=0.0136 
+qft            n=20 C=2 P=8 f=111a rep=5 e2e=0.1106 kern=0.0174 exch=0.0161 maxerr=0.00e+00 1-F=0.00e+00
+qft            n=24 C=2 P=8 f=111a rep=0 e2e=0.6267 kern=0.2949 exch=0.1122 
+qft            n=24 C=2 P=8 f=111a rep=1 e2e=0.5983 kern=0.2937 exch=0.1029 
+qft            n=24 C=2 P=8 f=111a rep=2 e2e=0.5895 kern=0.2937 exch=0.1033 
+qft            n=24 C=2 P=8 f=111a rep=3 e2e=0.5848 kern=0.2940 exch=0.1016 
+qft            n=24 C=2 P=8 f=111a rep=4 e2e=0.5945 kern=0.2938 exch=0.1014 
+qft            n=24 C=2 P=8 f=111a rep=5 e2e=0.5911 kern=0.2944 exch=0.1000 maxerr=4.61e-19 1-F=2.45e-30
+rand10         n=20 C=2 P=8 f=111a rep=0 e2e=0.2257 kern=0.0332 exch=0.0563 
+rand10         n=20 C=2 P=8 f=111a rep=1 e2e=0.2244 kern=0.0311 exch=0.0572 
+rand10         n=20 C=2 P=8 f=111a rep=2 e2e=0.2239 kern=0.0311 exch=0.0554 
+rand10         n=20 C=2 P=8 f=111a rep=3 e2e=0.2181 kern=0.0290 exch=0.0548 
+rand10         n=20 C=2 P=8 f=111a rep=4 e2e=0.2229 kern=0.0300 exch=0.0558 
+rand10         n=20 C=2 P=8 f=111a rep=5 e2e=0.2153 kern=0.0298 exch=0.0548 maxerr=5.58e-18 1-F=2.42e-30
+rand10         n=24 C=2 P=8 f=111a rep=0 e2e=1.2950 kern=0.3589 exch=0.6524 
+rand10         n=24 C=2 P=8 f=111a rep=1 e2e=1.2844 kern=0.3567 exch=0.6416 
+rand10         n=24 C=2 P=8 f=111a rep=2 e2e=1.2763 kern=0.3577 exch=0.6408 
+rand10         n=24 C=2 P=8 f=111a rep=3 e2e=1.2827 kern=0.3573 exch=0.6502 
+rand10         n=24 C=2 P=8 f=111a rep=4 e2e=1.2830 kern=0.3576 exch=0.6516 
+rand10         n=24 C=2 P=8 f=111a rep=5 e2e=1.2811 kern=0.3576 exch=0.6442 maxerr=1.70e-18 1-F=3.12e-30
+baseline qft          n=16 rep=0 e2e=3.6620 exec=3.6043 
+baseline qft          n=16 rep=1 e2e=3.5685 exec=3.5514 
+baseline qft          n=16 rep=2 e2e=3.5855 exec=3.5713 
+baseline qft          n=16 rep=3 e2e=3.5795 exec=3.5636 maxerr=2.08e-17
+baseline qft          n=20 rep=0 e2e=89.7366 exec=89.6907 
+baseline qft          n=20 rep=1 e2e=89.4154 exec=89.3841 
+baseline qft          n=20 rep=2 e2e=89.2775 exec=89.2468 
+baseline qft          n=20 rep=3 e2e=89.2516 exec=89.2205 maxerr=6.19e-18
+qft            n=20 C=2 P=8 f=111a rep=0 e2e=0.1226 kern=0.0177 exch=0.0167 
+qft            n=20 C=2 P=8 f=111a rep=1 e2e=0.1108 kern=0.0175 exch=0.0142 
+qft            n=20 C=2 P=8 f=111a rep=2 e2e=0.1091 kern=0.0172 exch=0.0140 
+qft            n=20 C=2 P=8 f=111a rep=3 e2e=0.1013 kern=0.0165 exch=0.0142 
+qft            n=20 C=2 P=8 f=111a rep=4 e2e=0.1047 kern=0.0162 exch=0.0124 
+qft            n=20 C=2 P=8 f=111a rep=5 e2e=0.1093 kern=0.0175 exch=0.0134 maxerr=0.00e+00 1-F=0.00e+00
+qft            n=24 C=2 P=8 f=111a rep=0 e2e=0.5864 kern=0.2944 exch=0.1013 
+qft            n=24 C=2 P=8 f=111a rep=1 e2e=0.5739 kern=0.2945 exch=0.0910 
+qft            n=24 C=2 P=8 f=111a rep=2 e2e=0.5678 kern=0.2941 exch=0.0931 
+qft            n=24 C=2 P=8 f=111a rep=3 e2e=0.5696 kern=0.2941 exch=0.0914 
+qft            n=24 C=2 P=8 f=111a rep=4 e2e=0.5635 kern=0.2934 exch=0.0931 
+qft            n=24 C=2 P=8 f=111a rep=5 e2e=0.5559 kern=0.2923 exch=0.0904 maxerr=4.61e-19 1-F=2.45e-30
+rand10         n=20 C=2 P=8 f=111a rep=0 e2e=0.1943 kern=0.0331 exch=0.0388 
+rand10         n=20 C=2 P=8 f=111a rep=1 e2e=0.1868 kern=0.0305 exch=0.0371 
+rand10         n=20 C=2 P=8 f=111a rep=2 e2e=0.2131 kern=0.0304 exch=0.0485 
+rand10         n=20 C=2 P=8 f=111a rep=3 e2e=0.2108 kern=0.0303 exch=0.0492 
+rand10         n=20 C=2 P=8 f=111a rep=4 e2e=0.1896 kern=0.0290 exch=0.0437 
+rand10         n=20 C=2 P=8 f=111a rep=5 e2e=0.1885 kern=0.0291 exch=0.0358 maxerr=5.58e-18 1-F=2.42e-30
+rand10         n=24 C=2 P=8 f=111a rep=0 e2e=1.1848 kern=0.3583 exch=0.5504 
+rand10         n=24 C=2 P=8 f=111a rep=1 e2e=1.2250 kern=0.3587 exch=0.5954 
+rand10         n=24 C=2 P=8 f=111a rep=2 e2e=1.1960 kern=0.3588 exch=0.5696 
+rand10         n=24 C=2 P=8 f=111a rep=3 e2e=1.2086 kern=0.3579 exch=0.5780 
+rand10         n=24 C=2 P=8 f=111a rep=4 e2e=1.2454 kern=0.3570 exch=0.6117 
+rand10         n=24 C=2 P=8 f=111a rep=5 e2e=1.2469 kern=0.3595 exch=0.6121 maxerr=1.70e-18 1-F=3.12e-30
+baseline qft          n=16 rep=0 e2e=3.6218 exec=3.5639 
+baseline qft          n=16 rep=1 e2e=3.5503 exec=3.5357 
+baseline qft          n=16 rep=2 e2e=3.5636 exec=3.5480 
+baseline qft          n=16 rep=3 e2e=3.5411 exec=3.5274 maxerr=2.08e-17
+baseline qft          n=20 rep=0 e2e=89.4409 exec=89.3939 
+baseline qft          n=20 rep=1 e2e=89.1627 exec=89.1317 
+baseline qft          n=20 rep=2 e2e=89.1262 exec=89.0958 
+baseline qft          n=20 rep=3 e2e=89.2181 exec=89.1835 maxerr=6.19e-18

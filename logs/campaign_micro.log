@@ -1,0 +1,57 @@
+L=11 launch=792.3us pass1=0.780ms HBM=2.7 GB/s (all cards)
+L=12 launch=792.1us pass1=0.781ms HBM=5.4 GB/s (all cards)
+L=13 launch=779.2us pass1=0.520ms HBM=16.1 GB/s (all cards)
+L=14 launch=1062.1us pass1=0.593ms HBM=28.3 GB/s (all cards)
+L=15 launch=794.2us pass1=0.609ms HBM=55.1 GB/s (all cards)
+L=16 launch=769.3us pass1=0.689ms HBM=97.4 GB/s (all cards)
+L=17 launch=1006.8us pass1=0.922ms HBM=145.5 GB/s (all cards)
+L=18 launch=771.3us pass1=1.213ms HBM=221.4 GB/s (all cards)
+L=19 launch=773.2us pass1=2.194ms HBM=244.8 GB/s (all cards)
+L=20 launch=793.4us pass1=3.607ms HBM=297.7 GB/s (all cards)
+L=21 launch=764.9us pass1=6.553ms HBM=327.7 GB/s (all cards)
+L=22 launch=826.9us pass1=12.182ms HBM=352.6 GB/s (all cards)
+L=23 launch=823.4us pass1=23.242ms HBM=369.6 GB/s (all cards)
+L=24 launch=1000.3us pass1=45.327ms HBM=379.0 GB/s (all cards)
+L=22 ops/pass=1 t=12.030ms
+L=22 ops/pass=2 t=13.288ms
+L=22 ops/pass=4 t=16.435ms
+L=22 ops/pass=8 t=31.472ms
+L=22 ops/pass=16 t=61.728ms
+L=22 ops/pass=32 t=122.069ms
+L=22 ops/pass=64 t=243.108ms
+sync 4 KiB: h2d 0.12 GB/s one card, 0.03 GB/s all; d2h 0.13 / 0.05
+sync 64 KiB: h2d 1.66 GB/s one card, 0.62 GB/s all; d2h 1.81 / 0.64
+sync 1024 KiB: h2d 3.81 GB/s one card, 2.94 GB/s all; d2h 4.00 / 2.90
+sync 16384 KiB: h2d 5.77 GB/s one card, 4.69 GB/s all; d2h 5.88 / 4.76
+sync 65536 KiB: h2d 5.94 GB/s one card, 5.03 GB/s all; d2h 5.31 / 5.21
+sync 262144 KiB: h2d 7.81 GB/s one card, 6.30 GB/s all; d2h 7.89 / 6.44
+exch_dev L=16: 0.92 ms
+exch_host L=16: 10.84 ms
+exch_dev L=20: 3.37 ms
+exch_host L=20: 106.27 ms
+exch_dev L=24: 41.21 ms
+exch_host L=24: 1620.88 ms
+nlq=4 launch=163us gate1=0.163ms collect=0.200ms distribute=0.221ms
+nlq=5 launch=105us gate1=0.123ms collect=0.219ms distribute=0.200ms
+nlq=6 launch=131us gate1=0.137ms collect=0.221ms distribute=0.196ms
+nlq=7 launch=104us gate1=0.241ms collect=0.389ms distribute=0.283ms
+nlq=8 launch=155us gate1=0.224ms collect=0.245ms distribute=0.230ms
+nlq=9 launch=156us gate1=0.474ms collect=0.344ms distribute=0.323ms
+nlq=10 launch=131us gate1=0.480ms collect=0.258ms distribute=0.236ms
+nlq=11 launch=128us gate1=0.811ms collect=0.356ms distribute=0.321ms
+nlq=12 launch=96us gate1=1.482ms collect=0.392ms distribute=0.342ms
+nlq=13 launch=128us gate1=2.878ms collect=0.555ms distribute=0.597ms
+nlq=14 launch=98us gate1=5.559ms collect=0.585ms distribute=0.665ms
+nlq=15 launch=131us gate1=10.902ms collect=0.568ms distribute=0.480ms
+nlq=16 launch=137us gate1=21.700ms collect=1.015ms distribute=0.915ms
+nlq=17 launch=177us gate1=43.027ms collect=1.944ms distribute=1.525ms
+nlq=18 launch=144us gate1=85.614ms collect=3.503ms distribute=2.716ms
+nlq=19 launch=139us gate1=170.948ms collect=5.924ms distribute=4.502ms
+nlq=20 launch=137us gate1=341.341ms collect=19.313ms distribute=7.543ms
+nlq=21 launch=135us gate1=682.054ms collect=40.578ms distribute=15.992ms
+nlq=22 launch=171us gate1=1363.716ms collect=80.140ms distribute=37.896ms
+nlq=23 launch=171us gate1=2726.820ms collect=161.631ms distribute=80.045ms
+nlq=24 launch=199us gate1=5453.157ms collect=323.506ms distribute=161.139ms
+nlq=25 launch=89us gate1=10905.647ms collect=643.902ms distribute=359.736ms
+nlq=26 launch=174us gate1=21810.801ms collect=1265.547ms distribute=653.054ms
+queue rtt median 359us; barrier round median 374us
