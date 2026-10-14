@@ -43,6 +43,12 @@ def med(v):
     return np.median(v), np.percentile(v, 25), np.percentile(v, 75)
 
 
+def disp(c, wrap=False):
+    """Circuit name as written in the text (no underscores)."""
+    name = {"partition_heavy": "partition heavy", "qft_iqft": "qft iqft", "ghz_log": "ghz log", "ghz_top": "ghz top"}.get(c, c.replace("_", " "))
+    return name.replace(" ", "\n") if wrap else name
+
+
 def save(fig, name):
     fig.savefig(os.path.join(OUT, name + ".pdf"))
     fig.savefig(os.path.join(OUT, name + ".png"))
@@ -57,13 +63,13 @@ def fig_breakdown(eng):
     sel = sorted({(r["circuit"], r["n"]) for r in rs if r["n"] in (20, 24, 28, 30)})
     if not sel:
         return
-    fig, ax = plt.subplots(figsize=(7, 3.2))
+    fig, ax = plt.subplots(figsize=(7.5, 3.4))
     bottom = np.zeros(len(sel))
     for k, lab in keys:
         vals = np.array([np.median([r["timing"][k] for r in rs if (r["circuit"], r["n"]) == s]) for s in sel])
         ax.bar(range(len(sel)), vals, bottom=bottom, label=lab)
         bottom += vals
-    ax.set_xticks(range(len(sel))); ax.set_xticklabels([f"{c}\n{n}" for c, n in sel], fontsize=7)
+    ax.set_xticks(range(len(sel))); ax.set_xticklabels([f"{disp(c, True)}\n{n}" for c, n in sel], fontsize=6.5)
     ax.set_yscale("log"); ax.set_ylabel("time (s), median"); ax.legend(fontsize=6, ncol=2)
     save(fig, "fig_breakdown")
 
@@ -81,7 +87,7 @@ def fig_scaling(sc):
             if ns:
                 ax.errorbar(ns, [x[0] for x in m], yerr=[[x[0] - x[1] for x in m], [x[2] - x[0] for x in m]],
                             marker="o", ms=3, color=C3[C], label=f"{C} card" + ("s" if C > 1 else ""))
-        ax.set_yscale("log"); ax.set_title(c, fontsize=8); ax.set_xlabel("$n$")
+        ax.set_yscale("log"); ax.set_title(disp(c), fontsize=8); ax.set_xlabel("$n$")
     np.atleast_1d(axs)[0].set_ylabel("$T_{e2e}$ (s)"); np.atleast_1d(axs)[0].legend(fontsize=6)
     save(fig, "fig_scaling")
 
@@ -90,14 +96,18 @@ def fig_ablation(ab):
     if not ab:
         return
     names = {"111a": "all on", "011a": "F1 off", "101a": "F2 off", "110a": "F3 off", "1110": "F4 off", "0000": "all off"}
-    rs = [r for r in ab if r["n"] == max(x["n"] for x in ab) and r["flags"] in names]
+    full = ("qft", "ghz", "rand10", "partition_heavy")       # circuits run with every path setting
+    ab4 = [r for r in ab if r.get("C") == 4 and r["circuit"] in full]
+    if not ab4:
+        return
+    rs = [r for r in ab4 if r["n"] == max(x["n"] for x in ab4) and r["flags"] in names]
     circs = sorted({r["circuit"] for r in rs})
     fig, ax = plt.subplots(figsize=(7, 2.8))
     w = 0.8 / len(names)
     for i, (fl, lab) in enumerate(names.items()):
         vals = [np.median([r["timing"]["T_e2e"] for r in rs if r["circuit"] == c and r["flags"] == fl] or [np.nan]) for c in circs]
         ax.bar(np.arange(len(circs)) + i * w, vals, w, label=lab)
-    ax.set_xticks(np.arange(len(circs)) + 0.4 - w / 2); ax.set_xticklabels(circs, fontsize=7)
+    ax.set_xticks(np.arange(len(circs)) + 0.4 - w / 2); ax.set_xticklabels([disp(c) for c in circs], fontsize=7)
     ax.set_yscale("log"); ax.set_ylabel("$T_{e2e}$ (s)"); ax.legend(fontsize=6, ncol=3)
     ax.set_title(f"four cards, n = {rs[0]['n'] if rs else ''}", fontsize=8)
     save(fig, "fig_ablation")
@@ -116,7 +126,7 @@ def fig_cpu(eng, cpu):
         ns = sorted({r["n"] for r in eng if r["circuit"] == c and r.get("C") == 4 and r.get("flags", "").startswith("111")})
         ax.plot(ns, [np.median([r["timing"]["T_e2e"] for r in eng if r["circuit"] == c and r.get("C") == 4 and r["n"] == n
                                 and r.get("flags", "").startswith("111")]) for n in ns], "o-k", ms=3, label="FPGA, 4 cards")
-        ax.set_yscale("log"); ax.set_title(c, fontsize=8); ax.set_xlabel("$n$")
+        ax.set_yscale("log"); ax.set_title(disp(c), fontsize=8); ax.set_xlabel("$n$")
     axs[0].set_ylabel("time (s), median"); axs[0].legend(fontsize=5)
     save(fig, "fig_cpu")
 
@@ -130,7 +140,8 @@ def fig_model(bl):
         return
     ns = sorted({r["n"] for r in rs})
     meas = [med([r["timing"]["T_exec"] for r in rs if r["n"] == n]) for n in ns]
-    pred = [model_v06.predict(mc, n - (r0["C"].bit_length() - 1), r0["routing"])
+    ops = model_v06.load_ops() or {}
+    pred = [model_v06.predict(mc, n - (r0["C"].bit_length() - 1), ops.get(f"qft:{n}"))
             for n in ns for r0 in [next(r for r in rs if r["n"] == n)]]
     fig, ax = plt.subplots(figsize=(3.4, 2.6))
     ax.errorbar(ns, [x[0] for x in meas], yerr=[[x[0] - x[1] for x in meas], [x[2] - x[0] for x in meas]],
@@ -138,7 +149,7 @@ def fig_model(bl):
     pn = [(n, p) for n, p in zip(ns, pred) if p is not None]
     ax.plot([x[0] for x in pn], [x[1] for x in pn], "s--", ms=3, color=C3[2], label="model (microbenchmarks)")
     ax.set_yscale("log"); ax.set_xlabel("$n$"); ax.set_ylabel("execution time (s)"); ax.legend(fontsize=6)
-    ax.set_title("submitted design, QFT, four cards", fontsize=8)
+    ax.set_title("baseline design, QFT, four cards", fontsize=8)
     save(fig, "fig_model")
 
 
@@ -150,13 +161,13 @@ def fig_bytes(eng, bl):
         e = [r for r in eng if r["circuit"] == c and r.get("C") == 4 and r.get("flags", "").startswith("111")]
         ns = sorted({r["n"] for r in e})
         tb = lambda r: 2 * 16 * (1 << r["n"]) + sum(r["timing"][k] for k in ("bytes_pcie_exch", "bytes_pcie_local_remap", "bytes_pcie_ins"))
-        ax.plot(ns, [np.median([tb(r) for r in e if r["n"] == n]) for n in ns], "o-", ms=3, color=C3[4], label="revised engine")
+        ax.plot(ns, [np.median([tb(r) for r in e if r["n"] == n]) for n in ns], "o-", ms=3, color=C3[4], label="engine")
         b = [r for r in bl if r["circuit"] == c and not r.get("per_gate") and r.get("init", "zero") == "zero"
           and r["_file"] in ("v06_batched.json", "v06_large.json")]
         nb = sorted({r["n"] for r in b})
         ax.plot(nb, [np.median([r["bytes"]["pcie_d2h"] + r["bytes"]["pcie_h2d"] for r in b if r["n"] == n]) for n in nb],
-                "s-", ms=3, color=C3[2], label="submitted design")
-        ax.set_yscale("log"); ax.set_title(c, fontsize=8); ax.set_xlabel("$n$")
+                "s-", ms=3, color=C3[2], label="baseline design")
+        ax.set_yscale("log"); ax.set_title(disp(c), fontsize=8); ax.set_xlabel("$n$")
     axs[0].set_ylabel("PCIe bytes per run"); axs[0].legend(fontsize=6)
     save(fig, "fig_bytes")
 

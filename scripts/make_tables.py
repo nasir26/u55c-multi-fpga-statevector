@@ -50,6 +50,10 @@ def sci(x):
     return f"${m}\\times 10^{{{int(e)}}}$"
 
 
+# configurations stopped by the thermal guard and run again later: the partial records are replaced by the rerun
+REPLACED = {"results/raw/main/grover_4c.json": [("grover", 16)]}
+
+
 def load(pattern):
     recs, metas = [], []
     for f in sorted(glob.glob(os.path.join(RAW, pattern), recursive=True)):
@@ -58,8 +62,11 @@ def load(pattern):
             raise SystemExit(f"mock data found in results: {f}")
         metas.append((f, d.get("meta", {})))
         m = d.get("meta", {})
+        rel = os.path.relpath(f, ROOT)
         for r in d.get("records", []):
-            r["_file"] = os.path.relpath(f, ROOT)
+            if (r.get("circuit"), r.get("n")) in REPLACED.get(rel, []):
+                continue
+            r["_file"] = rel
             r.setdefault("design", "baseline" if "baseline" in m.get("design", "") else "engine")
             r.setdefault("pin_cores", m.get("pin_cores", 0))
             recs.append(r)
@@ -160,7 +167,7 @@ def tab_platform_resources():
     xrt = re.search(r"Version : (\S+)", man["xrt"]).group(1)
     v = man["python_fpga_env"]
     rows = [("FPGA device", "AMD XCU55C on Alveo U55C (4 cards, shell " + man["cards"][0]["shell"].replace("_", r"\_") + ")"),
-            ("HBM2 per card", "16 GB in 32 pseudo channels of 512 MB"),
+            ("HBM2 per card", "16 GiB in 32 pseudo channels of 512 MiB"),
             ("Host CPU", f"{man['sockets']} $\\times$ {man['cpu']}, {cores} cores, {man['logical_cpus']} threads"),
             ("Host memory", f"{man['mem_gib']} GiB"),
             ("Card NUMA nodes", ", ".join(f"{c['bdf'][5:7]}: {c['numa_node']}" for c in man["cards"])),
@@ -169,17 +176,18 @@ def tab_platform_resources():
     write("tab_platform.tex", "\\begin{tabular}{@{}ll@{}}\n\\toprule\n" + "".join(f"{a} & {b} \\\\\n" for a, b in rows)
           + "\\bottomrule\n\\end{tabular}\n")
     body = []
-    for build, name in (("v06", "submitted v06 (8 data ports)"), ("sv128_e8w", "revised, 8 engines")):
+    for build, name in (("v06", "baseline (8 data ports)"), ("sv128_e8w", "engine, 8 compute units")):
         u = util(build)
         b = man["bitstreams"]["v06" if build == "v06" else "sv128_e8w"]
         clk = b["kernel_clocks_mhz"][-1]
         body.append(f"{name} & {clk} & " + " & ".join(f"{int(u[k][0]):,} ({u[k][2]:.1f})".replace(",", "{,}") for k in ("lut", "ff", "dsp", "bram", "uram")) + " \\\\\n")
         if build == "sv128_e8w":
             macro("NumClockFlagship", clk); macro("NumLutPctFlagship", f"{u['lut'][2]:.1f}"); macro("NumDspPctFlagship", f"{u['dsp'][2]:.1f}")
-            macro("NumBramPctFlagship", f"{u['bram'][2]:.1f}")
+            macro("NumBramPctFlagship", f"{u['bram'][2]:.1f}"); macro("NumUramPctFlagship", f"{u['uram'][2]:.1f}")
         else:
-            macro("NumClockVsix", clk)
-    body.append("revised, 16 engines & \\multicolumn{6}{l}{placed; routing failed (conflicted nets)} \\\\\n")
+            macro("NumClockVsix", clk); macro("NumLutPctVsix", f"{u['lut'][2]:.1f}"); macro("NumDspPctVsix", f"{u['dsp'][2]:.1f}")
+            macro("NumBramPctVsix", f"{u['bram'][2]:.1f}")
+    body.append("engine, 16 compute units & \\multicolumn{6}{l}{placed; routing failed (conflicted nets)} \\\\\n")
     u = util("sv128_e8w")
     body.append("device total (XCU55C) & & " + " & ".join(f"{int(u[k][1]):,}".replace(",", "{,}") for k in ("lut", "ff", "dsp", "bram", "uram"))
                 + " \\\\\n")
@@ -204,7 +212,7 @@ def tab_cpu(eng):
     cg = group(cpu, ("circuit", "n", "backend"), lambda r: r["wall_s"])
     eg = group([r for r in eng if r.get("C") == 4 and r.get("flags", "111a").startswith("111")], ("circuit", "n"),
                lambda r: r["timing"]["T_e2e"])
-    lines = []
+    lines, rows = [], []
     for (c, n) in sorted({(k[0], k[1]) for k in eg}):
         if (c, n, "aer") not in cg:
             continue
@@ -214,8 +222,23 @@ def tab_cpu(eng):
         a1 = med_iqr(cg[(c, n, "aer1")])[0] if (c, n, "aer1") in cg else None
         lines.append(f"{c.replace('_', ' ')} & {n} & {fmt_t(fe)} & {fmt_t(sv) if sv else 'n/a'} & {fmt_t(a)} & "
                      f"{fmt_t(a1) if a1 else 'n/a'} & {fe / a:.2g} \\\\\n")
+        rows.append((c, n, fe, sv, a, a1))
     write("tab_cpu.tex", "\\begin{tabular}{@{}lrrrrrr@{}}\n\\toprule\nCircuit & $n$ & FPGA $T_{\\mathrm{e2e}}$ & Statevector & Aer (all threads) & Aer (1 thread) & FPGA/Aer \\\\\n\\midrule\n"
           + "".join(lines) + "\\bottomrule\n\\end{tabular}\n")
+    macro("NumCpuCases", str(len(rows)))
+    wide = [r for r in rows if r[1] >= 24 and r[5]]
+    macro("NumCpuWideCases", str(len(wide))); macro("NumCpuWideFasterThanAerOne", str(sum(1 for r in wide if r[2] < r[5])))
+    macro("NumCpuFpgaFaster", str(sum(1 for r in rows if r[2] < r[4])))
+    macro("NumCpuAerFaster", str(sum(1 for r in rows if r[4] < r[2])))
+    big = [r for r in rows if r[5]]
+    macro("NumCpuFasterThanAerOne", str(sum(1 for r in big if r[2] < r[5])))
+    macro("NumCpuAerOneCases", str(len(big)))
+    for c, n, name in (("qft", 30, "Qft"), ("ghz", 30, "Ghz"), ("qft", 16, "QftSixteen"), ("grover", 16, "GroverSixteen")):
+        r = [x for x in rows if x[0] == c and x[1] == n]
+        if r:
+            macro(f"NumCpuRatio{name}", f"{r[0][2] / r[0][4]:.1f}")
+            if r[0][5]:
+                macro(f"NumCpuAerOneOver{name}", f"{r[0][5] / r[0][2]:.0f}")
 
 
 # ---------------------------------------------------------------------------------------------- engine tables
@@ -241,16 +264,85 @@ def tab_routing(eng):
     g = rows.get(("ghz", 28))
     if g:
         macro("NumGhzChainRemapsFfour", str(g["stats"]["n_remaps"]))
+    q = rows.get(("qft", 28))
+    if q:
+        st = q["stats"]; ro = st["route"]
+        macro("NumRouteQftGates", str(st["n_input_gates"])); macro("NumRouteQftLocal", str(ro["local"]))
+        macro("NumRouteQftFtwo", str(ro["pctrl"])); macro("NumRouteQftFone", str(ro["pdiag"]))
+        macro("NumRouteQftExch", str(ro["exchange"])); macro("NumRouteQftPasses", str(st["n_passes"]))
+
+
+def thermal_stops():
+    """Instances stopped by the thermal guard: listed by the driver (thermal_stops) or, for files written before that
+    field existed, the instance in progress when the abort marker was written (from the planned list in meta.cmd)."""
+    out = []
+    for f in sorted(glob.glob(os.path.join(RAW, "**", "*.json"), recursive=True)):
+        if "_aborted" in f:
+            continue
+        d = json.load(open(f))
+        if d.get("thermal_stops"):
+            out += [dict(x, file=os.path.relpath(f, ROOT)) for x in d["thermal_stops"]]
+            continue
+        if not os.path.exists(f + ".abort"):
+            continue
+        cmd = d.get("meta", {}).get("cmd", "")
+        arg = lambda k: (re.search(rf"--{k} (\S+)", cmd) or [None, None])[1]
+        circs, ns, reps = (arg("circuits") or "").split(","), [int(x) for x in (arg("ns") or "0").split(",")], int(arg("reps") or 1)
+        flags = (arg("flags") or "111a").split(",")
+        plan = [(c, n, fl) for c in circs for n in ns for fl in flags]
+        recs = d.get("records", [])
+        done = [(r["circuit"], r["n"], r.get("flags", "111a")) for r in recs]
+        last = recs[-1] if recs else None
+        if last and last["rep"] < reps - 1:
+            cur, nd = (last["circuit"], last["n"], last.get("flags", "111a")), last["rep"] + 1
+        else:
+            rest = [x for x in plan if x not in done]
+            cur, nd = (rest[0] if rest else None), 0
+        if cur:
+            out.append(dict(circuit=cur[0], n=cur[1], flags=cur[2], C=(last or {}).get("C"), reps_done=nd, reps_planned=reps,
+                            abort=open(f + ".abort").read().strip(), file=os.path.relpath(f, ROOT)))
+    return out
 
 
 def tab_maxwidth(allrecs):
-    """Largest width verified against the reference per number of cards."""
-    best = {}
+    """Largest width verified against the reference, per number of cards and circuit, and the thermally stopped runs."""
+    best, byc = {}, {}
     for r in allrecs:
         if "metrics" in r and r["metrics"]["max_abs_err"] < 1e-12:
             best[r["C"]] = max(best.get(r["C"], 0), r["n"])
+            k = (r["C"], r["circuit"])
+            if r["n"] > byc.get(k, (0, None))[0]:
+                byc[k] = (r["n"], r)
     for c, n in best.items():
         macro({1: "NumMaxWidthOneCard", 2: "NumMaxWidthTwoCards", 4: "NumMaxWidthFourCards"}[c], str(n))
+    t = defaultdict(list)
+    for r in allrecs:
+        if not r.get("warmup") and "timing" in r:
+            t[(r["C"], r["circuit"], r["n"], r.get("flags", "111a"), r.get("init", "zero"))].append(r["timing"]["T_e2e"])
+    lines = []
+    for (c, circ), (n, r) in sorted(byc.items()):
+        if circ not in ("qft", "ghz", "rand10", "qft_iqft"):
+            continue
+        tt = t.get((c, circ, n, r.get("flags", "111a"), r.get("init", "zero")), [])
+        lines.append(f"{c} & {circ.replace('_', ' ')} & {n} & {16 * 2 ** n / c / 2 ** 30:.0f} & {fmt_t(med(tt)) if tt else 'n/a'} & "
+                     f"{sci(r['metrics']['max_abs_err'])} \\\\\n")
+    write("tab_maxwidth.tex", "\\begin{tabular}{@{}rlrrrr@{}}\n\\toprule\n"
+          "Cards & Circuit & largest $n$ & HBM per card (GiB) & $T_{\\mathrm{e2e}}$ (s) & max $|\\Delta\\alpha|$ \\\\\n\\midrule\n"
+          + "".join(lines) + "\\bottomrule\n\\end{tabular}\n")
+    m31 = [r for r in allrecs if r["n"] == 31 and r.get("C") == 4 and not r.get("warmup") and "timing" in r]
+    for c, key in (("ghz", "Ghz"), ("qft", "Qft")):
+        v = [r["timing"]["T_e2e"] for r in m31 if r["circuit"] == c]
+        if v:
+            macro(f"NumMaxThirtyOne{key}S", fmt_t(med(v)))
+        ver = [r for r in allrecs if r["n"] == 31 and r["circuit"] == c and "metrics" in r]
+        macro(f"NumMaxThirtyOne{key}Verified", "yes" if ver and all(r["metrics"]["max_abs_err"] < 1e-12 for r in ver) else "no")
+    st = thermal_stops()
+    rows = [f"{x.get('C') or ''} & {x['circuit'].replace('_', ' ')} & {x['n']} & {x['flags']} & {x['reps_done']} of {x['reps_planned']} & "
+            f"{x['abort'].split()[1][5:7]} & {x['abort'].split()[2][5:]} / {x['abort'].split()[3][4:]} \\\\\n" for x in st]
+    write("tab_thermal.tex", "\\begin{tabular}{@{}rlrlrrr@{}}\n\\toprule\n"
+          "Cards & Circuit & $n$ & paths & repetitions & card & FPGA / HBM (C) \\\\\n\\midrule\n"
+          + ("".join(rows) or "\\multicolumn{7}{l}{none} \\\\\n") + "\\bottomrule\n\\end{tabular}\n")
+    macro("NumThermalStops", str(len(st)))
 
 
 def tab_scaling(sc):
@@ -258,7 +350,7 @@ def tab_scaling(sc):
         write("tab_scaling.tex", pending("scaling table (E4)") + "\n"); return
     g = group([r for r in sc if r.get("flags", "").startswith("111")], ("circuit", "n", "C"), lambda r: r["timing"]["T_e2e"])
     gk = group([r for r in sc if r.get("flags", "").startswith("111")], ("circuit", "n", "C"), lambda r: r["timing"]["T_kernel"])
-    lines = []
+    lines, allS = [], []
     for (c, n) in sorted({(k[0], k[1]) for k in g}):
         t = {C: med(g.get((c, n, C))) for C in (1, 2, 4)}
         if not t[1]:
@@ -273,32 +365,81 @@ def tab_scaling(sc):
         lines.append(f"{c.replace('_', ' ')} & {n} & " + " & ".join(cells) + " \\\\\n")
         if c == "qft" and n == 28 and t[4]:
             macro("NumQftTwentyEightSpeedupFour", f"{t[1] / t[4]:.2f}")
+        for C in (2, 4):
+            if t[C]:
+                allS.append((c, n, C, t[1] / t[C]))
     write("tab_scaling.tex", "\\begin{tabular}{@{}lrrrrrrrr@{}}\n\\toprule\n"
           " & & 1 card & \\multicolumn{3}{c}{2 cards} & \\multicolumn{3}{c}{4 cards} \\\\\n"
           "\\cmidrule(lr){3-3}\\cmidrule(lr){4-6}\\cmidrule(l){7-9}\n"
           "Circuit & $n$ & $T$ (s) & $T$ (s) & $S$ & $E$ (\\%) & $T$ (s) & $S$ & $E$ (\\%) \\\\\n\\midrule\n"
           + "".join(lines) + "\\bottomrule\n\\end{tabular}\n")
+    if allS:
+        macro("NumScaleCases", str(len(allS)))
+        macro("NumScaleBelowOne", str(sum(1 for x in allS if x[3] < 1)))
+        b = max((x for x in allS if x[2] == 4), key=lambda x: x[3])
+        macro("NumScaleBestFour", f"{b[3]:.2f}"); macro("NumScaleBestFourN", str(b[1]))
+        q2 = [x for x in allS if x[0] == "qft" and x[1] == 28 and x[2] == 2]
+        if q2:
+            macro("NumQftTwentyEightSpeedupTwo", f"{q2[0][3]:.2f}")
+        # weak scaling: equal amplitudes per card (n0 on one card, n0 + 1 on two, n0 + 2 on four)
+        wk = [r for r in sc if r["_file"].split("/")[-1].startswith("weak_") and not r.get("warmup")]
+        tw = defaultdict(list)
+        for r in wk:
+            tw[(r["circuit"], r["n"], r["C"])].append(r["timing"]["T_e2e"])
+        eff = []
+        for c in sorted({k[0] for k in tw}):
+            for n0 in (26, 27):
+                if (c, n0, 1) in tw and (c, n0 + 2, 4) in tw:
+                    eff.append((c, n0, med(tw[(c, n0, 1)]) / med(tw[(c, n0 + 2, 4)])))
+        if eff:
+            macro("NumWeakEffFourMin", f"{100 * min(e[2] for e in eff):.0f}"); macro("NumWeakEffFourMax", f"{100 * max(e[2] for e in eff):.0f}")
+        # where the time goes: exchange share of the end to end time at n = 28, one card against four cards
+        for c, key in (("qft", "Qft"), ("rand10", "Rand")):
+            for C, w in ((1, "One"), (4, "Four")):
+                rr = [r for r in sc if r["circuit"] == c and r["n"] == 28 and r["C"] == C and r.get("flags", "").startswith("111")
+                      and not r.get("warmup")]
+                if rr:
+                    macro(f"NumScaleExch{key}{w}", f"{100 * med([r['timing']['T_exchange'] / r['timing']['T_e2e'] for r in rr]):.0f}")
+                    macro(f"NumScaleExchHost{key}{w}", f"{med([r['timing']['T_exch_host'] for r in rr]):.3g}")
+                    macro(f"NumScaleExchDev{key}{w}", f"{med([r['timing']['T_exch_dev'] for r in rr]):.3g}")
 
 
 def tab_ablation(ab):
-    if not ab:
+    """Slice path ablation (R1.D, R1.Q.4, R1.Q.11): end to end time with F1 to F4 switched off one at a time and
+    together, per circuit and number of cards at the largest width of the ablation."""
+    rs0 = [r for r in ab if r.get("flags") in ("111a", "011a", "101a", "110a", "1110", "0000") and not r.get("warmup")
+           and r["circuit"] in ("qft", "ghz", "rand10", "partition_heavy", "grover")]
+    if not rs0:
         write("tab_ablation.tex", pending("ablation table (E5, E6)") + "\n"); return
-    g = group(ab, ("circuit", "n", "flags"), lambda r: r)
-    names = {"111a": "all on", "011a": "F1 off", "101a": "F2 off", "110a": "F3 off", "1110": "F4 off", "0000": "all off",
-             "1111": "F4 on"}
+    order = ["111a", "011a", "101a", "110a", "1110", "0000"]
+    g = defaultdict(list)
+    for r in rs0:
+        g[(r["circuit"], r["C"], r["n"], r["flags"])].append(r)
     lines = []
-    for (c, n, fl), rs in sorted(g.items()):
-        T = [x["timing"] for x in rs]
-        lines.append(f"{c.replace('_', ' ')} & {n} & {names.get(fl, fl)} & {fmt_t(med([t['T_e2e'] for t in T]))} & "
-                     f"{fmt_t(med([t['T_exchange'] for t in T]))} & {rs[0]['stats']['n_remaps']} & "
-                     f"{med([t['bytes_pcie_exch'] for t in T]) / 2**20:.0f} \\\\\n")
-    write("tab_ablation.tex", "\\begin{tabular}{@{}lrlrrrr@{}}\n\\toprule\nCircuit & $n$ & paths & $T_{\\mathrm{e2e}}$ (s) & $T_{\\mathrm{exch}}$ (s) & remaps & PCIe exch. (MiB) \\\\\n\\midrule\n"
+    for c in ("qft", "ghz", "rand10", "partition_heavy", "grover"):
+        for C in (2, 4):
+            ns = sorted({k[2] for k in g if k[0] == c and k[1] == C})
+            if not ns:
+                continue
+            n = ns[-1]
+            t = {fl: med([x["timing"]["T_e2e"] for x in g.get((c, C, n, fl), [])]) if g.get((c, C, n, fl)) else None for fl in order}
+            rem = {fl: g[(c, C, n, fl)][0]["stats"]["n_remaps"] for fl in ("111a", "0000") if g.get((c, C, n, fl))}
+            lines.append(f"{c.replace('_', ' ')} & {C} & {n} & " + " & ".join(fmt_t(t[fl]) if t[fl] else "n/a" for fl in order)
+                         + f" & {rem.get('111a', 'n/a')} & {rem.get('0000', 'n/a')} \\\\\n")
+            if t["111a"] and t["0000"]:
+                w = {2: "Two", 4: "Four"}[C]; ck = {"qft": "Qft", "ghz": "Ghz", "rand10": "Rand", "partition_heavy": "Ph", "grover": "Grover"}[c]
+                macro(f"NumAbl{ck}{w}AllOff", f"{t['0000'] / t['111a']:.1f}")
+                if t["101a"]:
+                    macro(f"NumAbl{ck}{w}FtwoOff", f"{t['101a'] / t['111a']:.1f}")
+                if t["011a"]:
+                    macro(f"NumAbl{ck}{w}FoneOff", f"{t['011a'] / t['111a']:.2f}")
+                macro(f"NumAbl{ck}{w}N", str(n))
+    write("tab_ablation.tex", "\\begin{tabular}{@{}lrr" + "r" * 6 + "rr@{}}\n\\toprule\n"
+          " & & & \\multicolumn{6}{c}{$T_{\\mathrm{e2e}}$ (s)} & \\multicolumn{2}{c}{remaps} \\\\\n"
+          "\\cmidrule(lr){4-9}\\cmidrule(l){10-11}\n"
+          "Circuit & $C$ & $n$ & all on & F1 off & F2 off & F3 off & F4 off & all off & on & off \\\\\n\\midrule\n"
           + "".join(lines) + "\\bottomrule\n\\end{tabular}\n")
-    for c, key in (("qft", "Qft"), ("ghz", "Ghz")):
-        on = med([x["timing"]["T_e2e"] for x in g.get((c, 28, "111a"), [])])
-        off = med([x["timing"]["T_e2e"] for x in g.get((c, 28, "0000"), [])])
-        if on and off:
-            macro(f"NumAbl{key}TwentyEightSpeedup", f"{off / on:.1f}")
+    g = group(ab, ("circuit", "n", "flags"), lambda r: r)
     for fl, key in (("1110", "NoFfour"), ("1111", "Ffour")):
         for cname, ck in (("ghz", "GhzChain"), ("ghz_log", "GhzLog")):
             rs = g.get((cname, 28, fl))
@@ -316,6 +457,14 @@ def tab_baseline(bl):
             continue
         ro, b, pc = r["routing"], r["bytes"], r["per_card_max"]
         tot = sum(pc.values()) or 1
+        for c, n, key in (("qft", 22, "QftTwentyTwo"), ("partition_heavy", 22, "PhTwentyTwo"), ("qft", 8, "QftEight")):
+            if r["circuit"] == c and r["n"] == n:
+                macro(f"NumVsix{key}KernelPct", f"{100 * pc['kernel'] / tot:.0f}")
+                macro(f"NumVsix{key}SyncPct", f"{100 * (pc['barrier'] + pc['queue']) / tot:.0f}")
+                macro(f"NumVsix{key}HostPct", f"{100 * pc['host_compute'] / tot:.0f}")
+                macro(f"NumVsix{key}PciePct", f"{100 * (pc['d2h'] + pc['h2d']) / tot:.0f}")
+        if r["n"] not in (8, 14, 22, 26):
+            continue
         lines.append(f"{r['circuit'].replace('_', ' ')} & {r['n']} & {ro['local']} & {ro['diag']} & {ro['exchange']} & "
                      f"{(b['pcie_d2h'] + b['pcie_h2d']) / 2**20:.1f} & {100 * pc['kernel'] / tot:.0f} & "
                      f"{100 * (pc['d2h'] + pc['h2d']) / tot:.0f} & {100 * pc['host_compute'] / tot:.0f} & "
@@ -335,6 +484,11 @@ def tab_grover_shor(eng):
               + lines + "\\bottomrule\n\\end{tabular}\n")
     else:
         write("tab_grover.tex", pending("Grover table (E7)") + "\n")
+    g16 = [r for r in eng if r["circuit"] == "grover" and r["n"] == 16 and r.get("C") == 4 and not r.get("warmup")]
+    if g16:
+        macro("NumGroverSixteenIters", str(g16[0]["meta_qc"]["k"]))
+        macro("NumGroverSixteenRemaps", f"{g16[0]['stats']['n_remaps']:,}".replace(",", "{,}"))
+        macro("NumGroverSixteenExchPct", f"{100 * med([r['timing']['T_exchange'] / r['timing']['T_e2e'] for r in g16]):.0f}")
     sh = [r for r in eng if "counting_dist_max_abs_diff" in r]
     if sh:
         macro("NumQpeWorstDistDiff", sci(max(r["counting_dist_max_abs_diff"] for r in sh)))
@@ -349,11 +503,23 @@ def tab_host(hs):
     rows = sorted({k[:4] for k in g})
     lines = []
     for d, C, c, n in rows:
-        lab = "submitted" if d == "baseline" else "revised"
+        lab = "baseline" if d == "baseline" else "engine"
         lines.append(f"{lab} & {C} & {c.replace('_', ' ')} & {n} & "
                      + " & ".join(fmt_t(med(g.get((d, C, c, n, k)))) for k in cores) + " \\\\\n")
+    for d0, key in (("engine", "Engine"), ("baseline", "Baseline")):
+        sp = []
+        for d, C, c, n in rows:
+            if d == d0:
+                v = [med(g[(d, C, c, n, k)]) for k in cores if g.get((d, C, c, n, k))]
+                if len(v) == len(cores):
+                    sp.append(100 * (max(v) - min(v)) / min(v))
+        if sp:
+            macro(f"NumHostSpread{key}Pct", f"{max(sp):.0f}")
+            macro(f"NumHostCoresMin", str(cores[0])); macro(f"NumHostCoresMax", str(cores[-1]))
     write("tab_host.tex", "\\begin{tabular}{@{}lrlr" + "r" * len(cores) + "@{}}\n\\toprule\n"
-          "Design & $C$ & Circuit & $n$ & " + " & ".join(f"{k} cores" for k in cores) + " \\\\\n\\midrule\n"
+          " & & & & \\multicolumn{" + str(len(cores)) + "}{c}{hardware threads} \\\\\n"
+          "\\cmidrule(l){5-" + str(4 + len(cores)) + "}\n"
+          "Design & $C$ & Circuit & $n$ & " + " & ".join(str(k) for k in cores) + " \\\\\n\\midrule\n"
           + "".join(lines) + "\\bottomrule\n\\end{tabular}\n")
 
 
@@ -366,44 +532,131 @@ def tab_energy(en):
     for r in rs:
         P = sum(v for v in r["power_w"].values() if v is not None)
         g[(r["circuit"], r["n"], r["C"])].append((r["timing"]["T_e2e"], P, min(r["power_readings"].values())))
-    lines = []
+    lines, vals = [], []
     for (c, n, C), v in sorted(g.items(), key=lambda kv: (kv[0][0], kv[0][1], kv[0][2])):
         T = med([x[0] for x in v]); P = med([x[1] for x in v]); nr = min(x[2] for x in v)
         lines.append(f"{c.replace('_', ' ')} & {n} & {C} & {fmt_t(T)} & {P:.1f} & {fmt_t(T * P)} & {nr} \\\\\n")
+        vals.append((c, n, C, T, P))
     write("tab_energy.tex", "\\begin{tabular}{@{}lrrrrrr@{}}\n\\toprule\n"
           "Circuit & $n$ & $C$ & $T_{\\mathrm{e2e}}$ (s) & board power (W) & energy (J) & readings \\\\\n\\midrule\n"
           + "".join(lines) + "\\bottomrule\n\\end{tabular}\n")
+    for C in (1, 2, 4):
+        v = [x for x in vals if x[2] == C]
+        if v:
+            w = {1: "One", 2: "Two", 4: "Four"}[C]
+            macro(f"NumEnergyPowerMin{w}", f"{min(x[4] for x in v):.0f}"); macro(f"NumEnergyPowerMax{w}", f"{max(x[4] for x in v):.0f}")
+            # idle level: per card 10th percentile of all readings of the stage (cards parked between runs), summed
+            pf = os.path.join(RAW, "energy", f"loop_{C}c.json.power.csv")
+            if os.path.exists(pf):
+                import csv
+                byb = defaultdict(list)
+                for row in csv.DictReader(open(pf)):
+                    byb[row["bdf"]].append(float(row["board_w"]))
+                macro(f"NumEnergyIdle{w}", f"{sum(np.percentile(x, 10) for x in byb.values()):.0f}")
+            q = [x for x in v if x[0] == "qft" and x[1] == 28]
+            if q:
+                macro(f"NumEnergyQftTwentyEight{w}", f"{q[0][3] * q[0][4]:.0f}")
 
 
 def tab_model(bl):
-    """Submitted design (R2.1): measured execution time against the microbenchmark model of scripts/model_v06.py."""
+    """Submitted design (R2.1 to R2.3): measured execution time of the QFT against the microbenchmark model of
+    scripts/model_v06.py (native operation counts from results/v06_op_counts.json), and the share of the model time
+    spent in the kernel sweeps."""
     sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
     import model_v06
-    mc = model_v06.load_micro()
+    mc, ops = model_v06.load_micro(), model_v06.load_ops()
     rs = [r for r in bl if r.get("circuit") == "qft" and not r.get("per_gate") and r.get("init", "zero") == "zero"
           and r.get("diag_path", True) and not r.get("warmup") and r["_file"].endswith(("v06_batched.json", "v06_large.json"))]
-    if mc is None or not rs:
+    if mc is None or ops is None or not rs:
         write("tab_model.tex", pending("model table (E12)") + "\n"); return
-    lines = []
+    lines, ratios, cross = [], [], None
     for n in sorted({r["n"] for r in rs}):
         x = [r for r in rs if r["n"] == n]
-        ro = x[0]["routing"]; l = n - (x[0]["C"].bit_length() - 1)
-        T = med([r["timing"]["T_exec"] for r in x]); M = model_v06.predict(mc, l, ro)
-        lines.append(f"{n} & {ro['launches']} & {ro['diag']} & {ro['exchange']} & {fmt_t(T)} & {fmt_t(M)} & "
-                     + (f"{M / T:.2f}" if M else "n/a") + " \\\\\n")
-    write("tab_model.tex", "\\begin{tabular}{@{}rrrrrrr@{}}\n\\toprule\n"
-          "$n$ & launches & diagonal & exchanges & measured (s) & model (s) & model/measured \\\\\n\\midrule\n"
+        l = n - (x[0]["C"].bit_length() - 1)
+        o = ops.get(f"qft:{n}")
+        T = med([r["timing"]["T_exec"] for r in x]); M = model_v06.predict(mc, l, o)
+        w = o["op1"] + 2 * o["cx"] + o["cz"] if o else 0
+        sweep = w * (mc["g1"][l] - mc["launch"][l]) if M else None
+        share = 100 * sweep / M if M else None
+        if M:
+            ratios.append((n, M / T))
+            if cross is None and share > 50:
+                cross = n
+        lines.append(f"{n} & {w} & {o['launches'] if o else 'n/a'} & {o['diag'] + o['exchange'] if o else 'n/a'} & {fmt_t(T)} & "
+                     f"{fmt_t(M) if M else 'n/a'} & " + (f"{M / T:.2f} & {share:.0f}" if M else "n/a & n/a") + " \\\\\n")
+    write("tab_model.tex", "\\begin{tabular}{@{}rrrrrrrr@{}}\n\\toprule\n"
+          "$n$ & sweeps & launches & slice transfers & measured (s) & model (s) & model/measured & sweeps (\\%) \\\\\n\\midrule\n"
           + "".join(lines) + "\\bottomrule\n\\end{tabular}\n")
     macro("NumQueueRttUs", f"{mc['q'] * 1e6:.0f}")
     macro("NumBarrierUs", f"{mc['b'] * 1e6:.0f}")
+    big = [r for n, r in ratios if n >= 12]
+    if big:
+        macro("NumModelRatioMin", f"{min(big):.2f}"); macro("NumModelRatioMax", f"{max(big):.2f}")
+    if cross:
+        macro("NumModelCrossN", str(cross))
+    sh8 = [ln for ln in lines if ln.startswith("8 & ")]
+    if sh8 and "n/a" not in sh8[0]:
+        macro("NumModelSweepShareEight", sh8[0].split("&")[-1].strip().rstrip("\\").strip())
+    # closed form of the bend: the sweep time per amplitude t0 (from the largest microbenchmark slice that the model
+    # uses, l = 16) and the fixed costs F of each circuit; the sweeps W t0 2^l equal F at l* = log2(F / (W t0))
+    import math
+    t0 = (mc["g1"][16] - mc["launch"][16]) / 2 ** 16
+    macro("NumVsixNsPerAmp", f"{t0 * 1e9:.0f}")
+    macro("NumVsixCyclesPerAmp", f"{t0 * float(MACROS.get('NumClockVsix', '258')) * 1e6:.0f}")
+    macro("NumVsixXferMsTen", f"{(mc['collect'][10] + mc['distribute'][10]) * 1e3:.2f}")
+    nst = []
+    for n in sorted({r["n"] for r in rs}):
+        o = ops.get(f"qft:{n}")
+        if not o or n < 8 or n > 16:      # near the bend; slice transfers are flat up to slices of 2^14 amplitudes
+            continue
+        l = n - 2
+        if l not in mc["launch"]:
+            continue
+        W = o["op1"] + 2 * o["cx"] + o["cz"]
+        Fx = (o["launches"] * (mc["launch"][l] + mc["q"]) + (o["diag"] + o["exchange"]) * (mc["collect"][l] + mc["distribute"][l] + mc["q"])
+              + o["exchange"] * 3 * mc["b"])
+        nst.append(2 + math.log2(Fx / (W * t0)))
+    if nst:
+        macro("NumModelNstarMin", f"{min(nst):.1f}"); macro("NumModelNstarMax", f"{max(nst):.1f}")
+    for l, key in ((10, "Ten"), (16, "Sixteen")):
+        if l in mc["g1"] and l in mc["launch"]:
+            macro(f"NumVsixSweepMs{key}", f"{(mc['g1'][l] - mc['launch'][l]) * 1e3:.2f}")
+            macro(f"NumVsixLaunchMs{key}", f"{mc['launch'][l] * 1e3:.2f}")
+
+
+def baseline_precision(bl):
+    """Largest amplitude error of the baseline design per circuit family (its gate angles travel as float32)."""
+    rs = [r for r in bl if "metrics" in r and not r["_file"].endswith(("v06_diag_on.json", "v06_diag_off.json"))]
+    if not rs:
+        return
+    errs = [r["metrics"]["max_abs_err"] for r in rs]
+    rot = [r["metrics"]["max_abs_err"] for r in rs if r["circuit"] in ("rand10", "qft_iqft", "grover") or r.get("init") == "haar"]
+    exact = [r["metrics"]["max_abs_err"] for r in rs if r["circuit"] in ("qft", "ghz", "bell") and r.get("init", "zero") == "zero"]
+    macro("NumBaselineErrMax", sci(max(errs)))
+    if rot:
+        macro("NumBaselineRotErrMin", sci(min(rot))); macro("NumBaselineRotErrMax", sci(max(rot)))
+    if exact:
+        macro("NumBaselineExactErrMax", sci(max(exact)))
+
+
+def submitted_vs_revised(bl, eng):
+    """QFT n = 20 on four cards: end to end time of the baseline design and of the engine."""
+    b = [r["timing"]["T_e2e"] for r in bl if r["_file"].endswith("v06_batched.json") and r["circuit"] == "qft" and r["n"] == 20
+         and not r.get("warmup")]
+    e = [r["timing"]["T_e2e"] for r in eng if r["circuit"] == "qft" and r["n"] == 20 and r.get("C") == 4
+         and r.get("flags", "111a").startswith("111") and not r.get("warmup")]
+    if b and e:
+        macro("NumHostSubmittedQftTwenty", fmt_t(med(b))); macro("NumHostRevisedQftTwenty", fmt_t(med(e)))
+        # ratio of the printed values, so that the text can be checked by hand
+        macro("NumSubmittedOverRevisedQftTwenty", f"{float(fmt_t(med(b))) / float(fmt_t(med(e))):.0f}")
 
 
 def tab_diag(bl):
-    """Submitted design, QFT on four cards with and without the partition diagonal path (R1.D, R1.Q.4)."""
+    """Baseline design, QFT on four cards with and without the partition diagonal path (R1.D, R1.Q.4)."""
     rs = [r for r in bl if r["_file"].endswith(("v06_diag_on.json", "v06_diag_off.json")) and not r.get("warmup")]
     if not rs:
         write("tab_diag.tex", pending("diagonal path ablation (E5b)") + "\n"); return
-    lines = []
+    lines, sps = [], []
     for n in sorted({r["n"] for r in rs}):
         row = {}
         for on in (True, False):
@@ -421,9 +674,16 @@ def tab_diag(bl):
                              f"{fmt_t(v['bar'])} & {v['pcie']:.0f} & {sp} \\\\\n")
         if n == 20 and True in row and False in row:
             macro("NumDiagSpeedupTwenty", f"{row[False]['T'] / row[True]['T']:.2f}")
+            for on, key in ((True, "On"), (False, "Off")):
+                macro(f"NumDiagHost{key}Twenty", f"{row[on]['host']:.2f}"); macro(f"NumDiagBarrier{key}Twenty", f"{row[on]['bar']:.2f}")
+            macro("NumDiagPcieTwenty", f"{row[True]['pcie']:.0f}")
+        if True in row and False in row:
+            sps.append(row[False]["T"] / row[True]["T"])
     write("tab_diag.tex", "\\begin{tabular}{@{}rlrrrrrrr@{}}\n\\toprule\n"
           "$n$ & diagonal path & diagonal & exchanges & $T_{\\mathrm{exec}}$ (s) & host compute (s) & barriers (s) & PCIe (MiB) & speedup \\\\\n\\midrule\n"
           + "".join(lines) + "\\bottomrule\n\\end{tabular}\n")
+    if sps:
+        macro("NumDiagSpeedupMin", f"{min(sps):.2f}"); macro("NumDiagSpeedupMax", f"{max(sps):.2f}")
 
 
 def share_macros(eng):
@@ -438,6 +698,62 @@ def share_macros(eng):
     kern = med([r["timing"]["T_kernel"] / r["timing"]["T_e2e"] for r in rs])
     macro("NumQftTwentyEightPciePct", f"{100 * pcie:.0f}")
     macro("NumQftTwentyEightKernelPct", f"{100 * kern:.0f}")
+
+
+def tab_part(pt):
+    """Partition choice (R1.X.9): top qubits select the card (default) against the two lowest qubits."""
+    rs = [r for r in pt if not r.get("warmup")]
+    if not rs:
+        write("tab_part.tex", pending("partition table (E9)") + "\n"); return
+    g = defaultdict(list)
+    for r in rs:
+        g[(r["circuit"], r["n"], r["C"], r.get("part", "top"))].append(r)
+    lines, ratios = [], []
+    for (c, n, C) in sorted({k[:3] for k in g}):
+        a, b = g.get((c, n, C, "top")), g.get((c, n, C, "0,1"))
+        if not a or not b:
+            continue
+        ta, tb = med([r["timing"]["T_e2e"] for r in a]), med([r["timing"]["T_e2e"] for r in b])
+        lines.append(f"{c.replace('_', ' ')} & {n} & {C} & {fmt_t(ta)} & {a[0]['stats']['n_remaps']} & {fmt_t(tb)} & "
+                     f"{b[0]['stats']['n_remaps']} & {tb / ta:.2f} \\\\\n")
+        ratios.append(tb / ta)
+    write("tab_part.tex", "\\begin{tabular}{@{}lrrrrrrr@{}}\n\\toprule\n"
+          " & & & \\multicolumn{2}{c}{top qubits} & \\multicolumn{2}{c}{qubits 0 and 1} & \\\\\n"
+          "\\cmidrule(lr){4-5}\\cmidrule(lr){6-7}\n"
+          "Circuit & $n$ & $C$ & $T_{\\mathrm{e2e}}$ (s) & remaps & $T_{\\mathrm{e2e}}$ (s) & remaps & ratio \\\\\n\\midrule\n"
+          + "".join(lines) + "\\bottomrule\n\\end{tabular}\n")
+    if ratios:
+        macro("NumPartRatioMin", f"{min(ratios):.2f}"); macro("NumPartRatioMax", f"{max(ratios):.2f}")
+
+
+def tab_micro_engine():
+    """Engine microbenchmarks (R1.X.6): launch, single pass time and measured HBM streaming rate, cost per op."""
+    f = os.path.join(RAW, "micro", "engine_4c.json")
+    if not os.path.exists(f):
+        write("tab_micro.tex", pending("engine microbenchmarks (E12)") + "\n"); return
+    d = json.load(open(f))
+    C, P = len(d["meta"]["cards"]), int(d["meta"]["engines"])
+    lines = []
+    for L in sorted(d["pass1"], key=int):
+        t = med(d["pass1"][L]); Li = int(L)
+        bw = 2 * C * P * (16 << Li) / t / 1e9
+        lines.append(f"{Li} & {16 * 2 ** Li / 2 ** 20:g} & {med(d['launch'][L]) * 1e3:.2f} & {t * 1e3:.3g} & {bw:.0f} & {bw / C:.0f} \\\\\n")
+    write("tab_micro.tex", "\\begin{tabular}{@{}rrrrrr@{}}\n\\toprule\n"
+          "$L$ & slice (MiB) & launch (ms) & one pass (ms) & HBM, all cards (GB/s) & per card (GB/s) \\\\\n\\midrule\n"
+          + "".join(lines) + "\\bottomrule\n\\end{tabular}\n")
+    Lmax = max(d["pass1"], key=int)
+    bw = 2 * C * P * (16 << int(Lmax)) / med(d["pass1"][Lmax]) / 1e9
+    macro("NumHbmAllCards", f"{bw:.0f}"); macro("NumHbmPerCard", f"{bw / C:.0f}"); macro("NumHbmLmax", str(int(Lmax)))
+    macro("NumLaunchMs", f"{med([med(v) for v in d['launch'].values()]) * 1e3:.1f}")
+    # cost per additional op at fixed L (compute bound region) against the closed form of 2 pairs per cycle at 300 MHz
+    ms = sorted(int(m) for m in d["passm"])
+    hi = [m for m in ms if m >= 8]
+    if len(hi) >= 2:
+        per_op = (med(d["passm"][str(hi[-1])]) - med(d["passm"][str(hi[0])])) / (hi[-1] - hi[0])
+        Lp = 22
+        macro("NumOpCostMs", f"{per_op * 1e3:.2f}")
+        macro("NumOpCostModelMs", f"{(2 ** (Lp - 1)) / 2 / 300e6 * 1e3:.2f}")
+        macro("NumPassmL", str(Lp))
 
 
 def protocol_macros(allrecs):
@@ -455,7 +771,7 @@ def protocol_macros(allrecs):
 
 def ghz_macros(ab):
     """Remaps of the GHZ variants on four cards from the compiler counters of the ablation records (E6)."""
-    rs = [r for r in ab if r.get("C") == 4 and r["circuit"] in ("ghz", "ghz_log") and r.get("flags") in ("1110", "1111")]
+    rs = [r for r in ab if r.get("C") == 4 and r["circuit"] in ("ghz", "ghz_top", "ghz_log") and r.get("flags") in ("1110", "1111")]
     for c, fl, name in (("ghz", "1110", "NumGhzChainRemapsNoFfour"), ("ghz_log", "1110", "NumGhzLogRemapsNoFfour"),
                         ("ghz", "1111", "NumGhzChainRemapsFfour")):
         v = sorted({r["stats"]["n_remaps"] for r in rs if r["circuit"] == c and r["flags"] == fl})
@@ -463,6 +779,21 @@ def ghz_macros(ab):
             macro(name, str(v[0]) if len(v) == 1 else f"{v[0]} to {v[-1]}")
         else:
             macro(name, pending(f"{name} from ablation4"))
+    for c, key in (("ghz", "Chain"), ("ghz_top", "Top"), ("ghz_log", "Log")):
+        t = {fl: [r["timing"]["T_e2e"] for r in rs if r["circuit"] == c and r["n"] == 28 and r["flags"] == fl and not r.get("warmup")]
+             for fl in ("1110", "1111")}
+        # the chain is also part of the ablation table, where the compiler chooses F4 itself (flags 111a); quote the
+        # same records as that table so that text and table agree
+        auto = [r["timing"]["T_e2e"] for r in ab if r.get("C") == 4 and r["circuit"] == c and r["n"] == 28
+                and r.get("flags") == "111a" and not r.get("warmup")]
+        if c == "ghz" and auto:
+            t["1111"] = auto
+        if t["1110"] and t["1111"]:
+            macro(f"NumGhz{key}SpeedupFfour", f"{med(t['1110']) / med(t['1111']):.1f}")
+            macro(f"NumGhz{key}TimeNoFfour", fmt_t(med(t["1110"]))); macro(f"NumGhz{key}TimeFfour", fmt_t(med(t["1111"])))
+        r4 = sorted({r["stats"]["n_remaps"] for r in rs if r["circuit"] == c and r["flags"] == "1111"})
+        if r4:
+            macro(f"NumGhz{key}RemapsFfourAll", str(r4[0]) if len(r4) == 1 else f"{r4[0]} to {r4[-1]}")
 
 
 def main():
@@ -490,7 +821,12 @@ def main():
     tab_energy(en)
     tab_model(bl)
     tab_diag(bl)
+    submitted_vs_revised(bl, eng)
+    baseline_precision(bl)
     share_macros(eng)
+    tab_micro_engine()
+    pt, _ = load("part/*.json")
+    tab_part(pt)
     ghz_macros(ab)
     protocol_macros(eng + sc + ab + hs + en)
     with open(os.path.join(GEN, "macros.tex"), "w") as f:
