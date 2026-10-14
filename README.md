@@ -1,4 +1,4 @@
-# Multi card complex128 statevector simulator on four Alveo U55C
+# Multi FPGA complex128 statevector simulator on four Alveo U55C
 
 An exact statevector quantum circuit simulator that distributes a complex128 state over the HBM of one, two or four
 AMD Alveo U55C cards in one host. Every gate that does not need amplitudes held by another card runs on the FPGAs;
@@ -45,6 +45,7 @@ sixteen complex128 engines (`builds/sv128_e16w`) placed but failed routing; its 
 | `results/raw/` | every measurement as written by the drivers (JSON records, power and temperature CSV, abort markers) |
 | `results/hardware_manifest.json` | cards, shell, XRT, host CPU and memory, bitstream hashes at measurement time |
 | `paper/generated/`, `figures/` | tables, macros and figures generated from `results/raw/` |
+| `paper/manuscript/` | the manuscript (single LaTeX source, bibliography, figures and the compiled PDF) |
 | `logs/` | build and campaign logs |
 | `setup/` | Python environment specifications and setup script |
 
@@ -103,20 +104,40 @@ submitted design (batched and per gate, diagonal path ablation) and Qiskit on th
 `n <= 30` is compared amplitude by amplitude with Qiskit (Statevector up to `n = 20`, Aer in double precision above);
 the records carry the fidelity, `1 - F` computed without cancellation, and the maximum amplitude error.
 
-Thermal guard: before each repetition the cards are parked on the small `v06` bitstream and cooled below 84 C if a card
-is at 87 C (FPGA) or 82 C (HBM); a run that crosses 90 C (FPGA) or 85 C (HBM) is kept, flagged and listed under
+Thermal guard: before each repetition the cards are parked on the small `v06` bitstream and cooled below the campaign's
+cooling target (84 C) if a card is at 85 C (FPGA) or 80 C (HBM); a run that crosses 90 C (FPGA) or 85 C (HBM) is kept, flagged and listed under
 `thermal_stops`, and the campaign continues with the next instance. On the measurement host one card runs markedly
 hotter than the others; runs stopped by the guard are kept in `results/raw/_aborted/` and in the logs.
 
 `scripts/make_tables.py` and `scripts/make_figures.py` regenerate every table and figure from `results/raw/` only.
 `scripts/compare_machines.py` compares the measurements of two hosts configuration by configuration.
 
-The measurement campaign of the revision is in progress; `results/raw/` grows with each stage.
+## Workflow: from a hardware run to the paper
+
+```
+sv128/ + baseline/        engine, compiler, runtime and the submitted design, tested without hardware (sv128/tests/)
+      |  sv128/build/*.sh, builds/v06/build.sh
+      v
+builds/<name>/            bitstream hash, metadata, utilisation and timing reports
+      |  bench/campaign*.sh on the four cards and on the host CPU
+      v
+results/raw/              one JSON record per run, with power and temperature logs
+      |  scripts/make_tables.py, scripts/make_figures.py
+      v
+paper/generated/          every table and number of the paper, as LaTeX
+      |
+      v
+paper/manuscript/         manuscript.tex and manuscript.pdf
+```
+
+No number in the manuscript is typed by hand: each one is a macro or a table in `paper/generated/`, produced from
+`results/raw/`. Runs that were stopped or affected by a driver bug are kept in `results/raw/_aborted/` with the reason
+in `results/raw/README.md`, and are not used by the analysis.
 
 ## Citation
 
 N. Ali, "Multi FPGA Quantum Circuit Simulation: A Distributed Statevector Architecture on Four Xilinx Alveo U55C
-Accelerators", Research Square preprint (2026), doi:10.21203/rs.3.rs-10128153/v1 (under review, The Journal of
+Accelerators", Research Square preprint (2026), doi:10.21203/rs.3.rs-10128153/v1 (under major revision, The Journal of
 Supercomputing). The single card design: A. Tiwari, N. Ali et al., "FPGA Based Quantum Circuit Simulator: Processing
 30 Qubit Systems", doi:10.21203/rs.3.rs-8581344/v1.
 
