@@ -1,0 +1,546 @@
+{
+ "cards": 4,
+ "kernel_max_gates": 512,
+ "counts": {
+  "qft:4": {
+   "op1": 5,
+   "cx": 2,
+   "cz": 0,
+   "launches": 2,
+   "segments": 2,
+   "diag": 5,
+   "exchange": 4,
+   "local_gates": 3
+  },
+  "qft:8": {
+   "op1": 51,
+   "cx": 36,
+   "cz": 0,
+   "launches": 7,
+   "segments": 7,
+   "diag": 13,
+   "exchange": 4,
+   "local_gates": 23
+  },
+  "qft:12": {
+   "op1": 145,
+   "cx": 102,
+   "cz": 0,
+   "launches": 2,
+   "segments": 2,
+   "diag": 21,
+   "exchange": 4,
+   "local_gates": 59
+  },
+  "qft:14": {
+   "op1": 210,
+   "cx": 147,
+   "cz": 0,
+   "launches": 13,
+   "segments": 13,
+   "diag": 25,
+   "exchange": 4,
+   "local_gates": 83
+  },
+  "qft:16": {
+   "op1": 287,
+   "cx": 200,
+   "cz": 0,
+   "launches": 15,
+   "segments": 15,
+   "diag": 29,
+   "exchange": 4,
+   "local_gates": 111
+  },
+  "qft:18": {
+   "op1": 376,
+   "cx": 261,
+   "cz": 0,
+   "launches": 17,
+   "segments": 17,
+   "diag": 33,
+   "exchange": 4,
+   "local_gates": 143
+  },
+  "qft:20": {
+   "op1": 477,
+   "cx": 330,
+   "cz": 0,
+   "launches": 19,
+   "segments": 19,
+   "diag": 37,
+   "exchange": 4,
+   "local_gates": 179
+  },
+  "qft:22": {
+   "op1": 590,
+   "cx": 407,
+   "cz": 0,
+   "launches": 21,
+   "segments": 21,
+   "diag": 41,
+   "exchange": 4,
+   "local_gates": 219
+  },
+  "qft:24": {
+   "op1": 715,
+   "cx": 492,
+   "cz": 0,
+   "launches": 23,
+   "segments": 23,
+   "diag": 45,
+   "exchange": 4,
+   "local_gates": 263
+  },
+  "qft:26": {
+   "op1": 852,
+   "cx": 585,
+   "cz": 0,
+   "launches": 25,
+   "segments": 25,
+   "diag": 49,
+   "exchange": 4,
+   "local_gates": 311
+  },
+  "qft:28": {
+   "op1": 1001,
+   "cx": 686,
+   "cz": 0,
+   "launches": 27,
+   "segments": 27,
+   "diag": 53,
+   "exchange": 4,
+   "local_gates": 363
+  },
+  "ghz:4": {
+   "op1": 1,
+   "cx": 1,
+   "cz": 0,
+   "launches": 1,
+   "segments": 1,
+   "diag": 0,
+   "exchange": 2,
+   "local_gates": 2
+  },
+  "ghz:8": {
+   "op1": 1,
+   "cx": 5,
+   "cz": 0,
+   "launches": 1,
+   "segments": 1,
+   "diag": 0,
+   "exchange": 2,
+   "local_gates": 6
+  },
+  "ghz:12": {
+   "op1": 1,
+   "cx": 9,
+   "cz": 0,
+   "launches": 1,
+   "segments": 1,
+   "diag": 0,
+   "exchange": 2,
+   "local_gates": 10
+  },
+  "ghz:14": {
+   "op1": 1,
+   "cx": 11,
+   "cz": 0,
+   "launches": 1,
+   "segments": 1,
+   "diag": 0,
+   "exchange": 2,
+   "local_gates": 12
+  },
+  "ghz:16": {
+   "op1": 1,
+   "cx": 13,
+   "cz": 0,
+   "launches": 1,
+   "segments": 1,
+   "diag": 0,
+   "exchange": 2,
+   "local_gates": 14
+  },
+  "ghz:18": {
+   "op1": 1,
+   "cx": 15,
+   "cz": 0,
+   "launches": 1,
+   "segments": 1,
+   "diag": 0,
+   "exchange": 2,
+   "local_gates": 16
+  },
+  "ghz:20": {
+   "op1": 1,
+   "cx": 17,
+   "cz": 0,
+   "launches": 1,
+   "segments": 1,
+   "diag": 0,
+   "exchange": 2,
+   "local_gates": 18
+  },
+  "ghz:22": {
+   "op1": 1,
+   "cx": 19,
+   "cz": 0,
+   "launches": 1,
+   "segments": 1,
+   "diag": 0,
+   "exchange": 2,
+   "local_gates": 20
+  },
+  "ghz:24": {
+   "op1": 1,
+   "cx": 21,
+   "cz": 0,
+   "launches": 1,
+   "segments": 1,
+   "diag": 0,
+   "exchange": 2,
+   "local_gates": 22
+  },
+  "ghz:26": {
+   "op1": 1,
+   "cx": 23,
+   "cz": 0,
+   "launches": 1,
+   "segments": 1,
+   "diag": 0,
+   "exchange": 2,
+   "local_gates": 24
+  },
+  "ghz:28": {
+   "op1": 1,
+   "cx": 25,
+   "cz": 0,
+   "launches": 1,
+   "segments": 1,
+   "diag": 0,
+   "exchange": 2,
+   "local_gates": 26
+  },
+  "bell:4": {
+   "op1": 1,
+   "cx": 0,
+   "cz": 0,
+   "launches": 1,
+   "segments": 1,
+   "diag": 0,
+   "exchange": 1,
+   "local_gates": 1
+  },
+  "bell:8": {
+   "op1": 1,
+   "cx": 0,
+   "cz": 0,
+   "launches": 1,
+   "segments": 1,
+   "diag": 0,
+   "exchange": 1,
+   "local_gates": 1
+  },
+  "bell:12": {
+   "op1": 1,
+   "cx": 0,
+   "cz": 0,
+   "launches": 1,
+   "segments": 1,
+   "diag": 0,
+   "exchange": 1,
+   "local_gates": 1
+  },
+  "bell:14": {
+   "op1": 1,
+   "cx": 0,
+   "cz": 0,
+   "launches": 1,
+   "segments": 1,
+   "diag": 0,
+   "exchange": 1,
+   "local_gates": 1
+  },
+  "bell:16": {
+   "op1": 1,
+   "cx": 0,
+   "cz": 0,
+   "launches": 1,
+   "segments": 1,
+   "diag": 0,
+   "exchange": 1,
+   "local_gates": 1
+  },
+  "bell:18": {
+   "op1": 1,
+   "cx": 0,
+   "cz": 0,
+   "launches": 1,
+   "segments": 1,
+   "diag": 0,
+   "exchange": 1,
+   "local_gates": 1
+  },
+  "bell:20": {
+   "op1": 1,
+   "cx": 0,
+   "cz": 0,
+   "launches": 1,
+   "segments": 1,
+   "diag": 0,
+   "exchange": 1,
+   "local_gates": 1
+  },
+  "bell:22": {
+   "op1": 1,
+   "cx": 0,
+   "cz": 0,
+   "launches": 1,
+   "segments": 1,
+   "diag": 0,
+   "exchange": 1,
+   "local_gates": 1
+  },
+  "qft_iqft:4": {
+   "op1": 12,
+   "cx": 4,
+   "cz": 0,
+   "launches": 5,
+   "segments": 5,
+   "diag": 10,
+   "exchange": 10,
+   "local_gates": 8
+  },
+  "qft_iqft:8": {
+   "op1": 108,
+   "cx": 72,
+   "cz": 0,
+   "launches": 9,
+   "segments": 9,
+   "diag": 26,
+   "exchange": 10,
+   "local_gates": 52
+  },
+  "qft_iqft:12": {
+   "op1": 300,
+   "cx": 204,
+   "cz": 0,
+   "launches": 13,
+   "segments": 13,
+   "diag": 42,
+   "exchange": 10,
+   "local_gates": 128
+  },
+  "qft_iqft:14": {
+   "op1": 432,
+   "cx": 294,
+   "cz": 0,
+   "launches": 24,
+   "segments": 24,
+   "diag": 50,
+   "exchange": 10,
+   "local_gates": 178
+  },
+  "qft_iqft:16": {
+   "op1": 588,
+   "cx": 400,
+   "cz": 0,
+   "launches": 26,
+   "segments": 26,
+   "diag": 58,
+   "exchange": 10,
+   "local_gates": 236
+  },
+  "qft_iqft:18": {
+   "op1": 768,
+   "cx": 522,
+   "cz": 0,
+   "launches": 28,
+   "segments": 28,
+   "diag": 66,
+   "exchange": 10,
+   "local_gates": 302
+  },
+  "qft_iqft:20": {
+   "op1": 972,
+   "cx": 660,
+   "cz": 0,
+   "launches": 30,
+   "segments": 30,
+   "diag": 74,
+   "exchange": 10,
+   "local_gates": 376
+  },
+  "qft_iqft:22": {
+   "op1": 1200,
+   "cx": 814,
+   "cz": 0,
+   "launches": 32,
+   "segments": 32,
+   "diag": 82,
+   "exchange": 10,
+   "local_gates": 458
+  },
+  "rand10:4": {
+   "op1": 20,
+   "cx": 2,
+   "cz": 3,
+   "launches": 13,
+   "segments": 13,
+   "diag": 8,
+   "exchange": 27,
+   "local_gates": 25
+  },
+  "rand10:8": {
+   "op1": 60,
+   "cx": 11,
+   "cz": 10,
+   "launches": 24,
+   "segments": 24,
+   "diag": 10,
+   "exchange": 29,
+   "local_gates": 81
+  },
+  "rand10:12": {
+   "op1": 100,
+   "cx": 22,
+   "cz": 19,
+   "launches": 23,
+   "segments": 23,
+   "diag": 8,
+   "exchange": 31,
+   "local_gates": 141
+  },
+  "rand10:14": {
+   "op1": 120,
+   "cx": 22,
+   "cz": 29,
+   "launches": 23,
+   "segments": 23,
+   "diag": 11,
+   "exchange": 28,
+   "local_gates": 171
+  },
+  "rand10:16": {
+   "op1": 140,
+   "cx": 35,
+   "cz": 27,
+   "launches": 19,
+   "segments": 19,
+   "diag": 6,
+   "exchange": 32,
+   "local_gates": 202
+  },
+  "rand10:18": {
+   "op1": 160,
+   "cx": 39,
+   "cz": 31,
+   "launches": 23,
+   "segments": 23,
+   "diag": 11,
+   "exchange": 29,
+   "local_gates": 230
+  },
+  "rand10:20": {
+   "op1": 180,
+   "cx": 40,
+   "cz": 40,
+   "launches": 25,
+   "segments": 25,
+   "diag": 8,
+   "exchange": 32,
+   "local_gates": 260
+  },
+  "rand10:22": {
+   "op1": 200,
+   "cx": 37,
+   "cz": 53,
+   "launches": 32,
+   "segments": 32,
+   "diag": 14,
+   "exchange": 26,
+   "local_gates": 290
+  },
+  "partition_heavy:4": {
+   "op1": 0,
+   "cx": 0,
+   "cz": 0,
+   "launches": 0,
+   "segments": 0,
+   "diag": 0,
+   "exchange": 40,
+   "local_gates": 0
+  },
+  "partition_heavy:8": {
+   "op1": 0,
+   "cx": 0,
+   "cz": 0,
+   "launches": 0,
+   "segments": 0,
+   "diag": 0,
+   "exchange": 40,
+   "local_gates": 0
+  },
+  "partition_heavy:12": {
+   "op1": 0,
+   "cx": 0,
+   "cz": 0,
+   "launches": 0,
+   "segments": 0,
+   "diag": 0,
+   "exchange": 40,
+   "local_gates": 0
+  },
+  "partition_heavy:14": {
+   "op1": 0,
+   "cx": 0,
+   "cz": 0,
+   "launches": 0,
+   "segments": 0,
+   "diag": 0,
+   "exchange": 40,
+   "local_gates": 0
+  },
+  "partition_heavy:16": {
+   "op1": 0,
+   "cx": 0,
+   "cz": 0,
+   "launches": 0,
+   "segments": 0,
+   "diag": 0,
+   "exchange": 40,
+   "local_gates": 0
+  },
+  "partition_heavy:18": {
+   "op1": 0,
+   "cx": 0,
+   "cz": 0,
+   "launches": 0,
+   "segments": 0,
+   "diag": 0,
+   "exchange": 40,
+   "local_gates": 0
+  },
+  "partition_heavy:20": {
+   "op1": 0,
+   "cx": 0,
+   "cz": 0,
+   "launches": 0,
+   "segments": 0,
+   "diag": 0,
+   "exchange": 40,
+   "local_gates": 0
+  },
+  "partition_heavy:22": {
+   "op1": 0,
+   "cx": 0,
+   "cz": 0,
+   "launches": 0,
+   "segments": 0,
+   "diag": 0,
+   "exchange": 40,
+   "local_gates": 0
+  }
+ }
+}

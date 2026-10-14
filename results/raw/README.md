@@ -23,3 +23,6 @@ reading of the cards during that invocation, `*.abort` the reading that crossed 
 Every record of a timed repetition carries the phase times (`timing`), the compiler counters (`stats`) and, for the last
 repetition, the comparison with the reference (`metrics`: fidelity, `1 - F` without cancellation, maximum amplitude
 error, l2 error, global phase). The first repetition of each configuration is a warm up (`warmup: true`).
+
+File paths and the host name inside the records are replaced by `<WS>`, `<HOME>` and `fpga-host`; apart from that the
+files are stored exactly as the drivers wrote them.
