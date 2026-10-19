@@ -1,0 +1,42 @@
+\section{Limitations}\label{sec:limitations}
+
+\paragraph{Thermal limit of one card.} The four cards sit in one host with a shared air path, and the card at PCIe
+bus 21 runs hottest. With the engine bitstream loaded, that card heats above 84\,\textdegree C within minutes even
+when no kernel runs. Every measurement therefore runs under a guard: before each repetition, a card at 85\,\textdegree C
+(FPGA) or 80\,\textdegree C (HBM) is parked on the small bitstream of the baseline design and cooled below
+84\,\textdegree C; a run during which a card reaches 90\,\textdegree C (FPGA) or 85\,\textdegree C (HBM) is kept,
+flagged, and ends that configuration. Table~\ref{tab:thermal} lists the \NumThermalStops~configurations that the guard
+stopped, all on card 21; where a stopped configuration was run again later, the complete run is the one reported. In one early attempt the cooling wait was done
+with the engine bitstream still loaded; card 21 reached 96\,\textdegree C (FPGA) and 91\,\textdegree C (HBM), its AXI
+firewall tripped and the driver reset the card. That run is excluded from all results and the procedure was changed
+as described. The widest runs, at $n=31$ on four cards, succeeded only after cooling pauses; on this host the time
+available for long runs at full width is limited by the temperature of one card, not by memory.
+
+\paragraph{Routing limit of the engine count.} A build with sixteen complex128 engines did not route
+(Section~\ref{sec:architecture}). The engine uses eight compute units with four pseudo channels each; it reaches
+all 32 pseudo channels of a card, but the peak kernel throughput is that of eight engines.
+
+\paragraph{Half of the HBM holds the state.} At full width the state occupies 8~GiB of the 16~GiB of each card
+(Section~\ref{subsec:res-maxwidth}): every pseudo channel holds $2^{24}$ amplitudes (256~MiB) of a slice next to the
+engine's instruction segment, which shares the buffer, and the next power of two would fill the 512~MiB channel
+completely. Storing the instructions in a separate buffer, on a further HBM port or in on chip memory, would remove this
+limit and give one more qubit per configuration ($n=30$ on one card, $n=32$ on four); we did not build this variant.
+
+\paragraph{Data movement across cards goes through the host.} Gates that need amplitudes of another card are
+executed after an exchange through host memory over PCIe. Peer to peer transfers between the cards are disabled on
+this host (the platform reports that they would need 32~GB of PCIe address space per card), and we did not change that system
+setting. The cost of this path for each circuit family is given in
+Sections~\ref{subsec:res-scaling} and~\ref{subsec:res-ablation}. This path is why more cards do not make a run faster:
+on four cards the exchanges take \NumScaleExchQftFour\,\% of the end to end time of the QFT at $n=28$ and
+\NumScaleExchRandFour\,\% for the random circuit, and they set the time of every circuit whose slice qubits carry non
+diagonal gates. Peer to peer transfers or a faster interconnect would shorten exactly this part.
+
+\paragraph{Card count.} The partition assigns the top $\log_2 C$ qubits to the card index, so the number of cards
+must be a power of two. The runtime accepts any such count, but only $C = 1$, 2 and 4 were run, because the host has
+four cards. Eight cards would need a host with eight x16 slots, and every further card qubit adds remaps across cards
+for the circuits that act on it; with the exchange through host memory, the trend of Section~\ref{subsec:res-scaling},
+a growing exchange share with every doubling of the cards, would be expected to continue. We make no measured claim for
+eight or more cards.
+
+\paragraph{One host, one platform.} All measurements come from one host with four U55C cards. The behaviour of the
+exchange on hosts with a different PCIe topology or with peer to peer transfers enabled was not measured.

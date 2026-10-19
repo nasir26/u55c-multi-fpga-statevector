@@ -47,12 +47,13 @@ sixteen complex128 engines (`builds/sv128_e16w`) placed but failed routing; its 
 | `results/raw/` | every measurement as written by the drivers (JSON records, power and temperature CSV, abort markers) |
 | `results/hardware_manifest.json` | cards, shell, XRT, host CPU and memory, bitstream hashes at measurement time |
 | `paper/generated/`, `figures/` | tables, macros and figures generated from `results/raw/` |
-| `paper/manuscript/` | the manuscript (single LaTeX source, bibliography, figures and the compiled PDF) |
+| `paper/revised/` | manuscript sources (`main_revised.tex`, `sections/`, `references.bib`), built from `paper/generated/` and `figures/` |
+| `paper/manuscript/` | the submitted manuscript (single LaTeX source, bibliography, figures and the compiled PDF) |
 | `logs/` | build and campaign logs |
 | `setup/` | Python environment specifications and setup script |
 
-Bitstreams (`*.xclbin`, 47 MB and 66 MB) and kernel objects are not stored in this repository; rebuild them as below and
-compare against the stored `sha256` files.
+Bitstreams (`*.xclbin`, 47 MB and 66 MB) are not stored in git; they are attached to the release `bitstreams-v1`
+(section "Bitstreams"), or can be rebuilt as below. Kernel objects are not stored.
 
 ## Requirements
 
@@ -100,7 +101,18 @@ $PY_FPGA sv128/tests/test_hw.py builds/sv128_e8w/sv.xclbin 8 4 12,16,20
 $PY_FPGA baseline/check_hw.py builds/v06/quantum_fpga_kernel_complex128_v06.xclbin 4 8,12,16
 ```
 
+## Bitstreams
+
+The two bitstreams measured for the paper, `builds/sv128_e8w/sv.xclbin` (statevector engine) and
+`builds/v06/quantum_fpga_kernel_complex128_v06.xclbin` (submitted design, also used to park the cards), are attached to
+the release [bitstreams-v1](https://github.com/nasir26/u55c-multi-fpga-statevector/releases/tag/bitstreams-v1).
+`scripts/fetch_bitstreams.sh` places them at those paths and checks them against `bitstreams.sha256` (the hashes in
+`builds/*/` and `results/hardware_manifest.json` were recorded at measurement time).
+
 ## Rebuilding the bitstreams
+
+A rebuild gives a functionally equal design, not a bit identical file.
+
 
 ```
 bash builds/sv_xo/build_swap.sh                       # exchange kernel object
@@ -123,7 +135,16 @@ cooling target (84 C) if a card is at 85 C (FPGA) or 80 C (HBM); a run that cros
 `thermal_stops`, and the campaign continues with the next instance. On the measurement host one card runs markedly
 hotter than the others; runs stopped by the guard are kept in `results/raw/_aborted/` and in the logs.
 
-`scripts/make_tables.py` and `scripts/make_figures.py` regenerate every table and figure from `results/raw/` only.
+`scripts/make_tables.py` and `scripts/make_figures.py` regenerate every table and figure from `results/raw/` only, and
+the manuscript builds from them:
+
+```
+python scripts/make_tables.py && python scripts/make_figures.py      # with the cpu environment
+cd paper/revised && latexmk -pdf main_revised.tex
+```
+
+From a fresh clone, without any card, this reproduces the committed tables and figures (pixel identical) and a
+manuscript whose text is identical to the submitted `paper/manuscript/manuscript.pdf`.
 `scripts/compare_machines.py` compares the measurements of two hosts configuration by configuration.
 
 ## Workflow: from a hardware run to the paper
@@ -141,7 +162,8 @@ results/raw/              one JSON record per run, with power and temperature lo
 paper/generated/          every table and number of the paper, as LaTeX
       |
       v
-paper/manuscript/         manuscript.tex and manuscript.pdf
+paper/revised/            main_revised.tex and sections, built by latexmk
+paper/manuscript/         the submitted single source manuscript.tex and manuscript.pdf
 ```
 
 No number in the manuscript is typed by hand: each one is a macro or a table in `paper/generated/`, produced from

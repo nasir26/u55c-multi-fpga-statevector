@@ -1,0 +1,64 @@
+\section{Methodology}\label{sec:methodology}
+
+\subsection{What the reported times contain}\label{subsec:timing}
+
+Every phase is timed on the host with \texttt{time.perf\_counter} and recorded per run; Table~\ref{tab:timing} lists
+the phases and states which of them each reported time includes. Device open and bitstream load ($T_{\mathrm{setup}}$)
+happen once per session and are reported separately. $T_{\mathrm{e2e}}$ is the time from the Qiskit circuit object to
+the sampled measurement results (1024 shots) and includes compilation, all transfers, all kernel time, all exchanges,
+the final read back and sampling; it excludes $T_{\mathrm{setup}}$ and the reference computation used for fidelity.
+For the baseline design the same boundaries are used; its worker processes are started once per session.
+
+\begin{table}[t]
+\caption{Timing phases and their inclusion in the reported times.}\label{tab:timing}
+\input{../generated/tab_timing_defs.tex}
+\end{table}
+
+\subsection{Protocol}\label{subsec:protocol}
+
+Each configuration runs one warm up repetition, which is discarded, followed by \NumRepsMin\ to \NumRepsMax~timed
+repetitions (more for short runs, fewer for the widest runs, whose length is bounded by the thermal limit of
+Section~\ref{sec:limitations}). We report the median and the interquartile range.
+Runs were made with no other job on the host (no build, no other benchmark; checked and logged before every campaign).
+The CPU frequency governor was \NumGovernor\ and is recorded with every campaign. All circuits come from one
+generator with fixed seeds (Section~\ref{subsec:compilation}); random input states are drawn from the Haar measure with
+a fixed seed per width.
+
+\subsection{Correctness metrics}\label{subsec:metrics}
+
+For every reported instance the final state $\psi$ (read back from HBM, outside the timed region) is compared with
+an independent reference $\psi_{\mathrm{ref}}$: the Qiskit \texttt{Statevector} class for $n \le \NumRefSvMax$ and Qiskit
+Aer in double precision with gate fusion disabled above. We report the fidelity
+$F = |\langle \psi_{\mathrm{ref}} | \psi \rangle|^2$, the infidelity computed without cancellation as
+$1 - F = d^2 - d^4/4$ with $d = \min_\phi \lVert \psi - e^{i\phi} \psi_{\mathrm{ref}} \rVert$ for normalised states, the
+largest amplitude error after optimal global phase alignment, and the $\ell_2$ error $d$. A global phase is
+physically irrelevant and is removed by the alignment; it is nonetheless reported, since the baseline design's gate
+decompositions drop global phases. Grover runs additionally report the measured target probability against the
+analytic value $\sin^2((2k+1)\theta)$, and the phase estimation runs the full distribution of the counting register.
+
+\subsection{CPU reference timing}\label{subsec:method-cpu}
+
+To compare the FPGA simulation time with the Qiskit simulation time, on the same host and
+for exactly the same circuit objects we time (i) the Qiskit \texttt{Statevector} class (NumPy, complex128, one
+thread) and (ii) Qiskit Aer, statevector method, double precision, with its default thread count and with one
+thread (versions in Table~\ref{tab:platform}). For Aer the circuit is transpiled to the simulator's native gate set
+with \texttt{optimization\_level=0}, which keeps multi controlled gates such as the Grover oracle as single gates, and
+Aer's default gate fusion is left enabled, as a user would run it; the reference states for correctness are computed
+with fusion disabled. The FPGA engine receives the same circuit object and compiles a multi controlled gate into
+one record (Section~\ref{subsec:compilation}); the baseline design lowers it to its 19 opcodes with the decomposition
+of its original code. Only the simulation call is timed; circuit construction and transpilation
+are excluded for both CPU and FPGA, and the FPGA time we compare against is $T_{\mathrm{e2e}}$, which does include the
+FPGA side compilation. A comparison with GPU simulators is not repeated here: a detailed FPGA, CPU and CUDA-Q GPU
+comparison on the same type of card is the subject of the companion single card study~\cite{tiwari2026fpga30}, and this
+paper makes no speed claim against GPU simulators.
+
+\subsection{Energy}\label{subsec:method-energy}
+
+Board power of each card is read from its management controller (sum of the 12~V PCIe, 12~V auxiliary and 3.3~V rails,
+the quantity reported by \texttt{xbutil}) every 0.1~s during a dedicated energy stage, in which every configuration is
+repeated several times. The controller refreshes its readings about once per second. For every run the board power of a
+card is the time weighted mean of the readings in force during the run, including the reading taken before the run
+started, and the energy is this power times the end to end time, summed over the cards in use; we report the median
+over the repetitions together with the number of new readings that fell inside the shortest run (Table~\ref{tab:energy}).
+Host CPU and memory power are not measured, because the RAPL energy counters of this host are readable only with
+administrator rights, so the energy figures cover the accelerator boards only.

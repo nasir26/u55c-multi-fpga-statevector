@@ -1,0 +1,36 @@
+\section{Benchmark Circuits}\label{sec:algorithms}
+
+All circuits are produced by one generator with fixed seeds; their gate counts and routing are generated from the
+compiler counters and reported in Table~\ref{tab:routing}.
+
+\paragraph{Quantum Fourier transform.} The $n$ qubit QFT consists of $n$ Hadamard gates, $n(n-1)/2$ controlled phase
+gates $\mathrm{CP}(\pi/2^{j-i})$ and $\lfloor n/2\rfloor$ final SWAP gates, a total of $n(n+1)/2 + \lfloor n/2\rfloor$
+gates~\cite{nielsen2010quantum}. In the baseline design with the two top qubits as partition qubits, the routing of
+the QFT at $n=12$ is 59 local, 21 diagonal and 4 exchange gates (the two Hadamard gates on the partition qubits and the
+two SWAP gates that cross the partition boundary), counted gate by gate on the circuit before lowering. On the engine
+SWAP gates are relabellings and the counts of Table~\ref{tab:routing} apply. The QFT is also run on a Haar random input state and as a round trip (a random
+product state, QFT, inverse QFT), whose output equals its input.
+
+\paragraph{GHZ and Bell states.} The GHZ state is prepared by the textbook chain (H on qubit 0 and CX$(i,i+1)$), by a
+fan out from the top qubit, and by the logarithmic depth construction of Cruz et al.~\cite{cruz2019efficient};
+the Bell state is H on qubit 0 followed by CX from qubit 0 to qubit $n-1$.
+
+\paragraph{Grover search.} For one marked state among $N = 2^n$ and $\theta = \arcsin(2^{-n/2})$, $k$ iterations give
+the success probability $P(k) = \sin^2\bigl((2k+1)\theta\bigr)$. We use the standard iteration count
+$k_{\mathrm{opt}} = \lfloor \pi/(4\theta) \rfloor$, which lies next to the first maximum of $P(k)$ and guarantees
+$P(k_{\mathrm{opt}}) \ge 1 - 2^{-n}$~\cite{boyer1998tight,grover1996fast}; because $P(k)$ is periodic in $k$, larger
+iteration counts can come closer to one, at several times the cost. All Grover runs use $k_{\mathrm{opt}}$, and we
+report the measured target probability against $P(k_{\mathrm{opt}})$; for $n=4$ this probability is 0.9613. The oracle
+and diffuser use one multi controlled $X$ gate each, which the engine executes as a single record.
+
+\paragraph{Phase estimation (Shor).} The order finding component of Shor's algorithm~\cite{shor1997polynomial} is
+run as quantum phase estimation of the modular multiplication by $a = 7$ modulo $N = 15$ (order $r = 4$) with a
+counting register of $t$ qubits and four work qubits; the counting register must show four peaks of probability $1/4$
+at multiples of $2^t/4$. To scale the phase estimation to the full width we also run it on the phase gate $P(2\pi\phi)$
+with $\phi = 5/16$, whose $t$ qubit counting register must return $2^t\phi$ with probability one. A larger order
+finding instance (for example $N = 21$) needs modular multipliers that we did not implement; the phase estimation on
+the phase gate covers the same circuit structure at every width.
+
+\paragraph{Random and worst case circuits.} Random circuits have layers of random U3 gates on every qubit and CX or
+CZ gates on random disjoint pairs. The worst case for the distributed design applies H and RX gates to the top qubits
+in every layer, so that every layer contains non diagonal gates on partition qubits.

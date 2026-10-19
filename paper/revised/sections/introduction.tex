@@ -1,0 +1,38 @@
+\section{Introduction}\label{sec:introduction}
+
+Classical simulation of quantum circuits remains essential for algorithm development, compiler verification and
+the validation of quantum hardware~\cite{preskill2018nisq,arute2019supremacy}. Exact statevector simulation stores all
+$2^n$ complex amplitudes of an $n$ qubit register; in complex128 (16~bytes per amplitude) this is 4~GiB at $n=28$, 16~GiB
+at $n=30$ and 64~GiB at $n=32$, so that every additional qubit doubles both memory and work. Distributing the state
+over several devices is the established way to go beyond one device, both on CPU clusters and on
+GPUs~\cite{smelyanskiy2016qhipster,jones2019quest,haner2017petabyte,deraedt2019massively,imamura2022mpiqulacs,bayraktar2023cuquantum}.
+On FPGAs, statevector designs have mostly targeted one device~\cite{khalid2004fpga,lee2016fpga,pilch2019fpga,mahmud2019scaling,pcq2024,tiwari2026fpga30};
+the Trefoil system distributes very large state vectors over several FPGAs backed by SATA disk arrays~\cite{niwase2023trefoil,wei2025qutrefoil}.
+
+This paper studies a different point of that design space: a statevector held entirely in the high bandwidth memory
+of four AMD Alveo U55C cards in one host, with complex128 arithmetic throughout. It is the multi card continuation of
+the single card complex64 simulator of the companion paper~\cite{tiwari2026fpga30}, which reaches 30 qubits on one card
+and contains the comparison of that design with CPU and GPU simulators. We compare two ways of dividing the work
+between host and cards. In a baseline design, one kernel per card applies the local gates while every gate on a
+partition qubit is computed on the host after the card's whole slice has been moved over PCIe. Our engine instead
+executes every gate that does not need another card's amplitudes inside the FPGA, including diagonal and controlled
+gates on partition qubits, and moves data only for the remaining gates.
+
+The contributions, each supported by measurements on the four cards, are:
+\begin{enumerate}
+\item A complex128 statevector engine for the U55C with one compute unit per group of HBM pseudo channels, built
+around a single $2\times2$ multiplexed primitive with a per operation slice enable, and a host runtime that distributes
+the state over one, two or four cards. The engine holds \NumMaxWidthOneCard~qubits on one card and
+\NumMaxWidthFourCards~qubits on four cards, verified amplitude by amplitude against an independent reference
+(Section~\ref{subsec:res-correctness}).
+\item Execution of diagonal, partition controlled and partition permutation gates without data movement (F1 to F3),
+and a hardware specific compiler rewrite for $X$ type gates on partition qubits (F4). Ablations quantify each of
+them (Section~\ref{subsec:res-ablation}).
+\item A measured account of where the time goes: per phase timing, bytes moved over PCIe, scaling over one, two and
+four cards, the sensitivity to the host, the board energy, and a model of the baseline design built only from
+microbenchmarks that explains its timing curve (Sections~\ref{subsec:res-breakdown} to~\ref{subsec:res-model}).
+\item An honest comparison with Qiskit on the same host and the same circuits (Section~\ref{subsec:res-cpu}).
+\end{enumerate}
+We make no claim that the FPGA system outperforms CPU or GPU statevector simulators. Section~\ref{subsec:res-cpu} shows
+where Qiskit Aer on the \NumHostCores~core host is faster and where it is not; the GPU comparison of the same card type is
+reported in the companion paper~\cite{tiwari2026fpga30}.

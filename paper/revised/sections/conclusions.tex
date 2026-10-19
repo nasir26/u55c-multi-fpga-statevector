@@ -1,0 +1,18 @@
+\section{Conclusions}\label{sec:conclusions}
+
+We presented a complex128 statevector engine for one, two and four AMD Alveo U55C cards and measured it, together with
+a baseline design that computes the gates on partition qubits on the host, on four physical cards in one host. The engine executes every gate that needs no
+amplitudes of another slice on the cards, including diagonal, slice controlled and slice permutation gates on partition
+qubits and multi controlled gates wider than its tile, packs consecutive gates into HBM passes, and spreads the
+state over all 32 pseudo channels of every card. It simulates \NumMaxWidthOneCard~qubits on one card, \NumMaxWidthTwoCards~on two and \NumMaxWidthFourCards~on four cards,
+every instance agreeing with an independent reference to double precision rounding (largest amplitude error
+\NumWorstMaxAbsErr). On the same cards the QFT at $n=20$ runs \NumSubmittedOverRevisedQftTwenty~times faster than in the
+baseline design, whose timing curve a microbenchmark model without fitted parameters reproduces to within a factor
+of \NumModelRatioMin~to \NumModelRatioMax.
+
+The measurements also set the limits. Qiskit Aer on the \NumHostCores~core host is faster than the four card system for
+almost all circuits measured. More cards add capacity but not speed, because remaps that involve a card qubit pass
+through host memory: in \NumScaleBelowOne~of \NumScaleCases~comparisons two or four cards are slower than one, and the
+energy of a simulation grows with the number of cards. One card of the host limits the widest runs thermally. The next
+steps are therefore a faster exchange path between the cards, by peer to peer transfers or direct links, and a kernel
+with a higher rate per card.

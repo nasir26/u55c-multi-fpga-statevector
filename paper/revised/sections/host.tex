@@ -1,0 +1,45 @@
+\section{Host Runtime and Distributed Protocol}\label{sec:host}
+
+\subsection{Baseline design: three barrier exchange}\label{subsec:exchange}
+
+In the baseline design one host process per card drives the card's kernel; the processes share three
+\texttt{multiprocessing.Barrier} objects $B_A$, $B_B$, $B_C$ and a read buffer $R[j]$ and write buffer $W[j]$ per card in
+shared host memory. A gate on partition qubits that is not diagonal is executed in three phases: each card reads its
+slice from HBM into $R[j]$ and waits at $B_A$; each card computes its new slice from the slices of its partner cards in
+NumPy, writes it to $W[j]$ and waits at $B_B$; each card writes $W[j]$ back to HBM and waits at $B_C$. Algorithm~\ref{alg:exchange}
+shows the Hadamard gate on partition qubit $q_p$. The card whose partition bit is one holds the amplitudes with
+$b_{q_p}=1$, so its new amplitudes are $(R[j'] - \alpha^{(j)})/\sqrt{2}$, with the partner's amplitude first.
+
+\begin{algorithm}[t]
+\caption{Three barrier exchange for $H$ on partition qubit $q_p$ (card $j$, baseline design).}\label{alg:exchange}
+\begin{algorithmic}[1]
+\Require partition bit index $p_b = q_p - n_\ell$, local slice $\alpha^{(j)}$
+\State $R[j] \gets$ slice read from HBM \Comment{$2^{n_\ell}$ amplitudes over PCIe}
+\State wait at $B_A$
+\State $b \gets (j \shr p_b) \band 1$;\quad $j' \gets j \oplus (1 \shl p_b)$
+\If{$b = 0$}
+  \State $W[j] \gets (\alpha^{(j)} + R[j'])/\sqrt{2}$
+\Else
+  \State $W[j] \gets (R[j'] - \alpha^{(j)})/\sqrt{2}$
+\EndIf
+\State wait at $B_B$
+\State write $W[j]$ to HBM \Comment{$2^{n_\ell}$ amplitudes over PCIe}
+\State wait at $B_C$
+\end{algorithmic}
+\end{algorithm}
+
+Every gate that touches a partition qubit therefore moves the whole slice of every card over PCIe twice: the exchange
+path for the exchange, and the diagonal path because the phase is multiplied on the host. Table~\ref{tab:bytes} reports
+the measured bytes per gate class.
+
+\subsection{Engine runtime}\label{subsec:runtime}
+
+The engine runtime drives all engines of all cards from one host process. For each segment it uploads the
+instruction stream to every slice buffer, starts every engine of every card with its logical slice index, and waits
+for all of them; cards run concurrently. A slice relabelling (F3) only updates the table that maps buffers to logical
+slices. A remap swaps half slices: when both partner slices are on the same card and the moving chunks are large, the
+card's exchange kernel copies them inside HBM; otherwise the moving halves are read over PCIe into host memory, swapped
+there and written back, with one transfer per buffer when the chunks are small. The runtime records the time and the
+bytes of every phase (Table~\ref{tab:timing}).
+
+\input{sections/compilation.tex}

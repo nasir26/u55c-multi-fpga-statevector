@@ -1,0 +1,41 @@
+\subsection{Compilation flow}\label{subsec:compilation}
+
+Every benchmark circuit is built once by \texttt{bench/circuits.py} (fixed seeds) and passed unchanged to the FPGA
+engines and to the Qiskit CPU runs of Section~\ref{subsec:res-cpu}; QASM copies are part of the reproduction package.
+The flow from a Qiskit circuit to engine records has five steps, all on the host and all included in
+$T_{\mathrm{compile}}$ (Table~\ref{tab:timing}):
+\begin{enumerate}
+\item \emph{Gate intake.} Gates of one or two qubits are taken as unitary matrices from Qiskit
+(\texttt{Operator}); multi controlled $X$, $Z$ and phase gates are taken directly as one controlled $2\times2$
+operation. Such a gate stays one record as long as its target and its local controls fit the tile window and its
+other controls sit on slice qubits, where the slice enable (F2) applies them; with $k$ tile qubits and $s$ slice qubits
+this allows gates of up to $k+s$ qubits. Wider gates, every gate wider than the tile window when F2 is switched off,
+and gates without a controlled form are decomposed by the Qiskit transpiler with \texttt{basis\_gates=[u, cx]},
+\texttt{optimization\_level=1}. No other transpilation is applied, so the
+FPGA and CPU runs see the same gate sequence.
+\item \emph{Fusion and relabelling.} Runs of single qubit gates on one qubit are multiplied into one matrix; SWAP
+gates are absorbed into the logical to physical qubit map and cost nothing.
+\item \emph{Classification.} With the current qubit map each operation is classified as local, slice controlled
+(F2), slice diagonal (F1), slice permutation (F3) or exchange (Section~\ref{subsec:engine}).
+\item \emph{Scheduling.} Operations are appended to the current pass while their qubits fit the tile window;
+an exchange operation first triggers a remap that brings its slice qubit to a local position, choosing as victims the
+local qubits used furthest in the future, and the remapped qubit stays local for all later gates on it. A multi controlled gate wider than the tile window is placed by one remap that swaps its target with one of
+its own controls, which then acts through the slice enable, and moves surplus local controls to free slice positions;
+this keeps the Grover oracle a single record up to $n=14$ on one and two cards and $n=16$ on four cards.
+\item \emph{Encoding.} Passes between remaps form one segment, uploaded once to every engine and executed by one
+launch per engine.
+\end{enumerate}
+
+In a statevector simulator the cost is set by the number of full sweeps over the state and by the amplitudes that
+cross slices, not by circuit depth. GHZ preparation, a serial chain of CX gates, shows what this means for the
+compilation. On the engine all CX gates of the textbook GHZ chain whose qubits are local
+share one pass, so depth does not cost sweeps; what costs is each CX whose target is a slice qubit, because the
+target must first be brought into the slice (one remap per slice qubit, \NumGhzChainRemapsNoFfour~remaps with four
+cards and \NumEnginesFlagship~engines per card). A logarithmic depth construction~\cite{cruz2019efficient} reduces depth but
+leaves this count almost unchanged (\NumGhzLogRemapsNoFfour). The compiler therefore applies a hardware specific
+rewrite (F4): for an $X$ type gate (CX, Toffoli) whose target is a slice qubit and whose controls are local, it moves
+the controls up into slice positions instead of moving the target down. The remap costs the same, but the gate and
+every later CX among these qubits then become slice relabelling (F3) or slice controlled (F2) operations; the GHZ
+chain needs \NumGhzChainRemapsFfour~remap at every width. Because the rewrite can also increase traffic (it does for
+the controlled modular multipliers of Shor's circuit), the compiler schedules every circuit with and without F4 and
+keeps the schedule with fewer remaps. Section~\ref{subsec:res-ablation} reports the measured times of all variants.

@@ -1,0 +1,13 @@
+Exact statevector simulation of quantum circuits needs memory that doubles with every qubit. We distribute a complex128
+statevector over the high bandwidth memory of one, two or four AMD Alveo U55C cards in one host and evaluate the design
+on the physical cards. A single primitive, a $2\times2$ complex128 matrix applied to amplitude pairs under a per
+operation slice enable, lets the cards execute every gate that needs no amplitudes of another card, including diagonal,
+controlled and permutation gates on the partition qubits and wide multi controlled gates, while a compiler packs gates
+into passes over memory and moves amplitudes only for the remaining gates. Each card runs \NumEnginesFlagship~engines, which use all \NumPcsUsedFlagship~memory
+channels of the card. The system simulates \NumMaxWidthOneCard~qubits on one card, \NumMaxWidthTwoCards~on two and \NumMaxWidthFourCards~on four cards,
+the largest widths its memory layout allows; all \NumCorrectnessInstances~checked instances agree with an independent reference to double precision rounding.
+On the same cards the quantum Fourier transform at 20 qubits runs \NumSubmittedOverRevisedQftTwenty~times faster than
+in a baseline design that computes the gates on partition qubits on the host, whose timing a microbenchmark model reproduces without fitted parameters. Ablations, timing
+breakdowns, scaling, energy and host measurements show where the time goes: distribution adds capacity, not speed,
+because exchanges between cards pass through host memory, and Qiskit Aer on the \NumHostCores~core host is faster for almost all
+circuits measured.

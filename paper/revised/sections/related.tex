@@ -1,0 +1,52 @@
+\section{Related Work}\label{sec:related}
+
+\subsection{Distributed statevector simulation on CPUs and GPUs}\label{subsec:related-dist}
+
+Exact statevector simulation beyond the memory of one node distributes the $2^n$ amplitudes over many processes,
+each holding a contiguous slice selected by the top qubits, and exchanges amplitudes when a gate acts on such a global
+qubit. qHiPSTER, later the Intel Quantum Simulator, combined vectorisation, multithreading, cache blocking and
+overlap of computation with communication and simulated circuits of up to 40 qubits on a supercomputer, limited by
+memory and network bandwidth~\cite{smelyanskiy2016qhipster,guerreschi2020intel}. QuEST is a hybrid multithreaded,
+distributed and GPU accelerated simulator that benchmarked random circuits of up to 38 qubits on up to 2048 nodes~\cite{jones2019quest}.
+H\"aner and Steiger used generated and optimised kernels and a scheduling algorithm that reduces communication to
+simulate a 45 qubit circuit on 8192 nodes~\cite{haner2017petabyte}; the J\"ulich simulator reached 48 qubits with an
+adaptive encoding of the wave function and showed close to ideal weak scaling on several supercomputers~\cite{deraedt2019massively};
+mpiQulacs is a distributed statevector simulator optimised for A64FX clusters~\cite{imamura2022mpiqulacs}. On GPUs,
+HyQuas selects among partitioning methods per circuit pattern to improve data locality~\cite{zhang2021hyquas}, and the
+cuQuantum SDK provides composable GPU primitives for quantum circuit simulation~\cite{bayraktar2023cuquantum};
+Qulacs is a widely used single node CPU and GPU simulator~\cite{suzuki2021qulacs}. Simulations at 49 qubits and beyond
+rely on other representations, such as tensor network contraction and low depth circuit
+structure~\cite{markov2008simulating,pednault2017breaking,chen2018sixtyfour,boixo2018characterizing,villalonga2019flexible}.
+
+Two techniques of these systems are central to the present work. First, a gate that is diagonal in the computational
+basis never needs amplitudes of another process, even when it acts on a global qubit, and a gate controlled by a
+global qubit acts only on the processes whose bit is one; second, global and local qubits can be swapped once so that
+a sequence of gates on a global qubit runs locally (global to local remapping), and gates can be scheduled to reduce
+the number of such exchanges~\cite{haner2017petabyte}. Executing diagonal gates on partition qubits without exchange is the
+first technique; it is not new as an algorithmic idea, and we do not claim it as such. What this paper contributes is the
+implementation of these techniques inside FPGA kernels: the slice enable lets every card's HBM engines execute
+partition diagonal, partition controlled and partition permutation gates in their streaming passes without host
+arithmetic or PCIe traffic, and remaps run as device copies inside a card and as half slice exchanges across cards.
+
+\subsection{FPGA statevector simulators}\label{subsec:related-fpga}
+
+FPGA emulation of quantum circuits was proposed by Khalid, Zilic and Radecka~\cite{khalid2004fpga}. Lee et al.\
+presented a serial parallel FPGA emulation architecture with the QFT and Grover's search as case studies and a linear
+reduction of resources compared with pipelined designs~\cite{lee2016fpga}; Pilch and D\l{}ugopolski proposed a
+universal FPGA emulator with a standard programming interface~\cite{pilch2019fpga}; Mahmud, El-Araby and Caliga
+studied scalable reconfigurable emulation at high precision and throughput~\cite{mahmud2019scaling}. More recent work
+includes Q2Logic, a coarse grained reconfigurable overlay specialised for Schr\"odinger style
+simulation~\cite{podobas2023q2logic}, PCQ, a parallel pipelined dataflow architecture with data decoupling that
+partitions computation into non interacting subsets~\cite{pcq2024}, and a scalable accelerator architecture that
+addresses parallelism and the routing of state components~\cite{belfore2024scalable}. These designs target one
+device. Statevector simulation over several FPGAs has been demonstrated by the Trefoil system, which combines
+multiple FPGAs with SATA disk arrays (2~PB of storage in eight storage subsystems) to hold state vectors of up to 47
+qubits, at the cost of disk bandwidth (an H gate on 30 qubits takes about 10 minutes)~\cite{niwase2023trefoil}; its
+simulator, Qu-Trefoil, builds on this storage based platform~\cite{wei2025qutrefoil}. The present work takes the
+opposite design point: the whole state stays in the HBM of the cards and moves over PCIe only when a gate requires
+amplitudes of another card, which limits the width to what the HBM of the cards holds but keeps every gate at HBM
+bandwidth. The companion paper of this work~\cite{tiwari2026fpga30} reaches 30 qubits in complex64 on one U55C with HBM and
+compares it with CPU and GPU simulators; the present paper is the multi card, complex128 continuation that the
+companion paper names as future work. Further related designs of the author on the same platform, a native RTL
+statevector engine in FP64~\cite{ali2026rtl}, real time error correction decoders~\cite{ali2026qec} and a matrix
+product state engine~\cite{ali2026mps}, are available as preprints.
