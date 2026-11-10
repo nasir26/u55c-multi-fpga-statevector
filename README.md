@@ -1,3 +1,5 @@
+> **Note (2026-11-09):** the code, data and reproduction scripts of this work are now maintained in [nasir26/u55c-statevector-multicard](https://github.com/nasir26/u55c-statevector-multicard) (currently private, to be published after review). This repository stays as it is for reference.
+
 # Multi FPGA complex128 statevector simulator on four Alveo U55C
 
 [![tests](https://github.com/nasir26/u55c-multi-fpga-statevector/actions/workflows/tests.yml/badge.svg)](https://github.com/nasir26/u55c-multi-fpga-statevector/actions/workflows/tests.yml)
